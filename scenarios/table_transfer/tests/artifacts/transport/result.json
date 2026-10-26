@@ -127,19 +127,19 @@
     "lift": {
       "validation": "passed",
       "reason": "",
-      "duration_s": 1.4422495703074087,
-      "cost": 0.20751609627124726,
+      "duration_s": 1.8171205928321392,
+      "cost": 0.30829433776422654,
       "cost_terms": {
         "base_distance_m": 0.0,
         "base_rotation_rad": 0.0,
-        "lift_fraction": 0.06329113924050639,
+        "lift_fraction": 0.1265822784810126,
         "active_arm_fraction": 0.0,
         "inactive_arm_fraction": 0.0,
-        "duration_s": 1.4422495703074087
+        "duration_s": 1.8171205928321392
       },
       "object_metrics": {
         "passed": true,
-        "samples": 117,
+        "samples": 149,
         "representation": "conservative cylinder bounding box"
       },
       "constraint_metrics": {
@@ -150,8 +150,8 @@
           "passed": true
         },
         "endpoint": {
-          "min_singular_value": 0.0549805648624897,
-          "max_condition_number": 31.622745513916016,
+          "min_singular_value": 0.0549805723130703,
+          "max_condition_number": 31.622739791870117,
           "max_arm_joint_change_rad": 0.45246021781235873,
           "passed": true
         },
@@ -178,14 +178,14 @@
       },
       "constraint_metrics": {
         "path": {
-          "min_singular_value": 0.0549805574119091,
-          "max_condition_number": 31.622745513916016,
+          "min_singular_value": 0.0549805611371994,
+          "max_condition_number": 31.622743606567383,
           "max_arm_joint_change_rad": 0.45246021781235873,
           "passed": true
         },
         "endpoint": {
-          "min_singular_value": 0.0549805648624897,
-          "max_condition_number": 31.622745513916016,
+          "min_singular_value": 0.0549805723130703,
+          "max_condition_number": 31.622739791870117,
           "max_arm_joint_change_rad": 0.45246021781235873,
           "passed": true
         },
@@ -195,19 +195,19 @@
     "place": {
       "validation": "passed",
       "reason": "",
-      "duration_s": 1.3388653681466196,
-      "cost": 0.1845193878479332,
+      "duration_s": 1.7544111851476725,
+      "cost": 0.2893652747761632,
       "cost_terms": {
         "base_distance_m": 0.0,
         "base_rotation_rad": 0.0,
-        "lift_fraction": 0.05063285103327124,
+        "lift_fraction": 0.11392415626139593,
         "active_arm_fraction": 0.0,
         "inactive_arm_fraction": 0.0,
-        "duration_s": 1.3388653681466196
+        "duration_s": 1.7544111851476725
       },
       "object_metrics": {
         "passed": true,
-        "samples": 109,
+        "samples": 145,
         "representation": "conservative cylinder bounding box"
       },
       "constraint_metrics": {

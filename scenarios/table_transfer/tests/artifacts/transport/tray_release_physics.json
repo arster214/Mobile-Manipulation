@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "final_position_m": [
+    1.200000524520874,
+    1.3200008869171143,
+    0.8199998736381531
+  ],
+  "rotation_deg": 0.0,
+  "max_position_error_m": 8.8691711419564e-07,
+  "physics_steps": 360,
+  "scope": "Environment-only release on tray; no robot, grip friction or controller tracking verification"
+}

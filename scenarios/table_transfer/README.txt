@@ -223,3 +223,12 @@ GPU复查保存的5cm抬升/搬运/放置/抽离均通过机器人碰撞检查�
 
 2026-10-26 用户明确要求排除body_base_link与l_base_link1/r_base_link1自碰撞对，双向ignore已同步正式三份配置及柱体候选；环境碰撞球保留。
 复测tests/validate_shoulder_ignore.py：固定保存抓取臂姿态，0..0.79m的791个升降采样自碰撞阳性728→0；10cm抬升1001点通过机器人碰撞检查，四段已有搬运轨迹也通过。
+
+2026-10-26 移动搬运续接
+正式511球及用户指定的肩部—柱体ignore配置下，transfer.lift_height_m恢复0.10m。
+重跑tests/test_table_transport.py，抬升1.817s、搬运9.525s（底盘2.25m）、放置1.754s、抽离3.961s均通过机器人及附着瓶子的采样检查。
+完整回放tests/view_table_transport.py：http://127.0.0.1:8101/；串联先前预抓取/深入与本轮四段轨迹，总24.714s，数据tests/artifacts/transport/full_playback.npz。
+独立yourdfpy正运动学审计tests/audit_table_transport.py：最大TCP位置差0.0106mm，旋转差0.000107rad；段间连续，瓶子刚性附着位置一致，目标在托盘内，X/Y余量87/52mm。
+审计使用已有规划位姿容差判定，原始误差完整记录；不是同一实现自比对。
+Isaac Sim环境独立释放测试tests/test_tray_release_physics.py：瓶子在目标托盘上模拟3秒，中心(1.2000005,1.3200009,0.8199999)，直立；只验证托盘支撑，不包含机器人夹持接触与闭环执行。
+当前回放中夹持/释放是任务事件假设，夹爪没有闭合物理过程；完整PhysX机器人控制、夹爪摩擦抓持与释放反馈仍待实现。

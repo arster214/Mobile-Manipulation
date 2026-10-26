@@ -92,7 +92,7 @@
     "table_name": "TargetTable"
   },
   "transfer": {
-    "lift_height_m": 0.05,
+    "lift_height_m": 0.1,
     "withdraw_distance_m": 0.15
   }
 }
