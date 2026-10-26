@@ -36,6 +36,7 @@ bottle=server.scene.add_mesh_simple('/bottle',mesh.vertices,mesh.faces,color=(23
 for i,start in enumerate(starts):
  server.scene.add_frame(f'/starts/{i}',position=(*start[:2],.03),wxyz=Rotation.from_euler('z',start[2]).as_quat(scalar_first=True),axes_length=.25,axes_radius=.01)
  server.scene.add_label(f'/starts/{i}/label',text=str(i+1),position=(0,0,.35))
+old_carry=server.gui.add_checkbox('对照：播放旧搬运轨迹',initial_value=False) if '--penalty' in sys.argv or '--maneuver' in sys.argv else None
 data={}
 path_handle=server.scene.add_line_segments('/path',points=np.zeros((1,2,3)),colors=(40,160,240),line_width=3)
 def load(_=None):
@@ -48,7 +49,7 @@ def load(_=None):
   insert=dict(np.load(folder/f'replay/{side}/approach.npz'));insert['base_poses']=np.tile(pre['base_poses'][-1],(len(insert['times']),1));parts.append(('深入',insert))
   for stage in ['lift','carry','place','withdraw']:
    p=folder/f'transport/{stage}.npz'
-   if stage=='carry' and ('--penalty' in sys.argv or '--maneuver' in sys.argv):
+   if stage=='carry' and old_carry is not None and not old_carry.value:
     p=ROOT/('tests/artifacts/carry_maneuver_scan' if '--maneuver' in sys.argv else 'tests/artifacts/carry_reverse_penalty')/folder.name/'carry.npz'
     if not p.exists():break
    if p.exists():parts.append((stage,dict(np.load(p))))
@@ -66,7 +67,7 @@ def load(_=None):
   results_path=ROOT/('tests/artifacts/carry_maneuver_scan/results.json' if '--maneuver' in sys.argv else 'tests/artifacts/carry_reverse_penalty/results.json')
   rows=json.loads(results_path.read_text()) if results_path.exists() else []
   row=next((r for r in rows if r['case']==i+1),None)
-  status='旧规则完整规划：'+status
+  status=('当前播放：旧搬运轨迹\n' if old_carry.value else '当前播放：新搬运轨迹\n')+'旧规则完整规划：'+status
   if row:
    if '--maneuver' in sys.argv:
     best=row['best']
@@ -84,6 +85,7 @@ def load(_=None):
   reasons='\n'+'\n'.join(f"{arm}: {row.get('reason','')}" for arm,row in report['arms'].items())
  data.update(times=np.array(times),qs=np.array(qs),bases=np.array(bases),objects=np.array(objects),labels=labels,names=names,z=state['base_pose'][2],status=status+reasons)
  slider.max=max(elapsed,.025);slider.value=0.
+ jump_carry.disabled='carry' not in labels
  line=np.array(bases);points=np.column_stack([line[:,:2],np.full(len(line),.035)])
  path_handle.points=np.stack([points[:-1],points[1:]],axis=1) if len(points)>1 else np.array([[points[0],points[0]+[0,0,.01]]])
  update()
@@ -100,8 +102,15 @@ pending={'load':False,'update':False}
 def request_load(_):pending['load']=True
 def request_update(_):pending['update']=True
 case.on_update(request_load);slider.on_update(request_update)
+if old_carry is not None:old_carry.on_update(request_load)
 refresh=server.gui.add_button('刷新测试结果')
 refresh.on_click(request_load)
+jump_carry=server.gui.add_button('跳到搬运开始')
+@jump_carry.on_click
+def goto_carry(_):
+ play.value=False
+ indices=[i for i,label in enumerate(data['labels']) if label=='carry']
+ if indices:slider.value=float(data['times'][indices[0]])
 @server.on_client_connect
 def connect(client):client.camera.position=(6,-6,6);client.camera.look_at=(0,0,.5)
 load();print('READY random-room replay',flush=True)

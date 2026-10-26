@@ -1,7 +1,7 @@
 """Independently audit new carry paths joined to saved adjacent task stages."""
 from pathlib import Path
 import tempfile,subprocess,json,sys
-ROOT=Path(__file__).resolve().parents[1];OUT=ROOT/'tests/artifacts/carry_maneuver_scan';OLD=ROOT/'tests/artifacts/random_room_resident'
+ROOT=Path(__file__).resolve().parents[1];OUT=ROOT/('tests/artifacts/carry_reverse_penalty' if '--penalty' in sys.argv else 'tests/artifacts/carry_maneuver_scan');OLD=ROOT/'tests/artifacts/random_room_resident'
 for folder in sorted(OUT.glob('case_*')):
  if not (folder/'carry.npz').exists():continue
  old=OLD/folder.name/'transport';side=json.loads((OLD/folder.name/'replay/result.json').read_text())['selected_arm']

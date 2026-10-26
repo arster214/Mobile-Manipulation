@@ -1,11 +1,13 @@
 """Replan saved carry endpoints with a soft carry-only reverse penalty."""
 from pathlib import Path
 import sys,json,time
+from types import SimpleNamespace
 import numpy as np,yaml,torch
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
 from planning.interfaces import RobotState,EnvironmentState,TaskTarget,Status
 from planning.arm_comparison import state_at
 from planning.model import state_vector
+from planning.selection import path_cost
 from planning.curobo_backend import CuroboPlanner
 from planning.carried_object import CarriedObject,matrix_pose
 ROOT=Path(__file__).resolve().parents[1];OLD=ROOT/'tests/artifacts/random_room_resident';OUT=ROOT/'tests/artifacts/carry_reverse_penalty'
@@ -27,11 +29,12 @@ for folder in sorted(OLD.glob('case_*')):
  goal=state_vector(end,planner.names);target=TaskTarget(planner.tcp_pose(goal[None])[0],old['object_poses'][-1],0.,tool_frame=f'{side}_grasp_tcp',target_type='carry')
  planner.plan_mobile(target,goal_configs=[goal]);torch.cuda.synchronize();started=time.perf_counter()
  plan=planner.plan_mobile(target,goal_configs=[goal]);torch.cuda.synchronize();elapsed=time.perf_counter()-started
- row={'case':int(folder.name[-2:]),'success':plan.validation_status==Status.PASSED,'warm_planning_s':elapsed,'reason':plan.reason,'old_reverse_distance_m':float(np.sum(np.maximum(-old['base_controls'][:,0],0)*np.diff(old['times']))),'path_candidates':planner.search_stats['path_candidates']}
+ old_score,_=path_cost(SimpleNamespace(positions=old['positions'],joint_names=old['joint_names'].tolist(),base_controls=old['base_controls'],times=old['times'],motion_phase='carry'),side,settings)
+ row={'old_duration_s':float(old['times'][-1]),'old_reverse_time_s':float(np.sum(np.diff(old['times'])[old['base_controls'][:,0]<0.])), 'old_cost_current_weights':old_score,'case':int(folder.name[-2:]),'success':plan.validation_status==Status.PASSED,'warm_planning_s':elapsed,'reason':plan.reason,'old_reverse_distance_m':float(np.sum(np.maximum(-old['base_controls'][:,0],0)*np.diff(old['times']))),'path_candidates':planner.search_stats['path_candidates']}
  if row['success']:
   configurations=np.column_stack([plan.base_poses,plan.positions]);tcp=planner.tcp_pose(configurations)
   object_poses=np.array([matrix_pose(t) for t in attachment.poses(tcp)])
   np.savez(OUT/folder.name/'carry.npz',joint_names=plan.joint_names,positions=plan.positions,velocities=plan.velocities,accelerations=plan.accelerations,times=plan.times,base_poses=plan.base_poses,base_controls=plan.base_controls,tcp_poses=tcp,object_poses=object_poses,motion_phase='carry')
-  row.update(duration_s=float(plan.times[-1]),min_forward_speed=float(plan.base_controls[:,0].min()),reverse_distance_m=float(np.sum(np.maximum(-plan.base_controls[:,0],0)*np.diff(plan.times))),reverse_time_s=float(np.sum(np.diff(plan.times)[plan.base_controls[:,0]<0.])),cost_terms=plan.cost_terms)
+  row.update(cost_current_weights=float(plan.cost),duration_s=float(plan.times[-1]),min_forward_speed=float(plan.base_controls[:,0].min()),reverse_distance_m=float(np.sum(np.maximum(-plan.base_controls[:,0],0)*np.diff(plan.times))),reverse_time_s=float(np.sum(np.diff(plan.times)[plan.base_controls[:,0]<0.])),cost_terms=plan.cost_terms)
  rows.append(row);(OUT/'results.json').write_text(json.dumps(rows,indent=2)+'\n');print(json.dumps(row),flush=True)
  del planner
