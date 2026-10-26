@@ -1,0 +1,1102 @@
+{
+  "constraints": {
+    "position_tolerance_m": 0.005,
+    "orientation_tolerance_rad": 0.05,
+    "interpolation_dt_s": 0.025,
+    "max_attempts": 5,
+    "num_ik_seeds": 32,
+    "collision_activation_distance_m": 0.002,
+    "base_front_half_angle_deg": 30,
+    "lift_max_m": 0.79,
+    "lift_acceleration_m_s2": 0.3,
+    "lift_jerk_m_s3": 1.0,
+    "local_correction_enabled": false,
+    "motion_mode": "simultaneous_mobile_dual_arm",
+    "base_model": "differential_drive",
+    "base_forward_axis_local": [
+      0,
+      -1,
+      0
+    ],
+    "base_max_linear_velocity_m_s": 1.5,
+    "base_max_angular_velocity_rad_s": null,
+    "base_max_linear_acceleration_m_s2": null,
+    "base_max_angular_acceleration_rad_s2": null,
+    "simulation_base_yaw_rate_rad_s": 1.0,
+    "approach_samples": 16,
+    "simulation_base_acceleration_m_s2": 1.0,
+    "simulation_base_angular_acceleration_rad_s2": 1.0,
+    "use_cuda_graph": false,
+    "arm_joint_max_change_rad": 0.8,
+    "grasp_side_half_angle_deg": 20.0,
+    "jacobian_min_singular_value": 0.005,
+    "jacobian_max_condition_number": 100.0,
+    "path_cost_weights": {
+      "base_distance_m": 1.0,
+      "base_rotation_rad": 1.0,
+      "lift_fraction": 1.0,
+      "active_arm_fraction": 1.0,
+      "inactive_arm_fraction": 2.0,
+      "duration_s": 0.1
+    },
+    "jacobian_constraint_scope": "new_ik_endpoints_and_approach_samples"
+  },
+  "jacobian": "selected arm geometric TCP Jacobian, 6x7, linear m/rad and angular rad/rad; world-aligned",
+  "scope": "sampled numerical planning, no PhysX or hardware execution",
+  "arms": {
+    "l": {
+      "pregrasp_status": "failed",
+      "reason": "l-arm retreat IK failed at 40.0%; reject this grasp candidate",
+      "planning_time_s": 16.30886050600384,
+      "search_stats": {
+        "motion_scope": "mobile",
+        "grasp_ik_success": 142,
+        "grasp_constraints_pass": 27,
+        "retreat_pass": 8,
+        "connection_pass": 0,
+        "height_candidates": [
+          {
+            "candidate_rank": 0,
+            "stats": {
+              "motion_scope": "mobile",
+              "grasp_ik_success": 142,
+              "grasp_constraints_pass": 27,
+              "retreat_pass": 8,
+              "connection_pass": 0
+            },
+            "reason": "l-arm retreat IK failed at 40.0%; reject this grasp candidate"
+          },
+          {
+            "candidate_rank": 1,
+            "stats": {
+              "motion_scope": "mobile",
+              "grasp_ik_success": 142,
+              "grasp_constraints_pass": 26,
+              "retreat_pass": 8,
+              "connection_pass": 0
+            },
+            "reason": "l-arm retreat IK failed at 40.0%; reject this grasp candidate"
+          },
+          {
+            "candidate_rank": 2,
+            "stats": {
+              "motion_scope": "mobile",
+              "grasp_ik_success": 145,
+              "grasp_constraints_pass": 29,
+              "retreat_pass": 10,
+              "connection_pass": 0
+            },
+            "reason": "l-arm retreat IK failed at 40.0%; reject this grasp candidate"
+          },
+          {
+            "candidate_rank": 3,
+            "stats": {
+              "motion_scope": "mobile",
+              "grasp_ik_success": 0,
+              "grasp_constraints_pass": 0,
+              "retreat_pass": 0,
+              "connection_pass": 0
+            },
+            "reason": "No grasp IK satisfying all constraints"
+          },
+          {
+            "candidate_rank": 4,
+            "stats": {
+              "motion_scope": "mobile",
+              "grasp_ik_success": 146,
+              "grasp_constraints_pass": 31,
+              "retreat_pass": 11,
+              "connection_pass": 0
+            },
+            "reason": "l-arm retreat IK failed at 40.0%; reject this grasp candidate"
+          }
+        ],
+        "priority_trials": [
+          {
+            "scope": "arm_only",
+            "arms": {
+              "l": {
+                "motion_scope": "arm_only",
+                "grasp_ik_success": 0,
+                "grasp_constraints_pass": 0,
+                "retreat_pass": 0,
+                "connection_pass": 0,
+                "height_candidates": [
+                  {
+                    "candidate_rank": 0,
+                    "stats": {
+                      "motion_scope": "arm_only",
+                      "grasp_ik_success": 0,
+                      "grasp_constraints_pass": 0,
+                      "retreat_pass": 0,
+                      "connection_pass": 0
+                    },
+                    "reason": "Fixed base heading violates grasp-arm side constraint"
+                  },
+                  {
+                    "candidate_rank": 1,
+                    "stats": {
+                      "motion_scope": "arm_only",
+                      "grasp_ik_success": 0,
+                      "grasp_constraints_pass": 0,
+                      "retreat_pass": 0,
+                      "connection_pass": 0
+                    },
+                    "reason": "Fixed base heading violates grasp-arm side constraint"
+                  },
+                  {
+                    "candidate_rank": 2,
+                    "stats": {
+                      "motion_scope": "arm_only",
+                      "grasp_ik_success": 0,
+                      "grasp_constraints_pass": 0,
+                      "retreat_pass": 0,
+                      "connection_pass": 0
+                    },
+                    "reason": "Fixed base heading violates grasp-arm side constraint"
+                  },
+                  {
+                    "candidate_rank": 3,
+                    "stats": {
+                      "motion_scope": "arm_only",
+                      "grasp_ik_success": 0,
+                      "grasp_constraints_pass": 0,
+                      "retreat_pass": 0,
+                      "connection_pass": 0
+                    },
+                    "reason": "Fixed base heading violates grasp-arm side constraint"
+                  },
+                  {
+                    "candidate_rank": 4,
+                    "stats": {
+                      "motion_scope": "arm_only",
+                      "grasp_ik_success": 0,
+                      "grasp_constraints_pass": 0,
+                      "retreat_pass": 0,
+                      "connection_pass": 0
+                    },
+                    "reason": "Fixed base heading violates grasp-arm side constraint"
+                  }
+                ]
+              },
+              "r": {
+                "motion_scope": "arm_only",
+                "grasp_ik_success": 0,
+                "grasp_constraints_pass": 0,
+                "retreat_pass": 0,
+                "connection_pass": 0,
+                "height_candidates": [
+                  {
+                    "candidate_rank": 0,
+                    "stats": {
+                      "motion_scope": "arm_only",
+                      "grasp_ik_success": 0,
+                      "grasp_constraints_pass": 0,
+                      "retreat_pass": 0,
+                      "connection_pass": 0
+                    },
+                    "reason": "Fixed base heading violates grasp-arm side constraint"
+                  },
+                  {
+                    "candidate_rank": 1,
+                    "stats": {
+                      "motion_scope": "arm_only",
+                      "grasp_ik_success": 0,
+                      "grasp_constraints_pass": 0,
+                      "retreat_pass": 0,
+                      "connection_pass": 0
+                    },
+                    "reason": "Fixed base heading violates grasp-arm side constraint"
+                  },
+                  {
+                    "candidate_rank": 2,
+                    "stats": {
+                      "motion_scope": "arm_only",
+                      "grasp_ik_success": 0,
+                      "grasp_constraints_pass": 0,
+                      "retreat_pass": 0,
+                      "connection_pass": 0
+                    },
+                    "reason": "Fixed base heading violates grasp-arm side constraint"
+                  },
+                  {
+                    "candidate_rank": 3,
+                    "stats": {
+                      "motion_scope": "arm_only",
+                      "grasp_ik_success": 0,
+                      "grasp_constraints_pass": 0,
+                      "retreat_pass": 0,
+                      "connection_pass": 0
+                    },
+                    "reason": "Fixed base heading violates grasp-arm side constraint"
+                  },
+                  {
+                    "candidate_rank": 4,
+                    "stats": {
+                      "motion_scope": "arm_only",
+                      "grasp_ik_success": 0,
+                      "grasp_constraints_pass": 0,
+                      "retreat_pass": 0,
+                      "connection_pass": 0
+                    },
+                    "reason": "Fixed base heading violates grasp-arm side constraint"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "scope": "arm_lift",
+            "arms": {
+              "l": {
+                "motion_scope": "arm_lift",
+                "grasp_ik_success": 0,
+                "grasp_constraints_pass": 0,
+                "retreat_pass": 0,
+                "connection_pass": 0,
+                "height_candidates": [
+                  {
+                    "candidate_rank": 0,
+                    "stats": {
+                      "motion_scope": "arm_lift",
+                      "grasp_ik_success": 0,
+                      "grasp_constraints_pass": 0,
+                      "retreat_pass": 0,
+                      "connection_pass": 0
+                    },
+                    "reason": "Fixed base heading violates grasp-arm side constraint"
+                  },
+                  {
+                    "candidate_rank": 1,
+                    "stats": {
+                      "motion_scope": "arm_lift",
+                      "grasp_ik_success": 0,
+                      "grasp_constraints_pass": 0,
+                      "retreat_pass": 0,
+                      "connection_pass": 0
+                    },
+                    "reason": "Fixed base heading violates grasp-arm side constraint"
+                  },
+                  {
+                    "candidate_rank": 2,
+                    "stats": {
+                      "motion_scope": "arm_lift",
+                      "grasp_ik_success": 0,
+                      "grasp_constraints_pass": 0,
+                      "retreat_pass": 0,
+                      "connection_pass": 0
+                    },
+                    "reason": "Fixed base heading violates grasp-arm side constraint"
+                  },
+                  {
+                    "candidate_rank": 3,
+                    "stats": {
+                      "motion_scope": "arm_lift",
+                      "grasp_ik_success": 0,
+                      "grasp_constraints_pass": 0,
+                      "retreat_pass": 0,
+                      "connection_pass": 0
+                    },
+                    "reason": "Fixed base heading violates grasp-arm side constraint"
+                  },
+                  {
+                    "candidate_rank": 4,
+                    "stats": {
+                      "motion_scope": "arm_lift",
+                      "grasp_ik_success": 0,
+                      "grasp_constraints_pass": 0,
+                      "retreat_pass": 0,
+                      "connection_pass": 0
+                    },
+                    "reason": "Fixed base heading violates grasp-arm side constraint"
+                  }
+                ]
+              },
+              "r": {
+                "motion_scope": "arm_lift",
+                "grasp_ik_success": 0,
+                "grasp_constraints_pass": 0,
+                "retreat_pass": 0,
+                "connection_pass": 0,
+                "height_candidates": [
+                  {
+                    "candidate_rank": 0,
+                    "stats": {
+                      "motion_scope": "arm_lift",
+                      "grasp_ik_success": 0,
+                      "grasp_constraints_pass": 0,
+                      "retreat_pass": 0,
+                      "connection_pass": 0
+                    },
+                    "reason": "Fixed base heading violates grasp-arm side constraint"
+                  },
+                  {
+                    "candidate_rank": 1,
+                    "stats": {
+                      "motion_scope": "arm_lift",
+                      "grasp_ik_success": 0,
+                      "grasp_constraints_pass": 0,
+                      "retreat_pass": 0,
+                      "connection_pass": 0
+                    },
+                    "reason": "Fixed base heading violates grasp-arm side constraint"
+                  },
+                  {
+                    "candidate_rank": 2,
+                    "stats": {
+                      "motion_scope": "arm_lift",
+                      "grasp_ik_success": 0,
+                      "grasp_constraints_pass": 0,
+                      "retreat_pass": 0,
+                      "connection_pass": 0
+                    },
+                    "reason": "Fixed base heading violates grasp-arm side constraint"
+                  },
+                  {
+                    "candidate_rank": 3,
+                    "stats": {
+                      "motion_scope": "arm_lift",
+                      "grasp_ik_success": 0,
+                      "grasp_constraints_pass": 0,
+                      "retreat_pass": 0,
+                      "connection_pass": 0
+                    },
+                    "reason": "Fixed base heading violates grasp-arm side constraint"
+                  },
+                  {
+                    "candidate_rank": 4,
+                    "stats": {
+                      "motion_scope": "arm_lift",
+                      "grasp_ik_success": 0,
+                      "grasp_constraints_pass": 0,
+                      "retreat_pass": 0,
+                      "connection_pass": 0
+                    },
+                    "reason": "Fixed base heading violates grasp-arm side constraint"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "scope": "mobile",
+            "arms": {
+              "l": {
+                "motion_scope": "mobile",
+                "grasp_ik_success": 142,
+                "grasp_constraints_pass": 27,
+                "retreat_pass": 8,
+                "connection_pass": 0,
+                "height_candidates": [
+                  {
+                    "candidate_rank": 0,
+                    "stats": {
+                      "motion_scope": "mobile",
+                      "grasp_ik_success": 142,
+                      "grasp_constraints_pass": 27,
+                      "retreat_pass": 8,
+                      "connection_pass": 0
+                    },
+                    "reason": "l-arm retreat IK failed at 40.0%; reject this grasp candidate"
+                  },
+                  {
+                    "candidate_rank": 1,
+                    "stats": {
+                      "motion_scope": "mobile",
+                      "grasp_ik_success": 142,
+                      "grasp_constraints_pass": 26,
+                      "retreat_pass": 8,
+                      "connection_pass": 0
+                    },
+                    "reason": "l-arm retreat IK failed at 40.0%; reject this grasp candidate"
+                  },
+                  {
+                    "candidate_rank": 2,
+                    "stats": {
+                      "motion_scope": "mobile",
+                      "grasp_ik_success": 145,
+                      "grasp_constraints_pass": 29,
+                      "retreat_pass": 10,
+                      "connection_pass": 0
+                    },
+                    "reason": "l-arm retreat IK failed at 40.0%; reject this grasp candidate"
+                  },
+                  {
+                    "candidate_rank": 3,
+                    "stats": {
+                      "motion_scope": "mobile",
+                      "grasp_ik_success": 0,
+                      "grasp_constraints_pass": 0,
+                      "retreat_pass": 0,
+                      "connection_pass": 0
+                    },
+                    "reason": "No grasp IK satisfying all constraints"
+                  },
+                  {
+                    "candidate_rank": 4,
+                    "stats": {
+                      "motion_scope": "mobile",
+                      "grasp_ik_success": 146,
+                      "grasp_constraints_pass": 31,
+                      "retreat_pass": 11,
+                      "connection_pass": 0
+                    },
+                    "reason": "l-arm retreat IK failed at 40.0%; reject this grasp candidate"
+                  }
+                ]
+              },
+              "r": {
+                "motion_scope": "mobile",
+                "grasp_ik_success": 115,
+                "grasp_constraints_pass": 20,
+                "retreat_pass": 8,
+                "connection_pass": 0,
+                "height_candidates": [
+                  {
+                    "candidate_rank": 0,
+                    "stats": {
+                      "motion_scope": "mobile",
+                      "grasp_ik_success": 115,
+                      "grasp_constraints_pass": 20,
+                      "retreat_pass": 8,
+                      "connection_pass": 0
+                    },
+                    "reason": "base=True, joint_motion=True, collisions=False, posture={'min_singular_value': 0.0038325644563883543, 'max_condition_number': 454.3437194824219, 'max_arm_joint_change_rad': 0.7984000523554449, 'passed': False}, carried_object={'passed': True}"
+                  },
+                  {
+                    "candidate_rank": 1,
+                    "stats": {
+                      "motion_scope": "mobile",
+                      "grasp_ik_success": 102,
+                      "grasp_constraints_pass": 19,
+                      "retreat_pass": 7,
+                      "connection_pass": 0
+                    },
+                    "reason": "base=True, joint_motion=True, collisions=False, posture={'min_singular_value': 0.003834302769973874, 'max_condition_number': 454.13818359375, 'max_arm_joint_change_rad': 0.7984000523554449, 'passed': False}, carried_object={'passed': True}"
+                  },
+                  {
+                    "candidate_rank": 2,
+                    "stats": {
+                      "motion_scope": "mobile",
+                      "grasp_ik_success": 127,
+                      "grasp_constraints_pass": 20,
+                      "retreat_pass": 8,
+                      "connection_pass": 0
+                    },
+                    "reason": "base=True, joint_motion=True, collisions=False, posture={'min_singular_value': 0.003830771893262863, 'max_condition_number': 454.5559997558594, 'max_arm_joint_change_rad': 0.7984000523554449, 'passed': False}, carried_object={'passed': True}"
+                  },
+                  {
+                    "candidate_rank": 3,
+                    "stats": {
+                      "motion_scope": "mobile",
+                      "grasp_ik_success": 0,
+                      "grasp_constraints_pass": 0,
+                      "retreat_pass": 0,
+                      "connection_pass": 0
+                    },
+                    "reason": "No grasp IK satisfying all constraints"
+                  },
+                  {
+                    "candidate_rank": 4,
+                    "stats": {
+                      "motion_scope": "mobile",
+                      "grasp_ik_success": 134,
+                      "grasp_constraints_pass": 21,
+                      "retreat_pass": 8,
+                      "connection_pass": 0
+                    },
+                    "reason": "base=True, joint_motion=True, collisions=False, posture={'min_singular_value': 0.0038288412615656853, 'max_condition_number': 454.78485107421875, 'max_arm_joint_change_rad': 0.7984014828669195, 'passed': False}, carried_object={'passed': True}"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "tool_frame": "l_grasp_tcp",
+      "target_pose": [
+        -1.05,
+        1.1700000000000002,
+        0.81,
+        0.49999999999999994,
+        -0.49999999999999994,
+        0.5000000000000001,
+        0.5000000000000001
+      ],
+      "grasp_pose": [
+        -1.05,
+        1.32,
+        0.81,
+        0.49999999999999994,
+        -0.49999999999999994,
+        0.5000000000000001,
+        0.5000000000000001
+      ],
+      "eligible": false,
+      "cost": null,
+      "pregrasp_cost": null,
+      "approach_reason": "l-arm retreat IK failed at 40.0%; reject this grasp candidate",
+      "approach_status": "failed"
+    },
+    "r": {
+      "pregrasp_status": "failed",
+      "reason": "base=True, joint_motion=True, collisions=False, posture={'min_singular_value': 0.0038325644563883543, 'max_condition_number': 454.3437194824219, 'max_arm_joint_change_rad': 0.7984000523554449, 'passed': False}, carried_object={'passed': True}",
+      "planning_time_s": 13.903379964998749,
+      "search_stats": {
+        "motion_scope": "mobile",
+        "grasp_ik_success": 115,
+        "grasp_constraints_pass": 20,
+        "retreat_pass": 8,
+        "connection_pass": 0,
+        "height_candidates": [
+          {
+            "candidate_rank": 0,
+            "stats": {
+              "motion_scope": "mobile",
+              "grasp_ik_success": 115,
+              "grasp_constraints_pass": 20,
+              "retreat_pass": 8,
+              "connection_pass": 0
+            },
+            "reason": "base=True, joint_motion=True, collisions=False, posture={'min_singular_value': 0.0038325644563883543, 'max_condition_number': 454.3437194824219, 'max_arm_joint_change_rad': 0.7984000523554449, 'passed': False}, carried_object={'passed': True}"
+          },
+          {
+            "candidate_rank": 1,
+            "stats": {
+              "motion_scope": "mobile",
+              "grasp_ik_success": 102,
+              "grasp_constraints_pass": 19,
+              "retreat_pass": 7,
+              "connection_pass": 0
+            },
+            "reason": "base=True, joint_motion=True, collisions=False, posture={'min_singular_value': 0.003834302769973874, 'max_condition_number': 454.13818359375, 'max_arm_joint_change_rad': 0.7984000523554449, 'passed': False}, carried_object={'passed': True}"
+          },
+          {
+            "candidate_rank": 2,
+            "stats": {
+              "motion_scope": "mobile",
+              "grasp_ik_success": 127,
+              "grasp_constraints_pass": 20,
+              "retreat_pass": 8,
+              "connection_pass": 0
+            },
+            "reason": "base=True, joint_motion=True, collisions=False, posture={'min_singular_value': 0.003830771893262863, 'max_condition_number': 454.5559997558594, 'max_arm_joint_change_rad': 0.7984000523554449, 'passed': False}, carried_object={'passed': True}"
+          },
+          {
+            "candidate_rank": 3,
+            "stats": {
+              "motion_scope": "mobile",
+              "grasp_ik_success": 0,
+              "grasp_constraints_pass": 0,
+              "retreat_pass": 0,
+              "connection_pass": 0
+            },
+            "reason": "No grasp IK satisfying all constraints"
+          },
+          {
+            "candidate_rank": 4,
+            "stats": {
+              "motion_scope": "mobile",
+              "grasp_ik_success": 134,
+              "grasp_constraints_pass": 21,
+              "retreat_pass": 8,
+              "connection_pass": 0
+            },
+            "reason": "base=True, joint_motion=True, collisions=False, posture={'min_singular_value': 0.0038288412615656853, 'max_condition_number': 454.78485107421875, 'max_arm_joint_change_rad': 0.7984014828669195, 'passed': False}, carried_object={'passed': True}"
+          }
+        ],
+        "priority_trials": [
+          {
+            "scope": "arm_only",
+            "arms": {
+              "l": {
+                "motion_scope": "arm_only",
+                "grasp_ik_success": 0,
+                "grasp_constraints_pass": 0,
+                "retreat_pass": 0,
+                "connection_pass": 0,
+                "height_candidates": [
+                  {
+                    "candidate_rank": 0,
+                    "stats": {
+                      "motion_scope": "arm_only",
+                      "grasp_ik_success": 0,
+                      "grasp_constraints_pass": 0,
+                      "retreat_pass": 0,
+                      "connection_pass": 0
+                    },
+                    "reason": "Fixed base heading violates grasp-arm side constraint"
+                  },
+                  {
+                    "candidate_rank": 1,
+                    "stats": {
+                      "motion_scope": "arm_only",
+                      "grasp_ik_success": 0,
+                      "grasp_constraints_pass": 0,
+                      "retreat_pass": 0,
+                      "connection_pass": 0
+                    },
+                    "reason": "Fixed base heading violates grasp-arm side constraint"
+                  },
+                  {
+                    "candidate_rank": 2,
+                    "stats": {
+                      "motion_scope": "arm_only",
+                      "grasp_ik_success": 0,
+                      "grasp_constraints_pass": 0,
+                      "retreat_pass": 0,
+                      "connection_pass": 0
+                    },
+                    "reason": "Fixed base heading violates grasp-arm side constraint"
+                  },
+                  {
+                    "candidate_rank": 3,
+                    "stats": {
+                      "motion_scope": "arm_only",
+                      "grasp_ik_success": 0,
+                      "grasp_constraints_pass": 0,
+                      "retreat_pass": 0,
+                      "connection_pass": 0
+                    },
+                    "reason": "Fixed base heading violates grasp-arm side constraint"
+                  },
+                  {
+                    "candidate_rank": 4,
+                    "stats": {
+                      "motion_scope": "arm_only",
+                      "grasp_ik_success": 0,
+                      "grasp_constraints_pass": 0,
+                      "retreat_pass": 0,
+                      "connection_pass": 0
+                    },
+                    "reason": "Fixed base heading violates grasp-arm side constraint"
+                  }
+                ]
+              },
+              "r": {
+                "motion_scope": "arm_only",
+                "grasp_ik_success": 0,
+                "grasp_constraints_pass": 0,
+                "retreat_pass": 0,
+                "connection_pass": 0,
+                "height_candidates": [
+                  {
+                    "candidate_rank": 0,
+                    "stats": {
+                      "motion_scope": "arm_only",
+                      "grasp_ik_success": 0,
+                      "grasp_constraints_pass": 0,
+                      "retreat_pass": 0,
+                      "connection_pass": 0
+                    },
+                    "reason": "Fixed base heading violates grasp-arm side constraint"
+                  },
+                  {
+                    "candidate_rank": 1,
+                    "stats": {
+                      "motion_scope": "arm_only",
+                      "grasp_ik_success": 0,
+                      "grasp_constraints_pass": 0,
+                      "retreat_pass": 0,
+                      "connection_pass": 0
+                    },
+                    "reason": "Fixed base heading violates grasp-arm side constraint"
+                  },
+                  {
+                    "candidate_rank": 2,
+                    "stats": {
+                      "motion_scope": "arm_only",
+                      "grasp_ik_success": 0,
+                      "grasp_constraints_pass": 0,
+                      "retreat_pass": 0,
+                      "connection_pass": 0
+                    },
+                    "reason": "Fixed base heading violates grasp-arm side constraint"
+                  },
+                  {
+                    "candidate_rank": 3,
+                    "stats": {
+                      "motion_scope": "arm_only",
+                      "grasp_ik_success": 0,
+                      "grasp_constraints_pass": 0,
+                      "retreat_pass": 0,
+                      "connection_pass": 0
+                    },
+                    "reason": "Fixed base heading violates grasp-arm side constraint"
+                  },
+                  {
+                    "candidate_rank": 4,
+                    "stats": {
+                      "motion_scope": "arm_only",
+                      "grasp_ik_success": 0,
+                      "grasp_constraints_pass": 0,
+                      "retreat_pass": 0,
+                      "connection_pass": 0
+                    },
+                    "reason": "Fixed base heading violates grasp-arm side constraint"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "scope": "arm_lift",
+            "arms": {
+              "l": {
+                "motion_scope": "arm_lift",
+                "grasp_ik_success": 0,
+                "grasp_constraints_pass": 0,
+                "retreat_pass": 0,
+                "connection_pass": 0,
+                "height_candidates": [
+                  {
+                    "candidate_rank": 0,
+                    "stats": {
+                      "motion_scope": "arm_lift",
+                      "grasp_ik_success": 0,
+                      "grasp_constraints_pass": 0,
+                      "retreat_pass": 0,
+                      "connection_pass": 0
+                    },
+                    "reason": "Fixed base heading violates grasp-arm side constraint"
+                  },
+                  {
+                    "candidate_rank": 1,
+                    "stats": {
+                      "motion_scope": "arm_lift",
+                      "grasp_ik_success": 0,
+                      "grasp_constraints_pass": 0,
+                      "retreat_pass": 0,
+                      "connection_pass": 0
+                    },
+                    "reason": "Fixed base heading violates grasp-arm side constraint"
+                  },
+                  {
+                    "candidate_rank": 2,
+                    "stats": {
+                      "motion_scope": "arm_lift",
+                      "grasp_ik_success": 0,
+                      "grasp_constraints_pass": 0,
+                      "retreat_pass": 0,
+                      "connection_pass": 0
+                    },
+                    "reason": "Fixed base heading violates grasp-arm side constraint"
+                  },
+                  {
+                    "candidate_rank": 3,
+                    "stats": {
+                      "motion_scope": "arm_lift",
+                      "grasp_ik_success": 0,
+                      "grasp_constraints_pass": 0,
+                      "retreat_pass": 0,
+                      "connection_pass": 0
+                    },
+                    "reason": "Fixed base heading violates grasp-arm side constraint"
+                  },
+                  {
+                    "candidate_rank": 4,
+                    "stats": {
+                      "motion_scope": "arm_lift",
+                      "grasp_ik_success": 0,
+                      "grasp_constraints_pass": 0,
+                      "retreat_pass": 0,
+                      "connection_pass": 0
+                    },
+                    "reason": "Fixed base heading violates grasp-arm side constraint"
+                  }
+                ]
+              },
+              "r": {
+                "motion_scope": "arm_lift",
+                "grasp_ik_success": 0,
+                "grasp_constraints_pass": 0,
+                "retreat_pass": 0,
+                "connection_pass": 0,
+                "height_candidates": [
+                  {
+                    "candidate_rank": 0,
+                    "stats": {
+                      "motion_scope": "arm_lift",
+                      "grasp_ik_success": 0,
+                      "grasp_constraints_pass": 0,
+                      "retreat_pass": 0,
+                      "connection_pass": 0
+                    },
+                    "reason": "Fixed base heading violates grasp-arm side constraint"
+                  },
+                  {
+                    "candidate_rank": 1,
+                    "stats": {
+                      "motion_scope": "arm_lift",
+                      "grasp_ik_success": 0,
+                      "grasp_constraints_pass": 0,
+                      "retreat_pass": 0,
+                      "connection_pass": 0
+                    },
+                    "reason": "Fixed base heading violates grasp-arm side constraint"
+                  },
+                  {
+                    "candidate_rank": 2,
+                    "stats": {
+                      "motion_scope": "arm_lift",
+                      "grasp_ik_success": 0,
+                      "grasp_constraints_pass": 0,
+                      "retreat_pass": 0,
+                      "connection_pass": 0
+                    },
+                    "reason": "Fixed base heading violates grasp-arm side constraint"
+                  },
+                  {
+                    "candidate_rank": 3,
+                    "stats": {
+                      "motion_scope": "arm_lift",
+                      "grasp_ik_success": 0,
+                      "grasp_constraints_pass": 0,
+                      "retreat_pass": 0,
+                      "connection_pass": 0
+                    },
+                    "reason": "Fixed base heading violates grasp-arm side constraint"
+                  },
+                  {
+                    "candidate_rank": 4,
+                    "stats": {
+                      "motion_scope": "arm_lift",
+                      "grasp_ik_success": 0,
+                      "grasp_constraints_pass": 0,
+                      "retreat_pass": 0,
+                      "connection_pass": 0
+                    },
+                    "reason": "Fixed base heading violates grasp-arm side constraint"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "scope": "mobile",
+            "arms": {
+              "l": {
+                "motion_scope": "mobile",
+                "grasp_ik_success": 142,
+                "grasp_constraints_pass": 27,
+                "retreat_pass": 8,
+                "connection_pass": 0,
+                "height_candidates": [
+                  {
+                    "candidate_rank": 0,
+                    "stats": {
+                      "motion_scope": "mobile",
+                      "grasp_ik_success": 142,
+                      "grasp_constraints_pass": 27,
+                      "retreat_pass": 8,
+                      "connection_pass": 0
+                    },
+                    "reason": "l-arm retreat IK failed at 40.0%; reject this grasp candidate"
+                  },
+                  {
+                    "candidate_rank": 1,
+                    "stats": {
+                      "motion_scope": "mobile",
+                      "grasp_ik_success": 142,
+                      "grasp_constraints_pass": 26,
+                      "retreat_pass": 8,
+                      "connection_pass": 0
+                    },
+                    "reason": "l-arm retreat IK failed at 40.0%; reject this grasp candidate"
+                  },
+                  {
+                    "candidate_rank": 2,
+                    "stats": {
+                      "motion_scope": "mobile",
+                      "grasp_ik_success": 145,
+                      "grasp_constraints_pass": 29,
+                      "retreat_pass": 10,
+                      "connection_pass": 0
+                    },
+                    "reason": "l-arm retreat IK failed at 40.0%; reject this grasp candidate"
+                  },
+                  {
+                    "candidate_rank": 3,
+                    "stats": {
+                      "motion_scope": "mobile",
+                      "grasp_ik_success": 0,
+                      "grasp_constraints_pass": 0,
+                      "retreat_pass": 0,
+                      "connection_pass": 0
+                    },
+                    "reason": "No grasp IK satisfying all constraints"
+                  },
+                  {
+                    "candidate_rank": 4,
+                    "stats": {
+                      "motion_scope": "mobile",
+                      "grasp_ik_success": 146,
+                      "grasp_constraints_pass": 31,
+                      "retreat_pass": 11,
+                      "connection_pass": 0
+                    },
+                    "reason": "l-arm retreat IK failed at 40.0%; reject this grasp candidate"
+                  }
+                ]
+              },
+              "r": {
+                "motion_scope": "mobile",
+                "grasp_ik_success": 115,
+                "grasp_constraints_pass": 20,
+                "retreat_pass": 8,
+                "connection_pass": 0,
+                "height_candidates": [
+                  {
+                    "candidate_rank": 0,
+                    "stats": {
+                      "motion_scope": "mobile",
+                      "grasp_ik_success": 115,
+                      "grasp_constraints_pass": 20,
+                      "retreat_pass": 8,
+                      "connection_pass": 0
+                    },
+                    "reason": "base=True, joint_motion=True, collisions=False, posture={'min_singular_value': 0.0038325644563883543, 'max_condition_number': 454.3437194824219, 'max_arm_joint_change_rad': 0.7984000523554449, 'passed': False}, carried_object={'passed': True}"
+                  },
+                  {
+                    "candidate_rank": 1,
+                    "stats": {
+                      "motion_scope": "mobile",
+                      "grasp_ik_success": 102,
+                      "grasp_constraints_pass": 19,
+                      "retreat_pass": 7,
+                      "connection_pass": 0
+                    },
+                    "reason": "base=True, joint_motion=True, collisions=False, posture={'min_singular_value': 0.003834302769973874, 'max_condition_number': 454.13818359375, 'max_arm_joint_change_rad': 0.7984000523554449, 'passed': False}, carried_object={'passed': True}"
+                  },
+                  {
+                    "candidate_rank": 2,
+                    "stats": {
+                      "motion_scope": "mobile",
+                      "grasp_ik_success": 127,
+                      "grasp_constraints_pass": 20,
+                      "retreat_pass": 8,
+                      "connection_pass": 0
+                    },
+                    "reason": "base=True, joint_motion=True, collisions=False, posture={'min_singular_value': 0.003830771893262863, 'max_condition_number': 454.5559997558594, 'max_arm_joint_change_rad': 0.7984000523554449, 'passed': False}, carried_object={'passed': True}"
+                  },
+                  {
+                    "candidate_rank": 3,
+                    "stats": {
+                      "motion_scope": "mobile",
+                      "grasp_ik_success": 0,
+                      "grasp_constraints_pass": 0,
+                      "retreat_pass": 0,
+                      "connection_pass": 0
+                    },
+                    "reason": "No grasp IK satisfying all constraints"
+                  },
+                  {
+                    "candidate_rank": 4,
+                    "stats": {
+                      "motion_scope": "mobile",
+                      "grasp_ik_success": 134,
+                      "grasp_constraints_pass": 21,
+                      "retreat_pass": 8,
+                      "connection_pass": 0
+                    },
+                    "reason": "base=True, joint_motion=True, collisions=False, posture={'min_singular_value': 0.0038288412615656853, 'max_condition_number': 454.78485107421875, 'max_arm_joint_change_rad': 0.7984014828669195, 'passed': False}, carried_object={'passed': True}"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "tool_frame": "r_grasp_tcp",
+      "target_pose": [
+        -1.05,
+        1.1700000000000002,
+        0.81,
+        0.49999999999999994,
+        -0.49999999999999994,
+        0.5000000000000001,
+        0.5000000000000001
+      ],
+      "grasp_pose": [
+        -1.05,
+        1.32,
+        0.81,
+        0.49999999999999994,
+        -0.49999999999999994,
+        0.5000000000000001,
+        0.5000000000000001
+      ],
+      "eligible": false,
+      "cost": null,
+      "pregrasp_cost": null,
+      "approach_reason": "base=True, joint_motion=True, collisions=False, posture={'min_singular_value': 0.0038325644563883543, 'max_condition_number': 454.3437194824219, 'max_arm_joint_change_rad': 0.7984000523554449, 'passed': False}, carried_object={'passed': True}",
+      "approach_status": "failed"
+    }
+  },
+  "selected_arm": null,
+  "preferred_pregrasp_arm": null,
+  "start_state": {
+    "joint_names": [
+      "l_joint1",
+      "l_joint2",
+      "l_joint3",
+      "l_joint4",
+      "l_joint5",
+      "l_joint6",
+      "l_joint7",
+      "r_joint1",
+      "r_joint2",
+      "r_joint3",
+      "r_joint4",
+      "r_joint5",
+      "r_joint6",
+      "r_joint7",
+      "platform_joint",
+      "head_joint1",
+      "head_joint2",
+      "l_Joint_finger1",
+      "r_Joint_finger1"
+    ],
+    "positions": [
+      2.862366499497238,
+      1.6963090646149952,
+      -1.605454245043555,
+      1.2938319799016864,
+      1.5691770386130677,
+      -0.0011763599735028268,
+      -2.222804969840793,
+      -2.8622861935756982,
+      -1.6960935688224021,
+      -1.533766857816064,
+      1.2938326754442206,
+      -1.6121790989181415,
+      0.0011637691047781463,
+      -0.8746416800394974,
+      0.5,
+      0.0,
+      0.0,
+      0.0325,
+      0.0325
+    ],
+    "base_pose": [
+      1.1034202451837958,
+      1.984241603977222,
+      0.24734551877975464,
+      0.9998924296372859,
+      0.0,
+      0.0,
+      0.014667281753795872
+    ]
+  },
+  "object_pose": [
+    -1.05,
+    1.32,
+    0.81,
+    1.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "selection_reason": "Pregrasp preference is provisional: no complete locked-base approach passed",
+  "wall_time_s": 125.95406200899743
+}

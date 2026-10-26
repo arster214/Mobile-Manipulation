@@ -27,6 +27,7 @@ class CuroboPlanner:
         self.robot_source = robot_source
         self.runtime_directory = runtime_directory
         self.extra_validation = None
+        self.motion_phase = 'approach'
         self.search_stats = {}
         self.arm = arm
         self.reference_state = state if reference_state is None else reference_state
@@ -182,7 +183,7 @@ class CuroboPlanner:
         posture = self.posture_metrics(np.vstack([q, middle]))
         endpoint_posture = self.posture_metrics(q[-1:])
         posture_ok = posture['passed'] if self.arm_only else (endpoint_posture['passed'] and posture['max_arm_joint_change_rad'] <= self.settings['arm_joint_max_change_rad']+1e-7)
-        plan.constraint_metrics = {'path': posture, 'endpoint': endpoint_posture,
+        plan.constraint_metrics = {'base': base, 'path': posture, 'endpoint': endpoint_posture,
             'singularity_scope': 'all approach samples' if self.arm_only else 'IK endpoint; moving path reported separately'}
         extra = self.extra_validation(np.vstack([q,middle])) if self.extra_validation is not None else {'passed':True}
         plan.object_metrics = extra
@@ -231,6 +232,7 @@ class CuroboPlanner:
                                              target.version, route, timing, reverse)
                             plan.ik_status = Status.PASSED
                             plan.planning_status = Status.PASSED
+                            plan.motion_phase = self.motion_phase
                             score, terms = path_cost(plan, self.arm, self.settings)
                             options.append((score, terms, plan))
         # Cost ordering covers all searched IK solutions/routes, not first-generated feasibility.

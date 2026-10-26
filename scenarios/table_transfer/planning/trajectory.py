@@ -20,15 +20,29 @@ def wrapped(angle: float | np.ndarray) -> float | np.ndarray:
 
 def candidate(start: RobotState, goal: np.ndarray, limits: dict, settings: dict,
               environment_version: int, target_version: int,
-              route: str = 'direct', upper_timing: str = 'together', reverse: bool = False) -> PlannedTrajectory:
+              route: str = 'direct', upper_timing: str = 'together', reverse: bool = False,
+              backoff_m: tuple[float, float] = (0., 0.)) -> PlannedTrajectory:
     """Generate stop-to-stop synchronized motion, with three route seeds."""
     q0 = state_vector(start, ['base_x', 'base_y', 'base_yaw'] + UPPER_BODY_JOINTS)
     anchors = [q0[:2]]
+    directions = []
+    def waypoint(xy, backwards):
+        anchors.append(np.asarray(xy))
+        directions.append(backwards)
+    before, after = backoff_m
+    if before:
+        forward = np.array([np.sin(q0[2]), -np.cos(q0[2])])
+        waypoint(q0[:2] - before * forward, True)
+    begin = anchors[-1]
+    forward_goal = np.array([np.sin(goal[2]), -np.cos(goal[2])])
+    finish = goal[:2] + after * forward_goal
     if route == 'x_then_y':
-        anchors.append(np.array([goal[0], q0[1]]))
+        waypoint([finish[0], begin[1]], reverse)
     elif route == 'y_then_x':
-        anchors.append(np.array([q0[0], goal[1]]))
-    anchors.append(goal[:2])
+        waypoint([begin[0], finish[1]], reverse)
+    waypoint(finish, reverse)
+    if after:
+        waypoint(goal[:2], True)
     dt = settings['interpolation_dt_s']
     yaw = q0[2]
     controls = []
@@ -41,17 +55,17 @@ def candidate(start: RobotState, goal: np.ndarray, limits: dict, settings: dict,
         count = max(2, int(np.ceil(duration/dt)))
         velocity = np.diff(smoothstep(np.linspace(0, 1, count+1))) * amount / dt
         controls.extend([[0., v] if turning else [v, 0.] for v in velocity])
-    for a, b in zip(anchors[:-1], anchors[1:]):
+    for a, b, backwards in zip(anchors[:-1], anchors[1:], directions):
         direction = b-a
         if np.linalg.norm(direction) < 1e-9:
             continue
         desired = np.arctan2(direction[1], direction[0]) + np.pi/2
-        if reverse:
+        if backwards:
             desired += np.pi
         delta = wrapped(desired-yaw)
         segment(delta, True)
         yaw += delta
-        segment(float(np.linalg.norm(direction)) * (-1 if reverse else 1), False)
+        segment(float(np.linalg.norm(direction)) * (-1 if backwards else 1), False)
     segment(wrapped(goal[2]-yaw), True)
     if not controls:
         controls = [[0., 0.], [0., 0.]]

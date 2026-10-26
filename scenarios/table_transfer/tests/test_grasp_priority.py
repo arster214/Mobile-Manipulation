@@ -21,7 +21,7 @@ ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT/'tests/artifacts/grasp_priority'
 
 
-def main():
+def main(initial_base=None):
     started=time.perf_counter()
     OUT.mkdir(parents=True, exist_ok=True)
     scene = json.loads((ROOT/'scene_config.json').read_text())
@@ -35,6 +35,9 @@ def main():
     values.update(model['lock_joints'])
     state = RobotState(list(values),np.array(list(values.values())),np.zeros(len(values)),0.,
                       np.array([*scene['robot']['spawn_xy_m'],manifest['robot_root_z_m'],0,0,0,1]))
+    if initial_base is not None:
+        state.base_pose[:2] = initial_base[:2]
+        state.base_pose[3:] = Rotation.from_euler('z', initial_base[2]).as_quat(scalar_first=True)
     observation = ObjectObservation(np.array([-1.05,1.32,.81,1,0,0,0]),0.,1)
     perception = SimulationPerception(yaml.safe_load((ROOT/'static_world.yml').read_text()),
                                      scene['cup']['radius_m'],scene['cup']['height_m'])

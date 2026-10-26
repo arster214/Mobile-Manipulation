@@ -1,0 +1,64 @@
+{
+  "carry_cases": 9,
+  "tested_candidates": 4050,
+  "skipped_case": 9,
+  "skip_reason": "No complete grasp path in the original random-start trial; no carry start exists.",
+  "scan_policy": "Two reverse adjustments (departure and arrival) at independently selected 0/5/10/15/20/30/40 cm, three routes and three body timing choices, plus nine full-reverse comparisons per case.",
+  "equal_adjustment_comparison": [
+    {
+      "each_adjustment_m": 0.0,
+      "candidates": 81,
+      "passed": 81,
+      "median_single_reverse_s": 0.0
+    },
+    {
+      "each_adjustment_m": 0.05,
+      "candidates": 81,
+      "passed": 72,
+      "median_single_reverse_s": 0.5500000000000007
+    },
+    {
+      "each_adjustment_m": 0.1,
+      "candidates": 81,
+      "passed": 72,
+      "median_single_reverse_s": 0.7750000000000004
+    },
+    {
+      "each_adjustment_m": 0.15,
+      "candidates": 81,
+      "passed": 72,
+      "median_single_reverse_s": 0.9500000000000011
+    },
+    {
+      "each_adjustment_m": 0.2,
+      "candidates": 81,
+      "passed": 72,
+      "median_single_reverse_s": 1.075
+    },
+    {
+      "each_adjustment_m": 0.3,
+      "candidates": 81,
+      "passed": 69,
+      "median_single_reverse_s": 1.325000000000001
+    },
+    {
+      "each_adjustment_m": 0.4,
+      "candidates": 81,
+      "passed": 45,
+      "median_single_reverse_s": 1.5250000000000004
+    }
+  ],
+  "soft_threshold_s": 1.1,
+  "selected_reverse_distances_m": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "limitation": "All available carry endpoints admit forward-only paths. This supports a provisional short-adjustment soft knee, not an optimal required reverse allowance or a collision safety threshold. The frozen endpoints do not fix original grasp or withdrawal failures."
+}

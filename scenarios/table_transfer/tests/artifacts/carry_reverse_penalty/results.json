@@ -1,0 +1,200 @@
+[
+  {
+    "case": 1,
+    "success": true,
+    "warm_planning_s": 0.15169933599827345,
+    "reason": "",
+    "old_reverse_distance_m": 2.25,
+    "path_candidates": 18,
+    "duration_s": 10.775,
+    "min_forward_speed": 0.0,
+    "reverse_distance_m": 0.0,
+    "reverse_time_s": 0.0,
+    "cost_terms": {
+      "base_distance_m": 2.250000000000001,
+      "base_rotation_rad": 3.802994704238624,
+      "lift_fraction": 0.09652833395366424,
+      "active_arm_fraction": 0.4105159960470521,
+      "inactive_arm_fraction": 0.0,
+      "duration_s": 10.775,
+      "carry_reverse_distance_m": 0.0,
+      "carry_reverse_excess_time_squared_s2": 0.0
+    }
+  },
+  {
+    "case": 2,
+    "success": true,
+    "warm_planning_s": 0.147689563993481,
+    "reason": "",
+    "old_reverse_distance_m": 2.3023255860301806,
+    "path_candidates": 18,
+    "duration_s": 9.875,
+    "min_forward_speed": 0.0,
+    "reverse_distance_m": 0.0,
+    "reverse_time_s": 0.0,
+    "cost_terms": {
+      "base_distance_m": 2.30232558603018,
+      "base_rotation_rad": 3.2909861088692893,
+      "lift_fraction": 0.0865007201327553,
+      "active_arm_fraction": 0.43210665277045746,
+      "inactive_arm_fraction": 0.0,
+      "duration_s": 9.875,
+      "carry_reverse_distance_m": 0.0,
+      "carry_reverse_excess_time_squared_s2": 0.0
+    }
+  },
+  {
+    "case": 3,
+    "success": true,
+    "warm_planning_s": 0.16322093000053428,
+    "reason": "",
+    "old_reverse_distance_m": 2.25,
+    "path_candidates": 18,
+    "duration_s": 10.775,
+    "min_forward_speed": 0.0,
+    "reverse_distance_m": 0.0,
+    "reverse_time_s": 0.0,
+    "cost_terms": {
+      "base_distance_m": 2.250000000000001,
+      "base_rotation_rad": 3.802994704238622,
+      "lift_fraction": 0.09848495072956323,
+      "active_arm_fraction": 0.4088198394772047,
+      "inactive_arm_fraction": 0.0,
+      "duration_s": 10.775,
+      "carry_reverse_distance_m": 0.0,
+      "carry_reverse_excess_time_squared_s2": 0.0
+    }
+  },
+  {
+    "case": 4,
+    "success": true,
+    "warm_planning_s": 0.16071164299501106,
+    "reason": "",
+    "old_reverse_distance_m": 2.25,
+    "path_candidates": 18,
+    "duration_s": 11.525,
+    "min_forward_speed": 0.0,
+    "reverse_distance_m": 0.0,
+    "reverse_time_s": 0.0,
+    "cost_terms": {
+      "base_distance_m": 2.25,
+      "base_rotation_rad": 4.190875029555999,
+      "lift_fraction": 0.0,
+      "active_arm_fraction": 0.3643485560352441,
+      "inactive_arm_fraction": 0.0,
+      "duration_s": 11.525,
+      "carry_reverse_distance_m": 0.0,
+      "carry_reverse_excess_time_squared_s2": 0.0
+    }
+  },
+  {
+    "case": 5,
+    "success": true,
+    "warm_planning_s": 0.1604128769977251,
+    "reason": "",
+    "old_reverse_distance_m": 0.0,
+    "path_candidates": 18,
+    "duration_s": 11.225000000000001,
+    "min_forward_speed": 0.0,
+    "reverse_distance_m": 0.0,
+    "reverse_time_s": 0.0,
+    "cost_terms": {
+      "base_distance_m": 2.25,
+      "base_rotation_rad": 4.034464812270848,
+      "lift_fraction": 0.0551467907579639,
+      "active_arm_fraction": 0.3466957782461986,
+      "inactive_arm_fraction": 0.0,
+      "duration_s": 11.225000000000001,
+      "carry_reverse_distance_m": 0.0,
+      "carry_reverse_excess_time_squared_s2": 0.0
+    }
+  },
+  {
+    "case": 6,
+    "success": true,
+    "warm_planning_s": 0.15746290300012333,
+    "reason": "",
+    "old_reverse_distance_m": 2.302325586030181,
+    "path_candidates": 18,
+    "duration_s": 9.875,
+    "min_forward_speed": 0.0,
+    "reverse_distance_m": 0.0,
+    "reverse_time_s": 0.0,
+    "cost_terms": {
+      "base_distance_m": 2.302325586030181,
+      "base_rotation_rad": 3.2909861088692898,
+      "lift_fraction": 0.0865007201327553,
+      "active_arm_fraction": 0.43210665277045746,
+      "inactive_arm_fraction": 0.0,
+      "duration_s": 9.875,
+      "carry_reverse_distance_m": 0.0,
+      "carry_reverse_excess_time_squared_s2": 0.0
+    }
+  },
+  {
+    "case": 7,
+    "success": true,
+    "warm_planning_s": 0.13864082700456493,
+    "reason": "",
+    "old_reverse_distance_m": 0.0,
+    "path_candidates": 18,
+    "duration_s": 9.675,
+    "min_forward_speed": 0.0,
+    "reverse_distance_m": 0.0,
+    "reverse_time_s": 0.0,
+    "cost_terms": {
+      "base_distance_m": 2.25,
+      "base_rotation_rad": 3.129026261968064,
+      "lift_fraction": 0.0,
+      "active_arm_fraction": 0.18542720180548447,
+      "inactive_arm_fraction": 0.0,
+      "duration_s": 9.675,
+      "carry_reverse_distance_m": 0.0,
+      "carry_reverse_excess_time_squared_s2": 0.0
+    }
+  },
+  {
+    "case": 8,
+    "success": true,
+    "warm_planning_s": 0.1400821060015005,
+    "reason": "",
+    "old_reverse_distance_m": 0.0,
+    "path_candidates": 18,
+    "duration_s": 9.675,
+    "min_forward_speed": 0.0,
+    "reverse_distance_m": 0.0,
+    "reverse_time_s": 0.0,
+    "cost_terms": {
+      "base_distance_m": 2.25,
+      "base_rotation_rad": 3.129026261968064,
+      "lift_fraction": 0.0,
+      "active_arm_fraction": 0.18542720180548447,
+      "inactive_arm_fraction": 0.0,
+      "duration_s": 9.675,
+      "carry_reverse_distance_m": 0.0,
+      "carry_reverse_excess_time_squared_s2": 0.0
+    }
+  },
+  {
+    "case": 10,
+    "success": true,
+    "warm_planning_s": 0.15406983400316676,
+    "reason": "",
+    "old_reverse_distance_m": 2.3023255860301837,
+    "path_candidates": 18,
+    "duration_s": 9.875,
+    "min_forward_speed": 0.0,
+    "reverse_distance_m": 0.0,
+    "reverse_time_s": 0.0,
+    "cost_terms": {
+      "base_distance_m": 2.3023255860301837,
+      "base_rotation_rad": 3.290986108869289,
+      "lift_fraction": 0.0865007201327553,
+      "active_arm_fraction": 0.43210665277045746,
+      "inactive_arm_fraction": 0.0,
+      "duration_s": 9.875,
+      "carry_reverse_distance_m": 0.0,
+      "carry_reverse_excess_time_squared_s2": 0.0
+    }
+  }
+]

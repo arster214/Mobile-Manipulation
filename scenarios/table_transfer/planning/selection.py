@@ -36,4 +36,14 @@ def path_cost(plan, arm, settings):
         'inactive_arm_fraction': arm_cost('l' if arm=='r' else 'r'),
         'duration_s': float(plan.times[-1]),
     }
-    return sum(settings['path_cost_weights'][name]*value for name,value in terms.items()), terms
+    if plan.motion_phase == 'carry':
+        reverse = plan.base_controls[:, 0] < 0.
+        terms['carry_reverse_distance_m'] = float(np.sum(np.maximum(-plan.base_controls[:, 0], 0.) * dt))
+        starts = np.flatnonzero(reverse & ~np.r_[False, reverse[:-1]])
+        ends = np.flatnonzero(reverse & ~np.r_[reverse[1:], False]) + 1
+        soft_time = settings['carry_reverse_soft_time_s']
+        terms['carry_reverse_excess_time_squared_s2'] = float(sum(
+            max(float(dt[start:end].sum()) - soft_time, 0.) ** 2
+            for start, end in zip(starts, ends)))
+    weights = settings['path_cost_weights']
+    return sum(weights[name]*value for name,value in terms.items()), terms

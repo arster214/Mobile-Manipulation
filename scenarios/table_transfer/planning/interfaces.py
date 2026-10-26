@@ -71,6 +71,7 @@ class PlannedTrajectory:
     reason: str = ''
     base_poses: np.ndarray | None = None  # [N,3]: x,y,URDF yaw on the same times.
     base_controls: np.ndarray | None = None  # [N-1,2]: forward speed, yaw rate.
+    motion_phase: str = 'approach'  # Carry applies a soft reverse-motion penalty.
     base_validation_status: Status = Status.NOT_RUN
     constraint_metrics: dict = field(default_factory=dict)
     cost: float | None = None

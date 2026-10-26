@@ -1,0 +1,38 @@
+{
+  "stage": "full",
+  "scope": "Identical state, target and world replay; includes search, validation and test artifact I/O. Warmup excluded from resident trials; no cached trajectory results.",
+  "trials": [
+    {
+      "phase": "initialization_and_warmup",
+      "wall_s": 416.19722249500046,
+      "grasp_s": 416.19692298200243,
+      "transport_s": null,
+      "initialization": {
+        "model_init_s": 155.68525811506697,
+        "ik_init_s": 130.04077862398117,
+        "models_created": 203,
+        "ik_created": 195
+      },
+      "same_trajectory_as_warmup": true,
+      "failure": null,
+      "success": false,
+      "stage_timing": {}
+    },
+    {
+      "phase": "resident",
+      "wall_s": 125.95618410099996,
+      "grasp_s": 125.9557198629991,
+      "transport_s": null,
+      "initialization": {
+        "model_init_s": 0.0,
+        "ik_init_s": 0.0,
+        "models_created": 0,
+        "ik_created": 0
+      },
+      "same_trajectory_as_warmup": true,
+      "failure": null,
+      "success": false,
+      "stage_timing": {}
+    }
+  ]
+}

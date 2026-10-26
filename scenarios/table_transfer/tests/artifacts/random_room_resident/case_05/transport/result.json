@@ -1,0 +1,331 @@
+{
+  "start_state": {
+    "joint_names": [
+      "l_joint1",
+      "l_joint2",
+      "l_joint3",
+      "l_joint4",
+      "l_joint5",
+      "l_joint6",
+      "l_joint7",
+      "r_joint1",
+      "r_joint2",
+      "r_joint3",
+      "r_joint4",
+      "r_joint5",
+      "r_joint6",
+      "r_joint7",
+      "platform_joint",
+      "head_joint1",
+      "head_joint2",
+      "l_Joint_finger1",
+      "r_Joint_finger1"
+    ],
+    "positions": [
+      2.3837709426879883,
+      1.5465549230575562,
+      -1.5955281257629395,
+      0.7960252165794373,
+      0.8095644116401672,
+      0.48285263776779175,
+      -1.5965869426727295,
+      -2.8622861935756982,
+      -1.6960935688224021,
+      -1.533766857816064,
+      1.2938326754442206,
+      -1.6121790989181415,
+      0.0011637691047781463,
+      -0.8746416800394974,
+      0.748345136642456,
+      0.0,
+      0.0,
+      0.0325,
+      0.0325
+    ],
+    "base_pose": [
+      -0.4464406669139875,
+      0.6533661484718319,
+      0.24734551877975464,
+      -0.22136896439864656,
+      0.0,
+      0.0,
+      0.9751901258734477
+    ]
+  },
+  "reference_state": {
+    "joint_names": [
+      "l_joint1",
+      "l_joint2",
+      "l_joint3",
+      "l_joint4",
+      "l_joint5",
+      "l_joint6",
+      "l_joint7",
+      "r_joint1",
+      "r_joint2",
+      "r_joint3",
+      "r_joint4",
+      "r_joint5",
+      "r_joint6",
+      "r_joint7",
+      "platform_joint",
+      "head_joint1",
+      "head_joint2",
+      "l_Joint_finger1",
+      "r_Joint_finger1"
+    ],
+    "positions": [
+      2.862366499497238,
+      1.6963090646149952,
+      -1.605454245043555,
+      1.2938319799016864,
+      1.5691770386130677,
+      -0.0011763599735028268,
+      -2.222804969840793,
+      -2.8622861935756982,
+      -1.6960935688224021,
+      -1.533766857816064,
+      1.2938326754442206,
+      -1.6121790989181415,
+      0.0011637691047781463,
+      -0.8746416800394974,
+      0.5,
+      0.0,
+      0.0,
+      0.0325,
+      0.0325
+    ],
+    "base_pose": [
+      2.0538482451629005,
+      -0.5064689059402911,
+      0.24734551877975464,
+      0.3960643190653752,
+      0.0,
+      0.0,
+      0.9182227699002463
+    ]
+  },
+  "object_start_pose": [
+    -1.05,
+    1.32,
+    0.81,
+    1.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "object_goal_pose": [
+    1.2000002384184163,
+    1.319999403953385,
+    0.8200002288819273,
+    0.9999999999995723,
+    -6.258488154390738e-07,
+    2.682209254702099e-07,
+    -6.258488474134997e-07
+  ],
+  "stages": {
+    "lift": {
+      "validation": "passed",
+      "reason": "",
+      "duration_s": 1.8171205928321392,
+      "cost": 0.30829433776422654,
+      "cost_terms": {
+        "base_distance_m": 0.0,
+        "base_rotation_rad": 0.0,
+        "lift_fraction": 0.1265822784810126,
+        "active_arm_fraction": 0.0,
+        "inactive_arm_fraction": 0.0,
+        "duration_s": 1.8171205928321392
+      },
+      "object_metrics": {
+        "passed": true,
+        "samples": 149,
+        "representation": "conservative cylinder bounding box"
+      },
+      "constraint_metrics": {
+        "path": {
+          "min_singular_value": 0.06017069146037102,
+          "max_condition_number": 30.24451446533203,
+          "max_arm_joint_change_rad": 0.7596126269729004,
+          "passed": true
+        },
+        "endpoint": {
+          "min_singular_value": 0.060170695185661316,
+          "max_condition_number": 30.2445125579834,
+          "max_arm_joint_change_rad": 0.7596126269729004,
+          "passed": true
+        },
+        "singularity_scope": "IK endpoint; moving path reported separately"
+      }
+    },
+    "carry": {
+      "validation": "passed",
+      "reason": "",
+      "duration_s": 11.225000000000001,
+      "cost": 7.808807381275012,
+      "cost_terms": {
+        "base_distance_m": 2.25,
+        "base_rotation_rad": 4.0344648122708495,
+        "lift_fraction": 0.0551467907579639,
+        "active_arm_fraction": 0.3466957782461986,
+        "inactive_arm_fraction": 0.0,
+        "duration_s": 11.225000000000001
+      },
+      "object_metrics": {
+        "passed": true,
+        "samples": 899,
+        "representation": "conservative cylinder bounding box"
+      },
+      "constraint_metrics": {
+        "path": {
+          "min_singular_value": 0.05975954607129097,
+          "max_condition_number": 30.244525909423828,
+          "max_arm_joint_change_rad": 0.7596126269729004,
+          "passed": true
+        },
+        "endpoint": {
+          "min_singular_value": 0.05982203781604767,
+          "max_condition_number": 29.24359703063965,
+          "max_arm_joint_change_rad": 0.5487225082736737,
+          "passed": true
+        },
+        "singularity_scope": "IK endpoint; moving path reported separately"
+      }
+    },
+    "place": {
+      "validation": "passed",
+      "reason": "",
+      "duration_s": 0.4432463648948778,
+      "cost": 0.41831245812143825,
+      "cost_terms": {
+        "base_distance_m": 0.0,
+        "base_rotation_rad": 0.0,
+        "lift_fraction": 0.0,
+        "active_arm_fraction": 0.37398782163195043,
+        "inactive_arm_fraction": 0.0,
+        "duration_s": 0.4432463648948778
+      },
+      "object_metrics": {
+        "passed": true,
+        "samples": 31,
+        "representation": "conservative cylinder bounding box"
+      },
+      "constraint_metrics": {
+        "path": {
+          "min_singular_value": 0.04601946845650673,
+          "max_condition_number": 39.53335189819336,
+          "max_arm_joint_change_rad": 0.782833046012668,
+          "passed": true
+        },
+        "endpoint": {
+          "min_singular_value": 0.04601946845650673,
+          "max_condition_number": 39.53335189819336,
+          "max_arm_joint_change_rad": 0.782833046012668,
+          "passed": true
+        },
+        "singularity_scope": "all approach samples"
+      }
+    },
+    "withdraw": {
+      "validation": "passed",
+      "reason": "",
+      "duration_s": 1.1702134751314508,
+      "cost": 0.6053587696584752,
+      "cost_terms": {
+        "base_distance_m": 0.0,
+        "base_rotation_rad": 0.0,
+        "lift_fraction": 0.0,
+        "active_arm_fraction": 0.4883374221453301,
+        "inactive_arm_fraction": 0.0,
+        "duration_s": 1.1702134751314508
+      },
+      "object_metrics": {
+        "passed": true,
+        "object_state": "released and fixed in tray",
+        "finger_contact_allowed": true
+      },
+      "constraint_metrics": {
+        "path": {
+          "min_singular_value": 0.04601946845650673,
+          "max_condition_number": 39.53335189819336,
+          "max_arm_joint_change_rad": 0.782833046012668,
+          "passed": true
+        },
+        "endpoint": {
+          "min_singular_value": 0.0922100841999054,
+          "max_condition_number": 19.20809555053711,
+          "max_arm_joint_change_rad": 0.7500214603763349,
+          "passed": true
+        },
+        "singularity_scope": "all approach samples"
+      }
+    }
+  },
+  "complete": true,
+  "scope": "numerical trajectories and sampled collisions, no grasp/release feedback or PhysX execution",
+  "tcp_from_object": [
+    [
+      -7.105427357601103e-15,
+      -1.1920928955078125e-07,
+      -0.9999999999999929,
+      1.8119812628114573e-07
+    ],
+    [
+      -0.9999999999999929,
+      1.1920928955078125e-07,
+      -7.105427357601103e-15,
+      4.768370942542788e-08
+    ],
+    [
+      1.1920928955078125e-07,
+      0.9999999999999858,
+      -1.1920928955078125e-07,
+      -5.245207157500431e-08
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "placement_search": {
+    "timers": {
+      "final_ik_s": 1.2412539379874943,
+      "upward_retreat_s": 0.39121059000171954,
+      "carry_s": 0.9373548519943142,
+      "lowering_validation_s": 0.009034848997544032
+    },
+    "trials": [
+      {
+        "scope": "arm_only",
+        "ik_solutions": 0,
+        "retreat_pass": 0,
+        "carry_pass": 0
+      },
+      {
+        "scope": "arm_lift",
+        "ik_solutions": 1,
+        "retreat_pass": 1,
+        "carry_pass": 1
+      }
+    ],
+    "scope": "arm_lift"
+  },
+  "timing": {
+    "lift_planning_s": 0.03485184100281913,
+    "placement_and_carry_search_s": 2.58037228500325,
+    "withdraw_planning_s": 0.9250246999945375,
+    "wall_time_s": 3.5753842489939416
+  },
+  "execution_durations_s": {
+    "lift": 1.8171205928321392,
+    "carry": 11.225000000000001,
+    "place": 0.4432463648948778,
+    "withdraw": 1.1702134751314508,
+    "pregrasp": 11.225000000000001,
+    "approach": 0.6275141336171559
+  },
+  "total_execution_duration_s": 26.508094566475627,
+  "release_requires_feedback": true
+}

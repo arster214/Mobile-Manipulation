@@ -41,7 +41,7 @@ def main():
  def save(name,plan,planner,attached):
   score,terms=path_cost(plan,side,settings)
   report['stages'][name]={'validation':plan.validation_status.value,'reason':plan.reason,'duration_s':float(plan.times[-1]),
-                         'cost':score,'cost_terms':terms,'object_metrics':plan.object_metrics,'constraint_metrics':plan.constraint_metrics}
+                         'cost':score,'cost_terms':terms,'object_metrics':plan.object_metrics,'constraint_metrics':plan.constraint_metrics,'motion_phase':plan.motion_phase}
   (OUT/'result.json').write_text(json.dumps(report,indent=2)+'\n')
   print(name,json.dumps(report['stages'][name]),flush=True)
   if plan.validation_status!=Status.PASSED:
@@ -62,7 +62,7 @@ def main():
    idx=pre['joint_names'].tolist().index(n);saved_positions[:,idx]=plan.positions[:,j];saved_velocities[:,idx]=plan.velocities[:,j];saved_accelerations[:,idx]=plan.accelerations[:,j]
   np.savez(OUT/f'{name}.npz',joint_names=pre['joint_names'],positions=saved_positions,velocities=saved_velocities,
            accelerations=saved_accelerations,times=plan.times,base_poses=plan.base_poses,base_controls=plan.base_controls,
-           object_poses=object_poses,tcp_poses=tcp)
+           object_poses=object_poses,tcp_poses=tcp,motion_phase=plan.motion_phase)
   return state_at(plan.start_state,planner.names,configurations[-1])
  def lift_plan(planner,goal):
   plan=candidate(planner.state,goal,{k:v[3:] for k,v in planner.limits.items()},settings,world.version,1)

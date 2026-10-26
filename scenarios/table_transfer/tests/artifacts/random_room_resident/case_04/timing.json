@@ -1,0 +1,48 @@
+{
+  "stage": "full",
+  "scope": "Identical state, target and world replay; includes search, validation and test artifact I/O. Warmup excluded from resident trials; no cached trajectory results.",
+  "trials": [
+    {
+      "phase": "initialization_and_warmup",
+      "wall_s": 41.17925671100238,
+      "grasp_s": 32.84656817000359,
+      "transport_s": 8.332688540998788,
+      "initialization": {
+        "model_init_s": 20.60688932802441,
+        "ik_init_s": 10.23158686098759,
+        "models_created": 26,
+        "ik_created": 15
+      },
+      "same_trajectory_as_warmup": true,
+      "failure": null,
+      "success": true,
+      "stage_timing": {
+        "lift_planning_s": 0.7719848829947296,
+        "placement_and_carry_search_s": 5.686074713004928,
+        "withdraw_planning_s": 1.8406486199965002,
+        "wall_time_s": 8.330941233005433
+      }
+    },
+    {
+      "phase": "resident",
+      "wall_s": 8.94272316199931,
+      "grasp_s": 7.329243103995395,
+      "transport_s": 1.6134800580039155,
+      "initialization": {
+        "model_init_s": 0.0,
+        "ik_init_s": 0.0,
+        "models_created": 0,
+        "ik_created": 0
+      },
+      "same_trajectory_as_warmup": true,
+      "failure": null,
+      "success": true,
+      "stage_timing": {
+        "lift_planning_s": 0.03045164800278144,
+        "placement_and_carry_search_s": 1.1681121700021322,
+        "withdraw_planning_s": 0.385587287004455,
+        "wall_time_s": 1.6118853980005952
+      }
+    }
+  ]
+}

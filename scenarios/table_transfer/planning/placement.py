@@ -18,9 +18,10 @@ def plan_placement(lifted_state, nominal_state, goal_object_pose, attachment, ma
     timers = dict(final_ik_s=0., upward_retreat_s=0., carry_s=0., lowering_validation_s=0.)
     trials = []
     target_pose = matrix_pose(pose_matrix(goal_object_pose) @ np.linalg.inv(attachment.tcp_from_object))
-    target = TaskTarget(target_pose, np.array(goal_object_pose), 0., tool_frame='r_grasp_tcp',
-                        task_constraints={'approach_direction':[0.,1.,0.]})
     carry_planner = make_planner(lifted_state, False)
+    carry_planner.motion_phase = 'carry'
+    target = TaskTarget(target_pose, np.array(goal_object_pose), 0., tool_frame=f'{carry_planner.arm}_grasp_tcp',
+                        task_constraints={'approach_direction':[0.,1.,0.]})
     nominal_planner = make_planner(nominal_state, False)
     for scope in GRASP_TIERS:
         begin = perf_counter()

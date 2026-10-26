@@ -65,7 +65,7 @@ def main():
  q=state_vector(state,first.names);q[3]-=scene['transfer']['lift_height_m']
  lifted=lift_plan(first,q);state=save('lift',lifted,first,True)
  if state is None:return
- planner=make(state,'carry',attachment);q=state_vector(state,planner.names)
+ planner=make(state,'carry',attachment);planner.motion_phase='carry';q=state_vector(state,planner.names)
  shift=np.array(scene['placement_center_m'][:2])-np.array(old['object_pose'][:2]);q[:2]+=shift
  tcp=planner.tcp_pose(q[None])[0]
  target=TaskTarget(tcp,np.array(report['object_goal_pose']),0.,tool_frame=f'{side}_grasp_tcp')
