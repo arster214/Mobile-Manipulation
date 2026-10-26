@@ -6,7 +6,7 @@ import numpy as np,yaml,yourdfpy
 from scipy.spatial.transform import Rotation
 ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT))
 from planning.carried_object import pose_matrix
-OUT=ROOT/'tests/artifacts/transport';report=json.loads((OUT/'result.json').read_text());scene=json.loads((ROOT/'scene_config.json').read_text());cfg=yaml.safe_load(Path(scene['robot']['curobo_config']).read_text())['kinematics'];urdf=Path(cfg['urdf_path'])
+OUT=ROOT/('tests/artifacts/transport_priority' if '--priority' in sys.argv else 'tests/artifacts/transport');report=json.loads((OUT/'result.json').read_text());scene=json.loads((ROOT/'scene_config.json').read_text());cfg=yaml.safe_load(Path(scene['robot']['curobo_config']).read_text())['kinematics'];urdf=Path(cfg['urdf_path'])
 robot=yourdfpy.URDF.load(urdf,load_meshes=False,build_scene_graph=True,filename_handler=partial(yourdfpy.filename_handler_magic,dir=urdf.parent))
 settings=json.loads((ROOT/'planning/config.json').read_text())
 fixed=dict(zip(report['start_state']['joint_names'],report['start_state']['positions']));attachment=np.array(report['tcp_from_object']);metrics={};previous=None

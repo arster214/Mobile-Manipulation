@@ -24,6 +24,8 @@ class CuroboPlanner:
 
     def __init__(self, robot_source: Path, state: RobotState, environment: EnvironmentState,
                  settings: dict, runtime_directory: Path, arm_only: bool = False, arm: str = 'r', reference_state=None):
+        self.robot_source = robot_source
+        self.runtime_directory = runtime_directory
         self.extra_validation = None
         self.search_stats = {}
         self.arm = arm
@@ -60,6 +62,13 @@ class CuroboPlanner:
             'jerk': np.array(cs['max_jerk']),
         }
 
+    def grasp_solver(self, scope):
+        """Use measured locks for the IK tier; connection validation stays full-body."""
+        settings = dict(self.settings, grasp_ik_scope=scope)
+        return CuroboPlanner(self.robot_source, self.state, self.environment, settings,
+                             self.runtime_directory / scope, arm=self.arm,
+                             reference_state=self.reference_state)
+
     @staticmethod
     def tensor(values: np.ndarray) -> torch.Tensor:
         return torch.as_tensor(np.ascontiguousarray(values), device='cuda', dtype=torch.float32)
@@ -74,7 +83,7 @@ class CuroboPlanner:
                                 (self.settings['num_ik_seeds'], len(self.names)))
         # Local seeds preserve posture; hard URDF bounds enforce the 0.8-rad envelope.
         bank = np.clip(seed + self.rng.normal(0., .2, bank.shape), self.bounds[0], self.bounds[1])
-        if not self.arm_only:
+        if 'base_x' in self.names:
             # Seed robot placements on the requested side of the object, near the task direction.
             bank[::2, 3:] = self.rng.uniform(self.bounds[0,3:], self.bounds[1,3:], bank[::2,3:].shape)
             other = 'l' if self.arm == 'r' else 'r'

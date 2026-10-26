@@ -5,7 +5,8 @@ import numpy as np
 import yaml
 from scipy.spatial.transform import Rotation
 ROOT = Path(__file__).resolve().parents[1]
-OUT = ROOT / 'tests/artifacts/grasp_first'
+OUT = ROOT / ('tests/artifacts/grasp_priority' if '--priority' in sys.argv else 'tests/artifacts/grasp_first')
+PORT = 8102 if '--priority' in sys.argv else 8096
 
 
 def export_frames():
@@ -51,8 +52,12 @@ def show():
     names=saved['r']['link_names'].tolist()
     scene = json.loads((ROOT / 'scene_config.json').read_text())
     cfg = yaml.safe_load(Path(scene['robot']['curobo_config']).read_text())['kinematics']
-    server = viser.ViserServer(host='127.0.0.1', port=8096)
+    server = viser.ViserServer(host='127.0.0.1', port=PORT)
     server.scene.set_up_direction('+z')
+    if '--priority' in sys.argv:
+        selected=report['selected_arm']
+        tier=report['arms'][selected]['search_stats']['motion_scope']
+        server.gui.add_markdown(f'## 分级规划结果：{tier}\n优先只动抓取臂 → 抓取臂与升降 → 允许底盘。仅回放通过完整路径检查的结果。')
     server.gui.add_markdown('## 抓取优先规划：右臂完整回放\n到预抓取 → 固定底盘、升降和左臂 → 右臂深入15cm。\n深入阶段排除杯子碰撞，保留自碰撞和其余环境碰撞。数值回放，不含夹爪闭合或物理执行。')
     play = server.gui.add_checkbox('播放', initial_value=False)
     slider = server.gui.add_slider('进度 (%)',min=0,max=100,step=.1,initial_value=0)
@@ -138,7 +143,7 @@ def show():
         client.camera.position=(.5,-.8,1.9)
         client.camera.look_at=(-1.05,1.05,.85)
     update()
-    print('REPLAY_READY http://127.0.0.1:8096/',flush=True)
+    print(f'REPLAY_READY http://127.0.0.1:{PORT}/',flush=True)
     previous=time.monotonic()
     while True:
         time.sleep(.025)

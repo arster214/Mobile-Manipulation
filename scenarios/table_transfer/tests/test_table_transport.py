@@ -11,7 +11,7 @@ from planning.curobo_backend import CuroboPlanner
 from planning.trajectory import candidate
 from planning.carried_object import CarriedObject,pose_matrix,matrix_pose
 from planning.selection import path_cost
-ROOT=Path(__file__).resolve().parents[1];OUT=ROOT/'tests/artifacts/transport';OLD=ROOT/'tests/artifacts/grasp_first'
+ROOT=Path(__file__).resolve().parents[1];OUT=ROOT/('tests/artifacts/transport_priority' if '--priority' in sys.argv else 'tests/artifacts/transport');OLD=ROOT/('tests/artifacts/grasp_priority' if '--priority' in sys.argv else 'tests/artifacts/grasp_first')
 
 
 def main():

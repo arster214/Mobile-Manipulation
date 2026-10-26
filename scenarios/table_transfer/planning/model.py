@@ -71,6 +71,13 @@ def build_config(source, state: RobotState, target_directory, settings: dict,
     measured = dict(zip(state.joint_names, state.joint_positions))
     measured.update(zip(BASE_JOINTS, state_vector(state, BASE_JOINTS)))
     active = [f'{arm}_joint{i}' for i in range(1, 8)] if arm_only else ACTIVE_JOINTS.copy()
+    scope = settings.get('grasp_ik_scope')
+    if scope is not None and not arm_only:
+        active = [f'{arm}_joint{i}' for i in range(1, 8)]
+        if scope in ('arm_lift', 'mobile'):
+            active = ['platform_joint'] + active
+        if scope == 'mobile':
+            active = BASE_JOINTS + active
     extras = {
         'default_joint_position': [*state_vector(state, BASE_JOINTS), measured['platform_joint']],
         'null_space_weight': [1., 1., 1., 1.],

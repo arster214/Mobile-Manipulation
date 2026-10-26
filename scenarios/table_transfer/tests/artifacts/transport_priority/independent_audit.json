@@ -1,0 +1,27 @@
+{
+  "lift": {
+    "independent_fk_max_position_error_m": 1.3722058223582978e-06,
+    "independent_fk_max_rotation_error_rad": 3.775380501513774e-05,
+    "duration_s": 1.8171205928321392
+  },
+  "carry": {
+    "independent_fk_max_position_error_m": 1.3815981335763982e-06,
+    "independent_fk_max_rotation_error_rad": 3.799548808205121e-05,
+    "duration_s": 9.675
+  },
+  "place": {
+    "independent_fk_max_position_error_m": 1.3112576588056884e-06,
+    "independent_fk_max_rotation_error_rad": 3.7753805015027596e-05,
+    "duration_s": 1.7544107978477408
+  },
+  "withdraw": {
+    "independent_fk_max_position_error_m": 1.0682401636756438e-05,
+    "independent_fk_max_rotation_error_rad": 0.0001090898741918828,
+    "duration_s": 5.093040416640675
+  },
+  "tray_inner_clearance_xy_m": [
+    0.087,
+    0.05199999999999999
+  ],
+  "passed": true
+}
