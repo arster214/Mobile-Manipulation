@@ -1,0 +1,148 @@
+{
+  "curobo_module": "/home/fang/robot_ws/curobo_v2/curobo/__init__.py",
+  "gpu": "NVIDIA GeForce RTX 5080",
+  "config": "/home/fang/robot_ws/collision_models/hybrid/rm75_platform_rebuilt.yml",
+  "candidates": 4,
+  "collision_free_candidates": 1,
+  "selected_index": 0,
+  "selected_self_collision_cost": 0.0,
+  "joint_names": [
+    "l_joint1",
+    "l_joint2",
+    "l_joint3",
+    "l_joint4",
+    "l_joint5",
+    "l_joint6",
+    "l_joint7",
+    "r_joint1",
+    "r_joint2",
+    "r_joint3",
+    "r_joint4",
+    "r_joint5",
+    "r_joint6",
+    "r_joint7"
+  ],
+  "joint_positions_rad": [
+    2.8623664959466195,
+    1.6963090643947003,
+    -1.6054542452496803,
+    1.2938319449148001,
+    1.5692000610988577,
+    -0.001176359963154701,
+    -0.6520316658711095,
+    -2.862286187855434,
+    -1.6960935703138367,
+    -1.533766852368474,
+    1.2938326401150542,
+    -1.612140244955442,
+    0.0011637731097970205,
+    0.6961157909207951
+  ],
+  "left": {
+    "q": [
+      2.8623664959466195,
+      1.6963090643947003,
+      -1.6054542452496803,
+      1.2938319449148001,
+      1.5692000610988577,
+      -0.001176359963154701,
+      -0.6520316658711095
+    ],
+    "spread": 0.15,
+    "forward_offset": 0.07,
+    "error": 9.626159464237274e-08,
+    "elbow": [
+      0.38220804216727955,
+      -0.2969293073066527,
+      0.7395731590237319
+    ],
+    "wrist": [
+      0.382250887479062,
+      -0.5069295147288586,
+      0.7396056075951578
+    ],
+    "tool_position": [
+      0.382068644011087,
+      -0.666429514730517,
+      0.7398435421942616
+    ],
+    "tool_z": [
+      3.1314354347194023e-09,
+      -0.9999999999999997,
+      -4.571484459812297e-09
+    ],
+    "shoulder": [
+      0.2322292109301534,
+      -0.22692902858997516,
+      0.9348737252296011
+    ],
+    "tool_x": [
+      0.9999999999999998,
+      3.1314354339277065e-09,
+      -1.808543490871339e-10
+    ],
+    "joint_change_norm": 1.7013979628584557
+  },
+  "right": {
+    "q": [
+      -2.862286187855434,
+      -1.6960935703138367,
+      -1.533766852368474,
+      1.2938326401150542,
+      -1.612140244955442,
+      0.0011637731097970205,
+      0.6961157909207951
+    ],
+    "spread": 0.15,
+    "forward_offset": 0.07,
+    "error": 9.610028181785861e-08,
+    "elbow": [
+      -0.3822515315248519,
+      -0.2969302673888752,
+      0.7396065598127342
+    ],
+    "wrist": [
+      -0.3822070785976017,
+      -0.5069304742462903,
+      0.7395721245839142
+    ],
+    "tool_position": [
+      -0.38239926999028206,
+      -0.668430429766791,
+      0.7393421398694534
+    ],
+    "tool_z": [
+      4.981866069376648e-09,
+      -0.9999999999999998,
+      6.240322002180042e-09
+    ],
+    "shoulder": [
+      -0.23222921093372156,
+      -0.22693,
+      0.9348737252296011
+    ],
+    "tool_x": [
+      0.9999999999999997,
+      4.981866090724514e-09,
+      8.101356578136975e-09
+    ],
+    "joint_change_norm": 1.7591506449320296
+  },
+  "sphere_count": 402,
+  "collision_pair_count": 23678,
+  "sphere_padding_min_max_m": [
+    0.0,
+    0.0
+  ],
+  "minimum_checked_sphere_gap_m": 0.0004999786615371704,
+  "name": "mobile_manipulation_initial",
+  "base_forward_axis": [
+    0,
+    -1,
+    0
+  ],
+  "tool_axis": "Z",
+  "curobo_config": "/home/fang/robot_ws/postures/rm75_mobile_manipulation.yml",
+  "validation_scope": "Static self collision only, existing ignore pairs, zero added padding; environment and trajectories not tested",
+  "tool_x_constraint": "parallel to ground; base +X; tool Y upward; wrist camera mounted on upper side"
+}

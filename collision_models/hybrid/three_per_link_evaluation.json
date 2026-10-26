@@ -1,0 +1,595 @@
+{
+  "source": "/home/fang/robot_ws/collision_models/hybrid/rm75_hybrid_edited_20261025_160450_406840.yml",
+  "layout": "three centers at path arclength fractions 0, 1/2, 1; end centers lie inside end regions, not at raw mesh extrema",
+  "links": {
+    "l_link1": {
+      "before": {
+        "count": 4,
+        "sampled_surface_coverage_pct": 100.0,
+        "sampled_max_gap_mm": 0.0,
+        "vertex_max_gap_mm": 0.0,
+        "aabb_excess_mm": 30.950718164443973,
+        "radius_min_mm": 47.0,
+        "radius_max_mm": 54.0
+      },
+      "after": {
+        "count": 3,
+        "sampled_surface_coverage_pct": 100.0,
+        "sampled_max_gap_mm": 0.0,
+        "vertex_max_gap_mm": 0.0,
+        "aabb_excess_mm": 33.95071816444398,
+        "radius_min_mm": 56.0,
+        "radius_max_mm": 59.00000000000001
+      },
+      "centers_m": [
+        [
+          0.0,
+          0.0,
+          -0.045
+        ],
+        [
+          0.0,
+          0.015,
+          0.0
+        ],
+        [
+          0.0,
+          0.075,
+          0.0
+        ]
+      ],
+      "radii_m": [
+        0.057,
+        0.059000000000000004,
+        0.056
+      ]
+    },
+    "l_link2": {
+      "before": {
+        "count": 4,
+        "sampled_surface_coverage_pct": 100.0,
+        "sampled_max_gap_mm": 0.0,
+        "vertex_max_gap_mm": 0.0,
+        "aabb_excess_mm": 21.499996423721303,
+        "radius_min_mm": 47.0,
+        "radius_max_mm": 54.0
+      },
+      "after": {
+        "count": 3,
+        "sampled_surface_coverage_pct": 100.0,
+        "sampled_max_gap_mm": 0.0,
+        "vertex_max_gap_mm": 0.0,
+        "aabb_excess_mm": 21.499996423721303,
+        "radius_min_mm": 53.0,
+        "radius_max_mm": 54.0
+      },
+      "centers_m": [
+        [
+          0.0,
+          0.006,
+          0.0
+        ],
+        [
+          0.0,
+          0.006,
+          0.06
+        ],
+        [
+          0.0,
+          0.006,
+          0.12
+        ]
+      ],
+      "radii_m": [
+        0.053,
+        0.053,
+        0.054
+      ]
+    },
+    "l_link3": {
+      "before": {
+        "count": 4,
+        "sampled_surface_coverage_pct": 100.0,
+        "sampled_max_gap_mm": 0.0,
+        "vertex_max_gap_mm": 0.0,
+        "aabb_excess_mm": 31.021247386932377,
+        "radius_min_mm": 44.0,
+        "radius_max_mm": 53.0
+      },
+      "after": {
+        "count": 3,
+        "sampled_surface_coverage_pct": 100.0,
+        "sampled_max_gap_mm": 0.0,
+        "vertex_max_gap_mm": 0.0,
+        "aabb_excess_mm": 35.02124738693238,
+        "radius_min_mm": 56.0,
+        "radius_max_mm": 57.0
+      },
+      "centers_m": [
+        [
+          0.0,
+          0.0,
+          -0.045
+        ],
+        [
+          0.0,
+          0.0175,
+          0.0
+        ],
+        [
+          0.0,
+          0.08,
+          0.0
+        ]
+      ],
+      "radii_m": [
+        0.057,
+        0.056,
+        0.057
+      ]
+    },
+    "l_link4": {
+      "before": {
+        "count": 4,
+        "sampled_surface_coverage_pct": 100.0,
+        "sampled_max_gap_mm": 0.0,
+        "vertex_max_gap_mm": 0.0,
+        "aabb_excess_mm": 18.50000035762789,
+        "radius_min_mm": 40.0,
+        "radius_max_mm": 47.0
+      },
+      "after": {
+        "count": 3,
+        "sampled_surface_coverage_pct": 100.0,
+        "sampled_max_gap_mm": 0.0,
+        "vertex_max_gap_mm": 0.0,
+        "aabb_excess_mm": 18.50000035762789,
+        "radius_min_mm": 46.0,
+        "radius_max_mm": 47.0
+      },
+      "centers_m": [
+        [
+          0.0,
+          0.006,
+          0.0
+        ],
+        [
+          0.0,
+          0.006,
+          0.05
+        ],
+        [
+          0.0,
+          0.006,
+          0.1
+        ]
+      ],
+      "radii_m": [
+        0.046,
+        0.046,
+        0.047
+      ]
+    },
+    "l_link5": {
+      "before": {
+        "count": 4,
+        "sampled_surface_coverage_pct": 100.0,
+        "sampled_max_gap_mm": 0.0,
+        "vertex_max_gap_mm": 0.0,
+        "aabb_excess_mm": 22.500006198883053,
+        "radius_min_mm": 35.0,
+        "radius_max_mm": 45.0
+      },
+      "after": {
+        "count": 3,
+        "sampled_surface_coverage_pct": 100.0,
+        "sampled_max_gap_mm": 0.0,
+        "vertex_max_gap_mm": 0.0,
+        "aabb_excess_mm": 24.500006198883053,
+        "radius_min_mm": 46.0,
+        "radius_max_mm": 47.0
+      },
+      "centers_m": [
+        [
+          0.0,
+          0.0,
+          -0.03
+        ],
+        [
+          0.0,
+          0.015,
+          0.0
+        ],
+        [
+          0.0,
+          0.06,
+          0.0
+        ]
+      ],
+      "radii_m": [
+        0.047,
+        0.047,
+        0.046
+      ]
+    },
+    "l_link6": {
+      "before": {
+        "count": 4,
+        "sampled_surface_coverage_pct": 100.0,
+        "sampled_max_gap_mm": 0.0,
+        "vertex_max_gap_mm": 0.0,
+        "aabb_excess_mm": 18.000005364418037,
+        "radius_min_mm": 38.0,
+        "radius_max_mm": 43.0
+      },
+      "after": {
+        "count": 3,
+        "sampled_surface_coverage_pct": 100.0,
+        "sampled_max_gap_mm": 0.0,
+        "vertex_max_gap_mm": 0.0,
+        "aabb_excess_mm": 18.000005364418037,
+        "radius_min_mm": 41.0,
+        "radius_max_mm": 43.0
+      },
+      "centers_m": [
+        [
+          0.0,
+          0.005,
+          0.0
+        ],
+        [
+          0.0,
+          0.005,
+          0.045
+        ],
+        [
+          0.0,
+          0.005,
+          0.09
+        ]
+      ],
+      "radii_m": [
+        0.041,
+        0.042,
+        0.043000000000000003
+      ]
+    },
+    "l_link7": {
+      "before": {
+        "count": 4,
+        "sampled_surface_coverage_pct": 100.0,
+        "sampled_max_gap_mm": 0.0,
+        "vertex_max_gap_mm": 0.0,
+        "aabb_excess_mm": 37.08665525913238,
+        "radius_min_mm": 36.00000000000001,
+        "radius_max_mm": 61.0
+      },
+      "after": {
+        "count": 3,
+        "sampled_surface_coverage_pct": 100.0,
+        "sampled_max_gap_mm": 0.0,
+        "vertex_max_gap_mm": 0.0,
+        "aabb_excess_mm": 37.08665525913238,
+        "radius_min_mm": 42.0,
+        "radius_max_mm": 61.0
+      },
+      "centers_m": [
+        [
+          -0.05,
+          0.0,
+          0.025
+        ],
+        [
+          -0.0175,
+          0.0,
+          0.025
+        ],
+        [
+          0.015,
+          0.0,
+          0.025
+        ]
+      ],
+      "radii_m": [
+        0.061,
+        0.042,
+        0.042
+      ]
+    },
+    "r_link1": {
+      "before": {
+        "count": 4,
+        "sampled_surface_coverage_pct": 100.0,
+        "sampled_max_gap_mm": 0.0,
+        "vertex_max_gap_mm": 0.0,
+        "aabb_excess_mm": 30.950710713863376,
+        "radius_min_mm": 47.0,
+        "radius_max_mm": 54.0
+      },
+      "after": {
+        "count": 3,
+        "sampled_surface_coverage_pct": 100.0,
+        "sampled_max_gap_mm": 0.0,
+        "vertex_max_gap_mm": 0.0,
+        "aabb_excess_mm": 33.95071071386338,
+        "radius_min_mm": 56.0,
+        "radius_max_mm": 59.00000000000001
+      },
+      "centers_m": [
+        [
+          0.0,
+          0.0,
+          -0.045
+        ],
+        [
+          0.0,
+          0.015,
+          0.0
+        ],
+        [
+          0.0,
+          0.075,
+          0.0
+        ]
+      ],
+      "radii_m": [
+        0.057,
+        0.059000000000000004,
+        0.056
+      ]
+    },
+    "r_link2": {
+      "before": {
+        "count": 4,
+        "sampled_surface_coverage_pct": 100.0,
+        "sampled_max_gap_mm": 0.0,
+        "vertex_max_gap_mm": 0.0,
+        "aabb_excess_mm": 21.499996423721303,
+        "radius_min_mm": 47.0,
+        "radius_max_mm": 54.0
+      },
+      "after": {
+        "count": 3,
+        "sampled_surface_coverage_pct": 100.0,
+        "sampled_max_gap_mm": 0.0,
+        "vertex_max_gap_mm": 0.0,
+        "aabb_excess_mm": 21.499996423721303,
+        "radius_min_mm": 53.0,
+        "radius_max_mm": 54.0
+      },
+      "centers_m": [
+        [
+          0.0,
+          0.006,
+          0.0
+        ],
+        [
+          0.0,
+          0.006,
+          0.06
+        ],
+        [
+          0.0,
+          0.006,
+          0.12
+        ]
+      ],
+      "radii_m": [
+        0.053,
+        0.053,
+        0.054
+      ]
+    },
+    "r_link3": {
+      "before": {
+        "count": 4,
+        "sampled_surface_coverage_pct": 100.0,
+        "sampled_max_gap_mm": 0.0,
+        "vertex_max_gap_mm": 0.0,
+        "aabb_excess_mm": 31.021172881126407,
+        "radius_min_mm": 44.0,
+        "radius_max_mm": 53.0
+      },
+      "after": {
+        "count": 3,
+        "sampled_surface_coverage_pct": 100.0,
+        "sampled_max_gap_mm": 0.0,
+        "vertex_max_gap_mm": 0.0,
+        "aabb_excess_mm": 35.02117288112641,
+        "radius_min_mm": 57.0,
+        "radius_max_mm": 57.0
+      },
+      "centers_m": [
+        [
+          0.0,
+          0.0,
+          -0.045
+        ],
+        [
+          0.0,
+          0.0175,
+          0.0
+        ],
+        [
+          0.0,
+          0.08,
+          0.0
+        ]
+      ],
+      "radii_m": [
+        0.057,
+        0.057,
+        0.057
+      ]
+    },
+    "r_link4": {
+      "before": {
+        "count": 4,
+        "sampled_surface_coverage_pct": 100.0,
+        "sampled_max_gap_mm": 0.0,
+        "vertex_max_gap_mm": 0.0,
+        "aabb_excess_mm": 18.500015258789084,
+        "radius_min_mm": 40.0,
+        "radius_max_mm": 47.0
+      },
+      "after": {
+        "count": 3,
+        "sampled_surface_coverage_pct": 100.0,
+        "sampled_max_gap_mm": 0.0,
+        "vertex_max_gap_mm": 0.0,
+        "aabb_excess_mm": 18.500015258789084,
+        "radius_min_mm": 46.0,
+        "radius_max_mm": 47.0
+      },
+      "centers_m": [
+        [
+          0.0,
+          0.006,
+          0.0
+        ],
+        [
+          0.0,
+          0.006,
+          0.05
+        ],
+        [
+          0.0,
+          0.006,
+          0.1
+        ]
+      ],
+      "radii_m": [
+        0.046,
+        0.046,
+        0.047
+      ]
+    },
+    "r_link5": {
+      "before": {
+        "count": 4,
+        "sampled_surface_coverage_pct": 100.0,
+        "sampled_max_gap_mm": 0.0,
+        "vertex_max_gap_mm": 0.0,
+        "aabb_excess_mm": 22.49999129772186,
+        "radius_min_mm": 35.0,
+        "radius_max_mm": 45.0
+      },
+      "after": {
+        "count": 3,
+        "sampled_surface_coverage_pct": 100.0,
+        "sampled_max_gap_mm": 0.0,
+        "vertex_max_gap_mm": 0.0,
+        "aabb_excess_mm": 24.49999129772186,
+        "radius_min_mm": 46.0,
+        "radius_max_mm": 47.0
+      },
+      "centers_m": [
+        [
+          0.0,
+          0.0,
+          -0.03
+        ],
+        [
+          0.0,
+          0.015,
+          0.0
+        ],
+        [
+          0.0,
+          0.06,
+          0.0
+        ]
+      ],
+      "radii_m": [
+        0.047,
+        0.047,
+        0.046
+      ]
+    },
+    "r_link6": {
+      "before": {
+        "count": 4,
+        "sampled_surface_coverage_pct": 100.0,
+        "sampled_max_gap_mm": 0.0,
+        "vertex_max_gap_mm": 0.0,
+        "aabb_excess_mm": 17.9969431757927,
+        "radius_min_mm": 38.0,
+        "radius_max_mm": 43.0
+      },
+      "after": {
+        "count": 3,
+        "sampled_surface_coverage_pct": 100.0,
+        "sampled_max_gap_mm": 0.0,
+        "vertex_max_gap_mm": 0.0,
+        "aabb_excess_mm": 17.9969431757927,
+        "radius_min_mm": 41.0,
+        "radius_max_mm": 43.0
+      },
+      "centers_m": [
+        [
+          0.0,
+          0.005,
+          0.0
+        ],
+        [
+          0.0,
+          0.005,
+          0.045
+        ],
+        [
+          0.0,
+          0.005,
+          0.09
+        ]
+      ],
+      "radii_m": [
+        0.041,
+        0.042,
+        0.043000000000000003
+      ]
+    },
+    "r_link7": {
+      "before": {
+        "count": 4,
+        "sampled_surface_coverage_pct": 100.0,
+        "sampled_max_gap_mm": 0.0,
+        "vertex_max_gap_mm": 0.0,
+        "aabb_excess_mm": 34.65049910545349,
+        "radius_min_mm": 46.0,
+        "radius_max_mm": 63.0
+      },
+      "after": {
+        "count": 3,
+        "sampled_surface_coverage_pct": 100.0,
+        "sampled_max_gap_mm": 0.0,
+        "vertex_max_gap_mm": 0.0,
+        "aabb_excess_mm": 34.65049910545349,
+        "radius_min_mm": 51.00000000000001,
+        "radius_max_mm": 63.0
+      },
+      "centers_m": [
+        [
+          -0.05,
+          0.0,
+          0.035
+        ],
+        [
+          -0.0175,
+          0.0,
+          0.035
+        ],
+        [
+          0.015,
+          0.0,
+          0.035
+        ]
+      ],
+      "radii_m": [
+        0.063,
+        0.051000000000000004,
+        0.051000000000000004
+      ]
+    }
+  },
+  "total_spheres": 378
+}

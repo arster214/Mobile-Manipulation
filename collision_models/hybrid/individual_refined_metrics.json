@@ -1,0 +1,745 @@
+{
+  "source": "/home/fang/robot_ws/collision_models/hybrid/rm75_hybrid_edited_20261025_163852_059679.yml",
+  "training_points_per_link": 180000,
+  "validation_points_per_link": 220000,
+  "policy": "Fit each sphere inside its old sphere, preserving sampled original coverage; prune redundant spheres. Per-link validation loss <=0.10 percentage point, newly exposed depth <=0.5mm. Independent local validation loss <=0.20 percentage point per changed sphere patch. No ignore changes.",
+  "links": {
+    "body_base_link": {
+      "count_before": 116,
+      "count_after": 116,
+      "mean_radius_before_mm": 79.3704767294482,
+      "mean_radius_after_mm": 77.43148173711504,
+      "coverage_before_pct": 99.98227272727273,
+      "coverage_after_pct": 99.96454545454544,
+      "newly_uncovered_max_mm": 0.4989127958016232,
+      "changes": [
+        {
+          "index": 50,
+          "old_radius_mm": 80.325,
+          "new_radius_mm": 63.55785049350295,
+          "center_shift_mm": 16.76714950649706,
+          "action": "refit"
+        },
+        {
+          "index": 36,
+          "old_radius_mm": 80.325,
+          "new_radius_mm": 51.83780475958232,
+          "center_shift_mm": 28.487195240417687,
+          "action": "refit"
+        },
+        {
+          "index": 71,
+          "old_radius_mm": 70.875,
+          "new_radius_mm": 28.474079562327763,
+          "center_shift_mm": 19.589228205578333,
+          "action": "refit"
+        },
+        {
+          "index": 1,
+          "old_radius_mm": 80.325,
+          "new_radius_mm": 78.80518204468436,
+          "center_shift_mm": 1.5198179553156466,
+          "action": "refit"
+        },
+        {
+          "index": 73,
+          "old_radius_mm": 70.875,
+          "new_radius_mm": 70.15429813353735,
+          "center_shift_mm": 0.7207018664626438,
+          "action": "refit"
+        },
+        {
+          "index": 63,
+          "old_radius_mm": 70.875,
+          "new_radius_mm": 70.03564714008036,
+          "center_shift_mm": 0.8393528599196318,
+          "action": "refit"
+        },
+        {
+          "index": 61,
+          "old_radius_mm": 66.15,
+          "new_radius_mm": 43.58213206206627,
+          "center_shift_mm": 3.742335985439065,
+          "action": "refit"
+        },
+        {
+          "index": 59,
+          "old_radius_mm": 75.6,
+          "new_radius_mm": 69.77461081750862,
+          "center_shift_mm": 5.825389182491388,
+          "action": "refit"
+        },
+        {
+          "index": 100,
+          "old_radius_mm": 99.225,
+          "new_radius_mm": 98.12538806906248,
+          "center_shift_mm": 1.0996119309375123,
+          "action": "refit"
+        },
+        {
+          "index": 24,
+          "old_radius_mm": 80.325,
+          "new_radius_mm": 59.716353098927094,
+          "center_shift_mm": 18.640688046037763,
+          "action": "refit"
+        },
+        {
+          "index": 114,
+          "old_radius_mm": 70.875,
+          "new_radius_mm": 62.29199917575437,
+          "center_shift_mm": 8.583000824245621,
+          "action": "refit"
+        },
+        {
+          "index": 64,
+          "old_radius_mm": 70.875,
+          "new_radius_mm": 67.49283082741934,
+          "center_shift_mm": 3.3821691725806544,
+          "action": "refit"
+        },
+        {
+          "index": 90,
+          "old_radius_mm": 99.225,
+          "new_radius_mm": 98.92497350243107,
+          "center_shift_mm": 0.30002649756892014,
+          "action": "refit"
+        },
+        {
+          "index": 85,
+          "old_radius_mm": 99.225,
+          "new_radius_mm": 98.53376588925248,
+          "center_shift_mm": 0.6912341107475203,
+          "action": "refit"
+        },
+        {
+          "index": 115,
+          "old_radius_mm": 70.875,
+          "new_radius_mm": 64.25755101362064,
+          "center_shift_mm": 6.61744898637935,
+          "action": "refit"
+        },
+        {
+          "index": 92,
+          "old_radius_mm": 99.225,
+          "new_radius_mm": 97.87565166953743,
+          "center_shift_mm": 1.349348330462559,
+          "action": "refit"
+        },
+        {
+          "index": 16,
+          "old_radius_mm": 80.325,
+          "new_radius_mm": 38.48105586220979,
+          "center_shift_mm": 21.060903828660607,
+          "action": "refit"
+        },
+        {
+          "index": 70,
+          "old_radius_mm": 70.875,
+          "new_radius_mm": 67.60754872937981,
+          "center_shift_mm": 3.2674512706201853,
+          "action": "refit"
+        },
+        {
+          "index": 95,
+          "old_radius_mm": 99.225,
+          "new_radius_mm": 98.46919667154373,
+          "center_shift_mm": 0.755803328456266,
+          "action": "refit"
+        },
+        {
+          "index": 46,
+          "old_radius_mm": 80.325,
+          "new_radius_mm": 75.12230805264274,
+          "center_shift_mm": 5.20269194735727,
+          "action": "refit"
+        },
+        {
+          "index": 18,
+          "old_radius_mm": 80.325,
+          "new_radius_mm": 78.69874604206318,
+          "center_shift_mm": 1.6262539579368385,
+          "action": "refit"
+        },
+        {
+          "index": 69,
+          "old_radius_mm": 70.875,
+          "new_radius_mm": 69.17719502415765,
+          "center_shift_mm": 1.6978049758423366,
+          "action": "refit"
+        },
+        {
+          "index": 28,
+          "old_radius_mm": 80.325,
+          "new_radius_mm": 79.77000836295589,
+          "center_shift_mm": 0.5549916370441202,
+          "action": "refit"
+        },
+        {
+          "index": 48,
+          "old_radius_mm": 75.6,
+          "new_radius_mm": 74.96572806755599,
+          "center_shift_mm": 0.6342719324440189,
+          "action": "refit"
+        },
+        {
+          "index": 25,
+          "old_radius_mm": 80.325,
+          "new_radius_mm": 79.28886420004747,
+          "center_shift_mm": 1.0361357999525462,
+          "action": "refit"
+        },
+        {
+          "index": 113,
+          "old_radius_mm": 70.875,
+          "new_radius_mm": 66.68119836496147,
+          "center_shift_mm": 4.193801635038515,
+          "action": "refit"
+        },
+        {
+          "index": 93,
+          "old_radius_mm": 99.225,
+          "new_radius_mm": 98.59646763150272,
+          "center_shift_mm": 0.6285323684972766,
+          "action": "refit"
+        },
+        {
+          "index": 11,
+          "old_radius_mm": 80.325,
+          "new_radius_mm": 78.60314562103648,
+          "center_shift_mm": 1.7218543789635319,
+          "action": "refit"
+        }
+      ],
+      "reverted_after_holdout": [
+        37,
+        77,
+        65,
+        13,
+        111,
+        27,
+        112,
+        9,
+        22,
+        53,
+        96,
+        29,
+        54,
+        39,
+        34,
+        81,
+        108,
+        86,
+        42,
+        15,
+        3,
+        101,
+        4,
+        5,
+        99,
+        106,
+        105,
+        41,
+        6
+      ]
+    },
+    "l_base_link1": {
+      "count_before": 3,
+      "count_after": 3,
+      "mean_radius_before_mm": 69.88666666666667,
+      "mean_radius_after_mm": 58.26054633081269,
+      "coverage_before_pct": 99.70409090909091,
+      "coverage_after_pct": 99.70318181818182,
+      "newly_uncovered_max_mm": 0.04234068815419517,
+      "changes": [
+        {
+          "index": 1,
+          "old_radius_mm": 73.85749999999999,
+          "new_radius_mm": 38.97913899243807,
+          "center_shift_mm": 34.87836100756193,
+          "action": "refit"
+        }
+      ]
+    },
+    "l_link1": {
+      "count_before": 3,
+      "count_after": 3,
+      "mean_radius_before_mm": 48.708400000000005,
+      "mean_radius_after_mm": 48.6434124,
+      "coverage_before_pct": 99.52727272727273,
+      "coverage_after_pct": 99.46318181818182,
+      "newly_uncovered_max_mm": 0.0993721060305458,
+      "changes": [
+        {
+          "index": 1,
+          "old_radius_mm": 46.415099999999995,
+          "new_radius_mm": 46.322269799999994,
+          "center_shift_mm": 0.0,
+          "action": "refit"
+        },
+        {
+          "index": 2,
+          "old_radius_mm": 51.066300000000005,
+          "new_radius_mm": 50.9641674,
+          "center_shift_mm": 0.0,
+          "action": "refit"
+        }
+      ]
+    },
+    "l_link2": {
+      "count_before": 3,
+      "count_after": 3,
+      "mean_radius_before_mm": 46.318200000000004,
+      "mean_radius_after_mm": 46.235512,
+      "coverage_before_pct": 99.51045454545454,
+      "coverage_after_pct": 99.46318181818182,
+      "newly_uncovered_max_mm": 0.23931281602466298,
+      "changes": [
+        {
+          "index": 1,
+          "old_radius_mm": 49.6128,
+          "new_radius_mm": 49.364736,
+          "center_shift_mm": 0.0,
+          "action": "refit"
+        }
+      ]
+    },
+    "l_link3": {
+      "count_before": 3,
+      "count_after": 3,
+      "mean_radius_before_mm": 44.818400000000004,
+      "mean_radius_after_mm": 44.7595456,
+      "coverage_before_pct": 99.50227272727273,
+      "coverage_after_pct": 99.43681818181818,
+      "newly_uncovered_max_mm": 0.09527072040197565,
+      "changes": [
+        {
+          "index": 1,
+          "old_radius_mm": 39.9784,
+          "new_radius_mm": 39.898443199999996,
+          "center_shift_mm": 0.0,
+          "action": "refit"
+        },
+        {
+          "index": 2,
+          "old_radius_mm": 48.3032,
+          "new_radius_mm": 48.2065936,
+          "center_shift_mm": 0.0,
+          "action": "refit"
+        }
+      ]
+    },
+    "l_link4": {
+      "count_before": 3,
+      "count_after": 3,
+      "mean_radius_before_mm": 39.421366666666664,
+      "mean_radius_after_mm": 39.36876186666667,
+      "coverage_before_pct": 99.5409090909091,
+      "coverage_after_pct": 99.47227272727272,
+      "newly_uncovered_max_mm": 0.0816114690553732,
+      "changes": [
+        {
+          "index": 1,
+          "old_radius_mm": 42.6447,
+          "new_radius_mm": 42.5594106,
+          "center_shift_mm": 0.0,
+          "action": "refit"
+        },
+        {
+          "index": 0,
+          "old_radius_mm": 36.262499999999996,
+          "new_radius_mm": 36.189975,
+          "center_shift_mm": 0.0,
+          "action": "refit"
+        }
+      ]
+    },
+    "l_link5": {
+      "count_before": 3,
+      "count_after": 3,
+      "mean_radius_before_mm": 36.33153333333333,
+      "mean_radius_after_mm": 36.28426706666667,
+      "coverage_before_pct": 99.55590909090908,
+      "coverage_after_pct": 99.49,
+      "newly_uncovered_max_mm": 0.07900817101305635,
+      "changes": [
+        {
+          "index": 1,
+          "old_radius_mm": 31.361200000000007,
+          "new_radius_mm": 31.298477600000005,
+          "center_shift_mm": 0.0,
+          "action": "refit"
+        },
+        {
+          "index": 2,
+          "old_radius_mm": 39.5382,
+          "new_radius_mm": 39.4591236,
+          "center_shift_mm": 0.0,
+          "action": "refit"
+        }
+      ]
+    },
+    "l_link6": {
+      "count_before": 3,
+      "count_after": 3,
+      "mean_radius_before_mm": 35.470499999999994,
+      "mean_radius_after_mm": 35.424211799999995,
+      "coverage_before_pct": 99.49727272727273,
+      "coverage_after_pct": 99.4309090909091,
+      "newly_uncovered_max_mm": 0.07734573749833967,
+      "changes": [
+        {
+          "index": 1,
+          "old_radius_mm": 38.905199999999994,
+          "new_radius_mm": 38.82738959999999,
+          "center_shift_mm": 0.0,
+          "action": "refit"
+        },
+        {
+          "index": 0,
+          "old_radius_mm": 30.527099999999997,
+          "new_radius_mm": 30.466045799999996,
+          "center_shift_mm": 0.0,
+          "action": "refit"
+        }
+      ]
+    },
+    "l_link7": {
+      "count_before": 3,
+      "count_after": 3,
+      "mean_radius_before_mm": 41.3336,
+      "mean_radius_after_mm": 41.174202666666666,
+      "coverage_before_pct": 99.51636363636364,
+      "coverage_after_pct": 99.4790909090909,
+      "newly_uncovered_max_mm": 0.2758535203600532,
+      "changes": [
+        {
+          "index": 1,
+          "old_radius_mm": 28.6528,
+          "new_radius_mm": 28.366272,
+          "center_shift_mm": 0.0,
+          "action": "refit"
+        },
+        {
+          "index": 2,
+          "old_radius_mm": 38.3328,
+          "new_radius_mm": 38.141135999999996,
+          "center_shift_mm": 0.0,
+          "action": "refit"
+        }
+      ]
+    },
+    "platform_base_link": {
+      "count_before": 42,
+      "count_after": 42,
+      "mean_radius_before_mm": 74.69755633652169,
+      "mean_radius_after_mm": 70.98417218966276,
+      "coverage_before_pct": 99.97318181818183,
+      "coverage_after_pct": 99.96272727272726,
+      "newly_uncovered_max_mm": 0.42918220264831497,
+      "changes": [
+        {
+          "index": 6,
+          "old_radius_mm": 75.28,
+          "new_radius_mm": 32.23702260826729,
+          "center_shift_mm": 43.04297739173271,
+          "action": "refit"
+        },
+        {
+          "index": 7,
+          "old_radius_mm": 75.28,
+          "new_radius_mm": 73.05232961279125,
+          "center_shift_mm": 2.227670387208753,
+          "action": "refit"
+        },
+        {
+          "index": 0,
+          "old_radius_mm": 75.28,
+          "new_radius_mm": 40.99986217175964,
+          "center_shift_mm": 26.530284348809218,
+          "action": "refit"
+        },
+        {
+          "index": 37,
+          "old_radius_mm": 75.28,
+          "new_radius_mm": 74.32777514463686,
+          "center_shift_mm": 0.9522248553631383,
+          "action": "refit"
+        },
+        {
+          "index": 17,
+          "old_radius_mm": 75.28,
+          "new_radius_mm": 74.84838257397784,
+          "center_shift_mm": 0.4316174260221635,
+          "action": "refit"
+        },
+        {
+          "index": 3,
+          "old_radius_mm": 75.28,
+          "new_radius_mm": 65.8447605996028,
+          "center_shift_mm": 9.435239400397219,
+          "action": "refit"
+        },
+        {
+          "index": 26,
+          "old_radius_mm": 75.28,
+          "new_radius_mm": 74.85134949298633,
+          "center_shift_mm": 0.4286505070136741,
+          "action": "refit"
+        },
+        {
+          "index": 14,
+          "old_radius_mm": 75.28,
+          "new_radius_mm": 74.71280572218151,
+          "center_shift_mm": 0.5671942778184889,
+          "action": "refit"
+        },
+        {
+          "index": 1,
+          "old_radius_mm": 70.575,
+          "new_radius_mm": 68.725705785637,
+          "center_shift_mm": 1.849294214362998,
+          "action": "refit"
+        },
+        {
+          "index": 34,
+          "old_radius_mm": 70.575,
+          "new_radius_mm": 70.10581749301684,
+          "center_shift_mm": 0.46918250698316116,
+          "action": "refit"
+        },
+        {
+          "index": 35,
+          "old_radius_mm": 67.63080294549037,
+          "new_radius_mm": 66.91711500250302,
+          "center_shift_mm": 0.7136879429873513,
+          "action": "refit"
+        },
+        {
+          "index": 32,
+          "old_radius_mm": 75.28,
+          "new_radius_mm": 70.48324185169511,
+          "center_shift_mm": 4.796758148304893,
+          "action": "refit"
+        },
+        {
+          "index": 20,
+          "old_radius_mm": 75.28,
+          "new_radius_mm": 47.86364000266691,
+          "center_shift_mm": 27.416359997333085,
+          "action": "refit"
+        },
+        {
+          "index": 30,
+          "old_radius_mm": 75.28,
+          "new_radius_mm": 47.55969288085208,
+          "center_shift_mm": 27.720307119147922,
+          "action": "refit"
+        },
+        {
+          "index": 19,
+          "old_radius_mm": 75.28,
+          "new_radius_mm": 74.48679040668691,
+          "center_shift_mm": 0.793209593313094,
+          "action": "refit"
+        },
+        {
+          "index": 31,
+          "old_radius_mm": 75.28,
+          "new_radius_mm": 74.4423774281539,
+          "center_shift_mm": 0.8376225718460916,
+          "action": "refit"
+        }
+      ],
+      "reverted_after_holdout": [
+        8,
+        38,
+        15,
+        39,
+        13,
+        5,
+        9,
+        33,
+        41,
+        18
+      ]
+    },
+    "r_base_link1": {
+      "count_before": 3,
+      "count_after": 3,
+      "mean_radius_before_mm": 70.68083333333333,
+      "mean_radius_after_mm": 70.68083333333333,
+      "coverage_before_pct": 99.86454545454545,
+      "coverage_after_pct": 99.86454545454545,
+      "newly_uncovered_max_mm": 0.0,
+      "changes": []
+    },
+    "r_link1": {
+      "count_before": 3,
+      "count_after": 3,
+      "mean_radius_before_mm": 48.708400000000005,
+      "mean_radius_after_mm": 48.6434124,
+      "coverage_before_pct": 99.52909090909091,
+      "coverage_after_pct": 99.46363636363637,
+      "newly_uncovered_max_mm": 0.09974856046825187,
+      "changes": [
+        {
+          "index": 1,
+          "old_radius_mm": 46.415099999999995,
+          "new_radius_mm": 46.322269799999994,
+          "center_shift_mm": 0.0,
+          "action": "refit"
+        },
+        {
+          "index": 2,
+          "old_radius_mm": 51.066300000000005,
+          "new_radius_mm": 50.9641674,
+          "center_shift_mm": 0.0,
+          "action": "refit"
+        }
+      ]
+    },
+    "r_link2": {
+      "count_before": 3,
+      "count_after": 3,
+      "mean_radius_before_mm": 46.318200000000004,
+      "mean_radius_after_mm": 46.235512,
+      "coverage_before_pct": 99.51045454545454,
+      "coverage_after_pct": 99.46318181818182,
+      "newly_uncovered_max_mm": 0.2393126400739229,
+      "changes": [
+        {
+          "index": 1,
+          "old_radius_mm": 49.6128,
+          "new_radius_mm": 49.364736,
+          "center_shift_mm": 0.0,
+          "action": "refit"
+        }
+      ]
+    },
+    "r_link3": {
+      "count_before": 3,
+      "count_after": 3,
+      "mean_radius_before_mm": 45.07653333333334,
+      "mean_radius_after_mm": 45.01709813333333,
+      "coverage_before_pct": 99.55590909090908,
+      "coverage_after_pct": 99.49045454545454,
+      "newly_uncovered_max_mm": 0.09541917789528814,
+      "changes": [
+        {
+          "index": 1,
+          "old_radius_mm": 40.7528,
+          "new_radius_mm": 40.6712944,
+          "center_shift_mm": 0.0,
+          "action": "refit"
+        },
+        {
+          "index": 2,
+          "old_radius_mm": 48.4,
+          "new_radius_mm": 48.3032,
+          "center_shift_mm": 0.0,
+          "action": "refit"
+        }
+      ]
+    },
+    "r_link4": {
+      "count_before": 3,
+      "count_after": 3,
+      "mean_radius_before_mm": 39.421366666666664,
+      "mean_radius_after_mm": 39.36876186666667,
+      "coverage_before_pct": 99.5409090909091,
+      "coverage_after_pct": 99.47227272727272,
+      "newly_uncovered_max_mm": 0.08160943617965821,
+      "changes": [
+        {
+          "index": 1,
+          "old_radius_mm": 42.6447,
+          "new_radius_mm": 42.5594106,
+          "center_shift_mm": 0.0,
+          "action": "refit"
+        },
+        {
+          "index": 0,
+          "old_radius_mm": 36.262499999999996,
+          "new_radius_mm": 36.189975,
+          "center_shift_mm": 0.0,
+          "action": "refit"
+        }
+      ]
+    },
+    "r_link5": {
+      "count_before": 3,
+      "count_after": 3,
+      "mean_radius_before_mm": 36.33153333333333,
+      "mean_radius_after_mm": 36.28426706666667,
+      "coverage_before_pct": 99.55590909090908,
+      "coverage_after_pct": 99.49,
+      "newly_uncovered_max_mm": 0.07901656836142856,
+      "changes": [
+        {
+          "index": 1,
+          "old_radius_mm": 31.361200000000007,
+          "new_radius_mm": 31.298477600000005,
+          "center_shift_mm": 0.0,
+          "action": "refit"
+        },
+        {
+          "index": 2,
+          "old_radius_mm": 39.5382,
+          "new_radius_mm": 39.4591236,
+          "center_shift_mm": 0.0,
+          "action": "refit"
+        }
+      ]
+    },
+    "r_link6": {
+      "count_before": 3,
+      "count_after": 3,
+      "mean_radius_before_mm": 35.470499999999994,
+      "mean_radius_after_mm": 35.424211799999995,
+      "coverage_before_pct": 99.49727272727273,
+      "coverage_after_pct": 99.4309090909091,
+      "newly_uncovered_max_mm": 0.07734409290890976,
+      "changes": [
+        {
+          "index": 1,
+          "old_radius_mm": 38.905199999999994,
+          "new_radius_mm": 38.82738959999999,
+          "center_shift_mm": 0.0,
+          "action": "refit"
+        },
+        {
+          "index": 0,
+          "old_radius_mm": 30.527099999999997,
+          "new_radius_mm": 30.466045799999996,
+          "center_shift_mm": 0.0,
+          "action": "refit"
+        }
+      ]
+    },
+    "r_link7": {
+      "count_before": 3,
+      "count_after": 3,
+      "mean_radius_before_mm": 43.07116666666666,
+      "mean_radius_after_mm": 42.89843166666666,
+      "coverage_before_pct": 99.48772727272728,
+      "coverage_after_pct": 99.42363636363636,
+      "newly_uncovered_max_mm": 0.32530581746489234,
+      "changes": [
+        {
+          "index": 1,
+          "old_radius_mm": 32.713499999999996,
+          "new_radius_mm": 32.386365,
+          "center_shift_mm": 0.0,
+          "action": "refit"
+        },
+        {
+          "index": 2,
+          "old_radius_mm": 38.214000000000006,
+          "new_radius_mm": 38.02293,
+          "center_shift_mm": 0.0,
+          "action": "refit"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,926 @@
+{
+  "seed": 20261025,
+  "mode": "planar_base_plus_lift_plus_right_arm_11dof",
+  "bottle_center_world_m": [
+    -1.05,
+    1.32,
+    0.81
+  ],
+  "target_tcp_world": [
+    [
+      -2.220446049250313e-16,
+      -1.0,
+      0.0,
+      -1.05
+    ],
+    [
+      0.0,
+      0.0,
+      1.0,
+      1.1700000000000002
+    ],
+    [
+      -1.0,
+      2.220446049250313e-16,
+      0.0,
+      0.81
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "initial_posture": "/home/fang/robot_ws/postures/mobile_manipulation_initial.json",
+  "robot_config": "/home/fang/robot_ws/postures/rm75_mobile_manipulation.yml",
+  "sphere_count": 402,
+  "sampling_attempts": 30,
+  "sampling_time_ms": 0.0,
+  "sampling_domain": "uniform x,y in 7m x 7m room and yaw in [-pi,pi], rejected if whole sphere envelope leaves room or comes within 1cm of wall/table/bottle",
+  "ground_policy": "fixed original scene spawn height; support contact excluded from sphere obstacle tests",
+  "initial_collision_check": "sphere self collision using config ignore pairs; sphere-box and sphere-cylinder world checks",
+  "final_collision_checked": true,
+  "nonholonomic_path_checked": false,
+  "execution_ready": false,
+  "timer_scope": "QP iterations, integration and convergence checks only; excludes loading, sampling, collision filtering, target setup, visualization",
+  "max_iterations": 1200,
+  "position_tolerance_m": 0.0001,
+  "rotation_tolerance_rad": 0.001,
+  "all": {
+    "count": 20,
+    "mean_ms": 0.605662050003275,
+    "median_ms": 0.5752310000275429,
+    "p95_ms": 0.69636070001593,
+    "min_ms": 0.5608540000139328,
+    "max_ms": 0.739085999953204
+  },
+  "success": {
+    "count": 20,
+    "mean_ms": 0.605662050003275,
+    "median_ms": 0.5752310000275429,
+    "p95_ms": 0.69636070001593,
+    "min_ms": 0.5608540000139328,
+    "max_ms": 0.739085999953204
+  },
+  "failure": {
+    "count": 0
+  },
+  "joint_names": [
+    "root_joint",
+    "platform_joint",
+    "r_joint1",
+    "r_joint2",
+    "r_joint3",
+    "r_joint4",
+    "r_joint5",
+    "r_joint6",
+    "r_joint7"
+  ],
+  "results": [
+    {
+      "index": 1,
+      "base_x_m": -2.3786668967816693,
+      "base_y_m": -2.5031894523557927,
+      "base_yaw_deg": -67.51859310447742,
+      "initial_environment_gap_m": 0.20970291661197932,
+      "initial_self_gap_m": 0.000499999997738157,
+      "success": true,
+      "time_ms": 0.739085999953204,
+      "iterations": 9,
+      "position_error_m": 2.0960772884756e-06,
+      "rotation_error_rad": 1.9153142636465774e-06,
+      "joint_limits_ok": true,
+      "exception": null,
+      "joint_positions": [
+        -1.1637138491339027,
+        0.38493624507868374,
+        -0.914828820290711,
+        -0.4038418373144448,
+        0.524452081368462,
+        -3.10904598588731,
+        -2.072978502402137,
+        -1.6848583359229115,
+        1.0508310969954058,
+        -2.114285368694957,
+        -0.6273547340645552,
+        -0.5991953726617533
+      ],
+      "final_base_xy_m": [
+        -1.1637138491339027,
+        0.38493624507868374
+      ],
+      "final_base_yaw_deg": -156.18142895144456,
+      "final_lift_joint_m": 0.524452081368462,
+      "final_self_gap_m": -0.011466594435161563,
+      "final_world_gap_m": 0.04788149326455775,
+      "final_collision_free": false,
+      "deepest_self_collision_links": [
+        "platform_base_link",
+        "r_link2"
+      ]
+    },
+    {
+      "index": 2,
+      "base_x_m": -1.2559475520689283,
+      "base_y_m": 0.31938830644496363,
+      "base_yaw_deg": 104.91828490288479,
+      "initial_environment_gap_m": 0.3380724506343445,
+      "initial_self_gap_m": 0.000499999997738157,
+      "success": true,
+      "time_ms": 0.6121989999883226,
+      "iterations": 9,
+      "position_error_m": 9.139172974626013e-07,
+      "rotation_error_rad": 1.1914961853376601e-06,
+      "joint_limits_ok": true,
+      "exception": null,
+      "joint_positions": [
+        -1.147279544104594,
+        0.40010911333422905,
+        -0.9280187082066671,
+        -0.37253359206711667,
+        0.5240827505911031,
+        -3.1090459858873096,
+        -2.164422285334975,
+        -1.6917560757244434,
+        1.0828424105077783,
+        -2.1506163920886983,
+        -0.626699932125492,
+        -0.6682948181087406
+      ],
+      "final_base_xy_m": [
+        -1.147279544104594,
+        0.40010911333422905
+      ],
+      "final_base_yaw_deg": -158.1280444315475,
+      "final_lift_joint_m": 0.5240827505911031,
+      "final_self_gap_m": -0.016489983189908027,
+      "final_world_gap_m": 0.04788162949077439,
+      "final_collision_free": false,
+      "deepest_self_collision_links": [
+        "platform_base_link",
+        "r_link2"
+      ]
+    },
+    {
+      "index": 3,
+      "base_x_m": 2.4228387879732676,
+      "base_y_m": 1.1361044940620637,
+      "base_yaw_deg": -105.91447767276277,
+      "initial_environment_gap_m": 0.193965305936149,
+      "initial_self_gap_m": 0.000499999997738157,
+      "success": true,
+      "time_ms": 0.5753509999522066,
+      "iterations": 9,
+      "position_error_m": 4.869709370547843e-07,
+      "rotation_error_rad": 7.960057076820394e-07,
+      "joint_limits_ok": true,
+      "exception": null,
+      "joint_positions": [
+        -1.1717656567905586,
+        0.40999363795092764,
+        -0.9497559573341016,
+        -0.3129914080424327,
+        0.5241169259549842,
+        -3.1087939706034833,
+        -2.158933000068326,
+        -1.7389349819437525,
+        1.0909412439260784,
+        -2.170665860217012,
+        -0.6164701094579729,
+        -0.6465491943482286
+      ],
+      "final_base_xy_m": [
+        -1.1717656567905586,
+        0.40999363795092764
+      ],
+      "final_base_yaw_deg": -161.76040056502583,
+      "final_lift_joint_m": 0.5241169259549842,
+      "final_self_gap_m": -0.016190547200579407,
+      "final_world_gap_m": 0.04788134773997041,
+      "final_collision_free": false,
+      "deepest_self_collision_links": [
+        "platform_base_link",
+        "r_link2"
+      ]
+    },
+    {
+      "index": 4,
+      "base_x_m": 1.090525288423363,
+      "base_y_m": -0.09655387661959036,
+      "base_yaw_deg": 56.420981861325494,
+      "initial_environment_gap_m": 1.0257866111330818,
+      "initial_self_gap_m": 0.000499999997738157,
+      "success": true,
+      "time_ms": 0.6654489999391444,
+      "iterations": 10,
+      "position_error_m": 7.474432193781511e-05,
+      "rotation_error_rad": 0.00019718952967425296,
+      "joint_limits_ok": true,
+      "exception": null,
+      "joint_positions": [
+        -1.1866852851462806,
+        0.42597349812575186,
+        -0.9749586269836112,
+        -0.22238632078037487,
+        0.5300000000000016,
+        -3.0896070551554433,
+        -2.188076896042524,
+        -1.820532466015689,
+        1.1280885009219177,
+        -2.1358044849280278,
+        -0.6034178603479454,
+        -0.7176860038102166
+      ],
+      "final_base_xy_m": [
+        -1.1866852851462806,
+        0.42597349812575186
+      ],
+      "final_base_yaw_deg": -167.1507681332466,
+      "final_lift_joint_m": 0.5300000000000016,
+      "final_self_gap_m": -0.017984205021525666,
+      "final_world_gap_m": 0.04794719995403414,
+      "final_collision_free": false,
+      "deepest_self_collision_links": [
+        "platform_base_link",
+        "r_link2"
+      ]
+    },
+    {
+      "index": 5,
+      "base_x_m": -1.3605419839387252,
+      "base_y_m": 0.7028110763361628,
+      "base_yaw_deg": 155.72929256720442,
+      "initial_environment_gap_m": 0.19060294463252106,
+      "initial_self_gap_m": 0.000499999997738157,
+      "success": true,
+      "time_ms": 0.5954990000418547,
+      "iterations": 9,
+      "position_error_m": 2.679914689602322e-06,
+      "rotation_error_rad": 2.2943119125261047e-06,
+      "joint_limits_ok": true,
+      "exception": null,
+      "joint_positions": [
+        -1.1687578714442277,
+        0.4075223302680766,
+        -0.9463698837430522,
+        -0.32308519486996384,
+        0.5241825558542954,
+        -3.105318956775698,
+        -2.146967523396959,
+        -1.7474049337966338,
+        1.0878490119786297,
+        -2.1403976582744395,
+        -0.6271231901443174,
+        -0.658408949323207
+      ],
+      "final_base_xy_m": [
+        -1.1687578714442277,
+        0.4075223302680766
+      ],
+      "final_base_yaw_deg": -161.15039261185257,
+      "final_lift_joint_m": 0.5241825558542954,
+      "final_self_gap_m": -0.015567018419290667,
+      "final_world_gap_m": 0.04788230793299671,
+      "final_collision_free": false,
+      "deepest_self_collision_links": [
+        "platform_base_link",
+        "r_link2"
+      ]
+    },
+    {
+      "index": 6,
+      "base_x_m": -1.7207450362421417,
+      "base_y_m": -0.3918047388037551,
+      "base_yaw_deg": -125.45116640395572,
+      "initial_environment_gap_m": 0.8363091198232583,
+      "initial_self_gap_m": 0.000499999997738157,
+      "success": true,
+      "time_ms": 0.5744300000287694,
+      "iterations": 9,
+      "position_error_m": 2.1359008522235043e-06,
+      "rotation_error_rad": 4.260009713031659e-06,
+      "joint_limits_ok": true,
+      "exception": null,
+      "joint_positions": [
+        -1.1558685582349584,
+        0.406878332236155,
+        -0.940096066253262,
+        -0.3409096452363027,
+        0.5240018939691384,
+        -3.10904598588731,
+        -2.172036416920575,
+        -1.7226399029161956,
+        1.0900571101665522,
+        -2.155202798107809,
+        -0.6268920776565324,
+        -0.6723286877459189
+      ],
+      "final_base_xy_m": [
+        -1.1558685582349584,
+        0.406878332236155
+      ],
+      "final_base_yaw_deg": -160.06769574337255,
+      "final_lift_joint_m": 0.5240018939691384,
+      "final_self_gap_m": -0.016908792001775315,
+      "final_world_gap_m": 0.04788185067740669,
+      "final_collision_free": false,
+      "deepest_self_collision_links": [
+        "platform_base_link",
+        "r_link2"
+      ]
+    },
+    {
+      "index": 7,
+      "base_x_m": 0.7681013290693919,
+      "base_y_m": 2.472071007916721,
+      "base_yaw_deg": 47.34179903754452,
+      "initial_environment_gap_m": 0.1803795854094115,
+      "initial_self_gap_m": 0.000499999997738157,
+      "success": true,
+      "time_ms": 0.6228089999922304,
+      "iterations": 10,
+      "position_error_m": 2.7480196295567464e-06,
+      "rotation_error_rad": 2.601532287521269e-06,
+      "joint_limits_ok": true,
+      "exception": null,
+      "joint_positions": [
+        -1.182423157358443,
+        0.4263781266716586,
+        -0.970794497251438,
+        -0.23991257596534554,
+        0.5268636230715361,
+        -3.1016268250842263,
+        -2.183438633203341,
+        -1.822642632244967,
+        1.120038480246429,
+        -2.1384509332178374,
+        -0.620795962327418,
+        -0.7049530408589552
+      ],
+      "final_base_xy_m": [
+        -1.182423157358443,
+        0.4263781266716586
+      ],
+      "final_base_yaw_deg": -166.1186194152376,
+      "final_lift_joint_m": 0.5268636230715361,
+      "final_self_gap_m": -0.01760942800845066,
+      "final_world_gap_m": 0.04788269480384991,
+      "final_collision_free": false,
+      "deepest_self_collision_links": [
+        "platform_base_link",
+        "r_link2"
+      ]
+    },
+    {
+      "index": 8,
+      "base_x_m": 0.6319557512316347,
+      "base_y_m": 2.129897703813528,
+      "base_yaw_deg": -22.93763225086935,
+      "initial_environment_gap_m": 0.023710382944543695,
+      "initial_self_gap_m": 0.000499999997738157,
+      "success": true,
+      "time_ms": 0.572817000033865,
+      "iterations": 9,
+      "position_error_m": 8.002412650730302e-07,
+      "rotation_error_rad": 1.0790623764378187e-06,
+      "joint_limits_ok": true,
+      "exception": null,
+      "joint_positions": [
+        -1.1643289188340409,
+        0.4091972949081234,
+        -0.9458916646391387,
+        -0.3244826016386693,
+        0.5240870769124774,
+        -3.10903980485651,
+        -2.1617775112564592,
+        -1.7426354822106918,
+        1.0923189965663007,
+        -2.149655663431016,
+        -0.6266659076036153,
+        -0.6665880650260914
+      ],
+      "final_base_xy_m": [
+        -1.1643289188340409,
+        0.4091972949081234
+      ],
+      "final_base_yaw_deg": -161.06576847982026,
+      "final_lift_joint_m": 0.5240870769124774,
+      "final_self_gap_m": -0.016344568754692666,
+      "final_world_gap_m": 0.04788158804902555,
+      "final_collision_free": false,
+      "deepest_self_collision_links": [
+        "platform_base_link",
+        "r_link2"
+      ]
+    },
+    {
+      "index": 9,
+      "base_x_m": -2.5511770600589343,
+      "base_y_m": -0.31552316196039243,
+      "base_yaw_deg": 31.019841266551207,
+      "initial_environment_gap_m": 0.5805511535958054,
+      "initial_self_gap_m": 0.000499999997738157,
+      "success": true,
+      "time_ms": 0.6887619999815797,
+      "iterations": 11,
+      "position_error_m": 3.0496361332838082e-06,
+      "rotation_error_rad": 2.7098606019479156e-06,
+      "joint_limits_ok": true,
+      "exception": null,
+      "joint_positions": [
+        -1.1869829098969293,
+        0.44068499848180254,
+        -0.9833077166637959,
+        -0.1819503623228925,
+        0.5305419312039261,
+        -3.097981167135306,
+        -2.2063672621666304,
+        -1.8967532298868697,
+        1.1497325686748294,
+        -2.0977838955947554,
+        -0.6272070391235737,
+        -0.7705961993334053
+      ],
+      "final_base_xy_m": [
+        -1.1869829098969293,
+        0.44068499848180254
+      ],
+      "final_base_yaw_deg": -169.51661645121806,
+      "final_lift_joint_m": 0.5305419312039261,
+      "final_self_gap_m": -0.021633079108818953,
+      "final_world_gap_m": 0.04788287277727414,
+      "final_collision_free": false,
+      "deepest_self_collision_links": [
+        "platform_base_link",
+        "r_link3"
+      ]
+    },
+    {
+      "index": 10,
+      "base_x_m": -0.3606606012179996,
+      "base_y_m": 2.467265567299421,
+      "base_yaw_deg": -22.09008883295818,
+      "initial_environment_gap_m": 0.22693937790425317,
+      "initial_self_gap_m": 0.000499999997738157,
+      "success": true,
+      "time_ms": 0.5721150000681519,
+      "iterations": 9,
+      "position_error_m": 4.922593743896771e-07,
+      "rotation_error_rad": 6.611049310562507e-07,
+      "joint_limits_ok": true,
+      "exception": null,
+      "joint_positions": [
+        -1.1534324887406167,
+        0.40045938708962187,
+        -0.9314802443990692,
+        -0.3637919107048015,
+        0.5240915792421047,
+        -3.108790874890054,
+        -2.1600610759694003,
+        -1.6913556747180778,
+        1.08149103477061,
+        -2.163287673712217,
+        -0.6199577662855033,
+        -0.6534409400996387
+      ],
+      "final_base_xy_m": [
+        -1.1534324887406167,
+        0.40045938708962187
+      ],
+      "final_base_yaw_deg": -158.6667462765013,
+      "final_lift_joint_m": 0.5240915792421047,
+      "final_self_gap_m": -0.016252626924821052,
+      "final_world_gap_m": 0.04788132528366501,
+      "final_collision_free": false,
+      "deepest_self_collision_links": [
+        "platform_base_link",
+        "r_link2"
+      ]
+    },
+    {
+      "index": 11,
+      "base_x_m": 2.578035856809202,
+      "base_y_m": -2.2218135464998507,
+      "base_yaw_deg": 137.4254651468452,
+      "initial_environment_gap_m": 0.057832780279186535,
+      "initial_self_gap_m": 0.000499999997738157,
+      "success": true,
+      "time_ms": 0.5670960000543346,
+      "iterations": 9,
+      "position_error_m": 6.850513704329182e-07,
+      "rotation_error_rad": 1.0936177959430774e-06,
+      "joint_limits_ok": true,
+      "exception": null,
+      "joint_positions": [
+        -1.1764694225270445,
+        0.4149470564086501,
+        -0.9562039431975058,
+        -0.29270124532283776,
+        0.5241112024349125,
+        -3.1086819031496864,
+        -2.15987432012069,
+        -1.768305981960049,
+        1.096955806194078,
+        -2.1589575849708056,
+        -0.6220516004123368,
+        -0.6573894430964975
+      ],
+      "final_base_xy_m": [
+        -1.1764694225270445,
+        0.4149470564086501
+      ],
+      "final_base_yaw_deg": -162.98025495477702,
+      "final_lift_joint_m": 0.5241112024349125,
+      "final_self_gap_m": -0.016243436154977677,
+      "final_world_gap_m": 0.04788152203825109,
+      "final_collision_free": false,
+      "deepest_self_collision_links": [
+        "platform_base_link",
+        "r_link2"
+      ]
+    },
+    {
+      "index": 12,
+      "base_x_m": 2.750352378700998,
+      "base_y_m": 1.6985149091800213,
+      "base_yaw_deg": -4.700096830389076,
+      "initial_environment_gap_m": 0.31779422373454613,
+      "initial_self_gap_m": 0.000499999997738157,
+      "success": true,
+      "time_ms": 0.5705119999674935,
+      "iterations": 9,
+      "position_error_m": 1.2053065485460048e-06,
+      "rotation_error_rad": 1.8109154488571006e-06,
+      "joint_limits_ok": true,
+      "exception": null,
+      "joint_positions": [
+        -1.1533550970012927,
+        0.3963393012311704,
+        -0.9257239555822682,
+        -0.3781998916725366,
+        0.5241855020787191,
+        -3.10904598588731,
+        -2.1368673634341833,
+        -1.6941836559908947,
+        1.0762610073766703,
+        -2.136707506585232,
+        -0.6267921422268348,
+        -0.6507796651978153
+      ],
+      "final_base_xy_m": [
+        -1.1533550970012927,
+        0.3963393012311704
+      ],
+      "final_base_yaw_deg": -157.77777570430888,
+      "final_lift_joint_m": 0.5241855020787191,
+      "final_self_gap_m": -0.014974488858678199,
+      "final_world_gap_m": 0.04788161444551635,
+      "final_collision_free": false,
+      "deepest_self_collision_links": [
+        "platform_base_link",
+        "r_link2"
+      ]
+    },
+    {
+      "index": 13,
+      "base_x_m": -0.556367335323543,
+      "base_y_m": -0.11506042146986983,
+      "base_yaw_deg": -121.07334374031258,
+      "initial_environment_gap_m": 0.5771729965259962,
+      "initial_self_gap_m": 0.000499999997738157,
+      "success": true,
+      "time_ms": 0.5746799999997165,
+      "iterations": 9,
+      "position_error_m": 1.1712546959855402e-06,
+      "rotation_error_rad": 1.7512933062305672e-06,
+      "joint_limits_ok": true,
+      "exception": null,
+      "joint_positions": [
+        -1.1665639569954074,
+        0.40380661652948213,
+        -0.9403387905097198,
+        -0.340239561283982,
+        0.5241952041051997,
+        -3.1090459858873105,
+        -2.136461550041669,
+        -1.7337876830345123,
+        1.0851286956683397,
+        -2.136888365433498,
+        -0.6267574912093337,
+        -0.6505417874226463
+      ],
+      "final_base_xy_m": [
+        -1.1665639569954074,
+        0.40380661652948213
+      ],
+      "final_base_yaw_deg": -160.10852989471184,
+      "final_lift_joint_m": 0.5241952041051997,
+      "final_self_gap_m": -0.014952174794199989,
+      "final_world_gap_m": 0.04788172654725051,
+      "final_collision_free": false,
+      "deepest_self_collision_links": [
+        "platform_base_link",
+        "r_link2"
+      ]
+    },
+    {
+      "index": 14,
+      "base_x_m": -1.9443581346941852,
+      "base_y_m": 0.16504589809214387,
+      "base_yaw_deg": 94.85609830324944,
+      "initial_environment_gap_m": 0.5721718510662478,
+      "initial_self_gap_m": 0.000499999997738157,
+      "success": true,
+      "time_ms": 0.5751110001028792,
+      "iterations": 9,
+      "position_error_m": 9.056942263720974e-07,
+      "rotation_error_rad": 1.17685588220653e-06,
+      "joint_limits_ok": true,
+      "exception": null,
+      "joint_positions": [
+        -1.1472881252417362,
+        0.40009126478316465,
+        -0.9279993640237693,
+        -0.3725817767571024,
+        0.5240836251989608,
+        -3.1090459858873096,
+        -2.164333312968288,
+        -1.6917337953794074,
+        1.0828205752114375,
+        -2.150563200790158,
+        -0.6266988619254014,
+        -0.6682475824104935
+      ],
+      "final_base_xy_m": [
+        -1.1472881252417362,
+        0.40009126478316465
+      ],
+      "final_base_yaw_deg": -158.12506948274282,
+      "final_lift_joint_m": 0.5240836251989608,
+      "final_self_gap_m": -0.016485089268711374,
+      "final_world_gap_m": 0.047881626299174404,
+      "final_collision_free": false,
+      "deepest_self_collision_links": [
+        "platform_base_link",
+        "r_link2"
+      ]
+    },
+    {
+      "index": 15,
+      "base_x_m": 1.4813452205027309,
+      "base_y_m": -1.9204352940081137,
+      "base_yaw_deg": -61.258911012558066,
+      "initial_environment_gap_m": 0.8153053503873231,
+      "initial_self_gap_m": 0.000499999997738157,
+      "success": true,
+      "time_ms": 0.571953999951802,
+      "iterations": 9,
+      "position_error_m": 1.454910992480634e-06,
+      "rotation_error_rad": 2.5562836011265384e-06,
+      "joint_limits_ok": true,
+      "exception": null,
+      "joint_positions": [
+        -1.161790223811373,
+        0.3986337564689075,
+        -0.9322145173767864,
+        -0.36190619446476097,
+        0.5242605530229549,
+        -3.10904598588731,
+        -2.1274907358545034,
+        -1.7141257590098533,
+        1.0783994109131765,
+        -2.1321686625361953,
+        -0.62685546357406,
+        -0.6447430765257459
+      ],
+      "final_base_xy_m": [
+        -1.161790223811373,
+        0.3986337564689075
+      ],
+      "final_base_yaw_deg": -158.78269181356987,
+      "final_lift_joint_m": 0.5242605530229549,
+      "final_self_gap_m": -0.014458972056624157,
+      "final_world_gap_m": 0.04788154372538063,
+      "final_collision_free": false,
+      "deepest_self_collision_links": [
+        "platform_base_link",
+        "r_link2"
+      ]
+    },
+    {
+      "index": 16,
+      "base_x_m": 2.7641343409131736,
+      "base_y_m": 1.0635858432243541,
+      "base_yaw_deg": 11.619007491960238,
+      "initial_environment_gap_m": 0.14707786599633105,
+      "initial_self_gap_m": 0.000499999997738157,
+      "success": true,
+      "time_ms": 0.6235710000055406,
+      "iterations": 10,
+      "position_error_m": 5.71986702694752e-06,
+      "rotation_error_rad": 1.0787344136686176e-05,
+      "joint_limits_ok": true,
+      "exception": null,
+      "joint_positions": [
+        -1.195607721062667,
+        0.42709129508922455,
+        -0.9779773301060187,
+        -0.20871114440466096,
+        0.5299999999999992,
+        -3.0892265055249353,
+        -2.1844797949194072,
+        -1.813718495048165,
+        1.1262015536299124,
+        -2.163159202328435,
+        -0.5894238554060356,
+        -0.6912265514218132
+      ],
+      "final_base_xy_m": [
+        -1.195607721062667,
+        0.42709129508922455
+      ],
+      "final_base_yaw_deg": -167.95316729195193,
+      "final_lift_joint_m": 0.5299999999999992,
+      "final_self_gap_m": -0.017790332419852763,
+      "final_world_gap_m": 0.047884765896785905,
+      "final_collision_free": false,
+      "deepest_self_collision_links": [
+        "platform_base_link",
+        "r_link2"
+      ]
+    },
+    {
+      "index": 17,
+      "base_x_m": -2.3731438610429856,
+      "base_y_m": 2.2162436740699905,
+      "base_yaw_deg": -128.3012446839435,
+      "initial_environment_gap_m": 0.22917830177408988,
+      "initial_self_gap_m": 0.000499999997738157,
+      "success": true,
+      "time_ms": 0.5608540000139328,
+      "iterations": 9,
+      "position_error_m": 1.3619661714069045e-06,
+      "rotation_error_rad": 2.2751216205843127e-06,
+      "joint_limits_ok": true,
+      "exception": null,
+      "joint_positions": [
+        -1.1543159194772525,
+        0.4048092161713693,
+        -0.9369966288011042,
+        -0.34933839985802495,
+        0.524086824218115,
+        -3.1090459858873105,
+        -2.167466284957044,
+        -1.7153047093484923,
+        1.088160229588443,
+        -2.1521062276218506,
+        -0.6267207911996653,
+        -0.6703117244388941
+      ],
+      "final_base_xy_m": [
+        -1.1543159194772525,
+        0.4048092161713693
+      ],
+      "final_base_yaw_deg": -159.5531459591242,
+      "final_lift_joint_m": 0.524086824218115,
+      "final_self_gap_m": -0.01665741765722984,
+      "final_world_gap_m": 0.04788186916727735,
+      "final_collision_free": false,
+      "deepest_self_collision_links": [
+        "platform_base_link",
+        "r_link2"
+      ]
+    },
+    {
+      "index": 18,
+      "base_x_m": 1.62632205882589,
+      "base_y_m": -2.3792549219314143,
+      "base_yaw_deg": -69.75140486836895,
+      "initial_environment_gap_m": 0.43773385653704994,
+      "initial_self_gap_m": 0.000499999997738157,
+      "success": true,
+      "time_ms": 0.5744400000367023,
+      "iterations": 9,
+      "position_error_m": 1.4634850980485996e-06,
+      "rotation_error_rad": 2.5799002620606848e-06,
+      "joint_limits_ok": true,
+      "exception": null,
+      "joint_positions": [
+        -1.1622219400999574,
+        0.39855817209501815,
+        -0.9322904404265963,
+        -0.3617105675663667,
+        0.5242693106787488,
+        -3.10904598588731,
+        -2.1262696578291105,
+        -1.7146851401178165,
+        1.0782059351484994,
+        -2.131613353536996,
+        -0.6268589156905444,
+        -0.6439087840174338
+      ],
+      "final_base_xy_m": [
+        -1.1622219400999574,
+        0.39855817209501815
+      ],
+      "final_base_yaw_deg": -158.79471494662636,
+      "final_lift_joint_m": 0.5242693106787488,
+      "final_self_gap_m": -0.014391849916466214,
+      "final_world_gap_m": 0.04788153339408409,
+      "final_collision_free": false,
+      "deepest_self_collision_links": [
+        "platform_base_link",
+        "r_link2"
+      ]
+    },
+    {
+      "index": 19,
+      "base_x_m": -1.362821976218357,
+      "base_y_m": 0.8486472596078594,
+      "base_yaw_deg": -0.30610751631186545,
+      "initial_environment_gap_m": 0.2066806001865585,
+      "initial_self_gap_m": 0.000499999997738157,
+      "success": true,
+      "time_ms": 0.5823939999345384,
+      "iterations": 9,
+      "position_error_m": 1.1845227225261708e-06,
+      "rotation_error_rad": 1.768435136202845e-06,
+      "joint_limits_ok": true,
+      "exception": null,
+      "joint_positions": [
+        -1.1474824006193314,
+        0.40086174273059216,
+        -0.9290879960380504,
+        -0.3698587509009341,
+        0.5240580722386534,
+        -3.10904598588731,
+        -2.1669598594068376,
+        -1.6937759106852295,
+        1.0837256156546808,
+        -2.1521259404526996,
+        -0.6267375160123526,
+        -0.6696458369842273
+      ],
+      "final_base_xy_m": [
+        -1.1474824006193314,
+        0.40086174273059216
+      ],
+      "final_base_yaw_deg": -158.2930936485478,
+      "final_lift_joint_m": 0.5240580722386534,
+      "final_self_gap_m": -0.016629561953635276,
+      "final_world_gap_m": 0.0478817122134554,
+      "final_collision_free": false,
+      "deepest_self_collision_links": [
+        "platform_base_link",
+        "r_link2"
+      ]
+    },
+    {
+      "index": 20,
+      "base_x_m": -2.6546756000988054,
+      "base_y_m": -1.2982040259589542,
+      "base_yaw_deg": 25.91835347130441,
+      "initial_environment_gap_m": 0.4914323677015424,
+      "initial_self_gap_m": 0.000499999997738157,
+      "success": true,
+      "time_ms": 0.6941120000192313,
+      "iterations": 11,
+      "position_error_m": 3.189408955014082e-06,
+      "rotation_error_rad": 2.8560578831077962e-06,
+      "joint_limits_ok": true,
+      "exception": null,
+      "joint_positions": [
+        -1.1873203400540553,
+        0.4408279557576052,
+        -0.9834019886503051,
+        -0.18144015189209167,
+        0.5303802656676747,
+        -3.0981485381463987,
+        -2.2063342183282963,
+        -1.8966943230618156,
+        1.1489828517379044,
+        -2.09964947315372,
+        -0.6271727964635886,
+        -0.7686553155733711
+      ],
+      "final_base_xy_m": [
+        -1.1873203400540553,
+        0.4408279557576052
+      ],
+      "final_base_yaw_deg": -169.5463441772914,
+      "final_lift_joint_m": 0.5303802656676747,
+      "final_self_gap_m": -0.021634513063496036,
+      "final_world_gap_m": 0.04788297678506476,
+      "final_collision_free": false,
+      "deepest_self_collision_links": [
+        "platform_base_link",
+        "r_link3"
+      ]
+    }
+  ],
+  "valid_collision_free_solution_count": 0,
+  "base_optimization": "SE(2) terminal pose IK; base x/y/yaw active; no nonholonomic trajectory constraints",
+  "reused_start_positions_from": "/home/fang/robot_ws/scenarios/table_transfer/ik_test/random20/result.json",
+  "configuration_layout": "root_joint uses [x,y,cos(yaw),sin(yaw)] followed by 8 scalar joints; nq=12, nv=11"
+}

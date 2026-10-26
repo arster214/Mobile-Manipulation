@@ -1,0 +1,45 @@
+{
+  "changed_indices": [
+    85,
+    86,
+    93,
+    94,
+    144,
+    145
+  ],
+  "changes": [
+    {
+      "index": 85,
+      "old_radius_mm": 98.51154851307872,
+      "new_radius_mm": 95.63096985823474
+    },
+    {
+      "index": 86,
+      "old_radius_mm": 99.225,
+      "new_radius_mm": 97.1163316333049
+    },
+    {
+      "index": 93,
+      "old_radius_mm": 102.46654248981564,
+      "new_radius_mm": 97.63529994761792
+    },
+    {
+      "index": 94,
+      "old_radius_mm": 99.225,
+      "new_radius_mm": 97.71096389287771
+    },
+    {
+      "index": 144,
+      "old_radius_mm": 25.0,
+      "new_radius_mm": 24.902647295318705
+    },
+    {
+      "index": 145,
+      "old_radius_mm": 25.0,
+      "new_radius_mm": 24.902773503997906
+    }
+  ],
+  "coverage_before_pct": 99.442,
+  "coverage_after_pct": 99.289,
+  "newly_uncovered_max_mm": 4.814923452619774
+}

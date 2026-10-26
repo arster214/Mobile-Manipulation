@@ -1,0 +1,14 @@
+{
+  "l_base_link1": {
+    "old_coverage_pct": 99.65603131301151,
+    "new_coverage_pct": 100.0,
+    "count": 4,
+    "min_column_gap_mm": -20.049031907459046
+  },
+  "r_base_link1": {
+    "old_coverage_pct": 99.87151103028387,
+    "new_coverage_pct": 100.0,
+    "count": 4,
+    "min_column_gap_mm": -21.189848579799165
+  }
+}

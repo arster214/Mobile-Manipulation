@@ -1,0 +1,34 @@
+{
+  "pink": {
+    "accepted": 60,
+    "runs": 60,
+    "mean_ms": 116.98434408337259,
+    "median_ms": 94.66314799965403,
+    "p95_ms": 291.32410339961996,
+    "min_ms": 15.265773000464833,
+    "max_ms": 329.48974300052214,
+    "mean_position_error_mm": 0.01951080338210652,
+    "max_position_error_mm": 0.09733924884714462,
+    "median_self_gap_mm": 4.151877044944463e-05,
+    "max_abs_heading_deg": 29.235722740078643
+  },
+  "curobo": {
+    "accepted": 60,
+    "runs": 60,
+    "mean_ms": 72.81058096659763,
+    "median_ms": 63.47172049981964,
+    "p95_ms": 193.2449988002189,
+    "min_ms": 4.13287700030196,
+    "max_ms": 243.48141300015413,
+    "mean_position_error_mm": 0.010339818571318658,
+    "max_position_error_mm": 0.07094918169344214,
+    "median_self_gap_mm": 0.2228657092268188,
+    "max_abs_heading_deg": 29.297781369854974,
+    "mean_synchronized_gpu_call_ms": 23.174600183362298
+  },
+  "gpu_faster_cases": 14,
+  "mean_wall_speed_ratio": 1.606694281659969,
+  "cpu": "AMD Ryzen 7 9700X",
+  "gpu": "NVIDIA GeForce RTX 5080",
+  "cpu_policy": "single process; BLAS/OpenMP threads limited to 1; no CPU seed parallelism"
+}

@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "scope": "Offline geometric tests only; no IK, collision, grasp execution or live pose validation",
+  "checks": [
+    "center_out_height_order",
+    "both_long_edges",
+    "rotated_table",
+    "equal_distance_tie",
+    "backoff_sign",
+    "frame_orthonormality",
+    "contact_diameter",
+    "outside_table_rejected"
+  ]
+}

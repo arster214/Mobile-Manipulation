@@ -1,0 +1,337 @@
+{
+  "initial_lift_q": 0.5602949857711792,
+  "sphere_count": 464,
+  "records": [
+    {
+      "a": "body_base_link",
+      "a_index": 78,
+      "b": "l_base_link1",
+      "b_index": 0,
+      "gap_m": -0.021045795374302623,
+      "lift_q": 0.76,
+      "mesh_surface_collision": false,
+      "within_10cm_lift": false
+    },
+    {
+      "a": "body_base_link",
+      "a_index": 62,
+      "b": "r_base_link1",
+      "b_index": 0,
+      "gap_m": -0.02104570341625528,
+      "lift_q": 0.76,
+      "mesh_surface_collision": false,
+      "within_10cm_lift": false
+    },
+    {
+      "a": "body_base_link",
+      "a_index": 100,
+      "b": "r_base_link1",
+      "b_index": 1,
+      "gap_m": -0.018325158561635663,
+      "lift_q": 0.0,
+      "mesh_surface_collision": false,
+      "within_10cm_lift": false
+    },
+    {
+      "a": "body_base_link",
+      "a_index": 84,
+      "b": "r_base_link1",
+      "b_index": 0,
+      "gap_m": -0.01788763129919553,
+      "lift_q": 0.68,
+      "mesh_surface_collision": false,
+      "within_10cm_lift": false
+    },
+    {
+      "a": "body_base_link",
+      "a_index": 89,
+      "b": "r_base_link1",
+      "b_index": 0,
+      "gap_m": -0.017874732531495338,
+      "lift_q": 0.17,
+      "mesh_surface_collision": false,
+      "within_10cm_lift": false
+    },
+    {
+      "a": "body_base_link",
+      "a_index": 87,
+      "b": "r_base_link1",
+      "b_index": 0,
+      "gap_m": -0.01785693943188861,
+      "lift_q": 0.31,
+      "mesh_surface_collision": false,
+      "within_10cm_lift": false
+    },
+    {
+      "a": "body_base_link",
+      "a_index": 86,
+      "b": "r_base_link1",
+      "b_index": 0,
+      "gap_m": -0.017855489896959578,
+      "lift_q": 0.39,
+      "mesh_surface_collision": false,
+      "within_10cm_lift": false
+    },
+    {
+      "a": "body_base_link",
+      "a_index": 99,
+      "b": "l_base_link1",
+      "b_index": 0,
+      "gap_m": -0.017840848003182294,
+      "lift_q": 0.02,
+      "mesh_surface_collision": false,
+      "within_10cm_lift": false
+    },
+    {
+      "a": "body_base_link",
+      "a_index": 92,
+      "b": "l_base_link1",
+      "b_index": 0,
+      "gap_m": -0.01784022683571411,
+      "lift_q": 0.68,
+      "mesh_surface_collision": false,
+      "within_10cm_lift": false
+    },
+    {
+      "a": "body_base_link",
+      "a_index": 97,
+      "b": "l_base_link1",
+      "b_index": 0,
+      "gap_m": -0.01782733194690382,
+      "lift_q": 0.17,
+      "mesh_surface_collision": false,
+      "within_10cm_lift": false
+    },
+    {
+      "a": "body_base_link",
+      "a_index": 95,
+      "b": "l_base_link1",
+      "b_index": 0,
+      "gap_m": -0.0178095441969585,
+      "lift_q": 0.31,
+      "mesh_surface_collision": false,
+      "within_10cm_lift": false
+    },
+    {
+      "a": "body_base_link",
+      "a_index": 94,
+      "b": "l_base_link1",
+      "b_index": 0,
+      "gap_m": -0.017808095097792506,
+      "lift_q": 0.39,
+      "mesh_surface_collision": false,
+      "within_10cm_lift": false
+    },
+    {
+      "a": "body_base_link",
+      "a_index": 98,
+      "b": "l_base_link1",
+      "b_index": 0,
+      "gap_m": -0.017784381437225452,
+      "lift_q": 0.09,
+      "mesh_surface_collision": false,
+      "within_10cm_lift": false
+    },
+    {
+      "a": "body_base_link",
+      "a_index": 88,
+      "b": "r_base_link1",
+      "b_index": 0,
+      "gap_m": -0.017480071618373977,
+      "lift_q": 0.24,
+      "mesh_surface_collision": false,
+      "within_10cm_lift": false
+    },
+    {
+      "a": "body_base_link",
+      "a_index": 91,
+      "b": "r_base_link1",
+      "b_index": 0,
+      "gap_m": -0.01715136828443102,
+      "lift_q": 0.02,
+      "mesh_surface_collision": false,
+      "within_10cm_lift": false
+    },
+    {
+      "a": "body_base_link",
+      "a_index": 96,
+      "b": "l_base_link1",
+      "b_index": 0,
+      "gap_m": -0.0164526864037067,
+      "lift_q": 0.24,
+      "mesh_surface_collision": false,
+      "within_10cm_lift": false
+    },
+    {
+      "a": "body_base_link",
+      "a_index": 90,
+      "b": "r_base_link1",
+      "b_index": 0,
+      "gap_m": -0.016071097996541966,
+      "lift_q": 0.1,
+      "mesh_surface_collision": false,
+      "within_10cm_lift": false
+    },
+    {
+      "a": "body_base_link",
+      "a_index": 100,
+      "b": "r_base_link1",
+      "b_index": 0,
+      "gap_m": -0.015851364277280344,
+      "lift_q": 0.0,
+      "mesh_surface_collision": false,
+      "within_10cm_lift": false
+    },
+    {
+      "a": "body_base_link",
+      "a_index": 108,
+      "b": "l_base_link1",
+      "b_index": 0,
+      "gap_m": -0.015848414977278458,
+      "lift_q": 0.0,
+      "mesh_surface_collision": false,
+      "within_10cm_lift": false
+    },
+    {
+      "a": "body_base_link",
+      "a_index": 62,
+      "b": "r_base_link1",
+      "b_index": 1,
+      "gap_m": -0.015304317076398927,
+      "lift_q": 0.78,
+      "mesh_surface_collision": false,
+      "within_10cm_lift": false
+    },
+    {
+      "a": "body_base_link",
+      "a_index": 77,
+      "b": "l_base_link1",
+      "b_index": 0,
+      "gap_m": -0.011203782742106025,
+      "lift_q": 0.79,
+      "mesh_surface_collision": false,
+      "within_10cm_lift": false
+    },
+    {
+      "a": "body_base_link",
+      "a_index": 87,
+      "b": "r_base_link1",
+      "b_index": 1,
+      "gap_m": -0.008173063324534144,
+      "lift_q": 0.34,
+      "mesh_surface_collision": false,
+      "within_10cm_lift": false
+    },
+    {
+      "a": "body_base_link",
+      "a_index": 84,
+      "b": "r_base_link1",
+      "b_index": 1,
+      "gap_m": -0.008150373104592532,
+      "lift_q": 0.71,
+      "mesh_surface_collision": false,
+      "within_10cm_lift": false
+    },
+    {
+      "a": "body_base_link",
+      "a_index": 89,
+      "b": "r_base_link1",
+      "b_index": 1,
+      "gap_m": -0.008127647638005345,
+      "lift_q": 0.2,
+      "mesh_surface_collision": false,
+      "within_10cm_lift": false
+    },
+    {
+      "a": "body_base_link",
+      "a_index": 86,
+      "b": "r_base_link1",
+      "b_index": 1,
+      "gap_m": -0.008113921785706454,
+      "lift_q": 0.41000000000000003,
+      "mesh_surface_collision": false,
+      "within_10cm_lift": false
+    },
+    {
+      "a": "body_base_link",
+      "a_index": 88,
+      "b": "r_base_link1",
+      "b_index": 1,
+      "gap_m": -0.007719078066800833,
+      "lift_q": 0.27,
+      "mesh_surface_collision": false,
+      "within_10cm_lift": false
+    },
+    {
+      "a": "body_base_link",
+      "a_index": 91,
+      "b": "r_base_link1",
+      "b_index": 1,
+      "gap_m": -0.00744866443329785,
+      "lift_q": 0.05,
+      "mesh_surface_collision": false,
+      "within_10cm_lift": false
+    },
+    {
+      "a": "body_base_link",
+      "a_index": 90,
+      "b": "r_base_link1",
+      "b_index": 1,
+      "gap_m": -0.006219586879014166,
+      "lift_q": 0.12,
+      "mesh_surface_collision": false,
+      "within_10cm_lift": false
+    },
+    {
+      "a": "body_base_link",
+      "a_index": 93,
+      "b": "l_base_link1",
+      "b_index": 0,
+      "gap_m": -0.004736780891774803,
+      "lift_q": 0.46,
+      "mesh_surface_collision": false,
+      "within_10cm_lift": false
+    },
+    {
+      "a": "body_base_link",
+      "a_index": 85,
+      "b": "r_base_link1",
+      "b_index": 0,
+      "gap_m": -0.0027805786548439904,
+      "lift_q": 0.4652949857711792,
+      "mesh_surface_collision": false,
+      "within_10cm_lift": true
+    },
+    {
+      "a": "body_base_link",
+      "a_index": 144,
+      "b": "r_base_link1",
+      "b_index": 0,
+      "gap_m": -0.0027591695612252942,
+      "lift_q": 0.58,
+      "mesh_surface_collision": false,
+      "within_10cm_lift": false
+    },
+    {
+      "a": "body_base_link",
+      "a_index": 145,
+      "b": "l_base_link1",
+      "b_index": 0,
+      "gap_m": -0.0027590398131283056,
+      "lift_q": 0.58,
+      "mesh_surface_collision": false,
+      "within_10cm_lift": false
+    },
+    {
+      "a": "body_base_link",
+      "a_index": 78,
+      "b": "l_base_link1",
+      "b_index": 1,
+      "gap_m": -0.0011958144128851114,
+      "lift_q": 0.76,
+      "mesh_surface_collision": false,
+      "within_10cm_lift": false
+    }
+  ],
+  "mesh_reference_limitation": "triangle-surface intersection; not certified solid containment or real hardware geometry"
+}

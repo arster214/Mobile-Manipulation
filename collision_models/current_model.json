@@ -1,0 +1,11 @@
+{
+  "version": "platform_rear_511_shoulder_column_ignored",
+  "user_accepted": false,
+  "sphere_count": 511,
+  "canonical_config": "/home/fang/robot_ws/collision_models/rm75_current.yml",
+  "experiment_config": "/home/fang/robot_ws/postures/rm75_mobile_manipulation.yml",
+  "base_config": "/home/fang/isaacsim_rm75/config/rm75_dual.yml",
+  "backup": "/home/fang/robot_ws/collision_models/backups/20261026_153539_shoulder_ignore",
+  "sha256": "e592860408678258c03c49cb56f7b8848cff152c2bf5b338c0da1048d0c53ed6",
+  "validation": "Fixed saved grasp-arm posture: 791 lift positions self-collision-free after explicit shoulder-column exclusions; 1001-point 10cm lift and saved four-stage transport robot collision checks pass. Not hardware execution approval."
+}

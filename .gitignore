@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+*.log
+logs/
+build/
+install/
+.venv/
+env/*
+!env/locks/
+.env
+.env.*

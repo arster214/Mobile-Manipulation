@@ -1,0 +1,7 @@
+URDF: /home/fang/robot_ws/realman_rm75/assets/urdf/rm75_dual_rmg24_curobo.urdf
+VISUAL: 38 geometry objects loaded
+COLLISION: 38 geometry objects loaded
+Fixed base: nq=14, nv=14, dual-arm pose error 7.503070e-02 -> 4.578224e-16
+Planar base: nq=18, nv=17, dual-arm pose error 8.129009e-02 -> 1.274057e-15
+PASS: RM75 assets, fixed-base and planar-base local dual-arm IK
+Planar base is an SE(2) kinematic prototype; wheel constraints and collision avoidance are not configured.

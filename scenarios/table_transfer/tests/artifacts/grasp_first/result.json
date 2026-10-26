@@ -1,0 +1,358 @@
+{
+  "constraints": {
+    "position_tolerance_m": 0.005,
+    "orientation_tolerance_rad": 0.05,
+    "interpolation_dt_s": 0.025,
+    "max_attempts": 5,
+    "num_ik_seeds": 32,
+    "collision_activation_distance_m": 0.002,
+    "base_front_half_angle_deg": 30,
+    "lift_max_m": 0.79,
+    "lift_acceleration_m_s2": 0.3,
+    "lift_jerk_m_s3": 1.0,
+    "local_correction_enabled": false,
+    "motion_mode": "simultaneous_mobile_dual_arm",
+    "base_model": "differential_drive",
+    "base_forward_axis_local": [
+      0,
+      -1,
+      0
+    ],
+    "base_max_linear_velocity_m_s": 1.5,
+    "base_max_angular_velocity_rad_s": null,
+    "base_max_linear_acceleration_m_s2": null,
+    "base_max_angular_acceleration_rad_s2": null,
+    "simulation_base_yaw_rate_rad_s": 1.0,
+    "approach_samples": 16,
+    "simulation_base_acceleration_m_s2": 1.0,
+    "simulation_base_angular_acceleration_rad_s2": 1.0,
+    "use_cuda_graph": false,
+    "arm_joint_max_change_rad": 0.8,
+    "grasp_side_half_angle_deg": 20.0,
+    "jacobian_min_singular_value": 0.005,
+    "jacobian_max_condition_number": 100.0,
+    "path_cost_weights": {
+      "base_distance_m": 1.0,
+      "base_rotation_rad": 1.0,
+      "lift_fraction": 1.0,
+      "active_arm_fraction": 1.0,
+      "inactive_arm_fraction": 2.0,
+      "duration_s": 0.1
+    },
+    "jacobian_constraint_scope": "new_ik_endpoints_and_approach_samples"
+  },
+  "jacobian": "selected arm geometric TCP Jacobian, 6x7, linear m/rad and angular rad/rad; world-aligned",
+  "scope": "sampled numerical planning, no PhysX or hardware execution",
+  "arms": {
+    "l": {
+      "pregrasp_status": "failed",
+      "reason": "l-arm retreat IK failed at 46.7%; reject this grasp candidate",
+      "planning_time_s": 8.925594895001268,
+      "search_stats": {
+        "grasp_ik_success": 4,
+        "grasp_constraints_pass": 2,
+        "retreat_pass": 0,
+        "connection_pass": 0,
+        "height_candidates": [
+          {
+            "candidate_rank": 0,
+            "stats": {
+              "grasp_ik_success": 4,
+              "grasp_constraints_pass": 2,
+              "retreat_pass": 0,
+              "connection_pass": 0
+            },
+            "reason": "l-arm retreat IK failed at 46.7%; reject this grasp candidate"
+          },
+          {
+            "candidate_rank": 1,
+            "stats": {
+              "grasp_ik_success": 0,
+              "grasp_constraints_pass": 0,
+              "retreat_pass": 0,
+              "connection_pass": 0
+            },
+            "reason": "No grasp IK satisfying all constraints"
+          },
+          {
+            "candidate_rank": 2,
+            "stats": {
+              "grasp_ik_success": 4,
+              "grasp_constraints_pass": 1,
+              "retreat_pass": 0,
+              "connection_pass": 0
+            },
+            "reason": "l-arm retreat IK failed at 86.7%; reject this grasp candidate"
+          },
+          {
+            "candidate_rank": 3,
+            "stats": {
+              "grasp_ik_success": 0,
+              "grasp_constraints_pass": 0,
+              "retreat_pass": 0,
+              "connection_pass": 0
+            },
+            "reason": "No grasp IK satisfying all constraints"
+          },
+          {
+            "candidate_rank": 4,
+            "stats": {
+              "grasp_ik_success": 11,
+              "grasp_constraints_pass": 1,
+              "retreat_pass": 0,
+              "connection_pass": 0
+            },
+            "reason": "l-arm retreat IK failed at 86.7%; reject this grasp candidate"
+          }
+        ]
+      },
+      "tool_frame": "l_grasp_tcp",
+      "target_pose": [
+        -1.05,
+        1.1700000000000002,
+        0.81,
+        0.49999999999999994,
+        -0.49999999999999994,
+        0.5000000000000001,
+        0.5000000000000001
+      ],
+      "grasp_pose": [
+        -1.05,
+        1.32,
+        0.81,
+        0.49999999999999994,
+        -0.49999999999999994,
+        0.5000000000000001,
+        0.5000000000000001
+      ],
+      "eligible": false,
+      "cost": null,
+      "pregrasp_cost": null,
+      "approach_reason": "l-arm retreat IK failed at 46.7%; reject this grasp candidate",
+      "approach_status": "failed"
+    },
+    "r": {
+      "pregrasp_status": "passed",
+      "reason": "",
+      "planning_time_s": 12.810440139997809,
+      "search_stats": {
+        "grasp_ik_success": 12,
+        "grasp_constraints_pass": 5,
+        "retreat_pass": 2,
+        "connection_pass": 2,
+        "height_candidates": [
+          {
+            "candidate_rank": 0,
+            "stats": {
+              "grasp_ik_success": 2,
+              "grasp_constraints_pass": 0,
+              "retreat_pass": 0,
+              "connection_pass": 0
+            },
+            "reason": "No grasp IK satisfying all constraints"
+          },
+          {
+            "candidate_rank": 1,
+            "stats": {
+              "grasp_ik_success": 3,
+              "grasp_constraints_pass": 1,
+              "retreat_pass": 0,
+              "connection_pass": 0
+            },
+            "reason": "r-arm retreat IK failed at 60.0%; reject this grasp candidate"
+          },
+          {
+            "candidate_rank": 2,
+            "stats": {
+              "grasp_ik_success": 8,
+              "grasp_constraints_pass": 5,
+              "retreat_pass": 0,
+              "connection_pass": 0
+            },
+            "reason": "r-arm retreat IK failed at 53.3%; reject this grasp candidate"
+          },
+          {
+            "candidate_rank": 3,
+            "stats": {
+              "grasp_ik_success": 0,
+              "grasp_constraints_pass": 0,
+              "retreat_pass": 0,
+              "connection_pass": 0
+            },
+            "reason": "No grasp IK satisfying all constraints"
+          },
+          {
+            "candidate_rank": 4,
+            "stats": {
+              "grasp_ik_success": 12,
+              "grasp_constraints_pass": 5,
+              "retreat_pass": 2,
+              "connection_pass": 2
+            },
+            "reason": ""
+          }
+        ]
+      },
+      "tool_frame": "r_grasp_tcp",
+      "target_pose": [
+        -1.05,
+        1.1700000000000002,
+        0.8442857142857143,
+        0.49999999999999994,
+        -0.49999999999999994,
+        0.5000000000000001,
+        0.5000000000000001
+      ],
+      "grasp_pose": [
+        -1.05,
+        1.32,
+        0.8442857142857143,
+        0.49999999999999994,
+        -0.49999999999999994,
+        0.5000000000000001,
+        0.5000000000000001
+      ],
+      "eligible": true,
+      "cost": 4.320028124269155,
+      "pregrasp_cost": 3.593069184329658,
+      "approach_reason": "",
+      "cost_terms": {
+        "base_distance_m": 0.06333200486418193,
+        "base_rotation_rad": 2.3253798663118204,
+        "lift_fraction": 0.07632276679896101,
+        "active_arm_fraction": 0.5430344515769108,
+        "inactive_arm_fraction": 4.7388891979256395e-08,
+        "duration_s": 5.8500000000000005
+      },
+      "constraint_metrics": {
+        "path": {
+          "min_singular_value": 0.003860930446535349,
+          "max_condition_number": 451.0151672363281,
+          "max_arm_joint_change_rad": 0.798613913820899,
+          "passed": false
+        },
+        "endpoint": {
+          "min_singular_value": 0.08920801430940628,
+          "max_condition_number": 19.657115936279297,
+          "max_arm_joint_change_rad": 0.798613913820899,
+          "passed": true
+        },
+        "singularity_scope": "IK endpoint; moving path reported separately"
+      },
+      "heading_deg": -17.31879447637265,
+      "approach_status": "passed",
+      "approach_cost_terms": {
+        "base_distance_m": 0.0,
+        "base_rotation_rad": 0.0,
+        "lift_fraction": 0.0,
+        "active_arm_fraction": 0.5462708103647909,
+        "inactive_arm_fraction": 0.0,
+        "duration_s": 1.8068812957470577
+      },
+      "approach_constraint_metrics": {
+        "path": {
+          "min_singular_value": 0.0549805648624897,
+          "max_condition_number": 31.622745513916016,
+          "max_arm_joint_change_rad": 0.798613913820899,
+          "passed": true
+        },
+        "endpoint": {
+          "min_singular_value": 0.0549805648624897,
+          "max_condition_number": 31.622745513916016,
+          "max_arm_joint_change_rad": 0.45246021781235873,
+          "passed": true
+        },
+        "singularity_scope": "all approach samples"
+      }
+    }
+  },
+  "selected_arm": "r",
+  "preferred_pregrasp_arm": "r",
+  "start_state": {
+    "joint_names": [
+      "l_joint1",
+      "l_joint2",
+      "l_joint3",
+      "l_joint4",
+      "l_joint5",
+      "l_joint6",
+      "l_joint7",
+      "r_joint1",
+      "r_joint2",
+      "r_joint3",
+      "r_joint4",
+      "r_joint5",
+      "r_joint6",
+      "r_joint7",
+      "platform_joint",
+      "head_joint1",
+      "head_joint2",
+      "l_Joint_finger1",
+      "r_Joint_finger1"
+    ],
+    "positions": [
+      2.862366499497238,
+      1.6963090646149952,
+      -1.605454245043555,
+      1.2938319799016864,
+      1.5691770386130677,
+      -0.0011763599735028268,
+      -2.222804969840793,
+      -2.8622861935756982,
+      -1.6960935688224021,
+      -1.533766857816064,
+      1.2938326754442206,
+      -1.6121790989181415,
+      0.0011637691047781463,
+      -0.8746416800394974,
+      0.5,
+      0.0,
+      0.0,
+      0.0325,
+      0.0325
+    ],
+    "base_pose": [
+      -1.3,
+      0.5,
+      0.24734551877975464,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  "object_pose": [
+    -1.05,
+    1.32,
+    0.81,
+    1.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "independent_pinocchio_audit": {
+    "max_sample_position_error_m": 0.004888667890003396,
+    "final_position_error_m": 4.1505223243604375e-06,
+    "max_rotation_error_rad": 0.002141268693267366,
+    "min_singular_value": 0.05498100287941789,
+    "max_condition_number": 31.622531089898516,
+    "max_arm_joint_change_rad": 0.798613913820899,
+    "approach_joint_names": [
+      "r_joint1",
+      "r_joint2",
+      "r_joint3",
+      "r_joint4",
+      "r_joint5",
+      "r_joint6",
+      "r_joint7"
+    ],
+    "cup_collision_excluded": true,
+    "pregrasp_duration_s": 5.8500000000000005,
+    "approach_duration_s": 1.8068812957470577
+  },
+  "collision_policy": {
+    "connection": "Cup, table, walls and robot self collision checked",
+    "contact": "Cup excluded; other environment and self collision checked"
+  },
+  "planning_order": "grasp IK -> locked-platform retreat -> start-to-pregrasp connection -> reverse retreat"
+}

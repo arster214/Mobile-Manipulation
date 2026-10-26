@@ -1,0 +1,275 @@
+{
+  "method": "Equal mirror-paired increments; original sphere layout is not exactly symmetric. No ball count or exclusion edits. Platform move toward X=0 by 8*s mm and shrink 4*s mm. Body move +Y 2*s mm and shrink 1.5*s mm. Both shoulder base sphere 2 shrink 2*s mm.",
+  "mirror_mapping": {
+    "platform_base_link": [
+      {
+        "index": 1,
+        "mirror_index": 26,
+        "center_mismatch_mm": 1.409119785905989
+      },
+      {
+        "index": 2,
+        "mirror_index": 27,
+        "center_mismatch_mm": 2.261289197514474
+      },
+      {
+        "index": 3,
+        "mirror_index": 28,
+        "center_mismatch_mm": 9.435701883160151
+      },
+      {
+        "index": 4,
+        "mirror_index": 29,
+        "center_mismatch_mm": 0.9516933830383595
+      },
+      {
+        "index": 44,
+        "mirror_index": 63,
+        "center_mismatch_mm": 33.019701806025196
+      }
+    ],
+    "body_base_link": [
+      {
+        "index": 86,
+        "mirror_index": 96,
+        "center_mismatch_mm": 10.357476027846461
+      },
+      {
+        "index": 95,
+        "mirror_index": 85,
+        "center_mismatch_mm": 0.7221305097367796
+      },
+      {
+        "index": 96,
+        "mirror_index": 86,
+        "center_mismatch_mm": 10.357476027846461
+      }
+    ]
+  },
+  "modified_indices": {
+    "platform_base_link": [
+      1,
+      2,
+      3,
+      4,
+      26,
+      27,
+      28,
+      29,
+      44,
+      63
+    ],
+    "body_base_link": [
+      85,
+      86,
+      95,
+      96
+    ]
+  },
+  "holdout_seed": 20261027,
+  "holdout_count": 128,
+  "sphere_count": 402,
+  "results": [
+    {
+      "strength": 0.5,
+      "config": "/home/fang/robot_ws/collision_models/hybrid/symmetric_adjustment/candidate_0.5.yml",
+      "failed20_now_clear": 0,
+      "failed20_worst_gap_mm": -15.870123709262357,
+      "initial_gap_mm": 0.49999999773815695,
+      "holdout_pair_overlaps_before": 805,
+      "holdout_pair_overlaps_after": 787,
+      "new_mesh_misses_on_changed_decisions": [],
+      "coverage": {
+        "platform_base_link": {
+          "coverage_before_pct": 99.981,
+          "coverage_after_pct": 99.949,
+          "local_coverage_after_pct": 99.86221743810549,
+          "newly_uncovered_max_mm": 3.6055749209408656,
+          "surface_gap_p99_mm": 0.0
+        },
+        "body_base_link": {
+          "coverage_before_pct": 99.983,
+          "coverage_after_pct": 99.978,
+          "local_coverage_after_pct": 99.95690769628544,
+          "newly_uncovered_max_mm": 1.2244937947842733,
+          "surface_gap_p99_mm": 0.0
+        },
+        "l_base_link1": {
+          "coverage_before_pct": 99.697,
+          "coverage_after_pct": 98.851,
+          "local_coverage_after_pct": 98.4135913591359,
+          "newly_uncovered_max_mm": 0.9989892985326071,
+          "surface_gap_p99_mm": 0.1405730586044701
+        },
+        "r_base_link1": {
+          "coverage_before_pct": 99.878,
+          "coverage_after_pct": 99.778,
+          "local_coverage_after_pct": 99.82116031189642,
+          "newly_uncovered_max_mm": 0.7859027357846118,
+          "surface_gap_p99_mm": 0.0
+        }
+      }
+    },
+    {
+      "strength": 1.0,
+      "config": "/home/fang/robot_ws/collision_models/hybrid/symmetric_adjustment/candidate_1.yml",
+      "failed20_now_clear": 1,
+      "failed20_worst_gap_mm": -10.087033925793964,
+      "initial_gap_mm": 0.49999999773815695,
+      "holdout_pair_overlaps_before": 805,
+      "holdout_pair_overlaps_after": 771,
+      "new_mesh_misses_on_changed_decisions": [],
+      "coverage": {
+        "platform_base_link": {
+          "coverage_before_pct": 99.981,
+          "coverage_after_pct": 99.83800000000001,
+          "local_coverage_after_pct": 99.38428417653391,
+          "newly_uncovered_max_mm": 7.941069576643978,
+          "surface_gap_p99_mm": 0.0
+        },
+        "body_base_link": {
+          "coverage_before_pct": 99.983,
+          "coverage_after_pct": 99.971,
+          "local_coverage_after_pct": 99.89657847108506,
+          "newly_uncovered_max_mm": 2.647455562263729,
+          "surface_gap_p99_mm": 0.0
+        },
+        "l_base_link1": {
+          "coverage_before_pct": 99.697,
+          "coverage_after_pct": 98.06,
+          "local_coverage_after_pct": 96.93031803180318,
+          "newly_uncovered_max_mm": 1.9989892985326079,
+          "surface_gap_p99_mm": 1.0903380930600541
+        },
+        "r_base_link1": {
+          "coverage_before_pct": 99.878,
+          "coverage_after_pct": 98.983,
+          "local_coverage_after_pct": 98.39938479147293,
+          "newly_uncovered_max_mm": 1.7859027357846127,
+          "surface_gap_p99_mm": 0.012753951209486235
+        }
+      }
+    },
+    {
+      "strength": 1.5,
+      "config": "/home/fang/robot_ws/collision_models/hybrid/symmetric_adjustment/candidate_1.5.yml",
+      "failed20_now_clear": 15,
+      "failed20_worst_gap_mm": -4.2873319271780135,
+      "initial_gap_mm": 0.49999999773815695,
+      "holdout_pair_overlaps_before": 805,
+      "holdout_pair_overlaps_after": 762,
+      "new_mesh_misses_on_changed_decisions": [],
+      "coverage": {
+        "platform_base_link": {
+          "coverage_before_pct": 99.981,
+          "coverage_after_pct": 99.661,
+          "local_coverage_after_pct": 98.62217438105489,
+          "newly_uncovered_max_mm": 13.125302108684684,
+          "surface_gap_p99_mm": 0.0
+        },
+        "body_base_link": {
+          "coverage_before_pct": 99.983,
+          "coverage_after_pct": 99.952,
+          "local_coverage_after_pct": 99.73282771696975,
+          "newly_uncovered_max_mm": 4.191248557573149,
+          "surface_gap_p99_mm": 0.0
+        },
+        "l_base_link1": {
+          "coverage_before_pct": 99.697,
+          "coverage_after_pct": 97.25399999999999,
+          "local_coverage_after_pct": 95.41891689168916,
+          "newly_uncovered_max_mm": 2.9989892985326088,
+          "surface_gap_p99_mm": 2.080253521674097
+        },
+        "r_base_link1": {
+          "coverage_before_pct": 99.878,
+          "coverage_after_pct": 97.956,
+          "local_coverage_after_pct": 96.56270119464911,
+          "newly_uncovered_max_mm": 2.785902735784614,
+          "surface_gap_p99_mm": 0.9147710854609451
+        }
+      }
+    },
+    {
+      "strength": 2.0,
+      "config": "/home/fang/robot_ws/collision_models/hybrid/symmetric_adjustment/candidate_2.yml",
+      "failed20_now_clear": 20,
+      "failed20_worst_gap_mm": 1.3533791502257433,
+      "initial_gap_mm": 0.49999999773815695,
+      "holdout_pair_overlaps_before": 805,
+      "holdout_pair_overlaps_after": 754,
+      "new_mesh_misses_on_changed_decisions": [],
+      "coverage": {
+        "platform_base_link": {
+          "coverage_before_pct": 99.981,
+          "coverage_after_pct": 99.362,
+          "local_coverage_after_pct": 97.33476856835307,
+          "newly_uncovered_max_mm": 17.516569416543177,
+          "surface_gap_p99_mm": 0.0
+        },
+        "body_base_link": {
+          "coverage_before_pct": 99.983,
+          "coverage_after_pct": 99.932,
+          "local_coverage_after_pct": 99.56045850211153,
+          "newly_uncovered_max_mm": 5.738696399835,
+          "surface_gap_p99_mm": 0.0
+        },
+        "l_base_link1": {
+          "coverage_before_pct": 99.697,
+          "coverage_after_pct": 96.385,
+          "local_coverage_after_pct": 93.78937893789379,
+          "newly_uncovered_max_mm": 3.998989298532603,
+          "surface_gap_p99_mm": 3.0802535216740914
+        },
+        "r_base_link1": {
+          "coverage_before_pct": 99.878,
+          "coverage_after_pct": 97.097,
+          "local_coverage_after_pct": 95.02646827383933,
+          "newly_uncovered_max_mm": 3.7859027357846147,
+          "surface_gap_p99_mm": 1.8949374932100014
+        }
+      }
+    },
+    {
+      "strength": 2.5,
+      "config": "/home/fang/robot_ws/collision_models/hybrid/symmetric_adjustment/candidate_2.5.yml",
+      "failed20_now_clear": 20,
+      "failed20_worst_gap_mm": 2.353379150225737,
+      "initial_gap_mm": 0.49999999773815695,
+      "holdout_pair_overlaps_before": 805,
+      "holdout_pair_overlaps_after": 742,
+      "new_mesh_misses_on_changed_decisions": [],
+      "coverage": {
+        "platform_base_link": {
+          "coverage_before_pct": 99.981,
+          "coverage_after_pct": 98.95,
+          "local_coverage_after_pct": 95.56081808396125,
+          "newly_uncovered_max_mm": 22.903292910441042,
+          "surface_gap_p99_mm": 0.3366307083961481
+        },
+        "body_base_link": {
+          "coverage_before_pct": 99.983,
+          "coverage_after_pct": 99.911,
+          "local_coverage_after_pct": 99.37947082651038,
+          "newly_uncovered_max_mm": 7.28971337451928,
+          "surface_gap_p99_mm": 0.0
+        },
+        "l_base_link1": {
+          "coverage_before_pct": 99.697,
+          "coverage_after_pct": 94.69,
+          "local_coverage_after_pct": 90.61093609360937,
+          "newly_uncovered_max_mm": 4.998989298532604,
+          "surface_gap_p99_mm": 4.080253521674092
+        },
+        "r_base_link1": {
+          "coverage_before_pct": 99.878,
+          "coverage_after_pct": 96.319,
+          "local_coverage_after_pct": 93.63509550039345,
+          "newly_uncovered_max_mm": 4.7859027357846085,
+          "surface_gap_p99_mm": 2.894937493209995
+        }
+      }
+    }
+  ],
+  "scope": "CPU geometric sphere checks and FCL changed-decision regression; no trajectory/world validation. Area samples cannot certify full coverage."
+}

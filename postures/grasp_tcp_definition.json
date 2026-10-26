@@ -1,0 +1,39 @@
+{
+  "status": "simulation_mesh_based_not_hardware_calibrated",
+  "definition": "midpoint between symmetric finger pad centers",
+  "finger_pad_z_range_in_finger_m": [
+    0.0059,
+    0.0495
+  ],
+  "finger_joint_z_in_gripper_m": 0.0891,
+  "frames": {
+    "l_grasp_tcp": {
+      "parent": "l_tool0",
+      "xyz_m": [
+        0,
+        0,
+        0.1168
+      ],
+      "rpy_rad": [
+        0,
+        0,
+        0
+      ]
+    },
+    "r_grasp_tcp": {
+      "parent": "r_tool0",
+      "xyz_m": [
+        0,
+        0,
+        0.1168
+      ],
+      "rpy_rad": [
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  "axes": "Same as tool0; confirmed initial posture X down, Y horizontal, Z forward. Finger closing axis is approximately tool Y.",
+  "candidate_frame_conversion": "For existing abstract candidates (X closing, Y up, Z approach), R_world_tcp = R_world_candidate @ Rz(-pi/2); candidate position is the grasp_tcp position."
+}

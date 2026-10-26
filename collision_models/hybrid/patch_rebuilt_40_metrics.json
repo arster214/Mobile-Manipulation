@@ -1,0 +1,921 @@
+{
+  "source": "/home/fang/robot_ws/collision_models/hybrid/rm75_hybrid_edited_20261025_164955_555593.yml",
+  "method": "Select body/platform balls from regression false-positive witnesses only; replace their intersecting mesh triangles with capped-radius surface patches. Every selected triangle is either inside one retained sphere or subdivided and covered by a new sphere. No test holdout poses used for selection.",
+  "links": {
+    "platform_base_link": {
+      "selected_indices": [
+        7,
+        38,
+        11,
+        14,
+        23,
+        26,
+        5,
+        33
+      ],
+      "scores": {
+        "38": 5,
+        "33": 3,
+        "34": 1,
+        "36": 2,
+        "37": 2,
+        "11": 4,
+        "14": 4,
+        "17": 1,
+        "23": 4,
+        "26": 4,
+        "2": 1,
+        "5": 4,
+        "29": 2,
+        "35": 1,
+        "1": 1,
+        "4": 1,
+        "30": 2,
+        "31": 2,
+        "21": 1,
+        "8": 1,
+        "28": 1,
+        "32": 2,
+        "39": 2,
+        "40": 2,
+        "41": 3,
+        "7": 7,
+        "19": 1,
+        "20": 1,
+        "18": 3,
+        "27": 3,
+        "22": 1,
+        "25": 1,
+        "3": 3,
+        "6": 1,
+        "12": 1,
+        "15": 2,
+        "0": 1,
+        "24": 1
+      },
+      "witnesses": [
+        {
+          "pose": "sweep_l_joint1_0",
+          "pair": [
+            "l_link2",
+            "platform_base_link"
+          ],
+          "sphere_indices": [
+            38
+          ]
+        },
+        {
+          "pose": "sweep_l_joint1_0.25",
+          "pair": [
+            "l_link2",
+            "platform_base_link"
+          ],
+          "sphere_indices": [
+            38
+          ]
+        },
+        {
+          "pose": "sweep_l_joint2_0",
+          "pair": [
+            "l_link3",
+            "platform_base_link"
+          ],
+          "sphere_indices": [
+            33,
+            34,
+            36,
+            37
+          ]
+        },
+        {
+          "pose": "sweep_l_joint2_0",
+          "pair": [
+            "l_link4",
+            "platform_base_link"
+          ],
+          "sphere_indices": [
+            33
+          ]
+        },
+        {
+          "pose": "sweep_l_joint2_1",
+          "pair": [
+            "l_link3",
+            "platform_base_link"
+          ],
+          "sphere_indices": [
+            11,
+            14,
+            17,
+            23,
+            26
+          ]
+        },
+        {
+          "pose": "sweep_l_joint2_1",
+          "pair": [
+            "l_link4",
+            "platform_base_link"
+          ],
+          "sphere_indices": [
+            2,
+            5,
+            11,
+            14
+          ]
+        },
+        {
+          "pose": "sweep_l_joint2_1",
+          "pair": [
+            "l_link5",
+            "platform_base_link"
+          ],
+          "sphere_indices": [
+            5
+          ]
+        },
+        {
+          "pose": "sweep_r_joint1_0",
+          "pair": [
+            "platform_base_link",
+            "r_link2"
+          ],
+          "sphere_indices": [
+            5
+          ]
+        },
+        {
+          "pose": "sweep_r_joint1_0.75",
+          "pair": [
+            "platform_base_link",
+            "r_link2"
+          ],
+          "sphere_indices": [
+            5
+          ]
+        },
+        {
+          "pose": "sweep_r_joint2_0",
+          "pair": [
+            "platform_base_link",
+            "r_link3"
+          ],
+          "sphere_indices": [
+            11,
+            14,
+            23,
+            26,
+            29
+          ]
+        },
+        {
+          "pose": "sweep_r_joint2_0",
+          "pair": [
+            "platform_base_link",
+            "r_link4"
+          ],
+          "sphere_indices": [
+            23,
+            26,
+            35,
+            38
+          ]
+        },
+        {
+          "pose": "sweep_r_joint2_0",
+          "pair": [
+            "platform_base_link",
+            "r_link5"
+          ],
+          "sphere_indices": [
+            38
+          ]
+        },
+        {
+          "pose": "sweep_r_joint2_1",
+          "pair": [
+            "platform_base_link",
+            "r_link3"
+          ],
+          "sphere_indices": [
+            1,
+            4
+          ]
+        },
+        {
+          "pose": "random_1",
+          "pair": [
+            "l_link7",
+            "platform_base_link"
+          ],
+          "sphere_indices": [
+            30,
+            31
+          ]
+        },
+        {
+          "pose": "random_2",
+          "pair": [
+            "platform_base_link",
+            "r_Link_finger2"
+          ],
+          "sphere_indices": [
+            21
+          ]
+        },
+        {
+          "pose": "random_13",
+          "pair": [
+            "l_link7",
+            "platform_base_link"
+          ],
+          "sphere_indices": [
+            8
+          ]
+        },
+        {
+          "pose": "random_16",
+          "pair": [
+            "l_link5",
+            "platform_base_link"
+          ],
+          "sphere_indices": [
+            28,
+            29,
+            31,
+            32,
+            37,
+            39,
+            40,
+            41
+          ]
+        },
+        {
+          "pose": "random_17",
+          "pair": [
+            "l_base_link_rmg24",
+            "platform_base_link"
+          ],
+          "sphere_indices": [
+            38,
+            41
+          ]
+        },
+        {
+          "pose": "random_17",
+          "pair": [
+            "platform_base_link",
+            "r_link4"
+          ],
+          "sphere_indices": [
+            7,
+            19,
+            20
+          ]
+        },
+        {
+          "pose": "random_22",
+          "pair": [
+            "platform_base_link",
+            "r_link5"
+          ],
+          "sphere_indices": [
+            7
+          ]
+        },
+        {
+          "pose": "random_22",
+          "pair": [
+            "platform_base_link",
+            "r_link6"
+          ],
+          "sphere_indices": [
+            7
+          ]
+        },
+        {
+          "pose": "random_30",
+          "pair": [
+            "l_base_link_rmg24",
+            "platform_base_link"
+          ],
+          "sphere_indices": [
+            18,
+            27
+          ]
+        },
+        {
+          "pose": "random_31",
+          "pair": [
+            "l_Link_finger2",
+            "platform_base_link"
+          ],
+          "sphere_indices": [
+            11,
+            14,
+            22,
+            23,
+            25,
+            26
+          ]
+        },
+        {
+          "pose": "random_46",
+          "pair": [
+            "platform_base_link",
+            "r_Link_finger1"
+          ],
+          "sphere_indices": [
+            3,
+            6,
+            12,
+            15
+          ]
+        },
+        {
+          "pose": "random_46",
+          "pair": [
+            "platform_base_link",
+            "r_Link_finger2"
+          ],
+          "sphere_indices": [
+            7,
+            18
+          ]
+        },
+        {
+          "pose": "random_46",
+          "pair": [
+            "platform_base_link",
+            "r_base_link_rmg24"
+          ],
+          "sphere_indices": [
+            3,
+            7
+          ]
+        },
+        {
+          "pose": "random_49",
+          "pair": [
+            "platform_base_link",
+            "r_Link_finger1"
+          ],
+          "sphere_indices": [
+            7
+          ]
+        },
+        {
+          "pose": "random_49",
+          "pair": [
+            "platform_base_link",
+            "r_base_link_rmg24"
+          ],
+          "sphere_indices": [
+            7
+          ]
+        },
+        {
+          "pose": "random_49",
+          "pair": [
+            "platform_base_link",
+            "r_link6"
+          ],
+          "sphere_indices": [
+            0,
+            3
+          ]
+        },
+        {
+          "pose": "random_59",
+          "pair": [
+            "l_link6",
+            "platform_base_link"
+          ],
+          "sphere_indices": [
+            40,
+            41
+          ]
+        },
+        {
+          "pose": "random_66",
+          "pair": [
+            "l_link6",
+            "platform_base_link"
+          ],
+          "sphere_indices": [
+            15,
+            18,
+            24,
+            27,
+            30,
+            39
+          ]
+        },
+        {
+          "pose": "random_78",
+          "pair": [
+            "l_Link_finger1",
+            "platform_base_link"
+          ],
+          "sphere_indices": [
+            27
+          ]
+        },
+        {
+          "pose": "random_85",
+          "pair": [
+            "platform_base_link",
+            "r_link7"
+          ],
+          "sphere_indices": [
+            32
+          ]
+        },
+        {
+          "pose": "random_114",
+          "pair": [
+            "l_Link_finger2",
+            "platform_base_link"
+          ],
+          "sphere_indices": [
+            33,
+            36
+          ]
+        }
+      ],
+      "count_before": 42,
+      "retained": 34,
+      "added": 49,
+      "count_after": 83,
+      "new_radius_cap_mm": 40.0,
+      "new_radius_min_mm": 13.000000000000002,
+      "original_patch_triangles": 7952,
+      "subdivided_tiles": 4541,
+      "coverage_before_pct": 99.978,
+      "coverage_after_pct": 99.98725,
+      "local_before_pct": 99.97416396195644,
+      "local_after_pct": 100.0,
+      "newly_uncovered_max_mm": 0.0
+    },
+    "body_base_link": {
+      "selected_indices": [
+        89,
+        90,
+        91,
+        88,
+        93,
+        99
+      ],
+      "scores": {
+        "103": 2,
+        "112": 3,
+        "93": 4,
+        "104": 3,
+        "99": 4,
+        "100": 2,
+        "89": 7,
+        "90": 7,
+        "88": 6,
+        "98": 4,
+        "91": 7,
+        "101": 4,
+        "94": 3,
+        "95": 2,
+        "92": 4,
+        "97": 1,
+        "84": 2,
+        "102": 2,
+        "85": 3,
+        "86": 1
+      },
+      "witnesses": [
+        {
+          "pose": "lift_0",
+          "pair": [
+            "body_base_link",
+            "l_base_link1"
+          ],
+          "sphere_indices": [
+            103,
+            112
+          ]
+        },
+        {
+          "pose": "lift_0",
+          "pair": [
+            "body_base_link",
+            "r_base_link1"
+          ],
+          "sphere_indices": [
+            93,
+            104
+          ]
+        },
+        {
+          "pose": "lift_0.25",
+          "pair": [
+            "body_base_link",
+            "l_base_link1"
+          ],
+          "sphere_indices": [
+            99,
+            100
+          ]
+        },
+        {
+          "pose": "lift_0.25",
+          "pair": [
+            "body_base_link",
+            "r_base_link1"
+          ],
+          "sphere_indices": [
+            89,
+            90
+          ]
+        },
+        {
+          "pose": "sweep_l_joint2_0.75",
+          "pair": [
+            "body_base_link",
+            "l_link5"
+          ],
+          "sphere_indices": [
+            112
+          ]
+        },
+        {
+          "pose": "sweep_l_joint2_1",
+          "pair": [
+            "body_base_link",
+            "l_link3"
+          ],
+          "sphere_indices": [
+            88,
+            89,
+            98,
+            99
+          ]
+        },
+        {
+          "pose": "sweep_l_joint4_1",
+          "pair": [
+            "body_base_link",
+            "l_Link_finger2"
+          ],
+          "sphere_indices": [
+            91
+          ]
+        },
+        {
+          "pose": "sweep_l_joint4_1",
+          "pair": [
+            "body_base_link",
+            "l_base_link_rmg24"
+          ],
+          "sphere_indices": [
+            91
+          ]
+        },
+        {
+          "pose": "sweep_r_joint2_0",
+          "pair": [
+            "body_base_link",
+            "r_link3"
+          ],
+          "sphere_indices": [
+            88,
+            89,
+            98,
+            99
+          ]
+        },
+        {
+          "pose": "sweep_r_joint2_0.25",
+          "pair": [
+            "body_base_link",
+            "r_link5"
+          ],
+          "sphere_indices": [
+            104
+          ]
+        },
+        {
+          "pose": "sweep_r_joint4_0",
+          "pair": [
+            "body_base_link",
+            "r_Link_finger2"
+          ],
+          "sphere_indices": [
+            101
+          ]
+        },
+        {
+          "pose": "sweep_r_joint4_0",
+          "pair": [
+            "body_base_link",
+            "r_link7"
+          ],
+          "sphere_indices": [
+            90
+          ]
+        },
+        {
+          "pose": "random_1",
+          "pair": [
+            "body_base_link",
+            "l_base_link_rmg24"
+          ],
+          "sphere_indices": [
+            94,
+            95
+          ]
+        },
+        {
+          "pose": "random_2",
+          "pair": [
+            "body_base_link",
+            "r_link2"
+          ],
+          "sphere_indices": [
+            88,
+            89
+          ]
+        },
+        {
+          "pose": "random_5",
+          "pair": [
+            "body_base_link",
+            "r_link3"
+          ],
+          "sphere_indices": [
+            90,
+            91,
+            92
+          ]
+        },
+        {
+          "pose": "random_9",
+          "pair": [
+            "body_base_link",
+            "l_link6"
+          ],
+          "sphere_indices": [
+            100,
+            101
+          ]
+        },
+        {
+          "pose": "random_10",
+          "pair": [
+            "body_base_link",
+            "l_link7"
+          ],
+          "sphere_indices": [
+            88
+          ]
+        },
+        {
+          "pose": "random_13",
+          "pair": [
+            "body_base_link",
+            "l_link6"
+          ],
+          "sphere_indices": [
+            90
+          ]
+        },
+        {
+          "pose": "random_15",
+          "pair": [
+            "body_base_link",
+            "l_link3"
+          ],
+          "sphere_indices": [
+            97,
+            98,
+            99
+          ]
+        },
+        {
+          "pose": "random_16",
+          "pair": [
+            "body_base_link",
+            "l_link7"
+          ],
+          "sphere_indices": [
+            94,
+            95
+          ]
+        },
+        {
+          "pose": "random_26",
+          "pair": [
+            "body_base_link",
+            "r_link4"
+          ],
+          "sphere_indices": [
+            89,
+            90,
+            91
+          ]
+        },
+        {
+          "pose": "random_30",
+          "pair": [
+            "body_base_link",
+            "l_Link_finger2"
+          ],
+          "sphere_indices": [
+            84
+          ]
+        },
+        {
+          "pose": "random_30",
+          "pair": [
+            "body_base_link",
+            "l_link5"
+          ],
+          "sphere_indices": [
+            94
+          ]
+        },
+        {
+          "pose": "random_31",
+          "pair": [
+            "body_base_link",
+            "l_Link_finger1"
+          ],
+          "sphere_indices": [
+            98
+          ]
+        },
+        {
+          "pose": "random_31",
+          "pair": [
+            "body_base_link",
+            "l_link4"
+          ],
+          "sphere_indices": [
+            101,
+            102
+          ]
+        },
+        {
+          "pose": "random_31",
+          "pair": [
+            "body_base_link",
+            "r_link4"
+          ],
+          "sphere_indices": [
+            90,
+            91
+          ]
+        },
+        {
+          "pose": "random_38",
+          "pair": [
+            "body_base_link",
+            "l_Link_finger1"
+          ],
+          "sphere_indices": [
+            112
+          ]
+        },
+        {
+          "pose": "random_38",
+          "pair": [
+            "body_base_link",
+            "r_Link_finger1"
+          ],
+          "sphere_indices": [
+            88,
+            89,
+            90
+          ]
+        },
+        {
+          "pose": "random_38",
+          "pair": [
+            "body_base_link",
+            "r_link5"
+          ],
+          "sphere_indices": [
+            92,
+            93
+          ]
+        },
+        {
+          "pose": "random_38",
+          "pair": [
+            "body_base_link",
+            "r_link6"
+          ],
+          "sphere_indices": [
+            91,
+            92,
+            93
+          ]
+        },
+        {
+          "pose": "random_44",
+          "pair": [
+            "body_base_link",
+            "l_link4"
+          ],
+          "sphere_indices": [
+            102,
+            103
+          ]
+        },
+        {
+          "pose": "random_46",
+          "pair": [
+            "body_base_link",
+            "r_Link_finger1"
+          ],
+          "sphere_indices": [
+            84,
+            85
+          ]
+        },
+        {
+          "pose": "random_46",
+          "pair": [
+            "body_base_link",
+            "r_Link_finger2"
+          ],
+          "sphere_indices": [
+            85,
+            86
+          ]
+        },
+        {
+          "pose": "random_49",
+          "pair": [
+            "body_base_link",
+            "r_base_link_rmg24"
+          ],
+          "sphere_indices": [
+            85
+          ]
+        },
+        {
+          "pose": "random_55",
+          "pair": [
+            "body_base_link",
+            "r_link2"
+          ],
+          "sphere_indices": [
+            88,
+            89
+          ]
+        },
+        {
+          "pose": "random_59",
+          "pair": [
+            "body_base_link",
+            "r_base_link_rmg24"
+          ],
+          "sphere_indices": [
+            92,
+            93,
+            104
+          ]
+        },
+        {
+          "pose": "random_60",
+          "pair": [
+            "body_base_link",
+            "r_link7"
+          ],
+          "sphere_indices": [
+            91
+          ]
+        },
+        {
+          "pose": "random_88",
+          "pair": [
+            "body_base_link",
+            "r_link6"
+          ],
+          "sphere_indices": [
+            101
+          ]
+        }
+      ],
+      "count_before": 116,
+      "retained": 110,
+      "added": 140,
+      "count_after": 250,
+      "new_radius_cap_mm": 40.0,
+      "new_radius_min_mm": 18.000000000000004,
+      "original_patch_triangles": 11634,
+      "subdivided_tiles": 98035,
+      "coverage_before_pct": 99.98075,
+      "coverage_after_pct": 99.988,
+      "local_before_pct": 99.96930907044847,
+      "local_after_pct": 100.0,
+      "newly_uncovered_max_mm": 0.0
+    }
+  }
+}

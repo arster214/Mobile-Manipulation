@@ -1,0 +1,136 @@
+{
+  "body_base_link": [
+    {
+      "index": 85,
+      "radius_mm": 98.53376588925248,
+      "link_surface_fraction_pct": 4.795833333333333,
+      "unique_link_surface_fraction_pct": 0.1,
+      "covered_surface_redundancy_pct": 97.91485664639444
+    },
+    {
+      "index": 86,
+      "radius_mm": 96.19705121917579,
+      "link_surface_fraction_pct": 5.053333333333334,
+      "unique_link_surface_fraction_pct": 0.08666666666666667,
+      "covered_surface_redundancy_pct": 98.28496042216359
+    },
+    {
+      "index": 95,
+      "radius_mm": 98.46919667154373,
+      "link_surface_fraction_pct": 4.8566666666666665,
+      "unique_link_surface_fraction_pct": 0.18333333333333332,
+      "covered_surface_redundancy_pct": 96.22512010981468
+    },
+    {
+      "index": 96,
+      "radius_mm": 97.67515839392517,
+      "link_surface_fraction_pct": 5.389166666666666,
+      "unique_link_surface_fraction_pct": 0.11083333333333334,
+      "covered_surface_redundancy_pct": 97.9434049791248
+    }
+  ],
+  "platform_base_link": [
+    {
+      "index": 1,
+      "radius_mm": 68.725705785637,
+      "link_surface_fraction_pct": 2.9208333333333334,
+      "unique_link_surface_fraction_pct": 0.4866666666666667,
+      "covered_surface_redundancy_pct": 83.33808844507845
+    },
+    {
+      "index": 2,
+      "radius_mm": 67.87656318842095,
+      "link_surface_fraction_pct": 2.5141666666666667,
+      "unique_link_surface_fraction_pct": 0.7633333333333333,
+      "covered_surface_redundancy_pct": 69.6387139542592
+    },
+    {
+      "index": 3,
+      "radius_mm": 65.8447605996028,
+      "link_surface_fraction_pct": 2.9391666666666665,
+      "unique_link_surface_fraction_pct": 0.7558333333333334,
+      "covered_surface_redundancy_pct": 74.2840941309895
+    },
+    {
+      "index": 4,
+      "radius_mm": 75.28,
+      "link_surface_fraction_pct": 5.2508333333333335,
+      "unique_link_surface_fraction_pct": 1.1175,
+      "covered_surface_redundancy_pct": 78.71766386287891
+    },
+    {
+      "index": 44,
+      "radius_mm": 39.0,
+      "link_surface_fraction_pct": 0.6799999999999999,
+      "unique_link_surface_fraction_pct": 0.06916666666666667,
+      "covered_surface_redundancy_pct": 89.82843137254902
+    },
+    {
+      "index": 26,
+      "radius_mm": 70.10581749301684,
+      "link_surface_fraction_pct": 2.930833333333333,
+      "unique_link_surface_fraction_pct": 0.39249999999999996,
+      "covered_surface_redundancy_pct": 86.60790446403185
+    },
+    {
+      "index": 27,
+      "radius_mm": 66.91711500250302,
+      "link_surface_fraction_pct": 2.549166666666667,
+      "unique_link_surface_fraction_pct": 1.1058333333333332,
+      "covered_surface_redundancy_pct": 56.619810395554104
+    },
+    {
+      "index": 28,
+      "radius_mm": 75.28,
+      "link_surface_fraction_pct": 3.8216666666666668,
+      "unique_link_surface_fraction_pct": 0.4116666666666667,
+      "covered_surface_redundancy_pct": 89.22808547754035
+    },
+    {
+      "index": 29,
+      "radius_mm": 74.32777514463686,
+      "link_surface_fraction_pct": 5.060833333333333,
+      "unique_link_surface_fraction_pct": 0.08916666666666667,
+      "covered_surface_redundancy_pct": 98.23810307920303
+    },
+    {
+      "index": 63,
+      "radius_mm": 34.0,
+      "link_surface_fraction_pct": 0.46499999999999997,
+      "unique_link_surface_fraction_pct": 0.0,
+      "covered_surface_redundancy_pct": 100.0
+    }
+  ],
+  "l_base_link1": [
+    {
+      "index": 0,
+      "radius_mm": 76.24000000000001,
+      "link_surface_fraction_pct": 61.775000000000006,
+      "unique_link_surface_fraction_pct": 31.040833333333335,
+      "covered_surface_redundancy_pct": 49.75178740051261
+    },
+    {
+      "index": 2,
+      "radius_mm": 59.5625,
+      "link_surface_fraction_pct": 53.12833333333333,
+      "unique_link_surface_fraction_pct": 37.66916666666666,
+      "covered_surface_redundancy_pct": 29.097782099946667
+    }
+  ],
+  "r_base_link1": [
+    {
+      "index": 0,
+      "radius_mm": 76.24000000000001,
+      "link_surface_fraction_pct": 61.07666666666667,
+      "unique_link_surface_fraction_pct": 3.879166666666667,
+      "covered_surface_redundancy_pct": 93.64869289963434
+    },
+    {
+      "index": 2,
+      "radius_mm": 61.945,
+      "link_surface_fraction_pct": 55.80833333333334,
+      "unique_link_surface_fraction_pct": 20.305,
+      "covered_surface_redundancy_pct": 63.6165447215171
+    }
+  ]
+}

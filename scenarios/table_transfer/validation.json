@@ -1,0 +1,12 @@
+{
+  "physics_steps": 360,
+  "physics_dt_s": 0.008333333333333333,
+  "cup_final_center_m": [
+    -1.2000008821487427,
+    1.3200008869171143,
+    0.8100000619888306
+  ],
+  "expected_support_center_z_m": 0.81,
+  "cup_resting_on_source_table": true,
+  "scope": "Environment-only rigid-body physics; full-robot grasp/reach/navigation not tested"
+}

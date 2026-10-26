@@ -1,0 +1,2621 @@
+{
+  "source": "/home/fang/robot_ws/postures/rm75_mobile_manipulation.yml",
+  "source_sha256": "31ab18f5c1524d6a9990f09e8a6a16ab64ea0953cfbe9a5201da389a060f157c",
+  "removed_indices": [
+    1,
+    2,
+    3,
+    4,
+    44,
+    26,
+    27,
+    28,
+    29,
+    63
+  ],
+  "removed_spheres": [
+    {
+      "center": [
+        -0.1470394764005451,
+        -0.14777405007274882,
+        -0.0017696766788563212
+      ],
+      "radius": 0.068725705785637
+    },
+    {
+      "center": [
+        -0.14670088496858916,
+        -0.13191669298476785,
+        0.09324247937557287
+      ],
+      "radius": 0.06787656318842095
+    },
+    {
+      "center": [
+        -0.14212311310582057,
+        -0.07679649068381324,
+        -0.10205973339003077
+      ],
+      "radius": 0.06584476059960279
+    },
+    {
+      "center": [
+        -0.14848898351192474,
+        -0.07358071766793728,
+        -0.0007268860936164856
+      ],
+      "radius": 0.07528
+    },
+    {
+      "center": [
+        -0.1936503772934278,
+        -0.07478770241141319,
+        0.05838798110683759
+      ],
+      "radius": 0.039
+    },
+    {
+      "center": [
+        0.14806147454610624,
+        -0.1474275712869858,
+        -0.0008635360647585374
+      ],
+      "radius": 0.07010581749301684
+    },
+    {
+      "center": [
+        0.14662177734899653,
+        -0.1296679178331805,
+        0.09301846790952419
+      ],
+      "radius": 0.06691711500250302
+    },
+    {
+      "center": [
+        0.14848966896533966,
+        -0.07358071766793728,
+        -0.09588249772787094
+      ],
+      "radius": 0.07528
+    },
+    {
+      "center": [
+        0.14775121637563407,
+        -0.0730814507992594,
+        -0.0010617779295412258
+      ],
+      "radius": 0.07432777514463686
+    },
+    {
+      "center": [
+        0.19385696947574615,
+        -0.10780568420886993,
+        0.058121701081593834
+      ],
+      "radius": 0.034
+    }
+  ],
+  "added_mirrored_spheres": [
+    {
+      "center": [
+        -0.1568522978966654,
+        -0.10455746738683909,
+        0.0029764536497974984
+      ],
+      "radius": 0.025
+    },
+    {
+      "center": [
+        0.1568522978966654,
+        -0.10455746738683909,
+        0.0029764536497974984
+      ],
+      "radius": 0.025
+    },
+    {
+      "center": [
+        -0.1539011307665899,
+        -0.15504577070208322,
+        0.030809720020762925
+      ],
+      "radius": 0.025
+    },
+    {
+      "center": [
+        0.1539011307665899,
+        -0.15504577070208322,
+        0.030809720020762925
+      ],
+      "radius": 0.025
+    },
+    {
+      "center": [
+        -0.13485574396093247,
+        -0.09211167090550651,
+        -0.04373968125368458
+      ],
+      "radius": 0.025
+    },
+    {
+      "center": [
+        0.13485574396093247,
+        -0.09211167090550651,
+        -0.04373968125368458
+      ],
+      "radius": 0.025
+    },
+    {
+      "center": [
+        -0.15746672265263542,
+        -0.16613945514259842,
+        0.08245728606709692
+      ],
+      "radius": 0.025
+    },
+    {
+      "center": [
+        0.15746672265263542,
+        -0.16613945514259842,
+        0.08245728606709692
+      ],
+      "radius": 0.025
+    },
+    {
+      "center": [
+        -0.13687949209087868,
+        -0.054485249709960965,
+        0.009610392987918402
+      ],
+      "radius": 0.025
+    },
+    {
+      "center": [
+        0.13687949209087868,
+        -0.054485249709960965,
+        0.009610392987918402
+      ],
+      "radius": 0.025
+    },
+    {
+      "center": [
+        0.13674565101815214,
+        -0.14237433618313905,
+        -0.018180128737538638
+      ],
+      "radius": 0.025
+    },
+    {
+      "center": [
+        -0.13674565101815214,
+        -0.14237433618313905,
+        -0.018180128737538638
+      ],
+      "radius": 0.025
+    },
+    {
+      "center": [
+        -0.18062460869462224,
+        -0.13772547360203571,
+        0.04594157183423547
+      ],
+      "radius": 0.025
+    },
+    {
+      "center": [
+        0.18062460869462224,
+        -0.13772547360203571,
+        0.04594157183423547
+      ],
+      "radius": 0.025
+    },
+    {
+      "center": [
+        -0.1284151703054782,
+        -0.14459121717555287,
+        0.11940412755746416
+      ],
+      "radius": 0.025
+    },
+    {
+      "center": [
+        0.1284151703054782,
+        -0.14459121717555287,
+        0.11940412755746416
+      ],
+      "radius": 0.025
+    },
+    {
+      "center": [
+        -0.18074442113516614,
+        -0.09021595952023151,
+        0.03937299053289015
+      ],
+      "radius": 0.025
+    },
+    {
+      "center": [
+        0.18074442113516614,
+        -0.09021595952023151,
+        0.03937299053289015
+      ],
+      "radius": 0.025
+    },
+    {
+      "center": [
+        -0.12558592938271104,
+        -0.07962576036480307,
+        -0.08250487908537205
+      ],
+      "radius": 0.025
+    },
+    {
+      "center": [
+        0.12558592938271104,
+        -0.07962576036480307,
+        -0.08250487908537205
+      ],
+      "radius": 0.025
+    },
+    {
+      "center": [
+        -0.11958080668032929,
+        -0.07711193944450788,
+        -0.12818788185308733
+      ],
+      "radius": 0.025
+    },
+    {
+      "center": [
+        0.11958080668032929,
+        -0.07711193944450788,
+        -0.12818788185308733
+      ],
+      "radius": 0.025
+    },
+    {
+      "center": [
+        -0.1814393573014596,
+        -0.0599676511487163,
+        0.04103927250912937
+      ],
+      "radius": 0.025
+    },
+    {
+      "center": [
+        0.1814393573014596,
+        -0.0599676511487163,
+        0.04103927250912937
+      ],
+      "radius": 0.025
+    },
+    {
+      "center": [
+        -0.1428448469344145,
+        -0.05837674492108046,
+        -0.020355016284112883
+      ],
+      "radius": 0.025
+    },
+    {
+      "center": [
+        0.1428448469344145,
+        -0.05837674492108046,
+        -0.020355016284112883
+      ],
+      "radius": 0.025
+    },
+    {
+      "center": [
+        0.12829883887447358,
+        -0.16691740740652838,
+        0.04240115841007007
+      ],
+      "radius": 0.025
+    },
+    {
+      "center": [
+        -0.12829883887447358,
+        -0.16691740740652838,
+        0.04240115841007007
+      ],
+      "radius": 0.025
+    },
+    {
+      "center": [
+        -0.1292931890078446,
+        -0.13746463979481136,
+        -0.04896035208597936
+      ],
+      "radius": 0.025
+    },
+    {
+      "center": [
+        0.1292931890078446,
+        -0.13746463979481136,
+        -0.04896035208597936
+      ],
+      "radius": 0.025
+    },
+    {
+      "center": [
+        0.1333606895856699,
+        -0.16629998993873596,
+        0.09653772083257903
+      ],
+      "radius": 0.025
+    },
+    {
+      "center": [
+        -0.1333606895856699,
+        -0.16629998993873596,
+        0.09653772083257903
+      ],
+      "radius": 0.025
+    },
+    {
+      "center": [
+        -0.16292479979038396,
+        -0.06213676080768012,
+        0.015056078470569686
+      ],
+      "radius": 0.025
+    },
+    {
+      "center": [
+        0.16292479979038396,
+        -0.06213676080768012,
+        0.015056078470569686
+      ],
+      "radius": 0.025
+    },
+    {
+      "center": [
+        -0.15270058267650452,
+        -0.12658844324882607,
+        0.019451024224802112
+      ],
+      "radius": 0.025
+    },
+    {
+      "center": [
+        0.15270058267650452,
+        -0.12658844324882607,
+        0.019451024224802112
+      ],
+      "radius": 0.025
+    },
+    {
+      "center": [
+        0.1265602592253586,
+        -0.11664732723493375,
+        0.12265419766031817
+      ],
+      "radius": 0.025
+    },
+    {
+      "center": [
+        -0.1265602592253586,
+        -0.11664732723493375,
+        0.12265419766031817
+      ],
+      "radius": 0.025
+    },
+    {
+      "center": [
+        -0.13147249085043605,
+        -0.16047425204577476,
+        0.00877153803105221
+      ],
+      "radius": 0.025
+    },
+    {
+      "center": [
+        0.13147249085043605,
+        -0.16047425204577476,
+        0.00877153803105221
+      ],
+      "radius": 0.025
+    },
+    {
+      "center": [
+        -0.12682069226019188,
+        -0.05450271574858947,
+        -0.06484337347346814
+      ],
+      "radius": 0.025
+    },
+    {
+      "center": [
+        0.12682069226019188,
+        -0.05450271574858947,
+        -0.06484337347346814
+      ],
+      "radius": 0.025
+    }
+  ],
+  "platform_count_before": 66,
+  "platform_count_after": 98,
+  "total_before": 432,
+  "total_after": 464,
+  "surface_coverage_before_pct": 99.99,
+  "surface_coverage_after_pct": 99.0765,
+  "local_surface_coverage_after_pct": 96.07476635514018,
+  "max_new_gap_mm": 8.525759258717493,
+  "failed20_platform_overlap_before": 20,
+  "failed20_platform_overlap_after": 0,
+  "initial_platform_pairs": [],
+  "holdout128_overlaps_before": 176,
+  "holdout128_overlaps_after": 143,
+  "new_mesh_misses": [],
+  "checks": [
+    [
+      {
+        "pair": [
+          "platform_base_link",
+          "r_link2"
+        ],
+        "before_gap_mm": -11.466594435161522,
+        "after_gap_mm": 17.07069307037732,
+        "mesh_hit": false
+      }
+    ],
+    [
+      {
+        "pair": [
+          "platform_base_link",
+          "r_link2"
+        ],
+        "before_gap_mm": -16.48998318990789,
+        "after_gap_mm": 6.700813267762215,
+        "mesh_hit": false
+      },
+      {
+        "pair": [
+          "platform_base_link",
+          "r_link3"
+        ],
+        "before_gap_mm": -11.826693715207615,
+        "after_gap_mm": 26.851850266078912,
+        "mesh_hit": false
+      }
+    ],
+    [
+      {
+        "pair": [
+          "platform_base_link",
+          "r_link2"
+        ],
+        "before_gap_mm": -16.19054720057956,
+        "after_gap_mm": 7.340806544421319,
+        "mesh_hit": false
+      },
+      {
+        "pair": [
+          "platform_base_link",
+          "r_link3"
+        ],
+        "before_gap_mm": -10.863533714686845,
+        "after_gap_mm": 27.53833491894366,
+        "mesh_hit": false
+      }
+    ],
+    [
+      {
+        "pair": [
+          "platform_base_link",
+          "r_link2"
+        ],
+        "before_gap_mm": -17.98420502152575,
+        "after_gap_mm": 3.527279214313478,
+        "mesh_hit": false
+      },
+      {
+        "pair": [
+          "platform_base_link",
+          "r_link3"
+        ],
+        "before_gap_mm": -16.905659200602134,
+        "after_gap_mm": 24.376421629199168,
+        "mesh_hit": false
+      }
+    ],
+    [
+      {
+        "pair": [
+          "platform_base_link",
+          "r_link2"
+        ],
+        "before_gap_mm": -15.567018419290763,
+        "after_gap_mm": 8.656500451547602,
+        "mesh_hit": false
+      },
+      {
+        "pair": [
+          "platform_base_link",
+          "r_link3"
+        ],
+        "before_gap_mm": -7.8861496622110865,
+        "after_gap_mm": 29.19197021222538,
+        "mesh_hit": false
+      }
+    ],
+    [
+      {
+        "pair": [
+          "platform_base_link",
+          "r_link2"
+        ],
+        "before_gap_mm": -16.908792001775424,
+        "after_gap_mm": 5.822942891619484,
+        "mesh_hit": false
+      },
+      {
+        "pair": [
+          "platform_base_link",
+          "r_link3"
+        ],
+        "before_gap_mm": -13.848117784656333,
+        "after_gap_mm": 25.84994110998389,
+        "mesh_hit": false
+      }
+    ],
+    [
+      {
+        "pair": [
+          "platform_base_link",
+          "r_link2"
+        ],
+        "before_gap_mm": -17.60942800845077,
+        "after_gap_mm": 4.444140276965075,
+        "mesh_hit": false
+      },
+      {
+        "pair": [
+          "platform_base_link",
+          "r_link3"
+        ],
+        "before_gap_mm": -16.508732029351062,
+        "after_gap_mm": 24.577986632132973,
+        "mesh_hit": false
+      }
+    ],
+    [
+      {
+        "pair": [
+          "platform_base_link",
+          "r_link2"
+        ],
+        "before_gap_mm": -16.344568754692876,
+        "after_gap_mm": 7.005956978967484,
+        "mesh_hit": false
+      },
+      {
+        "pair": [
+          "platform_base_link",
+          "r_link3"
+        ],
+        "before_gap_mm": -11.567309019450676,
+        "after_gap_mm": 27.161153846688457,
+        "mesh_hit": false
+      }
+    ],
+    [
+      {
+        "pair": [
+          "platform_base_link",
+          "r_link2"
+        ],
+        "before_gap_mm": -18.905728494545727,
+        "after_gap_mm": 1.752357351596262,
+        "mesh_hit": false
+      },
+      {
+        "pair": [
+          "platform_base_link",
+          "r_link3"
+        ],
+        "before_gap_mm": -21.633079108818883,
+        "after_gap_mm": 21.75775418294331,
+        "mesh_hit": false
+      }
+    ],
+    [
+      {
+        "pair": [
+          "platform_base_link",
+          "r_link2"
+        ],
+        "before_gap_mm": -16.252626924821108,
+        "after_gap_mm": 7.210808861075169,
+        "mesh_hit": false
+      },
+      {
+        "pair": [
+          "platform_base_link",
+          "r_link3"
+        ],
+        "before_gap_mm": -10.789522537744373,
+        "after_gap_mm": 27.422965820569072,
+        "mesh_hit": false
+      }
+    ],
+    [
+      {
+        "pair": [
+          "platform_base_link",
+          "r_link2"
+        ],
+        "before_gap_mm": -16.243436154977594,
+        "after_gap_mm": 7.23537348982442,
+        "mesh_hit": false
+      },
+      {
+        "pair": [
+          "platform_base_link",
+          "r_link3"
+        ],
+        "before_gap_mm": -11.215010366606034,
+        "after_gap_mm": 27.40609666978177,
+        "mesh_hit": false
+      }
+    ],
+    [
+      {
+        "pair": [
+          "platform_base_link",
+          "r_link2"
+        ],
+        "before_gap_mm": -14.974488858678074,
+        "after_gap_mm": 9.878780925103136,
+        "mesh_hit": false
+      },
+      {
+        "pair": [
+          "platform_base_link",
+          "r_link3"
+        ],
+        "before_gap_mm": -5.377115144448663,
+        "after_gap_mm": 30.417635187262334,
+        "mesh_hit": false
+      }
+    ],
+    [
+      {
+        "pair": [
+          "platform_base_link",
+          "r_link2"
+        ],
+        "before_gap_mm": -14.952174794200044,
+        "after_gap_mm": 9.925588073747091,
+        "mesh_hit": false
+      },
+      {
+        "pair": [
+          "platform_base_link",
+          "r_link3"
+        ],
+        "before_gap_mm": -5.537086761379678,
+        "after_gap_mm": 30.446391165119845,
+        "mesh_hit": false
+      }
+    ],
+    [
+      {
+        "pair": [
+          "platform_base_link",
+          "r_link2"
+        ],
+        "before_gap_mm": -16.485089268711373,
+        "after_gap_mm": 6.7110724455569235,
+        "mesh_hit": false
+      },
+      {
+        "pair": [
+          "platform_base_link",
+          "r_link3"
+        ],
+        "before_gap_mm": -11.805739947739438,
+        "after_gap_mm": 26.8633401285751,
+        "mesh_hit": false
+      }
+    ],
+    [
+      {
+        "pair": [
+          "platform_base_link",
+          "r_link2"
+        ],
+        "before_gap_mm": -14.45897205662406,
+        "after_gap_mm": 10.96026410262886,
+        "mesh_hit": false
+      },
+      {
+        "pair": [
+          "platform_base_link",
+          "r_link3"
+        ],
+        "before_gap_mm": -3.295095330288669,
+        "after_gap_mm": 31.62491659859331,
+        "mesh_hit": false
+      }
+    ],
+    [
+      {
+        "pair": [
+          "platform_base_link",
+          "r_link2"
+        ],
+        "before_gap_mm": -17.790332419852707,
+        "after_gap_mm": 3.9192468267132825,
+        "mesh_hit": false
+      },
+      {
+        "pair": [
+          "platform_base_link",
+          "r_link3"
+        ],
+        "before_gap_mm": -16.026963813855684,
+        "after_gap_mm": 24.85109930013126,
+        "mesh_hit": false
+      }
+    ],
+    [
+      {
+        "pair": [
+          "platform_base_link",
+          "r_link2"
+        ],
+        "before_gap_mm": -16.65741765722984,
+        "after_gap_mm": 6.349832032483738,
+        "mesh_hit": false
+      },
+      {
+        "pair": [
+          "platform_base_link",
+          "r_link3"
+        ],
+        "before_gap_mm": -12.727565041219968,
+        "after_gap_mm": 26.443146913735138,
+        "mesh_hit": false
+      }
+    ],
+    [
+      {
+        "pair": [
+          "platform_base_link",
+          "r_link2"
+        ],
+        "before_gap_mm": -14.391849916466352,
+        "after_gap_mm": 11.09841226915699,
+        "mesh_hit": false
+      },
+      {
+        "pair": [
+          "platform_base_link",
+          "r_link3"
+        ],
+        "before_gap_mm": -3.008451116154137,
+        "after_gap_mm": 31.783682344453105,
+        "mesh_hit": false
+      }
+    ],
+    [
+      {
+        "pair": [
+          "platform_base_link",
+          "r_link2"
+        ],
+        "before_gap_mm": -16.629561953635317,
+        "after_gap_mm": 6.408222197689051,
+        "mesh_hit": false
+      },
+      {
+        "pair": [
+          "platform_base_link",
+          "r_link3"
+        ],
+        "before_gap_mm": -12.43612543437006,
+        "after_gap_mm": 26.523262013810548,
+        "mesh_hit": false
+      }
+    ],
+    [
+      {
+        "pair": [
+          "platform_base_link",
+          "r_link2"
+        ],
+        "before_gap_mm": -18.902253941789564,
+        "after_gap_mm": 1.7616851356655334,
+        "mesh_hit": false
+      },
+      {
+        "pair": [
+          "platform_base_link",
+          "r_link3"
+        ],
+        "before_gap_mm": -21.63451306349623,
+        "after_gap_mm": 21.75650061511788,
+        "mesh_hit": false
+      }
+    ],
+    [],
+    [
+      {
+        "pair": [
+          "l_link2",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -19.200969692723703,
+        "after_gap_mm": -17.000392051502374,
+        "mesh_hit": false
+      },
+      {
+        "pair": [
+          "l_link3",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -19.573477902411074,
+        "after_gap_mm": -19.573477902411074,
+        "mesh_hit": false
+      }
+    ],
+    [
+      {
+        "pair": [
+          "l_link2",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -0.2456365695431284,
+        "after_gap_mm": -0.2456365695431284,
+        "mesh_hit": false
+      }
+    ],
+    [],
+    [],
+    [],
+    [
+      {
+        "pair": [
+          "l_link2",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -4.473546154897284,
+        "after_gap_mm": -4.473546154897284,
+        "mesh_hit": false
+      }
+    ],
+    [
+      {
+        "pair": [
+          "platform_base_link",
+          "r_link2"
+        ],
+        "before_gap_mm": -4.484436103760279,
+        "after_gap_mm": 16.678498040397997,
+        "mesh_hit": false
+      }
+    ],
+    [
+      {
+        "pair": [
+          "l_link2",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -5.966334885439066,
+        "after_gap_mm": 25.08944254734078,
+        "mesh_hit": false
+      }
+    ],
+    [],
+    [
+      {
+        "pair": [
+          "l_Link_finger1",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -6.822666758005788,
+        "after_gap_mm": 35.138028624446534,
+        "mesh_hit": false
+      },
+      {
+        "pair": [
+          "l_base_link_rmg24",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -41.33609212270675,
+        "after_gap_mm": -27.5975572929378,
+        "mesh_hit": true
+      },
+      {
+        "pair": [
+          "l_link2",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -2.6319023292008388,
+        "after_gap_mm": -2.6319023292008388,
+        "mesh_hit": false
+      },
+      {
+        "pair": [
+          "l_link5",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -46.20964173902945,
+        "after_gap_mm": -46.20964173902945,
+        "mesh_hit": true
+      },
+      {
+        "pair": [
+          "l_link6",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -52.03985897524888,
+        "after_gap_mm": -52.03985897524888,
+        "mesh_hit": true
+      },
+      {
+        "pair": [
+          "l_link7",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -65.5029648534331,
+        "after_gap_mm": -50.326866387865365,
+        "mesh_hit": true
+      }
+    ],
+    [],
+    [
+      {
+        "pair": [
+          "l_link2",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -32.37606029154123,
+        "after_gap_mm": -27.121805348134984,
+        "mesh_hit": false
+      },
+      {
+        "pair": [
+          "l_link3",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -28.669336016027252,
+        "after_gap_mm": -28.669336016027252,
+        "mesh_hit": false
+      },
+      {
+        "pair": [
+          "l_link4",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -33.97537242798341,
+        "after_gap_mm": -33.97537242798341,
+        "mesh_hit": true
+      },
+      {
+        "pair": [
+          "l_link5",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -53.99892264256992,
+        "after_gap_mm": -30.009109520934047,
+        "mesh_hit": true
+      },
+      {
+        "pair": [
+          "l_link6",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -4.658843150971453,
+        "after_gap_mm": 22.320041552915384,
+        "mesh_hit": false
+      }
+    ],
+    [
+      {
+        "pair": [
+          "platform_base_link",
+          "r_link2"
+        ],
+        "before_gap_mm": -61.44832800074229,
+        "after_gap_mm": -61.44832800074229,
+        "mesh_hit": false
+      },
+      {
+        "pair": [
+          "platform_base_link",
+          "r_link3"
+        ],
+        "before_gap_mm": -61.778806464819475,
+        "after_gap_mm": -61.778806464819475,
+        "mesh_hit": true
+      },
+      {
+        "pair": [
+          "platform_base_link",
+          "r_link4"
+        ],
+        "before_gap_mm": -1.8156298473815253,
+        "after_gap_mm": -1.8156298473815253,
+        "mesh_hit": false
+      }
+    ],
+    [],
+    [
+      {
+        "pair": [
+          "platform_base_link",
+          "r_link2"
+        ],
+        "before_gap_mm": -45.49040542890168,
+        "after_gap_mm": -45.49040542890168,
+        "mesh_hit": false
+      },
+      {
+        "pair": [
+          "platform_base_link",
+          "r_link3"
+        ],
+        "before_gap_mm": -39.81787604045152,
+        "after_gap_mm": -39.81787604045152,
+        "mesh_hit": false
+      }
+    ],
+    [
+      {
+        "pair": [
+          "l_Link_finger1",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -64.23556959762745,
+        "after_gap_mm": -64.23556959762745,
+        "mesh_hit": true
+      },
+      {
+        "pair": [
+          "l_Link_finger2",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -50.062384678705826,
+        "after_gap_mm": -50.062384678705826,
+        "mesh_hit": true
+      },
+      {
+        "pair": [
+          "l_base_link_rmg24",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -48.79703039421879,
+        "after_gap_mm": -48.79703039421879,
+        "mesh_hit": true
+      },
+      {
+        "pair": [
+          "l_link5",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -7.447763374030581,
+        "after_gap_mm": 28.427627367423643,
+        "mesh_hit": false
+      },
+      {
+        "pair": [
+          "l_link6",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -47.17220954622976,
+        "after_gap_mm": -47.17220954622976,
+        "mesh_hit": true
+      },
+      {
+        "pair": [
+          "l_link7",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -78.30868817278488,
+        "after_gap_mm": -61.8825198324726,
+        "mesh_hit": true
+      },
+      {
+        "pair": [
+          "platform_base_link",
+          "r_link2"
+        ],
+        "before_gap_mm": -26.906138306156713,
+        "after_gap_mm": 8.319856972605844,
+        "mesh_hit": false
+      }
+    ],
+    [
+      {
+        "pair": [
+          "platform_base_link",
+          "r_link2"
+        ],
+        "before_gap_mm": -24.78320430425162,
+        "after_gap_mm": -22.57867381774631,
+        "mesh_hit": false
+      },
+      {
+        "pair": [
+          "platform_base_link",
+          "r_link3"
+        ],
+        "before_gap_mm": -28.667145530903543,
+        "after_gap_mm": -28.667145530903543,
+        "mesh_hit": false
+      },
+      {
+        "pair": [
+          "platform_base_link",
+          "r_link4"
+        ],
+        "before_gap_mm": -21.482193155401617,
+        "after_gap_mm": -21.482193155401617,
+        "mesh_hit": false
+      }
+    ],
+    [
+      {
+        "pair": [
+          "l_link7",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -20.59409216246215,
+        "after_gap_mm": -20.59409216246215,
+        "mesh_hit": false
+      },
+      {
+        "pair": [
+          "platform_base_link",
+          "r_link2"
+        ],
+        "before_gap_mm": -38.671315700035784,
+        "after_gap_mm": -38.671315700035784,
+        "mesh_hit": false
+      },
+      {
+        "pair": [
+          "platform_base_link",
+          "r_link3"
+        ],
+        "before_gap_mm": -31.60611235515124,
+        "after_gap_mm": -31.60611235515124,
+        "mesh_hit": false
+      },
+      {
+        "pair": [
+          "platform_base_link",
+          "r_link4"
+        ],
+        "before_gap_mm": -10.383126648132443,
+        "after_gap_mm": -10.383126648132443,
+        "mesh_hit": false
+      },
+      {
+        "pair": [
+          "platform_base_link",
+          "r_link5"
+        ],
+        "before_gap_mm": -9.724815691947324,
+        "after_gap_mm": -9.724815691947324,
+        "mesh_hit": false
+      }
+    ],
+    [
+      {
+        "pair": [
+          "platform_base_link",
+          "r_link2"
+        ],
+        "before_gap_mm": -8.284335117530052,
+        "after_gap_mm": -6.492507807796422,
+        "mesh_hit": false
+      }
+    ],
+    [
+      {
+        "pair": [
+          "l_link2",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -29.771505254662703,
+        "after_gap_mm": -29.27884526360988,
+        "mesh_hit": false
+      },
+      {
+        "pair": [
+          "l_link3",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -39.86291979047164,
+        "after_gap_mm": -39.86291979047164,
+        "mesh_hit": true
+      },
+      {
+        "pair": [
+          "l_link4",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -8.494558862752806,
+        "after_gap_mm": -8.494558862752806,
+        "mesh_hit": false
+      }
+    ],
+    [],
+    [
+      {
+        "pair": [
+          "l_Link_finger1",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -4.105461876908648,
+        "after_gap_mm": -4.105461876908648,
+        "mesh_hit": false
+      },
+      {
+        "pair": [
+          "l_base_link_rmg24",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -39.055400763102725,
+        "after_gap_mm": -39.055400763102725,
+        "mesh_hit": true
+      },
+      {
+        "pair": [
+          "l_link2",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -22.898792611202236,
+        "after_gap_mm": -22.898792611202236,
+        "mesh_hit": false
+      },
+      {
+        "pair": [
+          "l_link3",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -10.606185623307244,
+        "after_gap_mm": -10.606185623307244,
+        "mesh_hit": false
+      },
+      {
+        "pair": [
+          "l_link4",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -40.66053599747417,
+        "after_gap_mm": -40.66053599747417,
+        "mesh_hit": false
+      },
+      {
+        "pair": [
+          "l_link5",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -75.57536122778569,
+        "after_gap_mm": -75.57536122778569,
+        "mesh_hit": true
+      },
+      {
+        "pair": [
+          "l_link6",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -94.66612059802901,
+        "after_gap_mm": -94.66612059802901,
+        "mesh_hit": true
+      },
+      {
+        "pair": [
+          "l_link7",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -52.61778659255387,
+        "after_gap_mm": -52.61778659255387,
+        "mesh_hit": true
+      }
+    ],
+    [
+      {
+        "pair": [
+          "platform_base_link",
+          "r_link2"
+        ],
+        "before_gap_mm": -6.953496090568438,
+        "after_gap_mm": 19.458998195957776,
+        "mesh_hit": false
+      }
+    ],
+    [
+      {
+        "pair": [
+          "l_link2",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -10.051234182549184,
+        "after_gap_mm": 24.747976611863397,
+        "mesh_hit": false
+      }
+    ],
+    [],
+    [],
+    [
+      {
+        "pair": [
+          "l_link2",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -8.685374735335115,
+        "after_gap_mm": 23.206714014849418,
+        "mesh_hit": false
+      }
+    ],
+    [],
+    [],
+    [],
+    [],
+    [
+      {
+        "pair": [
+          "platform_base_link",
+          "r_link2"
+        ],
+        "before_gap_mm": -24.151388805257337,
+        "after_gap_mm": -18.649472576648062,
+        "mesh_hit": false
+      },
+      {
+        "pair": [
+          "platform_base_link",
+          "r_link3"
+        ],
+        "before_gap_mm": -8.74675773091195,
+        "after_gap_mm": -8.74675773091195,
+        "mesh_hit": false
+      }
+    ],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [
+      {
+        "pair": [
+          "platform_base_link",
+          "r_link2"
+        ],
+        "before_gap_mm": -66.43167982008704,
+        "after_gap_mm": -66.43167982008704,
+        "mesh_hit": true
+      },
+      {
+        "pair": [
+          "platform_base_link",
+          "r_link3"
+        ],
+        "before_gap_mm": -60.10344094046484,
+        "after_gap_mm": -60.10344094046484,
+        "mesh_hit": false
+      },
+      {
+        "pair": [
+          "platform_base_link",
+          "r_link4"
+        ],
+        "before_gap_mm": -54.53093219073689,
+        "after_gap_mm": -54.53093219073689,
+        "mesh_hit": false
+      }
+    ],
+    [
+      {
+        "pair": [
+          "l_link2",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -4.105005128766881,
+        "after_gap_mm": 22.787997278998226,
+        "mesh_hit": false
+      },
+      {
+        "pair": [
+          "platform_base_link",
+          "r_link2"
+        ],
+        "before_gap_mm": -7.606955239691731,
+        "after_gap_mm": 27.591706270081,
+        "mesh_hit": false
+      }
+    ],
+    [
+      {
+        "pair": [
+          "l_link2",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -26.55405501451296,
+        "after_gap_mm": -21.02896888172373,
+        "mesh_hit": false
+      },
+      {
+        "pair": [
+          "l_link3",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -26.076014685925646,
+        "after_gap_mm": -26.076014685925646,
+        "mesh_hit": false
+      },
+      {
+        "pair": [
+          "platform_base_link",
+          "r_link2"
+        ],
+        "before_gap_mm": -28.374208780529244,
+        "after_gap_mm": 6.272193519408456,
+        "mesh_hit": false
+      }
+    ],
+    [
+      {
+        "pair": [
+          "l_link2",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -21.97357911733209,
+        "after_gap_mm": -21.97357911733209,
+        "mesh_hit": false
+      },
+      {
+        "pair": [
+          "l_link3",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -9.01463374915884,
+        "after_gap_mm": -9.01463374915884,
+        "mesh_hit": false
+      }
+    ],
+    [
+      {
+        "pair": [
+          "l_Link_finger1",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -47.32713899462307,
+        "after_gap_mm": -47.32713899462307,
+        "mesh_hit": true
+      },
+      {
+        "pair": [
+          "l_Link_finger2",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -48.694035218329994,
+        "after_gap_mm": -48.694035218329994,
+        "mesh_hit": true
+      },
+      {
+        "pair": [
+          "l_base_link_rmg24",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -85.87555181617779,
+        "after_gap_mm": -85.87555181617779,
+        "mesh_hit": true
+      },
+      {
+        "pair": [
+          "l_link6",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -50.068316135645915,
+        "after_gap_mm": -50.068316135645915,
+        "mesh_hit": true
+      },
+      {
+        "pair": [
+          "l_link7",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -57.80097518533383,
+        "after_gap_mm": -57.80097518533383,
+        "mesh_hit": true
+      }
+    ],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [
+      {
+        "pair": [
+          "platform_base_link",
+          "r_link2"
+        ],
+        "before_gap_mm": -22.580843558363046,
+        "after_gap_mm": -22.580843558363046,
+        "mesh_hit": false
+      },
+      {
+        "pair": [
+          "platform_base_link",
+          "r_link3"
+        ],
+        "before_gap_mm": -9.920491617143568,
+        "after_gap_mm": -9.920491617143568,
+        "mesh_hit": false
+      }
+    ],
+    [
+      {
+        "pair": [
+          "l_Link_finger1",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -43.15464908867653,
+        "after_gap_mm": -43.15464908867653,
+        "mesh_hit": true
+      },
+      {
+        "pair": [
+          "l_base_link_rmg24",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -46.01146377788054,
+        "after_gap_mm": -46.01146377788054,
+        "mesh_hit": true
+      },
+      {
+        "pair": [
+          "l_link2",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -14.952575279085188,
+        "after_gap_mm": 18.69162736971805,
+        "mesh_hit": false
+      },
+      {
+        "pair": [
+          "l_link6",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -6.569109481434091,
+        "after_gap_mm": -6.569109481434091,
+        "mesh_hit": false
+      },
+      {
+        "pair": [
+          "l_link7",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -52.93372269133521,
+        "after_gap_mm": -52.93372269133521,
+        "mesh_hit": true
+      }
+    ],
+    [
+      {
+        "pair": [
+          "platform_base_link",
+          "r_link2"
+        ],
+        "before_gap_mm": -9.152526803581509,
+        "after_gap_mm": 14.067623007251777,
+        "mesh_hit": false
+      }
+    ],
+    [],
+    [
+      {
+        "pair": [
+          "platform_base_link",
+          "r_link2"
+        ],
+        "before_gap_mm": -0.9436951806796947,
+        "after_gap_mm": 8.967252849753443,
+        "mesh_hit": false
+      }
+    ],
+    [],
+    [],
+    [],
+    [
+      {
+        "pair": [
+          "l_link2",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -7.2518110458859235,
+        "after_gap_mm": -4.818080722754595,
+        "mesh_hit": false
+      },
+      {
+        "pair": [
+          "platform_base_link",
+          "r_link2"
+        ],
+        "before_gap_mm": -0.23631522224621532,
+        "after_gap_mm": 3.857555727601297,
+        "mesh_hit": false
+      }
+    ],
+    [],
+    [
+      {
+        "pair": [
+          "platform_base_link",
+          "r_Link_finger1"
+        ],
+        "before_gap_mm": -38.130552144477875,
+        "after_gap_mm": -38.130552144477875,
+        "mesh_hit": false
+      },
+      {
+        "pair": [
+          "platform_base_link",
+          "r_base_link_rmg24"
+        ],
+        "before_gap_mm": -35.41546050541484,
+        "after_gap_mm": -35.41546050541484,
+        "mesh_hit": true
+      }
+    ],
+    [
+      {
+        "pair": [
+          "l_link2",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -23.070724917801996,
+        "after_gap_mm": -23.070724917801996,
+        "mesh_hit": false
+      },
+      {
+        "pair": [
+          "l_link3",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -33.609697486797565,
+        "after_gap_mm": -33.609697486797565,
+        "mesh_hit": false
+      },
+      {
+        "pair": [
+          "l_link4",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -28.642738496405446,
+        "after_gap_mm": -28.642738496405446,
+        "mesh_hit": false
+      },
+      {
+        "pair": [
+          "l_link5",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -20.97104421787215,
+        "after_gap_mm": -20.97104421787215,
+        "mesh_hit": false
+      },
+      {
+        "pair": [
+          "platform_base_link",
+          "r_link2"
+        ],
+        "before_gap_mm": -57.9102873198634,
+        "after_gap_mm": -57.9102873198634,
+        "mesh_hit": false
+      },
+      {
+        "pair": [
+          "platform_base_link",
+          "r_link3"
+        ],
+        "before_gap_mm": -48.46807802587994,
+        "after_gap_mm": -48.46807802587994,
+        "mesh_hit": false
+      },
+      {
+        "pair": [
+          "platform_base_link",
+          "r_link4"
+        ],
+        "before_gap_mm": -32.23288543050878,
+        "after_gap_mm": -32.23288543050878,
+        "mesh_hit": false
+      }
+    ],
+    [
+      {
+        "pair": [
+          "l_link2",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -31.425966153184678,
+        "after_gap_mm": -31.425966153184678,
+        "mesh_hit": false
+      },
+      {
+        "pair": [
+          "l_link3",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -20.051966655438527,
+        "after_gap_mm": -20.051966655438527,
+        "mesh_hit": false
+      },
+      {
+        "pair": [
+          "platform_base_link",
+          "r_link2"
+        ],
+        "before_gap_mm": -0.13312426189589915,
+        "after_gap_mm": 37.15943324694808,
+        "mesh_hit": false
+      }
+    ],
+    [
+      {
+        "pair": [
+          "l_link2",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -24.055413320541632,
+        "after_gap_mm": -24.055413320541632,
+        "mesh_hit": false
+      },
+      {
+        "pair": [
+          "l_link3",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -49.64001012570465,
+        "after_gap_mm": -36.01542621464014,
+        "mesh_hit": false
+      },
+      {
+        "pair": [
+          "platform_base_link",
+          "r_link2"
+        ],
+        "before_gap_mm": -26.27263489139473,
+        "after_gap_mm": -26.27263489139473,
+        "mesh_hit": false
+      },
+      {
+        "pair": [
+          "platform_base_link",
+          "r_link3"
+        ],
+        "before_gap_mm": -14.303400903376472,
+        "after_gap_mm": -14.303400903376472,
+        "mesh_hit": false
+      }
+    ],
+    [],
+    [],
+    [],
+    [],
+    [
+      {
+        "pair": [
+          "l_link2",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -0.935403953651659,
+        "after_gap_mm": 31.218892431073147,
+        "mesh_hit": false
+      }
+    ],
+    [
+      {
+        "pair": [
+          "platform_base_link",
+          "r_link2"
+        ],
+        "before_gap_mm": -37.02322855654542,
+        "after_gap_mm": -17.011029587767638,
+        "mesh_hit": false
+      },
+      {
+        "pair": [
+          "platform_base_link",
+          "r_link3"
+        ],
+        "before_gap_mm": -10.182868306357214,
+        "after_gap_mm": -10.182868306357214,
+        "mesh_hit": false
+      }
+    ],
+    [
+      {
+        "pair": [
+          "l_link2",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -24.684063268020854,
+        "after_gap_mm": 11.00350060383276,
+        "mesh_hit": false
+      }
+    ],
+    [
+      {
+        "pair": [
+          "l_link2",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -10.07757174502353,
+        "after_gap_mm": 17.654921433647967,
+        "mesh_hit": false
+      }
+    ],
+    [
+      {
+        "pair": [
+          "l_link2",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -16.444765675126156,
+        "after_gap_mm": -8.579504259521489,
+        "mesh_hit": false
+      },
+      {
+        "pair": [
+          "l_link3",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -10.062286767511045,
+        "after_gap_mm": -10.062286767511045,
+        "mesh_hit": false
+      },
+      {
+        "pair": [
+          "l_link6",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -4.740741148447178,
+        "after_gap_mm": -4.740741148447178,
+        "mesh_hit": false
+      },
+      {
+        "pair": [
+          "platform_base_link",
+          "r_link2"
+        ],
+        "before_gap_mm": -31.950744733995798,
+        "after_gap_mm": -31.950744733995798,
+        "mesh_hit": false
+      },
+      {
+        "pair": [
+          "platform_base_link",
+          "r_link3"
+        ],
+        "before_gap_mm": -29.54766894234156,
+        "after_gap_mm": -29.54766894234156,
+        "mesh_hit": false
+      },
+      {
+        "pair": [
+          "platform_base_link",
+          "r_link4"
+        ],
+        "before_gap_mm": -21.834315354633276,
+        "after_gap_mm": -21.834315354633276,
+        "mesh_hit": false
+      }
+    ],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [
+      {
+        "pair": [
+          "l_link2",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -29.738864254204763,
+        "after_gap_mm": -29.738864254204763,
+        "mesh_hit": false
+      },
+      {
+        "pair": [
+          "l_link3",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -28.33689233396635,
+        "after_gap_mm": -28.33689233396635,
+        "mesh_hit": false
+      }
+    ],
+    [
+      {
+        "pair": [
+          "l_link2",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -13.622425682132073,
+        "after_gap_mm": 1.3993037141292464,
+        "mesh_hit": false
+      }
+    ],
+    [
+      {
+        "pair": [
+          "l_Link_finger2",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -27.596714829928093,
+        "after_gap_mm": -27.596714829928093,
+        "mesh_hit": false
+      },
+      {
+        "pair": [
+          "l_base_link_rmg24",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -34.09823105031236,
+        "after_gap_mm": -34.09823105031236,
+        "mesh_hit": false
+      },
+      {
+        "pair": [
+          "l_link6",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -0.04118097112035257,
+        "after_gap_mm": 51.07567109240562,
+        "mesh_hit": false
+      },
+      {
+        "pair": [
+          "l_link7",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -53.62952643756798,
+        "after_gap_mm": -33.61970395505701,
+        "mesh_hit": false
+      }
+    ],
+    [],
+    [],
+    [
+      {
+        "pair": [
+          "platform_base_link",
+          "r_link2"
+        ],
+        "before_gap_mm": -2.3650380924360377,
+        "after_gap_mm": 31.154908753132723,
+        "mesh_hit": false
+      }
+    ],
+    [],
+    [
+      {
+        "pair": [
+          "l_link2",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -41.91457085926609,
+        "after_gap_mm": -41.91457085926609,
+        "mesh_hit": false
+      },
+      {
+        "pair": [
+          "l_link3",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -35.81816986592157,
+        "after_gap_mm": -35.81816986592157,
+        "mesh_hit": false
+      },
+      {
+        "pair": [
+          "platform_base_link",
+          "r_link2"
+        ],
+        "before_gap_mm": -26.12370039473416,
+        "after_gap_mm": -12.050413853689996,
+        "mesh_hit": false
+      }
+    ],
+    [],
+    [],
+    [],
+    [
+      {
+        "pair": [
+          "l_Link_finger1",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -23.89147259684274,
+        "after_gap_mm": -23.89147259684274,
+        "mesh_hit": false
+      },
+      {
+        "pair": [
+          "l_Link_finger2",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -34.7002093416732,
+        "after_gap_mm": -34.7002093416732,
+        "mesh_hit": true
+      },
+      {
+        "pair": [
+          "l_base_link_rmg24",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -43.820231853148904,
+        "after_gap_mm": -40.339920719801796,
+        "mesh_hit": true
+      },
+      {
+        "pair": [
+          "l_link6",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -30.15079692959415,
+        "after_gap_mm": -21.025142609710294,
+        "mesh_hit": false
+      },
+      {
+        "pair": [
+          "l_link7",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -86.62130284682675,
+        "after_gap_mm": -86.62130284682675,
+        "mesh_hit": true
+      }
+    ],
+    [],
+    [
+      {
+        "pair": [
+          "l_Link_finger1",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -43.921840082412615,
+        "after_gap_mm": -23.51774491335509,
+        "mesh_hit": true
+      },
+      {
+        "pair": [
+          "l_Link_finger2",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -38.019158790212536,
+        "after_gap_mm": -38.019158790212536,
+        "mesh_hit": true
+      },
+      {
+        "pair": [
+          "l_base_link_rmg24",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -69.63756400629467,
+        "after_gap_mm": -69.63756400629467,
+        "mesh_hit": true
+      },
+      {
+        "pair": [
+          "l_link2",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -18.184672798087156,
+        "after_gap_mm": -18.184672798087156,
+        "mesh_hit": false
+      },
+      {
+        "pair": [
+          "l_link3",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -1.7450064764286677,
+        "after_gap_mm": -1.7450064764286677,
+        "mesh_hit": false
+      },
+      {
+        "pair": [
+          "l_link4",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -24.727330650689037,
+        "after_gap_mm": -24.727330650689037,
+        "mesh_hit": false
+      },
+      {
+        "pair": [
+          "l_link5",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -94.78592478019634,
+        "after_gap_mm": -94.78592478019634,
+        "mesh_hit": true
+      },
+      {
+        "pair": [
+          "l_link6",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -78.89681911278163,
+        "after_gap_mm": -78.89681911278163,
+        "mesh_hit": true
+      },
+      {
+        "pair": [
+          "l_link7",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -94.27061100803635,
+        "after_gap_mm": -94.27061100803635,
+        "mesh_hit": true
+      }
+    ],
+    [
+      {
+        "pair": [
+          "l_link2",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -2.2728078041082957,
+        "after_gap_mm": 29.06309058867118,
+        "mesh_hit": false
+      },
+      {
+        "pair": [
+          "platform_base_link",
+          "r_Link_finger1"
+        ],
+        "before_gap_mm": -27.393454982153862,
+        "after_gap_mm": -27.393454982153862,
+        "mesh_hit": false
+      },
+      {
+        "pair": [
+          "platform_base_link",
+          "r_Link_finger2"
+        ],
+        "before_gap_mm": -8.877715571366199,
+        "after_gap_mm": -8.877715571366199,
+        "mesh_hit": false
+      },
+      {
+        "pair": [
+          "platform_base_link",
+          "r_base_link_rmg24"
+        ],
+        "before_gap_mm": -40.80163531927672,
+        "after_gap_mm": -40.80163531927672,
+        "mesh_hit": true
+      },
+      {
+        "pair": [
+          "platform_base_link",
+          "r_link7"
+        ],
+        "before_gap_mm": -47.13153886772721,
+        "after_gap_mm": -47.13153886772721,
+        "mesh_hit": true
+      }
+    ],
+    [
+      {
+        "pair": [
+          "platform_base_link",
+          "r_link2"
+        ],
+        "before_gap_mm": -28.46206679290438,
+        "after_gap_mm": -8.531437266819722,
+        "mesh_hit": false
+      },
+      {
+        "pair": [
+          "platform_base_link",
+          "r_link3"
+        ],
+        "before_gap_mm": -16.12402894126487,
+        "after_gap_mm": -16.12402894126487,
+        "mesh_hit": false
+      }
+    ],
+    [
+      {
+        "pair": [
+          "platform_base_link",
+          "r_link2"
+        ],
+        "before_gap_mm": -14.609031565815938,
+        "after_gap_mm": -14.609031565815938,
+        "mesh_hit": false
+      }
+    ],
+    [],
+    [
+      {
+        "pair": [
+          "l_link2",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -30.43048915101492,
+        "after_gap_mm": -0.43274927732649127,
+        "mesh_hit": false
+      }
+    ],
+    [],
+    [
+      {
+        "pair": [
+          "l_link2",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -3.0875604445117917,
+        "after_gap_mm": -3.0875604445117917,
+        "mesh_hit": false
+      }
+    ],
+    [],
+    [],
+    [
+      {
+        "pair": [
+          "l_Link_finger1",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -16.109362419723162,
+        "after_gap_mm": 2.3759698397582687,
+        "mesh_hit": false
+      },
+      {
+        "pair": [
+          "l_base_link_rmg24",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -30.143750253474767,
+        "after_gap_mm": -0.3176315635596838,
+        "mesh_hit": false
+      },
+      {
+        "pair": [
+          "l_link2",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -5.857772701986772,
+        "after_gap_mm": -5.857772701986772,
+        "mesh_hit": false
+      }
+    ],
+    [
+      {
+        "pair": [
+          "l_link2",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -15.80682258963765,
+        "after_gap_mm": 14.913622974841736,
+        "mesh_hit": false
+      },
+      {
+        "pair": [
+          "l_link5",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -6.631872813757155,
+        "after_gap_mm": -6.631872813757155,
+        "mesh_hit": false
+      },
+      {
+        "pair": [
+          "platform_base_link",
+          "r_Link_finger1"
+        ],
+        "before_gap_mm": -1.8115007242400365,
+        "after_gap_mm": -1.8115007242400365,
+        "mesh_hit": false
+      },
+      {
+        "pair": [
+          "platform_base_link",
+          "r_Link_finger2"
+        ],
+        "before_gap_mm": -65.80605777329708,
+        "after_gap_mm": -65.80605777329708,
+        "mesh_hit": false
+      },
+      {
+        "pair": [
+          "platform_base_link",
+          "r_base_link_rmg24"
+        ],
+        "before_gap_mm": -56.12470876403328,
+        "after_gap_mm": -56.12470876403328,
+        "mesh_hit": false
+      }
+    ],
+    [],
+    [],
+    [
+      {
+        "pair": [
+          "l_Link_finger1",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -25.40246532308266,
+        "after_gap_mm": 2.985259254055128,
+        "mesh_hit": false
+      }
+    ],
+    [],
+    [],
+    [],
+    [
+      {
+        "pair": [
+          "l_base_link_rmg24",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -48.53115190402085,
+        "after_gap_mm": -45.79479726165019,
+        "mesh_hit": true
+      },
+      {
+        "pair": [
+          "l_link2",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -67.34950135574975,
+        "after_gap_mm": -67.34950135574975,
+        "mesh_hit": false
+      },
+      {
+        "pair": [
+          "l_link3",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -66.22363411257734,
+        "after_gap_mm": -66.22363411257734,
+        "mesh_hit": false
+      },
+      {
+        "pair": [
+          "l_link4",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -103.47461334935434,
+        "after_gap_mm": -103.47461334935434,
+        "mesh_hit": true
+      },
+      {
+        "pair": [
+          "l_link5",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -94.02868452993732,
+        "after_gap_mm": -94.02868452993732,
+        "mesh_hit": true
+      },
+      {
+        "pair": [
+          "l_link6",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -81.3175730992287,
+        "after_gap_mm": -81.3175730992287,
+        "mesh_hit": true
+      },
+      {
+        "pair": [
+          "l_link7",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -98.54724594769438,
+        "after_gap_mm": -48.07643696099623,
+        "mesh_hit": true
+      }
+    ],
+    [],
+    [],
+    [],
+    [
+      {
+        "pair": [
+          "l_link2",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -9.810645786201034,
+        "after_gap_mm": -3.821125404052314,
+        "mesh_hit": false
+      },
+      {
+        "pair": [
+          "l_link5",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -21.082614817403652,
+        "after_gap_mm": -21.082614817403652,
+        "mesh_hit": false
+      },
+      {
+        "pair": [
+          "platform_base_link",
+          "r_link2"
+        ],
+        "before_gap_mm": -0.25641231202636755,
+        "after_gap_mm": 5.407818154258489,
+        "mesh_hit": false
+      },
+      {
+        "pair": [
+          "platform_base_link",
+          "r_link6"
+        ],
+        "before_gap_mm": -23.558409896376517,
+        "after_gap_mm": -23.558409896376517,
+        "mesh_hit": false
+      },
+      {
+        "pair": [
+          "platform_base_link",
+          "r_link7"
+        ],
+        "before_gap_mm": -11.461072017607085,
+        "after_gap_mm": -11.461072017607085,
+        "mesh_hit": false
+      }
+    ],
+    [
+      {
+        "pair": [
+          "l_link2",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -23.285550937327738,
+        "after_gap_mm": -14.883595587216469,
+        "mesh_hit": false
+      },
+      {
+        "pair": [
+          "l_link3",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -8.711086766238129,
+        "after_gap_mm": -8.711086766238129,
+        "mesh_hit": false
+      }
+    ],
+    [],
+    [],
+    [],
+    [
+      {
+        "pair": [
+          "l_link2",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -5.063966277143901,
+        "after_gap_mm": 26.524833612271266,
+        "mesh_hit": false
+      }
+    ],
+    [
+      {
+        "pair": [
+          "l_link2",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -36.34527365654595,
+        "after_gap_mm": -18.112654921532098,
+        "mesh_hit": false
+      }
+    ],
+    [
+      {
+        "pair": [
+          "l_link2",
+          "platform_base_link"
+        ],
+        "before_gap_mm": -23.190609520868552,
+        "after_gap_mm": 8.171744346025827,
+        "mesh_hit": false
+      }
+    ],
+    [
+      {
+        "pair": [
+          "platform_base_link",
+          "r_link2"
+        ],
+        "before_gap_mm": -15.185891678858129,
+        "after_gap_mm": 3.2372915491413536,
+        "mesh_hit": false
+      }
+    ],
+    [
+      {
+        "pair": [
+          "platform_base_link",
+          "r_link2"
+        ],
+        "before_gap_mm": -46.292661052455784,
+        "after_gap_mm": -46.292661052455784,
+        "mesh_hit": false
+      },
+      {
+        "pair": [
+          "platform_base_link",
+          "r_link3"
+        ],
+        "before_gap_mm": -32.633018160366156,
+        "after_gap_mm": -32.633018160366156,
+        "mesh_hit": false
+      }
+    ],
+    [],
+    [
+      {
+        "pair": [
+          "platform_base_link",
+          "r_link2"
+        ],
+        "before_gap_mm": -33.45472625971615,
+        "after_gap_mm": -5.828138276777986,
+        "mesh_hit": false
+      },
+      {
+        "pair": [
+          "platform_base_link",
+          "r_link3"
+        ],
+        "before_gap_mm": -22.114929772285056,
+        "after_gap_mm": 11.292671176189401,
+        "mesh_hit": false
+      }
+    ],
+    [
+      {
+        "pair": [
+          "platform_base_link",
+          "r_link2"
+        ],
+        "before_gap_mm": -11.720587899448722,
+        "after_gap_mm": 8.973565316557186,
+        "mesh_hit": false
+      }
+    ],
+    [
+      {
+        "pair": [
+          "platform_base_link",
+          "r_link2"
+        ],
+        "before_gap_mm": -30.264934864821033,
+        "after_gap_mm": -17.636724413860016,
+        "mesh_hit": false
+      },
+      {
+        "pair": [
+          "platform_base_link",
+          "r_link3"
+        ],
+        "before_gap_mm": -14.554017662690717,
+        "after_gap_mm": -1.70990682317778,
+        "mesh_hit": false
+      }
+    ],
+    [],
+    []
+  ],
+  "scope": "Only platform_base_link modified; torso refinement retained and arms unchanged. Surface area sampling, FCL open-mesh limitations, no world/path validation."
+}

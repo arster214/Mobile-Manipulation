@@ -1,0 +1,14 @@
+{
+  "environment_usd": "/home/fang/robot_ws/scenarios/table_transfer/assets/environment.usda",
+  "robot_scene_usd": "/home/fang/robot_ws/scenarios/table_transfer/assets/rm75_table_transfer.usda",
+  "robot_root_z_m": 0.24734551877975464,
+  "table_top_z_m": 0.75,
+  "static_box_count": 20,
+  "cup_prim": "/World/Environment/Cup",
+  "target_center_m": [
+    1.2,
+    1.32,
+    0.82
+  ],
+  "note": "Robot scene opens paused. Right-arm reachability and base orientation still require planning validation. Cup ground truth must be read at runtime after settling."
+}

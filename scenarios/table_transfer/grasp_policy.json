@@ -1,0 +1,66 @@
+{
+  "source_table": "SourceTable",
+  "arm": "right",
+  "sampling_axis": "cup_height_assumed_pending_user_confirmation",
+  "height_segments": 7,
+  "end_margin_m": 0.015,
+  "pregrasp_backoff_m": 0.15,
+  "allowed_side": "nearest_long_edge_only",
+  "tie_side_sign": -1,
+  "side_tie_tolerance_m": 1e-06,
+  "grasp_frame_axes": {
+    "x": "finger_closing",
+    "y": "world_up",
+    "z": "approach_into_cup"
+  },
+  "whole_body_selection": {
+    "target": "pregrasp_pose_then_validate_same_branch_grasp_and_lift",
+    "state": [
+      "base_x",
+      "base_y",
+      "base_yaw",
+      "platform_joint",
+      "r_joint1",
+      "r_joint2",
+      "r_joint3",
+      "r_joint4",
+      "r_joint5",
+      "r_joint6",
+      "r_joint7"
+    ],
+    "base_motion_model": "differential_drive",
+    "base_max_forward_speed_m_s_user_specified": 1.5,
+    "base_max_angular_speed_rad_s": null,
+    "lift_limits_status": "URDF_1m_vs_existing_driver_0.79m_requires_calibration",
+    "required_checks": [
+      "calibrated_grasp_center_to_tool_transform",
+      "gripper_opening_and_finger_clearance",
+      "left_arm_at_measured_locked_state",
+      "whole_body_self_and_world_collision",
+      "differential_drive_reachable_base_pose",
+      "continuous_pregrasp_to_grasp_path",
+      "intended_finger_contacts_only",
+      "postgrasp_lift_and_attached_cup_collision"
+    ],
+    "base_facing_constraint": {
+      "object_in_front_cone_half_angle_deg": 30,
+      "base_forward_axis_local": [
+        0,
+        -1,
+        0
+      ],
+      "evaluate_at": "final_base_pose",
+      "object_reference": "bottle_center_xy",
+      "enforcement": "hard_candidate_acceptance_and_front_facing_retry_seeds",
+      "max_attempts": 5,
+      "seeds_per_attempt": 32
+    }
+  },
+  "status": "geometric_candidate_policy_not_executable_plan",
+  "robot_grasp_tcp": {
+    "frame": "r_grasp_tcp",
+    "definition": "/home/fang/robot_ws/postures/grasp_tcp_definition.json",
+    "candidate_to_tcp_rotation_local_z_rad": -1.5707963267948966,
+    "status": "simulation_transform_defined; existing candidates retain abstract axes; apply rotation before IK"
+  }
+}

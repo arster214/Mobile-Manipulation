@@ -1,0 +1,22 @@
+{
+  "usd_asset": "/home/fang/isaacsim_rm75/assets/usd/rm75_dual_rmg24_sim_1/rm75_dual_rmg24_sim.usda",
+  "usd_prim_paths": {
+    "l_grasp_tcp": "/overseas_75_b_v_description/Geometry/base_link_underpan/body_base_link/platform_base_link/l_base_link1/l_link1/l_link2/l_link3/l_link4/l_link5/l_link6/l_link7/l_tool0/l_grasp_tcp",
+    "r_grasp_tcp": "/overseas_75_b_v_description/Geometry/base_link_underpan/body_base_link/platform_base_link/r_base_link1/r_link1/r_link2/r_link3/r_link4/r_link5/r_link6/r_link7/r_tool0/r_grasp_tcp"
+  },
+  "offset_from_link7_m": [
+    0,
+    0,
+    0.1613
+  ],
+  "offset_from_tool0_m": [
+    0,
+    0,
+    0.1168
+  ],
+  "source_urdfs": [
+    "rm75_dual_rmg24_sim.urdf",
+    "rm75_dual_rmg24_curobo.urdf"
+  ],
+  "scene_composition_verified": true
+}

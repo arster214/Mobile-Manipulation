@@ -1,0 +1,20 @@
+{
+  "model": "\u5e73\u53f0\u4fee\u6539\u540e511\u7403",
+  "platform_joint": 0.5602949857711792,
+  "pairs": [
+    {
+      "a": "l_base_link1",
+      "b": "platform_base_link",
+      "ignored": true,
+      "overlapping_sphere_pairs": 74,
+      "max_overlap_mm": 100.12203794344015
+    },
+    {
+      "a": "r_base_link1",
+      "b": "platform_base_link",
+      "ignored": true,
+      "overlapping_sphere_pairs": 107,
+      "max_overlap_mm": 100.12169295185275
+    }
+  ]
+}

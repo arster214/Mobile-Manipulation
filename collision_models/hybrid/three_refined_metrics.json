@@ -1,0 +1,496 @@
+{
+  "source": "/home/fang/robot_ws/collision_models/hybrid/rm75_hybrid_edited_20261025_161058_612073.yml",
+  "method": "alternating minimum enclosing spheres; center shifts bounded to 20 mm per axis; fitted on mesh vertices and 30000 area samples; final radius margin 1 mm",
+  "links": {
+    "l_link1": {
+      "before": {
+        "count": 3,
+        "sampled_surface_coverage_pct": 100.0,
+        "sampled_max_gap_mm": 0.0,
+        "vertex_max_gap_mm": 0.0,
+        "aabb_excess_mm": 33.95071816444398,
+        "radius_min_mm": 56.0,
+        "radius_max_mm": 59.00000000000001
+      },
+      "after": {
+        "count": 3,
+        "sampled_surface_coverage_pct": 100.0,
+        "sampled_max_gap_mm": 0.0,
+        "vertex_max_gap_mm": 0.0,
+        "aabb_excess_mm": 27.505626502443924,
+        "radius_min_mm": 47.9,
+        "radius_max_mm": 52.7
+      },
+      "old_radii_mm": [
+        57.0,
+        59.00000000000001,
+        56.0
+      ],
+      "new_radii_mm": [
+        50.2,
+        47.9,
+        52.7
+      ],
+      "center_shift_mm": [
+        6.871392721689159,
+        17.27552754698534,
+        3.3158926055488096
+      ]
+    },
+    "l_link2": {
+      "before": {
+        "count": 3,
+        "sampled_surface_coverage_pct": 100.0,
+        "sampled_max_gap_mm": 0.0,
+        "vertex_max_gap_mm": 0.0,
+        "aabb_excess_mm": 21.499996423721303,
+        "radius_min_mm": 53.0,
+        "radius_max_mm": 54.0
+      },
+      "after": {
+        "count": 3,
+        "sampled_surface_coverage_pct": 100.0,
+        "sampled_max_gap_mm": 0.0,
+        "vertex_max_gap_mm": 0.0,
+        "aabb_excess_mm": 21.430077853100414,
+        "radius_min_mm": 44.1,
+        "radius_max_mm": 51.2
+      },
+      "old_radii_mm": [
+        53.0,
+        53.0,
+        54.0
+      ],
+      "new_radii_mm": [
+        44.1,
+        51.2,
+        48.1
+      ],
+      "center_shift_mm": [
+        18.14266640878431,
+        3.5609259986958866,
+        6.130802188980794
+      ]
+    },
+    "l_link3": {
+      "before": {
+        "count": 3,
+        "sampled_surface_coverage_pct": 100.0,
+        "sampled_max_gap_mm": 0.0,
+        "vertex_max_gap_mm": 0.0,
+        "aabb_excess_mm": 35.02124738693238,
+        "radius_min_mm": 56.0,
+        "radius_max_mm": 57.0
+      },
+      "after": {
+        "count": 3,
+        "sampled_surface_coverage_pct": 100.0,
+        "sampled_max_gap_mm": 0.0,
+        "vertex_max_gap_mm": 0.0,
+        "aabb_excess_mm": 25.210592252024377,
+        "radius_min_mm": 41.3,
+        "radius_max_mm": 49.9
+      },
+      "old_radii_mm": [
+        57.0,
+        56.0,
+        57.0
+      ],
+      "new_radii_mm": [
+        47.7,
+        41.3,
+        49.9
+      ],
+      "center_shift_mm": [
+        10.864586253194515,
+        19.989475154073716,
+        7.059299318539654
+      ]
+    },
+    "l_link4": {
+      "before": {
+        "count": 3,
+        "sampled_surface_coverage_pct": 100.0,
+        "sampled_max_gap_mm": 0.0,
+        "vertex_max_gap_mm": 0.0,
+        "aabb_excess_mm": 18.50000035762789,
+        "radius_min_mm": 46.0,
+        "radius_max_mm": 47.0
+      },
+      "after": {
+        "count": 3,
+        "sampled_surface_coverage_pct": 100.0,
+        "sampled_max_gap_mm": 0.0,
+        "vertex_max_gap_mm": 0.0,
+        "aabb_excess_mm": 15.387610067604557,
+        "radius_min_mm": 37.5,
+        "radius_max_mm": 44.1
+      },
+      "old_radii_mm": [
+        46.0,
+        46.0,
+        47.0
+      ],
+      "new_radii_mm": [
+        37.5,
+        44.1,
+        40.7
+      ],
+      "center_shift_mm": [
+        16.75951029614355,
+        3.1919841548873884,
+        6.458114962399927
+      ]
+    },
+    "l_link5": {
+      "before": {
+        "count": 3,
+        "sampled_surface_coverage_pct": 100.0,
+        "sampled_max_gap_mm": 0.0,
+        "vertex_max_gap_mm": 0.0,
+        "aabb_excess_mm": 24.500006198883053,
+        "radius_min_mm": 46.0,
+        "radius_max_mm": 47.0
+      },
+      "after": {
+        "count": 3,
+        "sampled_surface_coverage_pct": 100.0,
+        "sampled_max_gap_mm": 0.0,
+        "vertex_max_gap_mm": 0.0,
+        "aabb_excess_mm": 20.883577443736673,
+        "radius_min_mm": 32.6,
+        "radius_max_mm": 41.1
+      },
+      "old_radii_mm": [
+        47.0,
+        47.0,
+        46.0
+      ],
+      "new_radii_mm": [
+        39.6,
+        32.6,
+        41.1
+      ],
+      "center_shift_mm": [
+        7.994739388899452,
+        15.4153905430588,
+        5.950843295059577
+      ]
+    },
+    "l_link6": {
+      "before": {
+        "count": 3,
+        "sampled_surface_coverage_pct": 100.0,
+        "sampled_max_gap_mm": 0.0,
+        "vertex_max_gap_mm": 0.0,
+        "aabb_excess_mm": 18.000005364418037,
+        "radius_min_mm": 41.0,
+        "radius_max_mm": 43.0
+      },
+      "after": {
+        "count": 3,
+        "sampled_surface_coverage_pct": 100.0,
+        "sampled_max_gap_mm": 0.0,
+        "vertex_max_gap_mm": 0.0,
+        "aabb_excess_mm": 14.242834235171031,
+        "radius_min_mm": 31.7,
+        "radius_max_mm": 40.4
+      },
+      "old_radii_mm": [
+        41.0,
+        42.0,
+        43.0
+      ],
+      "new_radii_mm": [
+        31.7,
+        40.4,
+        38.4
+      ],
+      "center_shift_mm": [
+        15.405826206446022,
+        3.802044585458089,
+        5.512269868252301
+      ]
+    },
+    "l_link7": {
+      "before": {
+        "count": 3,
+        "sampled_surface_coverage_pct": 100.0,
+        "sampled_max_gap_mm": 0.0,
+        "vertex_max_gap_mm": 0.0,
+        "aabb_excess_mm": 37.08665525913238,
+        "radius_min_mm": 42.0,
+        "radius_max_mm": 61.0
+      },
+      "after": {
+        "count": 3,
+        "sampled_surface_coverage_pct": 100.0,
+        "sampled_max_gap_mm": 0.0,
+        "vertex_max_gap_mm": 0.0,
+        "aabb_excess_mm": 36.99737317191182,
+        "radius_min_mm": 29.6,
+        "radius_max_mm": 58.9
+      },
+      "old_radii_mm": [
+        61.0,
+        42.0,
+        42.0
+      ],
+      "new_radii_mm": [
+        58.9,
+        29.6,
+        39.6
+      ],
+      "center_shift_mm": [
+        6.75317729337014,
+        24.68999369431869,
+        10.339808767990213
+      ]
+    },
+    "r_link1": {
+      "before": {
+        "count": 3,
+        "sampled_surface_coverage_pct": 100.0,
+        "sampled_max_gap_mm": 0.0,
+        "vertex_max_gap_mm": 0.0,
+        "aabb_excess_mm": 33.95071071386338,
+        "radius_min_mm": 56.0,
+        "radius_max_mm": 59.00000000000001
+      },
+      "after": {
+        "count": 3,
+        "sampled_surface_coverage_pct": 100.0,
+        "sampled_max_gap_mm": 0.0,
+        "vertex_max_gap_mm": 0.0,
+        "aabb_excess_mm": 27.505626279680353,
+        "radius_min_mm": 47.9,
+        "radius_max_mm": 52.7
+      },
+      "old_radii_mm": [
+        57.0,
+        59.00000000000001,
+        56.0
+      ],
+      "new_radii_mm": [
+        50.2,
+        47.9,
+        52.7
+      ],
+      "center_shift_mm": [
+        6.871397996824861,
+        17.27552310371445,
+        3.3159038403778647
+      ]
+    },
+    "r_link2": {
+      "before": {
+        "count": 3,
+        "sampled_surface_coverage_pct": 100.0,
+        "sampled_max_gap_mm": 0.0,
+        "vertex_max_gap_mm": 0.0,
+        "aabb_excess_mm": 21.499996423721303,
+        "radius_min_mm": 53.0,
+        "radius_max_mm": 54.0
+      },
+      "after": {
+        "count": 3,
+        "sampled_surface_coverage_pct": 100.0,
+        "sampled_max_gap_mm": 0.0,
+        "vertex_max_gap_mm": 0.0,
+        "aabb_excess_mm": 21.430078123364783,
+        "radius_min_mm": 44.1,
+        "radius_max_mm": 51.2
+      },
+      "old_radii_mm": [
+        53.0,
+        53.0,
+        54.0
+      ],
+      "new_radii_mm": [
+        44.1,
+        51.2,
+        48.1
+      ],
+      "center_shift_mm": [
+        18.1426586580911,
+        3.56093284210334,
+        6.130808774298619
+      ]
+    },
+    "r_link3": {
+      "before": {
+        "count": 3,
+        "sampled_surface_coverage_pct": 100.0,
+        "sampled_max_gap_mm": 0.0,
+        "vertex_max_gap_mm": 0.0,
+        "aabb_excess_mm": 35.02117288112641,
+        "radius_min_mm": 57.0,
+        "radius_max_mm": 57.0
+      },
+      "after": {
+        "count": 3,
+        "sampled_surface_coverage_pct": 100.0,
+        "sampled_max_gap_mm": 0.0,
+        "vertex_max_gap_mm": 0.0,
+        "aabb_excess_mm": 25.873443508931782,
+        "radius_min_mm": 42.1,
+        "radius_max_mm": 50.0
+      },
+      "old_radii_mm": [
+        57.0,
+        57.0,
+        57.0
+      ],
+      "new_radii_mm": [
+        47.6,
+        42.1,
+        50.0
+      ],
+      "center_shift_mm": [
+        10.941170472285728,
+        19.90222661128659,
+        7.160778660780519
+      ]
+    },
+    "r_link4": {
+      "before": {
+        "count": 3,
+        "sampled_surface_coverage_pct": 100.0,
+        "sampled_max_gap_mm": 0.0,
+        "vertex_max_gap_mm": 0.0,
+        "aabb_excess_mm": 18.500015258789084,
+        "radius_min_mm": 46.0,
+        "radius_max_mm": 47.0
+      },
+      "after": {
+        "count": 3,
+        "sampled_surface_coverage_pct": 100.0,
+        "sampled_max_gap_mm": 0.0,
+        "vertex_max_gap_mm": 0.0,
+        "aabb_excess_mm": 15.387609380384637,
+        "radius_min_mm": 37.5,
+        "radius_max_mm": 44.1
+      },
+      "old_radii_mm": [
+        46.0,
+        46.0,
+        47.0
+      ],
+      "new_radii_mm": [
+        37.5,
+        44.1,
+        40.7
+      ],
+      "center_shift_mm": [
+        16.75943488738228,
+        3.192017015446719,
+        6.458184966752376
+      ]
+    },
+    "r_link5": {
+      "before": {
+        "count": 3,
+        "sampled_surface_coverage_pct": 100.0,
+        "sampled_max_gap_mm": 0.0,
+        "vertex_max_gap_mm": 0.0,
+        "aabb_excess_mm": 24.49999129772186,
+        "radius_min_mm": 46.0,
+        "radius_max_mm": 47.0
+      },
+      "after": {
+        "count": 3,
+        "sampled_surface_coverage_pct": 100.0,
+        "sampled_max_gap_mm": 0.0,
+        "vertex_max_gap_mm": 0.0,
+        "aabb_excess_mm": 20.883564887690095,
+        "radius_min_mm": 32.6,
+        "radius_max_mm": 41.1
+      },
+      "old_radii_mm": [
+        47.0,
+        47.0,
+        46.0
+      ],
+      "new_radii_mm": [
+        39.6,
+        32.6,
+        41.1
+      ],
+      "center_shift_mm": [
+        7.994739447705021,
+        15.415268632080846,
+        5.9508528657408535
+      ]
+    },
+    "r_link6": {
+      "before": {
+        "count": 3,
+        "sampled_surface_coverage_pct": 100.0,
+        "sampled_max_gap_mm": 0.0,
+        "vertex_max_gap_mm": 0.0,
+        "aabb_excess_mm": 17.9969431757927,
+        "radius_min_mm": 41.0,
+        "radius_max_mm": 43.0
+      },
+      "after": {
+        "count": 3,
+        "sampled_surface_coverage_pct": 100.0,
+        "sampled_max_gap_mm": 0.0,
+        "vertex_max_gap_mm": 0.0,
+        "aabb_excess_mm": 14.239826412665856,
+        "radius_min_mm": 31.7,
+        "radius_max_mm": 40.4
+      },
+      "old_radii_mm": [
+        41.0,
+        42.0,
+        43.0
+      ],
+      "new_radii_mm": [
+        31.7,
+        40.4,
+        38.4
+      ],
+      "center_shift_mm": [
+        15.40577285055229,
+        3.7978083013605493,
+        5.498550439796233
+      ]
+    },
+    "r_link7": {
+      "before": {
+        "count": 3,
+        "sampled_surface_coverage_pct": 100.0,
+        "sampled_max_gap_mm": 0.0,
+        "vertex_max_gap_mm": 0.0,
+        "aabb_excess_mm": 34.65049910545349,
+        "radius_min_mm": 51.00000000000001,
+        "radius_max_mm": 63.0
+      },
+      "after": {
+        "count": 3,
+        "sampled_surface_coverage_pct": 100.0,
+        "sampled_max_gap_mm": 0.0,
+        "vertex_max_gap_mm": 0.0,
+        "aabb_excess_mm": 34.57454705642814,
+        "radius_min_mm": 33.9,
+        "radius_max_mm": 60.4
+      },
+      "old_radii_mm": [
+        63.0,
+        51.00000000000001,
+        51.00000000000001
+      ],
+      "new_radii_mm": [
+        60.4,
+        33.9,
+        39.6
+      ],
+      "center_shift_mm": [
+        4.82208388436674,
+        24.571399375423592,
+        15.011341774865006
+      ]
+    }
+  }
+}

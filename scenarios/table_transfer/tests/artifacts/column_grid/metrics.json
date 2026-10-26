@@ -1,0 +1,41 @@
+{
+  "source_sha256": "01c85b0a66915022d7afc41b7c5a45e2f12a3278d9ec3188645096e7fdff0d65",
+  "layout": "3 rows X by 2 columns Y per Z layer",
+  "column_z_range_m": [
+    0.57,
+    1.3
+  ],
+  "bounds_m": [
+    [
+      -0.10922285218061654,
+      -0.14929481896668553,
+      0.57
+    ],
+    [
+      0.10895462310268032,
+      0.005686959408917922,
+      1.3
+    ]
+  ],
+  "trials": [
+    {
+      "layers": 16,
+      "grid_spheres": 96,
+      "min_column_shoulder_gap_mm": -16.67392854266662,
+      "radius_range_mm": [
+        52.06831854317284,
+        58.04287497626241
+      ]
+    }
+  ],
+  "selected_layers": 16,
+  "old_body_count": 146,
+  "new_body_count": 192,
+  "total_spheres": 510,
+  "whole_body_link_surface_coverage_before_pct": 99.37559999999999,
+  "whole_body_link_surface_coverage_after_pct": 99.9876,
+  "column_surface_coverage_before_pct": 98.29479609293085,
+  "column_surface_coverage_after_pct": 99.98344462226146,
+  "newly_uncovered_max_mm": 0.8301544580631287,
+  "independent_surface_samples": 250000
+}

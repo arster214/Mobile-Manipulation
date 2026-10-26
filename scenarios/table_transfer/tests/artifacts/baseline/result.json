@@ -1,0 +1,27 @@
+{
+  "ik_status": "passed",
+  "planning_status": "passed",
+  "validation_status": "passed",
+  "execution_status": "not_run",
+  "reason": "",
+  "planning_time_s": 1.9439271409992216,
+  "samples": 444,
+  "duration_s": 11.075000000000001,
+  "validation_scope": "command and midpoint collision samples, joint velocity/acceleration, differential-drive integration; not continuous collision proof or PhysX execution",
+  "endpoint_position_error_m": 2.762467915924165e-07,
+  "endpoint_orientation_error_rad": 2.0647655870335124e-07,
+  "approach": {
+    "validation_status": "failed",
+    "reason": "Right-arm approach IK failed at 73.3% of insertion; return to mobile pregrasp planning",
+    "active_joints": [
+      "r_joint1",
+      "r_joint2",
+      "r_joint3",
+      "r_joint4",
+      "r_joint5",
+      "r_joint6",
+      "r_joint7"
+    ],
+    "without_target_object_diagnostic": "Right-arm approach IK failed at 80.0% of insertion; return to mobile pregrasp planning"
+  }
+}

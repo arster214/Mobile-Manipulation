@@ -1,0 +1,30 @@
+{
+  "before": {
+    "full_sweep_self_collision_samples": 728,
+    "full_sweep_samples": 791,
+    "full_sweep_max_self_cost": 0.0029797395691275597,
+    "lift_10cm_self_collision_samples": 376,
+    "lift_10cm_max_self_cost": 0.0008343238150700927,
+    "lift_10cm_robot_collision_free": false,
+    "saved_5cm_transport_robot_collision_free": {
+      "lift": true,
+      "carry": true,
+      "place": true,
+      "withdraw": true
+    }
+  },
+  "after": {
+    "full_sweep_self_collision_samples": 791,
+    "full_sweep_samples": 791,
+    "full_sweep_max_self_cost": 0.002780852373689413,
+    "lift_10cm_self_collision_samples": 1001,
+    "lift_10cm_max_self_cost": 0.0020835876930505037,
+    "lift_10cm_robot_collision_free": false,
+    "saved_5cm_transport_robot_collision_free": {
+      "lift": false,
+      "carry": false,
+      "place": false,
+      "withdraw": false
+    }
+  }
+}

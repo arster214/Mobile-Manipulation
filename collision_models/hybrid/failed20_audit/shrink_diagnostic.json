@@ -1,0 +1,83 @@
+{
+  "body_base_link": {
+    "sphere_changes": [
+      {
+        "index": 96,
+        "old_radius_mm": 97.67515839392517,
+        "diagnostic_radius_mm": 94.90003254212372,
+        "shrink_mm": 2.7751258518014374
+      },
+      {
+        "index": 86,
+        "old_radius_mm": 96.19705121917579,
+        "diagnostic_radius_mm": 91.8169676957355,
+        "shrink_mm": 4.380083523440298
+      },
+      {
+        "index": 95,
+        "old_radius_mm": 98.46919667154373,
+        "diagnostic_radius_mm": 97.15053402816967,
+        "shrink_mm": 1.3186626433740598
+      }
+    ],
+    "whole_surface_coverage_before_pct": 99.97666666666667,
+    "whole_surface_coverage_after_pct": 99.96666666666667,
+    "hotspot_surface_coverage_after_pct": 99.90153442192499,
+    "max_new_gap_on_previously_covered_surface_mm": 2.006134214929636,
+    "note": "Counterfactual shrink to clear these 20 samples by 1mm, NOT approved model; uniform area surface sampling only"
+  },
+  "platform_base_link": {
+    "sphere_changes": [
+      {
+        "index": 2,
+        "old_radius_mm": 67.87656318842095,
+        "diagnostic_radius_mm": 47.97083469387522,
+        "shrink_mm": 19.905728494545727
+      },
+      {
+        "index": 44,
+        "old_radius_mm": 39.0,
+        "diagnostic_radius_mm": 22.968852588416112,
+        "shrink_mm": 16.031147411583888
+      },
+      {
+        "index": 3,
+        "old_radius_mm": 65.8447605996028,
+        "diagnostic_radius_mm": 43.21024753610656,
+        "shrink_mm": 22.634513063496232
+      },
+      {
+        "index": 4,
+        "old_radius_mm": 75.28,
+        "diagnostic_radius_mm": 65.1918963150725,
+        "shrink_mm": 10.088103684927512
+      },
+      {
+        "index": 1,
+        "old_radius_mm": 68.725705785637,
+        "diagnostic_radius_mm": 63.65652283745663,
+        "shrink_mm": 5.069182948180379
+      }
+    ],
+    "whole_surface_coverage_before_pct": 99.995,
+    "whole_surface_coverage_after_pct": 99.425,
+    "hotspot_surface_coverage_after_pct": 95.07169104402334,
+    "max_new_gap_on_previously_covered_surface_mm": 17.32875860459197,
+    "note": "Counterfactual shrink to clear these 20 samples by 1mm, NOT approved model; uniform area surface sampling only"
+  },
+  "r_base_link1": {
+    "sphere_changes": [
+      {
+        "index": 2,
+        "old_radius_mm": 61.945,
+        "diagnostic_radius_mm": 58.29837915022574,
+        "shrink_mm": 3.6466208497742603
+      }
+    ],
+    "whole_surface_coverage_before_pct": 99.86500000000001,
+    "whole_surface_coverage_after_pct": 97.425,
+    "hotspot_surface_coverage_after_pct": 95.61269441697384,
+    "max_new_gap_on_previously_covered_surface_mm": 3.5905490529007587,
+    "note": "Counterfactual shrink to clear these 20 samples by 1mm, NOT approved model; uniform area surface sampling only"
+  }
+}

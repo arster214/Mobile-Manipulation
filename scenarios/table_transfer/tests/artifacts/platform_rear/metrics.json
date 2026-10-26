@@ -1,0 +1,31 @@
+{
+  "removed_indices": [
+    1,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24
+  ],
+  "old_platform_count": 98,
+  "new_platform_count": 145,
+  "replacement_radius_range_mm": [
+    4.121110667217555,
+    44.64240587759893
+  ],
+  "coverage_before_pct": 99.09360000000001,
+  "coverage_after_pct": 99.9916,
+  "newly_uncovered_max_mm": 0.07263955565667973,
+  "rear_extent_before_m": 0.14912385354816915,
+  "rear_extent_after_m": 0.12171988499178615
+}

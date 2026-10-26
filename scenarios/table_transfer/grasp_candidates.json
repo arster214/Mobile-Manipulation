@@ -1,0 +1,253 @@
+{
+  "table": "SourceTable",
+  "cup_pose_source": "scene_config_initial_pose_not_live_measurement",
+  "units": "meters",
+  "frame": "world",
+  "sampling_assumption": "upright_cylinder_height_segments_center_outward",
+  "selected_long_edge_sign_local_y": -1,
+  "selected_long_edge_midpoint_world_m": [
+    -1.2,
+    1.2,
+    0.75
+  ],
+  "outward_normal_world": [
+    0.0,
+    -1.0,
+    -0.0
+  ],
+  "approach_direction_world": [
+    -0.0,
+    1.0,
+    0.0
+  ],
+  "base_region_rule": "base footprint must stay outside selected long edge; check full robot against table and room",
+  "tool_from_grasp_transform": null,
+  "execution_ready": false,
+  "candidates": [
+    {
+      "rank": 0,
+      "height_segment": 3,
+      "grasp_center_world_m": [
+        -1.2,
+        1.32,
+        0.812
+      ],
+      "pregrasp_center_world_m": [
+        -1.2,
+        1.1700000000000002,
+        0.812
+      ],
+      "contact_pair_world_m": [
+        [
+          -1.23,
+          1.32,
+          0.812
+        ],
+        [
+          -1.17,
+          1.32,
+          0.812
+        ]
+      ],
+      "rotation_world_from_grasp": [
+        [
+          -1.0,
+          0.0,
+          -0.0
+        ],
+        [
+          -0.0,
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "pregrasp_center_outside_table_edge": true,
+      "status": "geometry_only_requires_tool_transform_ik_and_swept_collision_check"
+    },
+    {
+      "rank": 1,
+      "height_segment": 2,
+      "grasp_center_world_m": [
+        -1.2,
+        1.32,
+        0.7948571428571429
+      ],
+      "pregrasp_center_world_m": [
+        -1.2,
+        1.1700000000000002,
+        0.7948571428571429
+      ],
+      "contact_pair_world_m": [
+        [
+          -1.23,
+          1.32,
+          0.7948571428571429
+        ],
+        [
+          -1.17,
+          1.32,
+          0.7948571428571429
+        ]
+      ],
+      "rotation_world_from_grasp": [
+        [
+          -1.0,
+          0.0,
+          -0.0
+        ],
+        [
+          -0.0,
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "pregrasp_center_outside_table_edge": true,
+      "status": "geometry_only_requires_tool_transform_ik_and_swept_collision_check"
+    },
+    {
+      "rank": 2,
+      "height_segment": 4,
+      "grasp_center_world_m": [
+        -1.2,
+        1.32,
+        0.8291428571428572
+      ],
+      "pregrasp_center_world_m": [
+        -1.2,
+        1.1700000000000002,
+        0.8291428571428572
+      ],
+      "contact_pair_world_m": [
+        [
+          -1.23,
+          1.32,
+          0.8291428571428572
+        ],
+        [
+          -1.17,
+          1.32,
+          0.8291428571428572
+        ]
+      ],
+      "rotation_world_from_grasp": [
+        [
+          -1.0,
+          0.0,
+          -0.0
+        ],
+        [
+          -0.0,
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "pregrasp_center_outside_table_edge": true,
+      "status": "geometry_only_requires_tool_transform_ik_and_swept_collision_check"
+    },
+    {
+      "rank": 3,
+      "height_segment": 1,
+      "grasp_center_world_m": [
+        -1.2,
+        1.32,
+        0.7777142857142858
+      ],
+      "pregrasp_center_world_m": [
+        -1.2,
+        1.1700000000000002,
+        0.7777142857142858
+      ],
+      "contact_pair_world_m": [
+        [
+          -1.23,
+          1.32,
+          0.7777142857142858
+        ],
+        [
+          -1.17,
+          1.32,
+          0.7777142857142858
+        ]
+      ],
+      "rotation_world_from_grasp": [
+        [
+          -1.0,
+          0.0,
+          -0.0
+        ],
+        [
+          -0.0,
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "pregrasp_center_outside_table_edge": true,
+      "status": "geometry_only_requires_tool_transform_ik_and_swept_collision_check"
+    },
+    {
+      "rank": 4,
+      "height_segment": 5,
+      "grasp_center_world_m": [
+        -1.2,
+        1.32,
+        0.8462857142857143
+      ],
+      "pregrasp_center_world_m": [
+        -1.2,
+        1.1700000000000002,
+        0.8462857142857143
+      ],
+      "contact_pair_world_m": [
+        [
+          -1.23,
+          1.32,
+          0.8462857142857143
+        ],
+        [
+          -1.17,
+          1.32,
+          0.8462857142857143
+        ]
+      ],
+      "rotation_world_from_grasp": [
+        [
+          -1.0,
+          0.0,
+          -0.0
+        ],
+        [
+          -0.0,
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "pregrasp_center_outside_table_edge": true,
+      "status": "geometry_only_requires_tool_transform_ik_and_swept_collision_check"
+    }
+  ]
+}

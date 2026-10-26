@@ -1,0 +1,182 @@
+{
+  "source": "/home/fang/robot_ws/collision_models/hybrid/rm75_hybrid_edited_20261025_163001_130530.yml",
+  "policy": "Only body/platform spheres intersecting the four baseline arm pairs at default pose are refit. Keep all previously covered training samples/vertices covered. Fit uniquely needed points, split if needed. No ignore changes.",
+  "links": {
+    "body_base_link": {
+      "target_indices": [
+        86,
+        87,
+        96,
+        97
+      ],
+      "changes": [
+        {
+          "index": 86,
+          "action": "refit",
+          "old": {
+            "center": [
+              -0.05467848335979233,
+              -0.07180392977888381,
+              0.7525
+            ],
+            "radius": 0.099225
+          },
+          "new": [
+            {
+              "center": [
+                -0.037864334637840925,
+                -0.06395113483157522,
+                0.7479727324325414
+              ],
+              "radius": 0.0961970512191758
+            }
+          ],
+          "needed_points": 628
+        },
+        {
+          "index": 87,
+          "action": "refit",
+          "old": {
+            "center": [
+              -0.05467848335979233,
+              -0.07180392977888381,
+              0.8254999999999999
+            ],
+            "radius": 0.099225
+          },
+          "new": [
+            {
+              "center": [
+                -0.035392588489954434,
+                -0.061488981871455364,
+                0.8187309104669742
+              ],
+              "radius": 0.09851154851307872
+            }
+          ],
+          "needed_points": 1010
+        },
+        {
+          "index": 96,
+          "action": "refit",
+          "old": {
+            "center": [
+              0.054410254281856106,
+              -0.07180392977888381,
+              0.7525
+            ],
+            "radius": 0.099225
+          },
+          "new": [
+            {
+              "center": [
+                0.032900248036487466,
+                -0.06204196828247809,
+                0.7568603776195122
+              ],
+              "radius": 0.09767515839392517
+            }
+          ],
+          "needed_points": 473
+        },
+        {
+          "index": 97,
+          "action": "refit",
+          "old": {
+            "center": [
+              0.054410254281856106,
+              -0.07180392977888381,
+              0.8254999999999999
+            ],
+            "radius": 0.099225
+          },
+          "new": [
+            {
+              "center": [
+                0.0371790890465524,
+                -0.05894845975331581,
+                0.8280861994355223
+              ],
+              "radius": 0.10246654248981564
+            }
+          ],
+          "needed_points": 598
+        }
+      ],
+      "count_before": 116,
+      "count_after": 116,
+      "baseline_coverage_pct": 99.98208333333334,
+      "new_coverage_pct": 99.98458333333333,
+      "local_sample_count": 29400,
+      "local_before_coverage_pct": 99.97278911564625,
+      "local_after_coverage_pct": 99.98979591836735,
+      "local_max_gap_mm": 0.9474482466357709,
+      "newly_uncovered_max_gap_mm": 0.12574994755013003,
+      "remaining_default_sphere_overlaps": 0
+    },
+    "platform_base_link": {
+      "target_indices": [
+        2,
+        35
+      ],
+      "changes": [
+        {
+          "index": 2,
+          "action": "refit",
+          "old": {
+            "center": [
+              -0.14848898351192474,
+              -0.1472930032759905,
+              0.09442872554063797
+            ],
+            "radius": 0.07528
+          },
+          "new": [
+            {
+              "center": [
+                -0.14670088496858916,
+                -0.13191669298476785,
+                0.09324247937557287
+              ],
+              "radius": 0.06787656318842095
+            }
+          ],
+          "needed_points": 4449
+        },
+        {
+          "index": 35,
+          "action": "refit",
+          "old": {
+            "center": [
+              0.14848966896533966,
+              -0.1472930032759905,
+              0.09442872554063797
+            ],
+            "radius": 0.07528
+          },
+          "new": [
+            {
+              "center": [
+                0.14633841046220641,
+                -0.12935991528149887,
+                0.09359655796790091
+              ],
+              "radius": 0.06763080294549037
+            }
+          ],
+          "needed_points": 4471
+        }
+      ],
+      "count_before": 42,
+      "count_after": 42,
+      "baseline_coverage_pct": 99.97500000000001,
+      "new_coverage_pct": 99.97458333333333,
+      "local_sample_count": 15362,
+      "local_before_coverage_pct": 100.0,
+      "local_after_coverage_pct": 99.99349043093348,
+      "local_max_gap_mm": 0.06867946742579456,
+      "newly_uncovered_max_gap_mm": 0.06867946742579456,
+      "remaining_default_sphere_overlaps": 0
+    }
+  }
+}

@@ -1,0 +1,1054 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "URDF USD Converter v0.1.3"
+    }
+    defaultPrim = "overseas_75_b_v_description"
+    doc = """Generated from Composed Stage of root layer /tmp/tmp0irb955r/overseas_75_b_v_description.usdc
+
+
+Generated from Composed Stage of root layer /tmp/urdf_import_rm75_dual_rmg24_sim_qrsmhf04/usdex_rm75_dual_rmg24_sim/overseas_75_b_v_description.usdc
+
+
+Generated from Composed Stage of root layer /tmp/urdf_import_rm75_dual_rmg24_sim_qrsmhf04/temp_rm75_dual_rmg24_sim/rm75_dual_rmg24_sim.usd
+
+
+Generated from Composed Stage of root layer /home/fang/isaacsim_rm75/assets/usd/rm75_dual_rmg24_sim_1/payloads/base.usd
+"""
+    kilogramsPerUnit = 1
+    metersPerUnit = 1
+    subLayers = [
+        @./physics.usda@
+    ]
+    upAxis = "Z"
+)
+
+over "overseas_75_b_v_description"
+{
+    over "Physics"
+    {
+        def MjcActuator "joint_right_wheel_actuator"
+        {
+            uniform double[] mjc:biasPrm = [0, -6.981317043304443, -0.6981316804885864, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform double mjc:forceRange:max = 100
+            uniform double mjc:forceRange:min = -100
+            uniform double[] mjc:gainPrm = [6.981317043304443, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:gainType = "fixed"
+            custom rel mjc:target
+            prepend rel mjc:target = </overseas_75_b_v_description/Physics/joint_right_wheel>
+        }
+
+        def MjcActuator "joint_left_wheel_actuator"
+        {
+            uniform double[] mjc:biasPrm = [0, -6.981317043304443, -0.6981316804885864, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform double mjc:forceRange:max = 100
+            uniform double mjc:forceRange:min = -100
+            uniform double[] mjc:gainPrm = [6.981317043304443, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:gainType = "fixed"
+            custom rel mjc:target
+            prepend rel mjc:target = </overseas_75_b_v_description/Physics/joint_left_wheel>
+        }
+
+        def MjcActuator "joint_swivel_wheel_1_1_actuator"
+        {
+            uniform double[] mjc:biasPrm = [0, -6.981317043304443, -0.6981316804885864, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform double mjc:forceRange:max = inf
+            uniform double mjc:forceRange:min = -inf
+            uniform double[] mjc:gainPrm = [6.981317043304443, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:gainType = "fixed"
+            custom rel mjc:target
+            prepend rel mjc:target = </overseas_75_b_v_description/Physics/joint_swivel_wheel_1_1>
+        }
+
+        def MjcActuator "joint_swivel_wheel_1_2_actuator"
+        {
+            uniform double[] mjc:biasPrm = [0, -6.981317043304443, -0.6981316804885864, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform double mjc:forceRange:max = inf
+            uniform double mjc:forceRange:min = -inf
+            uniform double[] mjc:gainPrm = [6.981317043304443, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:gainType = "fixed"
+            custom rel mjc:target
+            prepend rel mjc:target = </overseas_75_b_v_description/Physics/joint_swivel_wheel_1_2>
+        }
+
+        def MjcActuator "joint_swivel_wheel_2_1_actuator"
+        {
+            uniform double[] mjc:biasPrm = [0, -6.981317043304443, -0.6981316804885864, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform double mjc:forceRange:max = inf
+            uniform double mjc:forceRange:min = -inf
+            uniform double[] mjc:gainPrm = [6.981317043304443, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:gainType = "fixed"
+            custom rel mjc:target
+            prepend rel mjc:target = </overseas_75_b_v_description/Physics/joint_swivel_wheel_2_1>
+        }
+
+        def MjcActuator "joint_swivel_wheel_2_2_actuator"
+        {
+            uniform double[] mjc:biasPrm = [0, -6.981317043304443, -0.6981316804885864, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform double mjc:forceRange:max = inf
+            uniform double mjc:forceRange:min = -inf
+            uniform double[] mjc:gainPrm = [6.981317043304443, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:gainType = "fixed"
+            custom rel mjc:target
+            prepend rel mjc:target = </overseas_75_b_v_description/Physics/joint_swivel_wheel_2_2>
+        }
+
+        def MjcActuator "joint_swivel_wheel_3_1_actuator"
+        {
+            uniform double[] mjc:biasPrm = [0, -6.981317043304443, -0.6981316804885864, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform double mjc:forceRange:max = inf
+            uniform double mjc:forceRange:min = -inf
+            uniform double[] mjc:gainPrm = [6.981317043304443, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:gainType = "fixed"
+            custom rel mjc:target
+            prepend rel mjc:target = </overseas_75_b_v_description/Physics/joint_swivel_wheel_3_1>
+        }
+
+        def MjcActuator "joint_swivel_wheel_3_2_actuator"
+        {
+            uniform double[] mjc:biasPrm = [0, -6.981317043304443, -0.6981316804885864, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform double mjc:forceRange:max = inf
+            uniform double mjc:forceRange:min = -inf
+            uniform double[] mjc:gainPrm = [6.981317043304443, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:gainType = "fixed"
+            custom rel mjc:target
+            prepend rel mjc:target = </overseas_75_b_v_description/Physics/joint_swivel_wheel_3_2>
+        }
+
+        def MjcActuator "joint_swivel_wheel_4_1_actuator"
+        {
+            uniform double[] mjc:biasPrm = [0, -6.981317043304443, -0.6981316804885864, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform double mjc:forceRange:max = inf
+            uniform double mjc:forceRange:min = -inf
+            uniform double[] mjc:gainPrm = [6.981317043304443, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:gainType = "fixed"
+            custom rel mjc:target
+            prepend rel mjc:target = </overseas_75_b_v_description/Physics/joint_swivel_wheel_4_1>
+        }
+
+        def MjcActuator "joint_swivel_wheel_4_2_actuator"
+        {
+            uniform double[] mjc:biasPrm = [0, -6.981317043304443, -0.6981316804885864, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform double mjc:forceRange:max = inf
+            uniform double mjc:forceRange:min = -inf
+            uniform double[] mjc:gainPrm = [6.981317043304443, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:gainType = "fixed"
+            custom rel mjc:target
+            prepend rel mjc:target = </overseas_75_b_v_description/Physics/joint_swivel_wheel_4_2>
+        }
+
+        def MjcActuator "platform_joint_actuator"
+        {
+            uniform double[] mjc:biasPrm = [0, -400, -40, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform double mjc:forceRange:max = 60
+            uniform double mjc:forceRange:min = -60
+            uniform double[] mjc:gainPrm = [400, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:gainType = "fixed"
+            custom rel mjc:target
+            prepend rel mjc:target = </overseas_75_b_v_description/Physics/platform_joint>
+        }
+
+        def MjcActuator "head_joint1_actuator"
+        {
+            uniform double[] mjc:biasPrm = [0, -6.981317043304443, -0.6981316804885864, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform double mjc:forceRange:max = 2
+            uniform double mjc:forceRange:min = -2
+            uniform double[] mjc:gainPrm = [6.981317043304443, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:gainType = "fixed"
+            custom rel mjc:target
+            prepend rel mjc:target = </overseas_75_b_v_description/Physics/head_joint1>
+        }
+
+        def MjcActuator "head_joint2_actuator"
+        {
+            uniform double[] mjc:biasPrm = [0, -6.981317043304443, -0.6981316804885864, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform double mjc:forceRange:max = 2
+            uniform double mjc:forceRange:min = -2
+            uniform double[] mjc:gainPrm = [6.981317043304443, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:gainType = "fixed"
+            custom rel mjc:target
+            prepend rel mjc:target = </overseas_75_b_v_description/Physics/head_joint2>
+        }
+
+        def MjcActuator "l_Joint_finger1_actuator"
+        {
+            uniform double[] mjc:biasPrm = [0, -400, -40, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform double mjc:forceRange:max = 10
+            uniform double mjc:forceRange:min = -10
+            uniform double[] mjc:gainPrm = [400, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:gainType = "fixed"
+            custom rel mjc:target
+            prepend rel mjc:target = </overseas_75_b_v_description/Physics/l_Joint_finger1>
+        }
+
+        def MjcActuator "l_Joint_finger2_actuator"
+        {
+            uniform double[] mjc:biasPrm = [0, -400, -40, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform double mjc:forceRange:max = 10
+            uniform double mjc:forceRange:min = -10
+            uniform double[] mjc:gainPrm = [400, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:gainType = "fixed"
+            custom rel mjc:target
+            prepend rel mjc:target = </overseas_75_b_v_description/Physics/l_Joint_finger2>
+        }
+
+        def MjcActuator "r_Joint_finger1_actuator"
+        {
+            uniform double[] mjc:biasPrm = [0, -400, -40, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform double mjc:forceRange:max = 10
+            uniform double mjc:forceRange:min = -10
+            uniform double[] mjc:gainPrm = [400, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:gainType = "fixed"
+            custom rel mjc:target
+            prepend rel mjc:target = </overseas_75_b_v_description/Physics/r_Joint_finger1>
+        }
+
+        def MjcActuator "r_Joint_finger2_actuator"
+        {
+            uniform double[] mjc:biasPrm = [0, -400, -40, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform double mjc:forceRange:max = 10
+            uniform double mjc:forceRange:min = -10
+            uniform double[] mjc:gainPrm = [400, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:gainType = "fixed"
+            custom rel mjc:target
+            prepend rel mjc:target = </overseas_75_b_v_description/Physics/r_Joint_finger2>
+        }
+
+        def MjcActuator "l_joint1_actuator"
+        {
+            uniform double[] mjc:biasPrm = [0, -6.981317043304443, -0.6981316804885864, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform double mjc:forceRange:max = 60
+            uniform double mjc:forceRange:min = -60
+            uniform double[] mjc:gainPrm = [6.981317043304443, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:gainType = "fixed"
+            custom rel mjc:target
+            prepend rel mjc:target = </overseas_75_b_v_description/Physics/l_joint1>
+        }
+
+        def MjcActuator "l_joint2_actuator"
+        {
+            uniform double[] mjc:biasPrm = [0, -6.981317043304443, -0.6981316804885864, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform double mjc:forceRange:max = 60
+            uniform double mjc:forceRange:min = -60
+            uniform double[] mjc:gainPrm = [6.981317043304443, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:gainType = "fixed"
+            custom rel mjc:target
+            prepend rel mjc:target = </overseas_75_b_v_description/Physics/l_joint2>
+        }
+
+        def MjcActuator "l_joint3_actuator"
+        {
+            uniform double[] mjc:biasPrm = [0, -6.981317043304443, -0.6981316804885864, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform double mjc:forceRange:max = 30
+            uniform double mjc:forceRange:min = -30
+            uniform double[] mjc:gainPrm = [6.981317043304443, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:gainType = "fixed"
+            custom rel mjc:target
+            prepend rel mjc:target = </overseas_75_b_v_description/Physics/l_joint3>
+        }
+
+        def MjcActuator "l_joint4_actuator"
+        {
+            uniform double[] mjc:biasPrm = [0, -6.981317043304443, -0.6981316804885864, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform double mjc:forceRange:max = 30
+            uniform double mjc:forceRange:min = -30
+            uniform double[] mjc:gainPrm = [6.981317043304443, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:gainType = "fixed"
+            custom rel mjc:target
+            prepend rel mjc:target = </overseas_75_b_v_description/Physics/l_joint4>
+        }
+
+        def MjcActuator "l_joint5_actuator"
+        {
+            uniform double[] mjc:biasPrm = [0, -6.981317043304443, -0.6981316804885864, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform double mjc:forceRange:max = 10
+            uniform double mjc:forceRange:min = -10
+            uniform double[] mjc:gainPrm = [6.981317043304443, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:gainType = "fixed"
+            custom rel mjc:target
+            prepend rel mjc:target = </overseas_75_b_v_description/Physics/l_joint5>
+        }
+
+        def MjcActuator "l_joint6_actuator"
+        {
+            uniform double[] mjc:biasPrm = [0, -6.981317043304443, -0.6981316804885864, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform double mjc:forceRange:max = 10
+            uniform double mjc:forceRange:min = -10
+            uniform double[] mjc:gainPrm = [6.981317043304443, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:gainType = "fixed"
+            custom rel mjc:target
+            prepend rel mjc:target = </overseas_75_b_v_description/Physics/l_joint6>
+        }
+
+        def MjcActuator "l_joint7_actuator"
+        {
+            uniform double[] mjc:biasPrm = [0, -6.981317043304443, -0.6981316804885864, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform double mjc:forceRange:max = 10
+            uniform double mjc:forceRange:min = -10
+            uniform double[] mjc:gainPrm = [6.981317043304443, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:gainType = "fixed"
+            custom rel mjc:target
+            prepend rel mjc:target = </overseas_75_b_v_description/Physics/l_joint7>
+        }
+
+        def MjcActuator "r_joint1_actuator"
+        {
+            uniform double[] mjc:biasPrm = [0, -6.981317043304443, -0.6981316804885864, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform double mjc:forceRange:max = 60
+            uniform double mjc:forceRange:min = -60
+            uniform double[] mjc:gainPrm = [6.981317043304443, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:gainType = "fixed"
+            custom rel mjc:target
+            prepend rel mjc:target = </overseas_75_b_v_description/Physics/r_joint1>
+        }
+
+        def MjcActuator "r_joint2_actuator"
+        {
+            uniform double[] mjc:biasPrm = [0, -6.981317043304443, -0.6981316804885864, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform double mjc:forceRange:max = 60
+            uniform double mjc:forceRange:min = -60
+            uniform double[] mjc:gainPrm = [6.981317043304443, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:gainType = "fixed"
+            custom rel mjc:target
+            prepend rel mjc:target = </overseas_75_b_v_description/Physics/r_joint2>
+        }
+
+        def MjcActuator "r_joint3_actuator"
+        {
+            uniform double[] mjc:biasPrm = [0, -6.981317043304443, -0.6981316804885864, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform double mjc:forceRange:max = 30
+            uniform double mjc:forceRange:min = -30
+            uniform double[] mjc:gainPrm = [6.981317043304443, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:gainType = "fixed"
+            custom rel mjc:target
+            prepend rel mjc:target = </overseas_75_b_v_description/Physics/r_joint3>
+        }
+
+        def MjcActuator "r_joint4_actuator"
+        {
+            uniform double[] mjc:biasPrm = [0, -6.981317043304443, -0.6981316804885864, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform double mjc:forceRange:max = 30
+            uniform double mjc:forceRange:min = -30
+            uniform double[] mjc:gainPrm = [6.981317043304443, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:gainType = "fixed"
+            custom rel mjc:target
+            prepend rel mjc:target = </overseas_75_b_v_description/Physics/r_joint4>
+        }
+
+        def MjcActuator "r_joint5_actuator"
+        {
+            uniform double[] mjc:biasPrm = [0, -6.981317043304443, -0.6981316804885864, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform double mjc:forceRange:max = 10
+            uniform double mjc:forceRange:min = -10
+            uniform double[] mjc:gainPrm = [6.981317043304443, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:gainType = "fixed"
+            custom rel mjc:target
+            prepend rel mjc:target = </overseas_75_b_v_description/Physics/r_joint5>
+        }
+
+        def MjcActuator "r_joint6_actuator"
+        {
+            uniform double[] mjc:biasPrm = [0, -6.981317043304443, -0.6981316804885864, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform double mjc:forceRange:max = 10
+            uniform double mjc:forceRange:min = -10
+            uniform double[] mjc:gainPrm = [6.981317043304443, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:gainType = "fixed"
+            custom rel mjc:target
+            prepend rel mjc:target = </overseas_75_b_v_description/Physics/r_joint6>
+        }
+
+        def MjcActuator "r_joint7_actuator"
+        {
+            uniform double[] mjc:biasPrm = [0, -6.981317043304443, -0.6981316804885864, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform double mjc:forceRange:max = 10
+            uniform double mjc:forceRange:min = -10
+            uniform double[] mjc:gainPrm = [6.981317043304443, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:gainType = "fixed"
+            custom rel mjc:target
+            prepend rel mjc:target = </overseas_75_b_v_description/Physics/r_joint7>
+        }
+
+        over "root_joint"
+        {
+        }
+
+        over "joint_right_wheel" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "joint_left_wheel" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "joint_swivel_wheel_1_1" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "joint_swivel_wheel_1_2" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "joint_swivel_wheel_2_1" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "joint_swivel_wheel_2_2" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "joint_swivel_wheel_3_1" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "joint_swivel_wheel_3_2" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "joint_swivel_wheel_4_1" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "joint_swivel_wheel_4_2" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "platform_joint" (
+            delete apiSchemas = ["PhysicsDriveAPI:linear", "PhysicsJointStateAPI:linear"]
+        )
+        {
+        }
+
+        over "head_joint1" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "head_joint2" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "camera_joint"
+        {
+        }
+
+        over "l_Joint_finger1" (
+            delete apiSchemas = ["PhysicsDriveAPI:linear", "PhysicsJointStateAPI:linear"]
+        )
+        {
+        }
+
+        over "l_Joint_finger2" (
+            delete apiSchemas = ["PhysicsDriveAPI:linear", "PhysicsJointStateAPI:linear"]
+        )
+        {
+        }
+
+        over "r_Joint_finger1" (
+            delete apiSchemas = ["PhysicsDriveAPI:linear", "PhysicsJointStateAPI:linear"]
+        )
+        {
+        }
+
+        over "r_Joint_finger2" (
+            delete apiSchemas = ["PhysicsDriveAPI:linear", "PhysicsJointStateAPI:linear"]
+        )
+        {
+        }
+
+        over "l_joint1" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "l_joint2" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "l_joint3" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "l_joint4" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "l_joint5" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "l_joint6" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "l_joint7" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "r_joint1" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "r_joint2" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "r_joint3" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "r_joint4" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "r_joint5" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "r_joint6" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "r_joint7" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "body_base_joint"
+        {
+        }
+
+        over "r_base_joint1"
+        {
+        }
+
+        over "l_base_joint1"
+        {
+        }
+
+        over "r_hand_joint"
+        {
+        }
+
+        over "l_hand_joint"
+        {
+        }
+    }
+
+    over "Geometry"
+    {
+        over "base_link_underpan"
+        {
+            over "link_right_wheel"
+            {
+                over "link_right_wheel"
+                {
+                }
+
+                over "link_right_wheel_1"
+                {
+                }
+            }
+
+            over "link_left_wheel"
+            {
+                over "link_left_wheel"
+                {
+                }
+
+                over "link_left_wheel_1"
+                {
+                }
+            }
+
+            over "link_swivel_wheel_1_1"
+            {
+                over "link_swivel_wheel_1_2"
+                {
+                    over "link_swivel_wheel_1_2"
+                    {
+                    }
+
+                    over "link_swivel_wheel_1_2_1"
+                    {
+                    }
+                }
+
+                over "link_swivel_wheel_1_1"
+                {
+                }
+
+                over "link_swivel_wheel_1_1_1"
+                {
+                }
+            }
+
+            over "link_swivel_wheel_2_1"
+            {
+                over "link_swivel_wheel_2_2"
+                {
+                    over "link_swivel_wheel_2_2"
+                    {
+                    }
+
+                    over "link_swivel_wheel_2_2_1"
+                    {
+                    }
+                }
+
+                over "link_swivel_wheel_2_1"
+                {
+                }
+
+                over "link_swivel_wheel_2_1_1"
+                {
+                }
+            }
+
+            over "link_swivel_wheel_3_1"
+            {
+                over "link_swivel_wheel_3_2"
+                {
+                    over "link_swivel_wheel_3_2"
+                    {
+                    }
+
+                    over "link_swivel_wheel_3_2_1"
+                    {
+                    }
+                }
+
+                over "link_swivel_wheel_3_1"
+                {
+                }
+
+                over "link_swivel_wheel_3_1_1"
+                {
+                }
+            }
+
+            over "link_swivel_wheel_4_1"
+            {
+                over "link_swivel_wheel_4_2"
+                {
+                    over "link_swivel_wheel_4_2"
+                    {
+                    }
+
+                    over "link_swivel_wheel_4_2_1"
+                    {
+                    }
+                }
+
+                over "link_swivel_wheel_4_1"
+                {
+                }
+
+                over "link_swivel_wheel_4_1_1"
+                {
+                }
+            }
+
+            over "body_base_link"
+            {
+                over "platform_base_link"
+                {
+                    over "head_link1"
+                    {
+                        over "head_link2"
+                        {
+                            over "camera_link"
+                            {
+                                over "camera_link"
+                                {
+                                }
+
+                                over "camera_link_1"
+                                {
+                                }
+                            }
+
+                            over "head_link2"
+                            {
+                            }
+
+                            over "head_link2_1"
+                            {
+                            }
+                        }
+
+                        over "head_link1"
+                        {
+                        }
+
+                        over "head_link1_1"
+                        {
+                        }
+                    }
+
+                    over "r_base_link1"
+                    {
+                        over "r_link1"
+                        {
+                            over "r_link2"
+                            {
+                                over "r_link3"
+                                {
+                                    over "r_link4"
+                                    {
+                                        over "r_link5"
+                                        {
+                                            over "r_link6"
+                                            {
+                                                over "r_link7"
+                                                {
+                                                    over "r_base_link_rmg24"
+                                                    {
+                                                        over "r_Link_finger1"
+                                                        {
+                                                            over "Link_finger1"
+                                                            {
+                                                            }
+
+                                                            over "Link_finger1_1"
+                                                            {
+                                                            }
+                                                        }
+
+                                                        over "r_Link_finger2"
+                                                        {
+                                                            over "Link_finger2"
+                                                            {
+                                                            }
+
+                                                            over "Link_finger2_1"
+                                                            {
+                                                            }
+                                                        }
+
+                                                        over "base_link2"
+                                                        {
+                                                        }
+
+                                                        over "base_link2_1"
+                                                        {
+                                                        }
+                                                    }
+
+                                                    over "r_tool0"
+                                                    {
+                                                    }
+
+                                                    over "r_link7"
+                                                    {
+                                                    }
+
+                                                    over "r_link7_1"
+                                                    {
+                                                    }
+                                                }
+
+                                                over "r_link6"
+                                                {
+                                                }
+
+                                                over "r_link6_1"
+                                                {
+                                                }
+                                            }
+
+                                            over "r_link5"
+                                            {
+                                            }
+
+                                            over "r_link5_1"
+                                            {
+                                            }
+                                        }
+
+                                        over "r_link4"
+                                        {
+                                        }
+
+                                        over "r_link4_1"
+                                        {
+                                        }
+                                    }
+
+                                    over "r_link3"
+                                    {
+                                    }
+
+                                    over "r_link3_1"
+                                    {
+                                    }
+                                }
+
+                                over "r_link2"
+                                {
+                                }
+
+                                over "r_link2_1"
+                                {
+                                }
+                            }
+
+                            over "r_link1"
+                            {
+                            }
+
+                            over "r_link1_1"
+                            {
+                            }
+                        }
+
+                        over "r_base_link1"
+                        {
+                        }
+
+                        over "r_base_link1_1"
+                        {
+                        }
+                    }
+
+                    over "l_base_link1"
+                    {
+                        over "l_link1"
+                        {
+                            over "l_link2"
+                            {
+                                over "l_link3"
+                                {
+                                    over "l_link4"
+                                    {
+                                        over "l_link5"
+                                        {
+                                            over "l_link6"
+                                            {
+                                                over "l_link7"
+                                                {
+                                                    over "l_base_link_rmg24"
+                                                    {
+                                                        over "l_Link_finger1"
+                                                        {
+                                                            over "Link_finger1"
+                                                            {
+                                                            }
+
+                                                            over "Link_finger1_1"
+                                                            {
+                                                            }
+                                                        }
+
+                                                        over "l_Link_finger2"
+                                                        {
+                                                            over "Link_finger2"
+                                                            {
+                                                            }
+
+                                                            over "Link_finger2_1"
+                                                            {
+                                                            }
+                                                        }
+
+                                                        over "base_link2"
+                                                        {
+                                                        }
+
+                                                        over "base_link2_1"
+                                                        {
+                                                        }
+                                                    }
+
+                                                    over "l_tool0"
+                                                    {
+                                                    }
+
+                                                    over "l_link7"
+                                                    {
+                                                    }
+
+                                                    over "l_link7_1"
+                                                    {
+                                                    }
+                                                }
+
+                                                over "l_link6"
+                                                {
+                                                }
+
+                                                over "l_link6_1"
+                                                {
+                                                }
+                                            }
+
+                                            over "l_link5"
+                                            {
+                                            }
+
+                                            over "l_link5_1"
+                                            {
+                                            }
+                                        }
+
+                                        over "l_link4"
+                                        {
+                                        }
+
+                                        over "l_link4_1"
+                                        {
+                                        }
+                                    }
+
+                                    over "l_link3"
+                                    {
+                                    }
+
+                                    over "l_link3_1"
+                                    {
+                                    }
+                                }
+
+                                over "l_link2"
+                                {
+                                }
+
+                                over "l_link2_1"
+                                {
+                                }
+                            }
+
+                            over "l_link1"
+                            {
+                            }
+
+                            over "l_link1_1"
+                            {
+                            }
+                        }
+
+                        over "l_base_link1"
+                        {
+                        }
+
+                        over "l_base_link1_1"
+                        {
+                        }
+                    }
+
+                    over "platform_base_link"
+                    {
+                    }
+
+                    over "platform_base_link_1"
+                    {
+                    }
+                }
+
+                over "body_base_link"
+                {
+                }
+
+                over "body_base_link_1"
+                {
+                }
+            }
+
+            over "base_link_underpan"
+            {
+            }
+
+            over "base_link_underpan_1"
+            {
+            }
+        }
+    }
+
+    over "Materials"
+    {
+    }
+
+    over "VisualMaterials"
+    {
+    }
+}
+

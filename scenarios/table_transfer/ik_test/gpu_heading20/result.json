@@ -1,0 +1,1688 @@
+{
+  "backend": "cuRobo V2 CUDA multi-seed IK",
+  "gpu": "NVIDIA GeForce RTX 5080",
+  "source_config": "/home/fang/robot_ws/postures/rm75_mobile_manipulation.yml",
+  "source_sha256": "01c85b0a66915022d7afc41b7c5a45e2f12a3278d9ec3188645096e7fdff0d65",
+  "sphere_count": 464,
+  "joint_names": [
+    "base_x",
+    "base_y",
+    "base_yaw",
+    "platform_joint",
+    "r_joint1",
+    "r_joint2",
+    "r_joint3",
+    "r_joint4",
+    "r_joint5",
+    "r_joint6",
+    "r_joint7"
+  ],
+  "urdf": "/home/fang/robot_ws/scenarios/table_transfer/ik_test/gpu_heading20/whole_body.urdf",
+  "setup_s": 1.0713610729999345,
+  "warmup_s": 1.6265665790001549,
+  "seeds_per_query": 32,
+  "base_angular_speed_status": "placeholder for pose IK only, not measured hardware limit",
+  "target_tcp_world": [
+    [
+      -2.220446049250313e-16,
+      -1.0,
+      0.0,
+      -1.05
+    ],
+    [
+      0.0,
+      0.0,
+      1.0,
+      1.1700000000000002
+    ],
+    [
+      -1.0,
+      2.220446049250313e-16,
+      0.0,
+      0.81
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "cup": {
+    "radius_m": 0.03,
+    "height_m": 0.12,
+    "mass_kg": 0.15,
+    "initial_center_m": [
+      -1.2,
+      1.32,
+      0.812
+    ],
+    "center_m": [
+      -1.05,
+      1.32,
+      0.81
+    ],
+    "pose_source": "offline_test_placement_on_tabletop"
+  },
+  "self_collision_check": true,
+  "environment_collision_check": true,
+  "floor_support_excluded": true,
+  "trajectory_validated": false,
+  "rows": [
+    {
+      "index": 1,
+      "start_q": [
+        -2.3786668967816693,
+        -2.5031894523557927,
+        -1.1784217559874708,
+        0.5,
+        -2.8622861935756982,
+        -1.6960935688224021,
+        -1.533766857816064,
+        1.2938326754442206,
+        -1.6121790989181415,
+        0.0011637691047781463,
+        -0.8746416800394974
+      ],
+      "end_q": [
+        -1.4712806940078735,
+        0.5672518014907837,
+        3.1353094577789307,
+        0.513322114944458,
+        -0.12512171268463135,
+        2.097858428955078,
+        2.074786424636841,
+        0.9302552938461304,
+        2.3986151218414307,
+        -0.9221993088722229,
+        -5.45166015625
+      ],
+      "solver_success": true,
+      "heading_ok": true,
+      "heading_error_deg": -28.873856730223412,
+      "attempts": 4,
+      "attempt_log": [
+        {
+          "attempt": 1,
+          "ik_success_count": 1,
+          "heading_valid_count": 0
+        },
+        {
+          "attempt": 2,
+          "ik_success_count": 2,
+          "heading_valid_count": 0
+        },
+        {
+          "attempt": 3,
+          "ik_success_count": 1,
+          "heading_valid_count": 0
+        },
+        {
+          "attempt": 4,
+          "ik_success_count": 1,
+          "heading_valid_count": 1
+        }
+      ],
+      "wall_ms": 34.51313300001857,
+      "position_error_m": 2.0647654253025394e-07,
+      "rotation_error_rad": 1.788139627478813e-07,
+      "start_audit": {
+        "self_collision_free": true,
+        "min_self_gap_m": 0.00049999999773849,
+        "closest_self_links": [
+          "body_base_link",
+          "l_base_link1"
+        ],
+        "colliding_sphere_pairs": 0,
+        "min_world_gap_m": 0.20970291661197887,
+        "closest_obstacle": "WestWall",
+        "world_collision_free": true,
+        "joint_limits_ok": true
+      },
+      "end_audit": {
+        "self_collision_free": true,
+        "min_self_gap_m": 0.0030029470320019694,
+        "closest_self_links": [
+          "r_base_link1",
+          "r_link2"
+        ],
+        "colliding_sphere_pairs": 0,
+        "min_world_gap_m": 0.047872771535144104,
+        "closest_obstacle": "SourceTable/Top",
+        "world_collision_free": true,
+        "joint_limits_ok": true
+      },
+      "independent_position_error_m": 1.6915126557687693e-05,
+      "independent_rotation_error_rad": 0.00013623139781269924,
+      "accepted": true
+    },
+    {
+      "index": 2,
+      "start_q": [
+        -1.2559475520689283,
+        0.31938830644496363,
+        1.8311695171007987,
+        0.5,
+        -2.8622861935756982,
+        -1.6960935688224021,
+        -1.533766857816064,
+        1.2938326754442206,
+        -1.6121790989181415,
+        0.0011637691047781463,
+        -0.8746416800394974
+      ],
+      "end_q": [
+        -1.4893969297409058,
+        0.7201113700866699,
+        2.988835096359253,
+        0.5330210328102112,
+        0.2896471619606018,
+        1.4008499383926392,
+        -0.4998725950717926,
+        1.223414421081543,
+        1.8527051210403442,
+        1.84869384765625,
+        -3.3142998218536377
+      ],
+      "solver_success": true,
+      "heading_ok": true,
+      "heading_error_deg": -27.469077143147004,
+      "attempts": 4,
+      "attempt_log": [
+        {
+          "attempt": 1,
+          "ik_success_count": 1,
+          "heading_valid_count": 0
+        },
+        {
+          "attempt": 2,
+          "ik_success_count": 2,
+          "heading_valid_count": 0
+        },
+        {
+          "attempt": 3,
+          "ik_success_count": 2,
+          "heading_valid_count": 0
+        },
+        {
+          "attempt": 4,
+          "ik_success_count": 2,
+          "heading_valid_count": 1
+        }
+      ],
+      "wall_ms": 9.567096999944624,
+      "position_error_m": 1.3328003944934608e-07,
+      "rotation_error_rad": 2.598106618734164e-07,
+      "start_audit": {
+        "self_collision_free": true,
+        "min_self_gap_m": 0.0004999999977382125,
+        "closest_self_links": [
+          "body_base_link",
+          "l_base_link1"
+        ],
+        "colliding_sphere_pairs": 0,
+        "min_world_gap_m": 0.33807245063434466,
+        "closest_obstacle": "SourceTable/Top",
+        "world_collision_free": true,
+        "joint_limits_ok": true
+      },
+      "end_audit": {
+        "self_collision_free": true,
+        "min_self_gap_m": 0.009642152162168044,
+        "closest_self_links": [
+          "body_base_link",
+          "r_base_link1"
+        ],
+        "colliding_sphere_pairs": 0,
+        "min_world_gap_m": 0.047868442007601195,
+        "closest_obstacle": "SourceTable/Top",
+        "world_collision_free": true,
+        "joint_limits_ok": true
+      },
+      "independent_position_error_m": 5.426265511142979e-05,
+      "independent_rotation_error_rad": 0.0002444306769966997,
+      "accepted": true
+    },
+    {
+      "index": 3,
+      "start_q": [
+        2.4228387879732676,
+        1.1361044940620637,
+        -1.8485563609197317,
+        0.5,
+        -2.8622861935756982,
+        -1.6960935688224021,
+        -1.533766857816064,
+        1.2938326754442206,
+        -1.6121790989181415,
+        0.0011637691047781463,
+        -0.8746416800394974
+      ],
+      "end_q": [
+        -1.3663016557693481,
+        0.5441234111785889,
+        3.0369462966918945,
+        0.5596158504486084,
+        0.08677390962839127,
+        1.6625865697860718,
+        -2.4738645553588867,
+        -1.44525945186615,
+        -1.6592679023742676,
+        0.8350467681884766,
+        2.42036771774292
+      ],
+      "solver_success": true,
+      "heading_ok": true,
+      "heading_error_deg": -16.18345669375204,
+      "attempts": 1,
+      "attempt_log": [
+        {
+          "attempt": 1,
+          "ik_success_count": 3,
+          "heading_valid_count": 1
+        }
+      ],
+      "wall_ms": 13.607774000320205,
+      "position_error_m": 3.513035335345194e-05,
+      "rotation_error_rad": 0.0003935181593988091,
+      "start_audit": {
+        "self_collision_free": true,
+        "min_self_gap_m": 0.0004999999977379627,
+        "closest_self_links": [
+          "body_base_link",
+          "l_base_link1"
+        ],
+        "colliding_sphere_pairs": 0,
+        "min_world_gap_m": 0.19396530593614902,
+        "closest_obstacle": "TargetTable/Top",
+        "world_collision_free": true,
+        "joint_limits_ok": true
+      },
+      "end_audit": {
+        "self_collision_free": true,
+        "min_self_gap_m": 0.00016477388205429766,
+        "closest_self_links": [
+          "body_base_link",
+          "r_base_link1"
+        ],
+        "colliding_sphere_pairs": 0,
+        "min_world_gap_m": 0.04784621146940675,
+        "closest_obstacle": "SourceTable/Top",
+        "world_collision_free": true,
+        "joint_limits_ok": true
+      },
+      "independent_position_error_m": 4.4169338378099964e-05,
+      "independent_rotation_error_rad": 0.000369198499539425,
+      "accepted": true
+    },
+    {
+      "index": 4,
+      "start_q": [
+        1.090525288423363,
+        -0.09655387661959036,
+        0.9847319006881285,
+        0.5,
+        -2.8622861935756982,
+        -1.6960935688224021,
+        -1.533766857816064,
+        1.2938326754442206,
+        -1.6121790989181415,
+        0.0011637691047781463,
+        -0.8746416800394974
+      ],
+      "end_q": [
+        -1.4572266340255737,
+        0.9830253720283508,
+        2.702224016189575,
+        0.49934959411621094,
+        -0.6929675340652466,
+        1.9467992782592773,
+        -1.4913253784179688,
+        -0.7508600950241089,
+        2.468719959259033,
+        1.7296998500823975,
+        -2.592525005340576
+      ],
+      "solver_success": true,
+      "heading_ok": true,
+      "heading_error_deg": -25.218726760731695,
+      "attempts": 1,
+      "attempt_log": [
+        {
+          "attempt": 1,
+          "ik_success_count": 1,
+          "heading_valid_count": 1
+        }
+      ],
+      "wall_ms": 14.391084000180854,
+      "position_error_m": 0.0,
+      "rotation_error_rad": 3.9085378489289724e-07,
+      "start_audit": {
+        "self_collision_free": true,
+        "min_self_gap_m": 0.000499999997738157,
+        "closest_self_links": [
+          "body_base_link",
+          "l_base_link1"
+        ],
+        "colliding_sphere_pairs": 0,
+        "min_world_gap_m": 1.0257866111330818,
+        "closest_obstacle": "TargetTable/Top",
+        "world_collision_free": true,
+        "joint_limits_ok": true
+      },
+      "end_audit": {
+        "self_collision_free": true,
+        "min_self_gap_m": 0.00017766709336502345,
+        "closest_self_links": [
+          "platform_base_link",
+          "r_link2"
+        ],
+        "colliding_sphere_pairs": 0,
+        "min_world_gap_m": 0.02201958191405215,
+        "closest_obstacle": "SourceTable/Top",
+        "world_collision_free": true,
+        "joint_limits_ok": true
+      },
+      "independent_position_error_m": 4.9275351774887104e-05,
+      "independent_rotation_error_rad": 0.00023285046394016878,
+      "accepted": true
+    },
+    {
+      "index": 5,
+      "start_q": [
+        -1.3605419839387252,
+        0.7028110763361628,
+        2.71798889709925,
+        0.5,
+        -2.8622861935756982,
+        -1.6960935688224021,
+        -1.533766857816064,
+        1.2938326754442206,
+        -1.6121790989181415,
+        0.0011637691047781463,
+        -0.8746416800394974
+      ],
+      "end_q": [
+        -1.3048267364501953,
+        0.688247799873352,
+        2.8889358043670654,
+        0.552101731300354,
+        -2.5870649814605713,
+        -1.8306986093521118,
+        2.768153667449951,
+        1.6158286333084106,
+        -1.1630667448043823,
+        -1.8531882762908936,
+        5.378374099731445
+      ],
+      "solver_success": true,
+      "heading_ok": true,
+      "heading_error_deg": -7.4912532148584,
+      "attempts": 1,
+      "attempt_log": [
+        {
+          "attempt": 1,
+          "ik_success_count": 1,
+          "heading_valid_count": 1
+        }
+      ],
+      "wall_ms": 13.592774999779067,
+      "position_error_m": 5.960464477539063e-08,
+      "rotation_error_rad": 1.1920930376163597e-07,
+      "start_audit": {
+        "self_collision_free": true,
+        "min_self_gap_m": 0.000499999997738157,
+        "closest_self_links": [
+          "body_base_link",
+          "l_base_link1"
+        ],
+        "colliding_sphere_pairs": 0,
+        "min_world_gap_m": 0.19060294463252106,
+        "closest_obstacle": "SourceTable/Top",
+        "world_collision_free": true,
+        "joint_limits_ok": true
+      },
+      "end_audit": {
+        "self_collision_free": true,
+        "min_self_gap_m": 0.00047436203437008564,
+        "closest_self_links": [
+          "platform_base_link",
+          "r_link6"
+        ],
+        "colliding_sphere_pairs": 0,
+        "min_world_gap_m": 0.04792719787999447,
+        "closest_obstacle": "SourceTable/Top",
+        "world_collision_free": true,
+        "joint_limits_ok": true
+      },
+      "independent_position_error_m": 5.4419147277798784e-05,
+      "independent_rotation_error_rad": 0.00024462439384346954,
+      "accepted": true
+    },
+    {
+      "index": 6,
+      "start_q": [
+        -1.7207450362421417,
+        -0.3918047388037551,
+        -2.189535904216322,
+        0.5,
+        -2.8622861935756982,
+        -1.6960935688224021,
+        -1.533766857816064,
+        1.2938326754442206,
+        -1.6121790989181415,
+        0.0011637691047781463,
+        -0.8746416800394974
+      ],
+      "end_q": [
+        -1.3191782236099243,
+        0.30144473910331726,
+        -2.9884703159332275,
+        0.5596204996109009,
+        0.7618895173072815,
+        1.9935201406478882,
+        -0.25348955392837524,
+        -0.2963920831680298,
+        2.157362222671509,
+        0.6702895164489746,
+        3.5703611373901367
+      ],
+      "solver_success": true,
+      "heading_ok": true,
+      "heading_error_deg": -23.57664544139103,
+      "attempts": 4,
+      "attempt_log": [
+        {
+          "attempt": 1,
+          "ik_success_count": 3,
+          "heading_valid_count": 0
+        },
+        {
+          "attempt": 2,
+          "ik_success_count": 1,
+          "heading_valid_count": 0
+        },
+        {
+          "attempt": 3,
+          "ik_success_count": 1,
+          "heading_valid_count": 0
+        },
+        {
+          "attempt": 4,
+          "ik_success_count": 5,
+          "heading_valid_count": 3
+        }
+      ],
+      "wall_ms": 32.67862399980004,
+      "position_error_m": 5.960464477539063e-08,
+      "rotation_error_rad": 1.1920928955078125e-07,
+      "start_audit": {
+        "self_collision_free": true,
+        "min_self_gap_m": 0.0004999999977381014,
+        "closest_self_links": [
+          "body_base_link",
+          "l_base_link1"
+        ],
+        "colliding_sphere_pairs": 0,
+        "min_world_gap_m": 0.8363091198232583,
+        "closest_obstacle": "SourceTable/Top",
+        "world_collision_free": true,
+        "joint_limits_ok": true
+      },
+      "end_audit": {
+        "self_collision_free": true,
+        "min_self_gap_m": 0.00016364942996416332,
+        "closest_self_links": [
+          "body_base_link",
+          "r_base_link1"
+        ],
+        "colliding_sphere_pairs": 0,
+        "min_world_gap_m": 0.04788138323391815,
+        "closest_obstacle": "SourceTable/Top",
+        "world_collision_free": true,
+        "joint_limits_ok": true
+      },
+      "independent_position_error_m": 9.22198451860694e-06,
+      "independent_rotation_error_rad": 0.00010062872281286686,
+      "accepted": true
+    },
+    {
+      "index": 7,
+      "start_q": [
+        0.7681013290693919,
+        2.472071007916721,
+        0.8262702670226344,
+        0.5,
+        -2.8622861935756982,
+        -1.6960935688224021,
+        -1.533766857816064,
+        1.2938326754442206,
+        -1.6121790989181415,
+        0.0011637691047781463,
+        -0.8746416800394974
+      ],
+      "end_q": [
+        -1.3786377906799316,
+        0.425965815782547,
+        2.8898017406463623,
+        0.5331227779388428,
+        0.7476599812507629,
+        2.1490232944488525,
+        1.3542115688323975,
+        0.3784550130367279,
+        0.5422595143318176,
+        0.6607130169868469,
+        3.1384570598602295
+      ],
+      "solver_success": true,
+      "heading_ok": true,
+      "heading_error_deg": -5.756353090142879,
+      "attempts": 2,
+      "attempt_log": [
+        {
+          "attempt": 1,
+          "ik_success_count": 1,
+          "heading_valid_count": 0
+        },
+        {
+          "attempt": 2,
+          "ik_success_count": 1,
+          "heading_valid_count": 1
+        }
+      ],
+      "wall_ms": 28.26215899995077,
+      "position_error_m": 0.0,
+      "rotation_error_rad": 0.0,
+      "start_audit": {
+        "self_collision_free": true,
+        "min_self_gap_m": 0.0004999999977381847,
+        "closest_self_links": [
+          "body_base_link",
+          "l_base_link1"
+        ],
+        "colliding_sphere_pairs": 0,
+        "min_world_gap_m": 0.18037958540941157,
+        "closest_obstacle": "TargetTable/Top",
+        "world_collision_free": true,
+        "joint_limits_ok": true
+      },
+      "end_audit": {
+        "self_collision_free": true,
+        "min_self_gap_m": 0.00010813111950706139,
+        "closest_self_links": [
+          "r_base_link1",
+          "r_link2"
+        ],
+        "colliding_sphere_pairs": 0,
+        "min_world_gap_m": 0.04787782816584929,
+        "closest_obstacle": "SourceTable/Top",
+        "world_collision_free": true,
+        "joint_limits_ok": true
+      },
+      "independent_position_error_m": 8.901735407246747e-06,
+      "independent_rotation_error_rad": 9.912223788016365e-05,
+      "accepted": true
+    },
+    {
+      "index": 8,
+      "start_q": [
+        0.6319557512316347,
+        2.129897703813528,
+        -0.4003372053893081,
+        0.5,
+        -2.8622861935756982,
+        -1.6960935688224021,
+        -1.533766857816064,
+        1.2938326754442206,
+        -1.6121790989181415,
+        0.0011637691047781463,
+        -0.8746416800394974
+      ],
+      "end_q": [
+        -1.4465793371200562,
+        0.6446073055267334,
+        2.674626588821411,
+        0.5516175031661987,
+        -3.1037797927856445,
+        -1.9180066585540771,
+        -2.218473196029663,
+        1.3551249504089355,
+        0.5666412115097046,
+        0.4420875608921051,
+        2.9925687313079834
+      ],
+      "solver_success": true,
+      "heading_ok": true,
+      "heading_error_deg": -3.6655612740953356,
+      "attempts": 2,
+      "attempt_log": [
+        {
+          "attempt": 1,
+          "ik_success_count": 1,
+          "heading_valid_count": 0
+        },
+        {
+          "attempt": 2,
+          "ik_success_count": 1,
+          "heading_valid_count": 1
+        }
+      ],
+      "wall_ms": 16.723317000014504,
+      "position_error_m": 0.0,
+      "rotation_error_rad": 2.2500262275571004e-07,
+      "start_audit": {
+        "self_collision_free": true,
+        "min_self_gap_m": 0.0004999999977385455,
+        "closest_self_links": [
+          "body_base_link",
+          "l_base_link1"
+        ],
+        "colliding_sphere_pairs": 0,
+        "min_world_gap_m": 0.023710382944543695,
+        "closest_obstacle": "TargetTable/Leg1",
+        "world_collision_free": true,
+        "joint_limits_ok": true
+      },
+      "end_audit": {
+        "self_collision_free": true,
+        "min_self_gap_m": 0.002390448195878525,
+        "closest_self_links": [
+          "body_base_link",
+          "r_base_link1"
+        ],
+        "colliding_sphere_pairs": 0,
+        "min_world_gap_m": 0.04787798845075525,
+        "closest_obstacle": "SourceTable/Top",
+        "world_collision_free": true,
+        "joint_limits_ok": true
+      },
+      "independent_position_error_m": 4.022493111573085e-06,
+      "independent_rotation_error_rad": 6.701854913729938e-05,
+      "accepted": true
+    },
+    {
+      "index": 9,
+      "start_q": [
+        -2.5511770600589343,
+        -0.31552316196039243,
+        0.5413983635473265,
+        0.5,
+        -2.8622861935756982,
+        -1.6960935688224021,
+        -1.533766857816064,
+        1.2938326754442206,
+        -1.6121790989181415,
+        0.0011637691047781463,
+        -0.8746416800394974
+      ],
+      "end_q": [
+        -1.3611716032028198,
+        0.762839138507843,
+        2.709932565689087,
+        0.5002177953720093,
+        2.7834343910217285,
+        -1.9171909093856812,
+        0.5748368501663208,
+        -1.2965903282165527,
+        0.5048800706863403,
+        -0.857242226600647,
+        5.969839572906494
+      ],
+      "solver_success": true,
+      "heading_ok": true,
+      "heading_error_deg": -4.450842607694893,
+      "attempts": 1,
+      "attempt_log": [
+        {
+          "attempt": 1,
+          "ik_success_count": 1,
+          "heading_valid_count": 1
+        }
+      ],
+      "wall_ms": 12.95547900008387,
+      "position_error_m": 2.2292773792287335e-05,
+      "rotation_error_rad": 0.00010871516860788688,
+      "start_audit": {
+        "self_collision_free": true,
+        "min_self_gap_m": 0.0004999999977382125,
+        "closest_self_links": [
+          "body_base_link",
+          "l_base_link1"
+        ],
+        "colliding_sphere_pairs": 0,
+        "min_world_gap_m": 0.5805511535958054,
+        "closest_obstacle": "WestWall",
+        "world_collision_free": true,
+        "joint_limits_ok": true
+      },
+      "end_audit": {
+        "self_collision_free": true,
+        "min_self_gap_m": 0.0005420902187467103,
+        "closest_self_links": [
+          "body_base_link",
+          "r_base_link1"
+        ],
+        "colliding_sphere_pairs": 0,
+        "min_world_gap_m": 0.04789899061197067,
+        "closest_obstacle": "SourceTable/Top",
+        "world_collision_free": true,
+        "joint_limits_ok": true
+      },
+      "independent_position_error_m": 2.8601982097856445e-05,
+      "independent_rotation_error_rad": 0.0001248415349612489,
+      "accepted": true
+    },
+    {
+      "index": 10,
+      "start_q": [
+        -0.3606606012179996,
+        2.467265567299421,
+        -0.3855447821931519,
+        0.5,
+        -2.8622861935756982,
+        -1.6960935688224021,
+        -1.533766857816064,
+        1.2938326754442206,
+        -1.6121790989181415,
+        0.0011637691047781463,
+        -0.8746416800394974
+      ],
+      "end_q": [
+        -1.4035478830337524,
+        0.9364345669746399,
+        2.3100385665893555,
+        0.5028322339057922,
+        0.6405948400497437,
+        2.0117685794830322,
+        -0.9878109097480774,
+        1.3026214838027954,
+        1.922601342201233,
+        1.9567883014678955,
+        -3.73721981048584
+      ],
+      "solver_success": true,
+      "heading_ok": true,
+      "heading_error_deg": 4.976513689228488,
+      "attempts": 2,
+      "attempt_log": [
+        {
+          "attempt": 1,
+          "ik_success_count": 1,
+          "heading_valid_count": 0
+        },
+        {
+          "attempt": 2,
+          "ik_success_count": 5,
+          "heading_valid_count": 3
+        }
+      ],
+      "wall_ms": 16.89347799992902,
+      "position_error_m": 5.960464477539063e-08,
+      "rotation_error_rad": 2.598106618734164e-07,
+      "start_audit": {
+        "self_collision_free": true,
+        "min_self_gap_m": 0.0004999999977384623,
+        "closest_self_links": [
+          "body_base_link",
+          "l_base_link1"
+        ],
+        "colliding_sphere_pairs": 0,
+        "min_world_gap_m": 0.22693937790425336,
+        "closest_obstacle": "SourceTable/Top",
+        "world_collision_free": true,
+        "joint_limits_ok": true
+      },
+      "end_audit": {
+        "self_collision_free": true,
+        "min_self_gap_m": 3.833093105565927e-05,
+        "closest_self_links": [
+          "platform_base_link",
+          "r_link7"
+        ],
+        "colliding_sphere_pairs": 0,
+        "min_world_gap_m": 0.047845343023890555,
+        "closest_obstacle": "SourceTable/Top",
+        "world_collision_free": true,
+        "joint_limits_ok": true
+      },
+      "independent_position_error_m": 5.8598715502223046e-05,
+      "independent_rotation_error_rad": 0.0002535769092529118,
+      "accepted": true
+    },
+    {
+      "index": 11,
+      "start_q": [
+        2.578035856809202,
+        -2.2218135464998507,
+        2.3985268428971613,
+        0.5,
+        -2.8622861935756982,
+        -1.6960935688224021,
+        -1.533766857816064,
+        1.2938326754442206,
+        -1.6121790989181415,
+        0.0011637691047781463,
+        -0.8746416800394974
+      ],
+      "end_q": [
+        -1.3563238382339478,
+        0.7462533712387085,
+        2.863365411758423,
+        0.5387513041496277,
+        2.4538750648498535,
+        -1.9225455522537231,
+        -2.2907445430755615,
+        1.551353096961975,
+        0.11198537051677704,
+        0.7285979986190796,
+        3.1195919513702393
+      ],
+      "solver_success": true,
+      "heading_ok": true,
+      "heading_error_deg": -12.15655171173264,
+      "attempts": 2,
+      "attempt_log": [
+        {
+          "attempt": 1,
+          "ik_success_count": 0,
+          "heading_valid_count": 0
+        },
+        {
+          "attempt": 2,
+          "ik_success_count": 3,
+          "heading_valid_count": 1
+        }
+      ],
+      "wall_ms": 27.16864700005317,
+      "position_error_m": 0.0,
+      "rotation_error_rad": 5.1619135632563484e-08,
+      "start_audit": {
+        "self_collision_free": true,
+        "min_self_gap_m": 0.0004999999977379627,
+        "closest_self_links": [
+          "body_base_link",
+          "l_base_link1"
+        ],
+        "colliding_sphere_pairs": 0,
+        "min_world_gap_m": 0.057832780279186535,
+        "closest_obstacle": "EastWall",
+        "world_collision_free": true,
+        "joint_limits_ok": true
+      },
+      "end_audit": {
+        "self_collision_free": true,
+        "min_self_gap_m": 0.0004868765695923219,
+        "closest_self_links": [
+          "platform_base_link",
+          "r_link2"
+        ],
+        "colliding_sphere_pairs": 0,
+        "min_world_gap_m": 0.04787737495964346,
+        "closest_obstacle": "SourceTable/Top",
+        "world_collision_free": true,
+        "joint_limits_ok": true
+      },
+      "independent_position_error_m": 1.0803331699392831e-05,
+      "independent_rotation_error_rad": 0.00010903880402238342,
+      "accepted": true
+    },
+    {
+      "index": 12,
+      "start_q": [
+        2.750352378700998,
+        1.6985149091800213,
+        -0.08203216485283883,
+        0.5,
+        -2.8622861935756982,
+        -1.6960935688224021,
+        -1.533766857816064,
+        1.2938326754442206,
+        -1.6121790989181415,
+        0.0011637691047781463,
+        -0.8746416800394974
+      ],
+      "end_q": [
+        -1.458216905593872,
+        0.9528368711471558,
+        2.694931983947754,
+        0.5077352523803711,
+        -0.735780656337738,
+        1.8989475965499878,
+        -1.7066909074783325,
+        -0.9710471630096436,
+        2.629398822784424,
+        1.5182442665100098,
+        3.6886253356933594
+      ],
+      "solver_success": true,
+      "heading_ok": true,
+      "heading_error_deg": -22.439018440532333,
+      "attempts": 3,
+      "attempt_log": [
+        {
+          "attempt": 1,
+          "ik_success_count": 1,
+          "heading_valid_count": 0
+        },
+        {
+          "attempt": 2,
+          "ik_success_count": 1,
+          "heading_valid_count": 0
+        },
+        {
+          "attempt": 3,
+          "ik_success_count": 2,
+          "heading_valid_count": 2
+        }
+      ],
+      "wall_ms": 18.424786999730713,
+      "position_error_m": 0.0,
+      "rotation_error_rad": 1.788139485370266e-07,
+      "start_audit": {
+        "self_collision_free": true,
+        "min_self_gap_m": 0.0004999999977383512,
+        "closest_self_links": [
+          "body_base_link",
+          "l_base_link1"
+        ],
+        "colliding_sphere_pairs": 0,
+        "min_world_gap_m": 0.31779422373454613,
+        "closest_obstacle": "EastWall",
+        "world_collision_free": true,
+        "joint_limits_ok": true
+      },
+      "end_audit": {
+        "self_collision_free": true,
+        "min_self_gap_m": 0.0003566836628595624,
+        "closest_self_links": [
+          "platform_base_link",
+          "r_link2"
+        ],
+        "colliding_sphere_pairs": 0,
+        "min_world_gap_m": 0.047897345374959044,
+        "closest_obstacle": "SourceTable/Top",
+        "world_collision_free": true,
+        "joint_limits_ok": true
+      },
+      "independent_position_error_m": 4.0345985342724955e-05,
+      "independent_rotation_error_rad": 0.00021086019473181447,
+      "accepted": true
+    },
+    {
+      "index": 13,
+      "start_q": [
+        -0.556367335323543,
+        -0.11506042146986983,
+        -2.113128484667321,
+        0.5,
+        -2.8622861935756982,
+        -1.6960935688224021,
+        -1.533766857816064,
+        1.2938326754442206,
+        -1.6121790989181415,
+        0.0011637691047781463,
+        -0.8746416800394974
+      ],
+      "end_q": [
+        -1.1963330507278442,
+        0.4053550362586975,
+        -2.961083173751831,
+        0.560293436050415,
+        -2.993729591369629,
+        -2.152590274810791,
+        -1.8122599124908447,
+        1.2069811820983887,
+        -1.8993197679519653,
+        -0.5263310670852661,
+        -0.9361590147018433
+      ],
+      "solver_success": true,
+      "heading_ok": true,
+      "heading_error_deg": -19.432088723295884,
+      "attempts": 3,
+      "attempt_log": [
+        {
+          "attempt": 1,
+          "ik_success_count": 0,
+          "heading_valid_count": 0
+        },
+        {
+          "attempt": 2,
+          "ik_success_count": 1,
+          "heading_valid_count": 0
+        },
+        {
+          "attempt": 3,
+          "ik_success_count": 2,
+          "heading_valid_count": 1
+        }
+      ],
+      "wall_ms": 41.98602800033768,
+      "position_error_m": 1.1920928955078125e-07,
+      "rotation_error_rad": 1.2083729643563856e-06,
+      "start_audit": {
+        "self_collision_free": true,
+        "min_self_gap_m": 0.000499999997738268,
+        "closest_self_links": [
+          "body_base_link",
+          "l_base_link1"
+        ],
+        "colliding_sphere_pairs": 0,
+        "min_world_gap_m": 0.5771729965259962,
+        "closest_obstacle": "SourceTable/Top",
+        "world_collision_free": true,
+        "joint_limits_ok": true
+      },
+      "end_audit": {
+        "self_collision_free": true,
+        "min_self_gap_m": 3.012362084164888e-06,
+        "closest_self_links": [
+          "body_base_link",
+          "r_base_link1"
+        ],
+        "colliding_sphere_pairs": 0,
+        "min_world_gap_m": 0.04788833188527554,
+        "closest_obstacle": "SourceTable/Top",
+        "world_collision_free": true,
+        "joint_limits_ok": true
+      },
+      "independent_position_error_m": 5.8298008736420965e-06,
+      "independent_rotation_error_rad": 7.99993445520959e-05,
+      "accepted": true
+    },
+    {
+      "index": 14,
+      "start_q": [
+        -1.9443581346941852,
+        0.16504589809214387,
+        1.6555512309871094,
+        0.5,
+        -2.8622861935756982,
+        -1.6960935688224021,
+        -1.533766857816064,
+        1.2938326754442206,
+        -1.6121790989181415,
+        0.0011637691047781463,
+        -0.8746416800394974
+      ],
+      "end_q": [
+        -1.5729120969772339,
+        0.5946922302246094,
+        -2.963858127593994,
+        0.5494604706764221,
+        3.091021776199341,
+        -1.5646815299987793,
+        0.5657667517662048,
+        0.03336203470826149,
+        -2.0135366916656494,
+        1.5092107057571411,
+        3.961672782897949
+      ],
+      "solver_success": true,
+      "heading_ok": false,
+      "heading_error_deg": -45.97323282540005,
+      "attempts": 5,
+      "attempt_log": [
+        {
+          "attempt": 1,
+          "ik_success_count": 1,
+          "heading_valid_count": 0
+        },
+        {
+          "attempt": 2,
+          "ik_success_count": 0,
+          "heading_valid_count": 0
+        },
+        {
+          "attempt": 3,
+          "ik_success_count": 2,
+          "heading_valid_count": 0
+        },
+        {
+          "attempt": 4,
+          "ik_success_count": 1,
+          "heading_valid_count": 0
+        },
+        {
+          "attempt": 5,
+          "ik_success_count": 1,
+          "heading_valid_count": 0
+        }
+      ],
+      "wall_ms": 36.01881400027196,
+      "position_error_m": 1.1920928955078125e-07,
+      "rotation_error_rad": 2.2891600792718236e-07,
+      "start_audit": {
+        "self_collision_free": true,
+        "min_self_gap_m": 0.000499999997738268,
+        "closest_self_links": [
+          "body_base_link",
+          "l_base_link1"
+        ],
+        "colliding_sphere_pairs": 0,
+        "min_world_gap_m": 0.5721718510662481,
+        "closest_obstacle": "SourceTable/Top",
+        "world_collision_free": true,
+        "joint_limits_ok": true
+      },
+      "end_audit": {
+        "self_collision_free": true,
+        "min_self_gap_m": 0.0030875786481956435,
+        "closest_self_links": [
+          "body_base_link",
+          "r_base_link1"
+        ],
+        "colliding_sphere_pairs": 0,
+        "min_world_gap_m": 0.04790525850405801,
+        "closest_obstacle": "SourceTable/Top",
+        "world_collision_free": true,
+        "joint_limits_ok": true
+      },
+      "independent_position_error_m": 4.008370539783077e-05,
+      "independent_rotation_error_rad": 0.00020958193428853117,
+      "accepted": false
+    },
+    {
+      "index": 15,
+      "start_q": [
+        1.4813452205027309,
+        -1.9204352940081137,
+        -1.0691696933553516,
+        0.5,
+        -2.8622861935756982,
+        -1.6960935688224021,
+        -1.533766857816064,
+        1.2938326754442206,
+        -1.6121790989181415,
+        0.0011637691047781463,
+        -0.8746416800394974
+      ],
+      "end_q": [
+        -1.295824646949768,
+        0.3133719861507416,
+        -2.991260051727295,
+        0.5602225065231323,
+        0.9704513549804688,
+        2.115800142288208,
+        0.637622594833374,
+        -0.5435447692871094,
+        1.2615052461624146,
+        0.8297638297080994,
+        3.71301007270813
+      ],
+      "solver_success": true,
+      "heading_ok": true,
+      "heading_error_deg": -22.336802137940072,
+      "attempts": 5,
+      "attempt_log": [
+        {
+          "attempt": 1,
+          "ik_success_count": 0,
+          "heading_valid_count": 0
+        },
+        {
+          "attempt": 2,
+          "ik_success_count": 1,
+          "heading_valid_count": 0
+        },
+        {
+          "attempt": 3,
+          "ik_success_count": 1,
+          "heading_valid_count": 0
+        },
+        {
+          "attempt": 4,
+          "ik_success_count": 1,
+          "heading_valid_count": 0
+        },
+        {
+          "attempt": 5,
+          "ik_success_count": 3,
+          "heading_valid_count": 2
+        }
+      ],
+      "wall_ms": 46.10176100004537,
+      "position_error_m": 5.960464477539063e-08,
+      "rotation_error_rad": 5.960464477539063e-08,
+      "start_audit": {
+        "self_collision_free": true,
+        "min_self_gap_m": 0.0004999999977383512,
+        "closest_self_links": [
+          "body_base_link",
+          "l_base_link1"
+        ],
+        "colliding_sphere_pairs": 0,
+        "min_world_gap_m": 0.8153053503873235,
+        "closest_obstacle": "SouthWall",
+        "world_collision_free": true,
+        "joint_limits_ok": true
+      },
+      "end_audit": {
+        "self_collision_free": true,
+        "min_self_gap_m": 1.974516325131681e-05,
+        "closest_self_links": [
+          "body_base_link",
+          "r_base_link1"
+        ],
+        "colliding_sphere_pairs": 0,
+        "min_world_gap_m": 0.04788452781467263,
+        "closest_obstacle": "SourceTable/Top",
+        "world_collision_free": true,
+        "joint_limits_ok": true
+      },
+      "independent_position_error_m": 1.3981136500091262e-05,
+      "independent_rotation_error_rad": 0.000123271392222163,
+      "accepted": true
+    },
+    {
+      "index": 16,
+      "start_q": [
+        2.7641343409131736,
+        1.0635858432243541,
+        0.20278993654859476,
+        0.5,
+        -2.8622861935756982,
+        -1.6960935688224021,
+        -1.533766857816064,
+        1.2938326754442206,
+        -1.6121790989181415,
+        0.0011637691047781463,
+        -0.8746416800394974
+      ],
+      "end_q": [
+        -1.2094553709030151,
+        0.5046220421791077,
+        -3.07852840423584,
+        0.4979422092437744,
+        -2.9812257289886475,
+        -2.070091485977173,
+        -2.478806495666504,
+        1.0311421155929565,
+        1.4321482181549072,
+        1.0416854619979858,
+        2.377140998840332
+      ],
+      "solver_success": true,
+      "heading_ok": true,
+      "heading_error_deg": -14.67843523807583,
+      "attempts": 1,
+      "attempt_log": [
+        {
+          "attempt": 1,
+          "ik_success_count": 3,
+          "heading_valid_count": 1
+        }
+      ],
+      "wall_ms": 14.018911000221124,
+      "position_error_m": 5.960464477539063e-08,
+      "rotation_error_rad": 1.2644053981603065e-07,
+      "start_audit": {
+        "self_collision_free": true,
+        "min_self_gap_m": 0.0004999999977382957,
+        "closest_self_links": [
+          "body_base_link",
+          "l_base_link1"
+        ],
+        "colliding_sphere_pairs": 0,
+        "min_world_gap_m": 0.14707786599633016,
+        "closest_obstacle": "EastWall",
+        "world_collision_free": true,
+        "joint_limits_ok": true
+      },
+      "end_audit": {
+        "self_collision_free": true,
+        "min_self_gap_m": 1.6036628797747032e-05,
+        "closest_self_links": [
+          "body_base_link",
+          "l_base_link1"
+        ],
+        "colliding_sphere_pairs": 0,
+        "min_world_gap_m": 0.04786209436797993,
+        "closest_obstacle": "SourceTable/Top",
+        "world_collision_free": true,
+        "joint_limits_ok": true
+      },
+      "independent_position_error_m": 2.125947641229192e-05,
+      "independent_rotation_error_rad": 0.00015199127945882704,
+      "accepted": true
+    },
+    {
+      "index": 17,
+      "start_q": [
+        -2.3731438610429856,
+        2.2162436740699905,
+        -2.239279154141686,
+        0.5,
+        -2.8622861935756982,
+        -1.6960935688224021,
+        -1.533766857816064,
+        1.2938326754442206,
+        -1.6121790989181415,
+        0.0011637691047781463,
+        -0.8746416800394974
+      ],
+      "end_q": [
+        -1.2990401983261108,
+        0.9635624885559082,
+        2.977857828140259,
+        0.4996185600757599,
+        -0.6616372466087341,
+        1.94524347782135,
+        2.8158762454986572,
+        -0.4658469259738922,
+        -2.018022060394287,
+        2.0824294090270996,
+        -3.4688258171081543
+      ],
+      "solver_success": true,
+      "heading_ok": true,
+      "heading_error_deg": -25.560394937980732,
+      "attempts": 1,
+      "attempt_log": [
+        {
+          "attempt": 1,
+          "ik_success_count": 3,
+          "heading_valid_count": 2
+        }
+      ],
+      "wall_ms": 15.096903000085149,
+      "position_error_m": 0.0,
+      "rotation_error_rad": 3.538829957960843e-07,
+      "start_audit": {
+        "self_collision_free": true,
+        "min_self_gap_m": 0.0004999999977379627,
+        "closest_self_links": [
+          "body_base_link",
+          "l_base_link1"
+        ],
+        "colliding_sphere_pairs": 0,
+        "min_world_gap_m": 0.22917830177408988,
+        "closest_obstacle": "WestWall",
+        "world_collision_free": true,
+        "joint_limits_ok": true
+      },
+      "end_audit": {
+        "self_collision_free": true,
+        "min_self_gap_m": 0.00040860448359010537,
+        "closest_self_links": [
+          "body_base_link",
+          "l_base_link1"
+        ],
+        "colliding_sphere_pairs": 0,
+        "min_world_gap_m": 0.04785836217543919,
+        "closest_obstacle": "SourceTable/Top",
+        "world_collision_free": true,
+        "joint_limits_ok": true
+      },
+      "independent_position_error_m": 6.349086005722813e-05,
+      "independent_rotation_error_rad": 0.00026418384866907564,
+      "accepted": true
+    },
+    {
+      "index": 18,
+      "start_q": [
+        1.62632205882589,
+        -2.3792549219314143,
+        -1.2173916728446401,
+        0.5,
+        -2.8622861935756982,
+        -1.6960935688224021,
+        -1.533766857816064,
+        1.2938326754442206,
+        -1.6121790989181415,
+        0.0011637691047781463,
+        -0.8746416800394974
+      ],
+      "end_q": [
+        -1.2392534017562866,
+        0.5234368443489075,
+        3.0372509956359863,
+        0.5557233095169067,
+        0.172042116522789,
+        2.0576343536376953,
+        0.6768964529037476,
+        1.3603435754776,
+        -1.5903397798538208,
+        -0.8658535480499268,
+        5.192183017730713
+      ],
+      "solver_success": true,
+      "heading_ok": true,
+      "heading_error_deg": -7.386624218030097,
+      "attempts": 4,
+      "attempt_log": [
+        {
+          "attempt": 1,
+          "ik_success_count": 2,
+          "heading_valid_count": 0
+        },
+        {
+          "attempt": 2,
+          "ik_success_count": 0,
+          "heading_valid_count": 0
+        },
+        {
+          "attempt": 3,
+          "ik_success_count": 0,
+          "heading_valid_count": 0
+        },
+        {
+          "attempt": 4,
+          "ik_success_count": 3,
+          "heading_valid_count": 3
+        }
+      ],
+      "wall_ms": 56.70352400011325,
+      "position_error_m": 5.960464477539063e-08,
+      "rotation_error_rad": 1.2644053981603065e-07,
+      "start_audit": {
+        "self_collision_free": true,
+        "min_self_gap_m": 0.0004999999977381847,
+        "closest_self_links": [
+          "body_base_link",
+          "l_base_link1"
+        ],
+        "colliding_sphere_pairs": 0,
+        "min_world_gap_m": 0.4377338565370495,
+        "closest_obstacle": "SouthWall",
+        "world_collision_free": true,
+        "joint_limits_ok": true
+      },
+      "end_audit": {
+        "self_collision_free": true,
+        "min_self_gap_m": 0.0011759806158684327,
+        "closest_self_links": [
+          "body_base_link",
+          "r_base_link1"
+        ],
+        "colliding_sphere_pairs": 0,
+        "min_world_gap_m": 0.0478980388424199,
+        "closest_obstacle": "SourceTable/Top",
+        "world_collision_free": true,
+        "joint_limits_ok": true
+      },
+      "independent_position_error_m": 1.4946913984414227e-05,
+      "independent_rotation_error_rad": 0.00012827105802494578,
+      "accepted": true
+    },
+    {
+      "index": 19,
+      "start_q": [
+        -1.362821976218357,
+        0.8486472596078594,
+        -0.005342584024744301,
+        0.5,
+        -2.8622861935756982,
+        -1.6960935688224021,
+        -1.533766857816064,
+        1.2938326754442206,
+        -1.6121790989181415,
+        0.0011637691047781463,
+        -0.8746416800394974
+      ],
+      "end_q": [
+        -1.1684322357177734,
+        0.5115143656730652,
+        3.0039894580841064,
+        0.5569921731948853,
+        -2.039716958999634,
+        -2.117766857147217,
+        3.0475146770477295,
+        1.1379634141921997,
+        -0.5224266648292542,
+        -1.6142295598983765,
+        5.514593601226807
+      ],
+      "solver_success": true,
+      "heading_ok": true,
+      "heading_error_deg": -0.44970389788313697,
+      "attempts": 2,
+      "attempt_log": [
+        {
+          "attempt": 1,
+          "ik_success_count": 1,
+          "heading_valid_count": 0
+        },
+        {
+          "attempt": 2,
+          "ik_success_count": 4,
+          "heading_valid_count": 2
+        }
+      ],
+      "wall_ms": 16.44305300033011,
+      "position_error_m": 5.960464477539063e-08,
+      "rotation_error_rad": 1.7120132156378531e-07,
+      "start_audit": {
+        "self_collision_free": true,
+        "min_self_gap_m": 0.0004999999977382125,
+        "closest_self_links": [
+          "body_base_link",
+          "l_base_link1"
+        ],
+        "colliding_sphere_pairs": 0,
+        "min_world_gap_m": 0.2066806001865585,
+        "closest_obstacle": "SourceTable/Leg0",
+        "world_collision_free": true,
+        "joint_limits_ok": true
+      },
+      "end_audit": {
+        "self_collision_free": true,
+        "min_self_gap_m": 0.000831148396188558,
+        "closest_self_links": [
+          "body_base_link",
+          "r_base_link1"
+        ],
+        "colliding_sphere_pairs": 0,
+        "min_world_gap_m": 0.04791559365887334,
+        "closest_obstacle": "SourceTable/Top",
+        "world_collision_free": true,
+        "joint_limits_ok": true
+      },
+      "independent_position_error_m": 4.420188546934441e-05,
+      "independent_rotation_error_rad": 0.00022089183723868484,
+      "accepted": true
+    },
+    {
+      "index": 20,
+      "start_q": [
+        -2.6546756000988054,
+        -1.2982040259589542,
+        0.4523606047699636,
+        0.5,
+        -2.8622861935756982,
+        -1.6960935688224021,
+        -1.533766857816064,
+        1.2938326754442206,
+        -1.6121790989181415,
+        0.0011637691047781463,
+        -0.8746416800394974
+      ],
+      "end_q": [
+        -1.4903349876403809,
+        0.5006764531135559,
+        2.878302574157715,
+        0.5137417912483215,
+        0.5193582773208618,
+        2.1179609298706055,
+        2.186668872833252,
+        0.4356597661972046,
+        -0.7785125970840454,
+        0.8546510338783264,
+        3.7508928775787354
+      ],
+      "solver_success": true,
+      "heading_ok": true,
+      "heading_error_deg": -13.169829435803132,
+      "attempts": 4,
+      "attempt_log": [
+        {
+          "attempt": 1,
+          "ik_success_count": 0,
+          "heading_valid_count": 0
+        },
+        {
+          "attempt": 2,
+          "ik_success_count": 1,
+          "heading_valid_count": 0
+        },
+        {
+          "attempt": 3,
+          "ik_success_count": 2,
+          "heading_valid_count": 0
+        },
+        {
+          "attempt": 4,
+          "ik_success_count": 2,
+          "heading_valid_count": 2
+        }
+      ],
+      "wall_ms": 34.8184660001607,
+      "position_error_m": 2.6656007889869215e-07,
+      "rotation_error_rad": 2.5288110805377073e-07,
+      "start_audit": {
+        "self_collision_free": true,
+        "min_self_gap_m": 0.0004999999977380737,
+        "closest_self_links": [
+          "body_base_link",
+          "l_base_link1"
+        ],
+        "colliding_sphere_pairs": 0,
+        "min_world_gap_m": 0.4914323677015424,
+        "closest_obstacle": "WestWall",
+        "world_collision_free": true,
+        "joint_limits_ok": true
+      },
+      "end_audit": {
+        "self_collision_free": true,
+        "min_self_gap_m": 0.0018634167817958083,
+        "closest_self_links": [
+          "r_base_link1",
+          "r_link2"
+        ],
+        "colliding_sphere_pairs": 0,
+        "min_world_gap_m": 0.047885292710585683,
+        "closest_obstacle": "SourceTable/Top",
+        "world_collision_free": true,
+        "joint_limits_ok": true
+      },
+      "independent_position_error_m": 1.4480216244974525e-05,
+      "independent_rotation_error_rad": 0.00012667276245091069,
+      "accepted": true
+    }
+  ],
+  "heading_limit_deg": 30,
+  "heading_rule": "bearing from final base XY to bottle, relative to base local -Y",
+  "heading_enforcement": "hard output acceptance + front-facing retry seeds, not an added CUDA optimizer cost",
+  "max_attempts": 5,
+  "accepted_count": 19,
+  "all_starts_valid_under_new_model": true,
+  "independent_audit": "Pinocchio FK + sphere-sphere / sphere-AABB distances, original ignore pairs, numerical tolerance 1 micrometer; no swept path check",
+  "iteration_configuration": {
+    "lm_max_iterations": 16,
+    "particle_config_num_iters": 4,
+    "lbfgs_config_num_iters": 100,
+    "early_exit_possible": true,
+    "max_outer_attempts": 5,
+    "seeds_per_attempt": 32
+  }
+}

@@ -1,0 +1,3189 @@
+{
+  "source": "/home/fang/robot_ws/postures/rm75_mobile_manipulation.yml",
+  "rows": [
+    {
+      "index": 1,
+      "checks": [
+        {
+          "pair": [
+            "body_base_link",
+            "l_base_link1"
+          ],
+          "sphere_gap_mm": -1.740818909766198,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 26.080120281942648,
+          "deepest_sphere_indices": [
+            96,
+            0
+          ],
+          "overlapping_sphere_pairs": [
+            [
+              96,
+              0,
+              -1.740818909766198
+            ]
+          ]
+        },
+        {
+          "pair": [
+            "body_base_link",
+            "r_base_link1"
+          ],
+          "sphere_gap_mm": -3.0383011144438363,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 25.939372807514562,
+          "deepest_sphere_indices": [
+            86,
+            0
+          ],
+          "overlapping_sphere_pairs": [
+            [
+              86,
+              0,
+              -3.0383011144438363
+            ]
+          ]
+        },
+        {
+          "pair": [
+            "body_base_link",
+            "r_link2"
+          ],
+          "sphere_gap_mm": 79.7931507800197,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 113.85497216755837,
+          "deepest_sphere_indices": [
+            88,
+            0
+          ],
+          "overlapping_sphere_pairs": []
+        },
+        {
+          "pair": [
+            "body_base_link",
+            "r_link3"
+          ],
+          "sphere_gap_mm": 112.45349182589642,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 163.6018433376951,
+          "deepest_sphere_indices": [
+            85,
+            0
+          ],
+          "overlapping_sphere_pairs": []
+        },
+        {
+          "pair": [
+            "platform_base_link",
+            "r_link2"
+          ],
+          "sphere_gap_mm": -11.466594435161522,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 28.587134430104168,
+          "deepest_sphere_indices": [
+            2,
+            1
+          ],
+          "overlapping_sphere_pairs": [
+            [
+              2,
+              1,
+              -11.466594435161522
+            ],
+            [
+              44,
+              1,
+              -6.691229101568788
+            ],
+            [
+              44,
+              2,
+              -2.7368131658015713
+            ]
+          ]
+        },
+        {
+          "pair": [
+            "platform_base_link",
+            "r_link3"
+          ],
+          "sphere_gap_mm": 9.916998834529483,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 63.522749608020995,
+          "deepest_sphere_indices": [
+            3,
+            0
+          ],
+          "overlapping_sphere_pairs": []
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "checks": [
+        {
+          "pair": [
+            "body_base_link",
+            "l_base_link1"
+          ],
+          "sphere_gap_mm": -1.7325828554490967,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 26.079919404757273,
+          "deepest_sphere_indices": [
+            96,
+            0
+          ],
+          "overlapping_sphere_pairs": [
+            [
+              96,
+              0,
+              -1.7325828554490967
+            ]
+          ]
+        },
+        {
+          "pair": [
+            "body_base_link",
+            "r_base_link1"
+          ],
+          "sphere_gap_mm": -3.0105549409560615,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 25.939597970523327,
+          "deepest_sphere_indices": [
+            86,
+            0
+          ],
+          "overlapping_sphere_pairs": [
+            [
+              86,
+              0,
+              -3.0105549409560615
+            ]
+          ]
+        },
+        {
+          "pair": [
+            "body_base_link",
+            "r_link2"
+          ],
+          "sphere_gap_mm": 79.71851915995119,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 113.84289669314667,
+          "deepest_sphere_indices": [
+            88,
+            0
+          ],
+          "overlapping_sphere_pairs": []
+        },
+        {
+          "pair": [
+            "body_base_link",
+            "r_link3"
+          ],
+          "sphere_gap_mm": 94.43521515959793,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 143.10092140996852,
+          "deepest_sphere_indices": [
+            85,
+            0
+          ],
+          "overlapping_sphere_pairs": []
+        },
+        {
+          "pair": [
+            "platform_base_link",
+            "r_link2"
+          ],
+          "sphere_gap_mm": -16.48998318990789,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 19.569428367663754,
+          "deepest_sphere_indices": [
+            2,
+            1
+          ],
+          "overlapping_sphere_pairs": [
+            [
+              2,
+              1,
+              -16.48998318990789
+            ],
+            [
+              44,
+              1,
+              -10.834214964743738
+            ],
+            [
+              44,
+              2,
+              -11.607505104084703
+            ]
+          ]
+        },
+        {
+          "pair": [
+            "platform_base_link",
+            "r_link3"
+          ],
+          "sphere_gap_mm": -11.826693715207615,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 52.98225975173769,
+          "deepest_sphere_indices": [
+            3,
+            0
+          ],
+          "overlapping_sphere_pairs": [
+            [
+              3,
+              0,
+              -11.826693715207615
+            ],
+            [
+              4,
+              2,
+              -2.564282979028963
+            ]
+          ]
+        },
+        {
+          "pair": [
+            "r_base_link1",
+            "r_link2"
+          ],
+          "sphere_gap_mm": -0.2930800640854672,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 16.91260745288511,
+          "deepest_sphere_indices": [
+            2,
+            1
+          ],
+          "overlapping_sphere_pairs": [
+            [
+              2,
+              1,
+              -0.2930800640854672
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "checks": [
+        {
+          "pair": [
+            "body_base_link",
+            "l_base_link1"
+          ],
+          "sphere_gap_mm": -1.733378209010525,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 26.079937940206747,
+          "deepest_sphere_indices": [
+            96,
+            0
+          ],
+          "overlapping_sphere_pairs": [
+            [
+              96,
+              0,
+              -1.733378209010525
+            ]
+          ]
+        },
+        {
+          "pair": [
+            "body_base_link",
+            "r_base_link1"
+          ],
+          "sphere_gap_mm": -3.0131559957444765,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 25.939577135466443,
+          "deepest_sphere_indices": [
+            86,
+            0
+          ],
+          "overlapping_sphere_pairs": [
+            [
+              86,
+              0,
+              -3.0131559957444765
+            ]
+          ]
+        },
+        {
+          "pair": [
+            "body_base_link",
+            "r_link2"
+          ],
+          "sphere_gap_mm": 79.72601588280098,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 113.83688848873004,
+          "deepest_sphere_indices": [
+            88,
+            0
+          ],
+          "overlapping_sphere_pairs": []
+        },
+        {
+          "pair": [
+            "body_base_link",
+            "r_link3"
+          ],
+          "sphere_gap_mm": 94.44260092905432,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 144.25533788092395,
+          "deepest_sphere_indices": [
+            85,
+            0
+          ],
+          "overlapping_sphere_pairs": []
+        },
+        {
+          "pair": [
+            "platform_base_link",
+            "r_link2"
+          ],
+          "sphere_gap_mm": -16.19054720057956,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 20.12415614747265,
+          "deepest_sphere_indices": [
+            2,
+            1
+          ],
+          "overlapping_sphere_pairs": [
+            [
+              2,
+              1,
+              -16.19054720057956
+            ],
+            [
+              44,
+              1,
+              -10.590275587805328
+            ],
+            [
+              44,
+              2,
+              -11.068309841979666
+            ]
+          ]
+        },
+        {
+          "pair": [
+            "platform_base_link",
+            "r_link3"
+          ],
+          "sphere_gap_mm": -10.863533714686845,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 53.617026118904604,
+          "deepest_sphere_indices": [
+            3,
+            0
+          ],
+          "overlapping_sphere_pairs": [
+            [
+              3,
+              0,
+              -10.863533714686845
+            ],
+            [
+              4,
+              2,
+              -1.6981960120853525
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "checks": [
+        {
+          "pair": [
+            "body_base_link",
+            "l_base_link1"
+          ],
+          "sphere_gap_mm": -1.7692076471370473,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 26.083287823408906,
+          "deepest_sphere_indices": [
+            96,
+            0
+          ],
+          "overlapping_sphere_pairs": [
+            [
+              95,
+              0,
+              -0.08540269566138792
+            ],
+            [
+              96,
+              0,
+              -1.7692076471370473
+            ]
+          ]
+        },
+        {
+          "pair": [
+            "body_base_link",
+            "r_base_link1"
+          ],
+          "sphere_gap_mm": -3.358531429972583,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 25.93599051140475,
+          "deepest_sphere_indices": [
+            86,
+            0
+          ],
+          "overlapping_sphere_pairs": [
+            [
+              86,
+              0,
+              -3.358531429972583
+            ]
+          ]
+        },
+        {
+          "pair": [
+            "body_base_link",
+            "r_link2"
+          ],
+          "sphere_gap_mm": 79.776932593454,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 114.01120240362526,
+          "deepest_sphere_indices": [
+            88,
+            0
+          ],
+          "overlapping_sphere_pairs": []
+        },
+        {
+          "pair": [
+            "body_base_link",
+            "r_link3"
+          ],
+          "sphere_gap_mm": 89.89224545259502,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 139.9146075930655,
+          "deepest_sphere_indices": [
+            85,
+            0
+          ],
+          "overlapping_sphere_pairs": []
+        },
+        {
+          "pair": [
+            "platform_base_link",
+            "r_link2"
+          ],
+          "sphere_gap_mm": -17.98420502152575,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 17.13536248913442,
+          "deepest_sphere_indices": [
+            2,
+            1
+          ],
+          "overlapping_sphere_pairs": [
+            [
+              2,
+              1,
+              -17.98420502152575
+            ],
+            [
+              4,
+              2,
+              -0.9978817805938802
+            ],
+            [
+              44,
+              1,
+              -11.452735269073742
+            ],
+            [
+              44,
+              2,
+              -12.87008588435598
+            ]
+          ]
+        },
+        {
+          "pair": [
+            "platform_base_link",
+            "r_link3"
+          ],
+          "sphere_gap_mm": -16.905659200602134,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 49.999283548362,
+          "deepest_sphere_indices": [
+            3,
+            0
+          ],
+          "overlapping_sphere_pairs": [
+            [
+              1,
+              2,
+              -1.6161737067732287
+            ],
+            [
+              3,
+              0,
+              -16.905659200602134
+            ],
+            [
+              4,
+              2,
+              -5.6457297045819015
+            ]
+          ]
+        },
+        {
+          "pair": [
+            "r_base_link1",
+            "r_link2"
+          ],
+          "sphere_gap_mm": -1.6226532175505417,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 14.559596335805303,
+          "deepest_sphere_indices": [
+            2,
+            1
+          ],
+          "overlapping_sphere_pairs": [
+            [
+              2,
+              1,
+              -1.6226532175505417
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "checks": [
+        {
+          "pair": [
+            "body_base_link",
+            "l_base_link1"
+          ],
+          "sphere_gap_mm": -1.7348865839947742,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 26.0799735653737,
+          "deepest_sphere_indices": [
+            96,
+            0
+          ],
+          "overlapping_sphere_pairs": [
+            [
+              96,
+              0,
+              -1.7348865839947742
+            ]
+          ]
+        },
+        {
+          "pair": [
+            "body_base_link",
+            "r_base_link1"
+          ],
+          "sphere_gap_mm": -3.018131806207025,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 25.939537124109407,
+          "deepest_sphere_indices": [
+            86,
+            0
+          ],
+          "overlapping_sphere_pairs": [
+            [
+              86,
+              0,
+              -3.018131806207025
+            ]
+          ]
+        },
+        {
+          "pair": [
+            "body_base_link",
+            "r_link2"
+          ],
+          "sphere_gap_mm": 79.78389964827149,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 113.84665650853765,
+          "deepest_sphere_indices": [
+            88,
+            0
+          ],
+          "overlapping_sphere_pairs": []
+        },
+        {
+          "pair": [
+            "body_base_link",
+            "r_link3"
+          ],
+          "sphere_gap_mm": 96.99140294300537,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 147.2775615870927,
+          "deepest_sphere_indices": [
+            85,
+            0
+          ],
+          "overlapping_sphere_pairs": []
+        },
+        {
+          "pair": [
+            "platform_base_link",
+            "r_link2"
+          ],
+          "sphere_gap_mm": -15.567018419290763,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 21.32484784517503,
+          "deepest_sphere_indices": [
+            2,
+            1
+          ],
+          "overlapping_sphere_pairs": [
+            [
+              2,
+              1,
+              -15.567018419290763
+            ],
+            [
+              44,
+              1,
+              -9.994479880705857
+            ],
+            [
+              44,
+              2,
+              -9.74467057304866
+            ]
+          ]
+        },
+        {
+          "pair": [
+            "platform_base_link",
+            "r_link3"
+          ],
+          "sphere_gap_mm": -7.8861496622110865,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 55.02016825825898,
+          "deepest_sphere_indices": [
+            3,
+            0
+          ],
+          "overlapping_sphere_pairs": [
+            [
+              3,
+              0,
+              -7.8861496622110865
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "checks": [
+        {
+          "pair": [
+            "body_base_link",
+            "l_base_link1"
+          ],
+          "sphere_gap_mm": -1.7306741077145609,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 26.079875593645493,
+          "deepest_sphere_indices": [
+            96,
+            0
+          ],
+          "overlapping_sphere_pairs": [
+            [
+              96,
+              0,
+              -1.7306741077145609
+            ]
+          ]
+        },
+        {
+          "pair": [
+            "body_base_link",
+            "r_base_link1"
+          ],
+          "sphere_gap_mm": -3.0043737307616225,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 25.93964726487245,
+          "deepest_sphere_indices": [
+            86,
+            0
+          ],
+          "overlapping_sphere_pairs": [
+            [
+              86,
+              0,
+              -3.0043737307616225
+            ]
+          ]
+        },
+        {
+          "pair": [
+            "body_base_link",
+            "r_link2"
+          ],
+          "sphere_gap_mm": 79.7146107377478,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 113.85517281897727,
+          "deepest_sphere_indices": [
+            88,
+            0
+          ],
+          "overlapping_sphere_pairs": []
+        },
+        {
+          "pair": [
+            "body_base_link",
+            "r_link3"
+          ],
+          "sphere_gap_mm": 92.24341387770576,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 141.3318301811148,
+          "deepest_sphere_indices": [
+            85,
+            0
+          ],
+          "overlapping_sphere_pairs": []
+        },
+        {
+          "pair": [
+            "platform_base_link",
+            "r_link2"
+          ],
+          "sphere_gap_mm": -16.908792001775424,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 18.796953113595055,
+          "deepest_sphere_indices": [
+            2,
+            1
+          ],
+          "overlapping_sphere_pairs": [
+            [
+              2,
+              1,
+              -16.908792001775424
+            ],
+            [
+              44,
+              1,
+              -11.163245258956067
+            ],
+            [
+              44,
+              2,
+              -12.336347904963421
+            ]
+          ]
+        },
+        {
+          "pair": [
+            "platform_base_link",
+            "r_link3"
+          ],
+          "sphere_gap_mm": -13.848117784656333,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 52.04607011602612,
+          "deepest_sphere_indices": [
+            3,
+            0
+          ],
+          "overlapping_sphere_pairs": [
+            [
+              3,
+              0,
+              -13.848117784656333
+            ],
+            [
+              4,
+              2,
+              -3.8508268065206646
+            ]
+          ]
+        },
+        {
+          "pair": [
+            "r_base_link1",
+            "r_link2"
+          ],
+          "sphere_gap_mm": -0.721652701903934,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 16.17872023522047,
+          "deepest_sphere_indices": [
+            2,
+            1
+          ],
+          "overlapping_sphere_pairs": [
+            [
+              2,
+              1,
+              -0.721652701903934
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "checks": [
+        {
+          "pair": [
+            "body_base_link",
+            "l_base_link1"
+          ],
+          "sphere_gap_mm": -1.7751258518014374,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 26.08146256306557,
+          "deepest_sphere_indices": [
+            96,
+            0
+          ],
+          "overlapping_sphere_pairs": [
+            [
+              96,
+              0,
+              -1.7751258518014374
+            ]
+          ]
+        },
+        {
+          "pair": [
+            "body_base_link",
+            "r_base_link1"
+          ],
+          "sphere_gap_mm": -3.1997671774451897,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 25.937902607848237,
+          "deepest_sphere_indices": [
+            86,
+            0
+          ],
+          "overlapping_sphere_pairs": [
+            [
+              86,
+              0,
+              -3.1997671774451897
+            ]
+          ]
+        },
+        {
+          "pair": [
+            "body_base_link",
+            "r_link2"
+          ],
+          "sphere_gap_mm": 79.69069354712585,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 113.92274002439895,
+          "deepest_sphere_indices": [
+            88,
+            0
+          ],
+          "overlapping_sphere_pairs": []
+        },
+        {
+          "pair": [
+            "body_base_link",
+            "r_link3"
+          ],
+          "sphere_gap_mm": 89.06462033353577,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 139.80789134681666,
+          "deepest_sphere_indices": [
+            85,
+            0
+          ],
+          "overlapping_sphere_pairs": []
+        },
+        {
+          "pair": [
+            "platform_base_link",
+            "r_link2"
+          ],
+          "sphere_gap_mm": -17.60942800845077,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 17.626821210695788,
+          "deepest_sphere_indices": [
+            2,
+            1
+          ],
+          "overlapping_sphere_pairs": [
+            [
+              2,
+              1,
+              -17.60942800845077
+            ],
+            [
+              4,
+              2,
+              -0.8670898314526789
+            ],
+            [
+              44,
+              1,
+              -11.501169281456308
+            ],
+            [
+              44,
+              2,
+              -13.046546344274768
+            ]
+          ]
+        },
+        {
+          "pair": [
+            "platform_base_link",
+            "r_link3"
+          ],
+          "sphere_gap_mm": -16.508732029351062,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 50.66379805333992,
+          "deepest_sphere_indices": [
+            3,
+            0
+          ],
+          "overlapping_sphere_pairs": [
+            [
+              1,
+              2,
+              -0.3088675189844778
+            ],
+            [
+              3,
+              0,
+              -16.508732029351062
+            ],
+            [
+              4,
+              2,
+              -5.456907918219879
+            ]
+          ]
+        },
+        {
+          "pair": [
+            "r_base_link1",
+            "r_link2"
+          ],
+          "sphere_gap_mm": -1.362390711405266,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 15.047586624742406,
+          "deepest_sphere_indices": [
+            2,
+            1
+          ],
+          "overlapping_sphere_pairs": [
+            [
+              2,
+              1,
+              -1.362390711405266
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "checks": [
+        {
+          "pair": [
+            "body_base_link",
+            "l_base_link1"
+          ],
+          "sphere_gap_mm": -1.7326839154967604,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 26.079921750603116,
+          "deepest_sphere_indices": [
+            96,
+            0
+          ],
+          "overlapping_sphere_pairs": [
+            [
+              96,
+              0,
+              -1.7326839154967604
+            ]
+          ]
+        },
+        {
+          "pair": [
+            "body_base_link",
+            "r_base_link1"
+          ],
+          "sphere_gap_mm": -3.010884592097307,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 25.93959533297564,
+          "deepest_sphere_indices": [
+            86,
+            0
+          ],
+          "overlapping_sphere_pairs": [
+            [
+              86,
+              0,
+              -3.010884592097307
+            ]
+          ]
+        },
+        {
+          "pair": [
+            "body_base_link",
+            "r_link2"
+          ],
+          "sphere_gap_mm": 79.72109131081037,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 113.83914875960346,
+          "deepest_sphere_indices": [
+            88,
+            0
+          ],
+          "overlapping_sphere_pairs": []
+        },
+        {
+          "pair": [
+            "body_base_link",
+            "r_link3"
+          ],
+          "sphere_gap_mm": 93.7811408101838,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 143.60030421742184,
+          "deepest_sphere_indices": [
+            85,
+            0
+          ],
+          "overlapping_sphere_pairs": []
+        },
+        {
+          "pair": [
+            "platform_base_link",
+            "r_link2"
+          ],
+          "sphere_gap_mm": -16.344568754692876,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 19.83700573591915,
+          "deepest_sphere_indices": [
+            2,
+            1
+          ],
+          "overlapping_sphere_pairs": [
+            [
+              2,
+              1,
+              -16.344568754692876
+            ],
+            [
+              44,
+              1,
+              -10.71918091617427
+            ],
+            [
+              44,
+              2,
+              -11.353599114940534
+            ]
+          ]
+        },
+        {
+          "pair": [
+            "platform_base_link",
+            "r_link3"
+          ],
+          "sphere_gap_mm": -11.567309019450676,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 53.27847192208258,
+          "deepest_sphere_indices": [
+            3,
+            0
+          ],
+          "overlapping_sphere_pairs": [
+            [
+              3,
+              0,
+              -11.567309019450676
+            ],
+            [
+              4,
+              2,
+              -2.181112013337601
+            ]
+          ]
+        },
+        {
+          "pair": [
+            "r_base_link1",
+            "r_link2"
+          ],
+          "sphere_gap_mm": -0.14409008165861686,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 17.166801156279888,
+          "deepest_sphere_indices": [
+            2,
+            1
+          ],
+          "overlapping_sphere_pairs": [
+            [
+              2,
+              1,
+              -0.14409008165861686
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "checks": [
+        {
+          "pair": [
+            "body_base_link",
+            "l_base_link1"
+          ],
+          "sphere_gap_mm": -1.762395373992684,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 26.083612318026454,
+          "deepest_sphere_indices": [
+            96,
+            0
+          ],
+          "overlapping_sphere_pairs": [
+            [
+              95,
+              0,
+              -0.3186626433740597
+            ],
+            [
+              96,
+              0,
+              -1.762395373992684
+            ]
+          ]
+        },
+        {
+          "pair": [
+            "body_base_link",
+            "r_base_link1"
+          ],
+          "sphere_gap_mm": -3.3800835234402973,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 25.93566012231209,
+          "deepest_sphere_indices": [
+            86,
+            0
+          ],
+          "overlapping_sphere_pairs": [
+            [
+              86,
+              0,
+              -3.3800835234402973
+            ]
+          ]
+        },
+        {
+          "pair": [
+            "body_base_link",
+            "r_link2"
+          ],
+          "sphere_gap_mm": 79.62513206505481,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 114.00146797293475,
+          "deepest_sphere_indices": [
+            88,
+            0
+          ],
+          "overlapping_sphere_pairs": []
+        },
+        {
+          "pair": [
+            "body_base_link",
+            "r_link3"
+          ],
+          "sphere_gap_mm": 84.14431091500427,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 135.73157414490493,
+          "deepest_sphere_indices": [
+            85,
+            0
+          ],
+          "overlapping_sphere_pairs": []
+        },
+        {
+          "pair": [
+            "platform_base_link",
+            "r_link2"
+          ],
+          "sphere_gap_mm": -18.905728494545727,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 15.263798809876628,
+          "deepest_sphere_indices": [
+            2,
+            1
+          ],
+          "overlapping_sphere_pairs": [
+            [
+              2,
+              1,
+              -18.905728494545727
+            ],
+            [
+              4,
+              2,
+              -3.296886111299836
+            ],
+            [
+              44,
+              1,
+              -12.390024461050864
+            ],
+            [
+              44,
+              2,
+              -15.025583441287335
+            ]
+          ]
+        },
+        {
+          "pair": [
+            "platform_base_link",
+            "r_link3"
+          ],
+          "sphere_gap_mm": -21.633079108818883,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 47.644485843544615,
+          "deepest_sphere_indices": [
+            3,
+            0
+          ],
+          "overlapping_sphere_pairs": [
+            [
+              1,
+              2,
+              -4.069182948180379
+            ],
+            [
+              3,
+              0,
+              -21.633079108818883
+            ],
+            [
+              4,
+              0,
+              -2.452795247804201
+            ],
+            [
+              4,
+              2,
+              -9.085522730361193
+            ]
+          ]
+        },
+        {
+          "pair": [
+            "r_base_link1",
+            "r_link2"
+          ],
+          "sphere_gap_mm": -2.6466208497742603,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 12.794301432846316,
+          "deepest_sphere_indices": [
+            2,
+            1
+          ],
+          "overlapping_sphere_pairs": [
+            [
+              2,
+              1,
+              -2.6466208497742603
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "checks": [
+        {
+          "pair": [
+            "body_base_link",
+            "l_base_link1"
+          ],
+          "sphere_gap_mm": -1.732788971617008,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 26.079924192067033,
+          "deepest_sphere_indices": [
+            96,
+            0
+          ],
+          "overlapping_sphere_pairs": [
+            [
+              96,
+              0,
+              -1.732788971617008
+            ]
+          ]
+        },
+        {
+          "pair": [
+            "body_base_link",
+            "r_base_link1"
+          ],
+          "sphere_gap_mm": -3.011227537850214,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 25.939592588124274,
+          "deepest_sphere_indices": [
+            86,
+            0
+          ],
+          "overlapping_sphere_pairs": [
+            [
+              86,
+              0,
+              -3.011227537850214
+            ]
+          ]
+        },
+        {
+          "pair": [
+            "body_base_link",
+            "r_link2"
+          ],
+          "sphere_gap_mm": 79.7261115340894,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 113.83837593173368,
+          "deepest_sphere_indices": [
+            88,
+            0
+          ],
+          "overlapping_sphere_pairs": []
+        },
+        {
+          "pair": [
+            "body_base_link",
+            "r_link3"
+          ],
+          "sphere_gap_mm": 95.3126593786548,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 144.08818210032206,
+          "deepest_sphere_indices": [
+            85,
+            0
+          ],
+          "overlapping_sphere_pairs": []
+        },
+        {
+          "pair": [
+            "platform_base_link",
+            "r_link2"
+          ],
+          "sphere_gap_mm": -16.252626924821108,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 20.01024390145367,
+          "deepest_sphere_indices": [
+            2,
+            1
+          ],
+          "overlapping_sphere_pairs": [
+            [
+              2,
+              1,
+              -16.252626924821108
+            ],
+            [
+              44,
+              1,
+              -10.639409956442927
+            ],
+            [
+              44,
+              2,
+              -11.176437688223393
+            ]
+          ]
+        },
+        {
+          "pair": [
+            "platform_base_link",
+            "r_link3"
+          ],
+          "sphere_gap_mm": -10.789522537744373,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 53.50289820409475,
+          "deepest_sphere_indices": [
+            3,
+            0
+          ],
+          "overlapping_sphere_pairs": [
+            [
+              3,
+              0,
+              -10.789522537744373
+            ],
+            [
+              4,
+              2,
+              -1.8345781538187043
+            ]
+          ]
+        },
+        {
+          "pair": [
+            "r_base_link1",
+            "r_link2"
+          ],
+          "sphere_gap_mm": -0.04736350451246124,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 17.330678612828954,
+          "deepest_sphere_indices": [
+            2,
+            1
+          ],
+          "overlapping_sphere_pairs": [
+            [
+              2,
+              1,
+              -0.04736350451246124
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "index": 11,
+      "checks": [
+        {
+          "pair": [
+            "body_base_link",
+            "l_base_link1"
+          ],
+          "sphere_gap_mm": -1.7332454797788914,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 26.079934835237356,
+          "deepest_sphere_indices": [
+            96,
+            0
+          ],
+          "overlapping_sphere_pairs": [
+            [
+              96,
+              0,
+              -1.7332454797788914
+            ]
+          ]
+        },
+        {
+          "pair": [
+            "body_base_link",
+            "r_base_link1"
+          ],
+          "sphere_gap_mm": -3.0127208618158097,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 25.9395806248182,
+          "deepest_sphere_indices": [
+            86,
+            0
+          ],
+          "overlapping_sphere_pairs": [
+            [
+              86,
+              0,
+              -3.0127208618158097
+            ]
+          ]
+        },
+        {
+          "pair": [
+            "body_base_link",
+            "r_link2"
+          ],
+          "sphere_gap_mm": 79.72690046341391,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 113.83881061570243,
+          "deepest_sphere_indices": [
+            88,
+            0
+          ],
+          "overlapping_sphere_pairs": []
+        },
+        {
+          "pair": [
+            "body_base_link",
+            "r_link3"
+          ],
+          "sphere_gap_mm": 93.65085229653141,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 144.11505296339539,
+          "deepest_sphere_indices": [
+            85,
+            0
+          ],
+          "overlapping_sphere_pairs": []
+        },
+        {
+          "pair": [
+            "platform_base_link",
+            "r_link2"
+          ],
+          "sphere_gap_mm": -16.243436154977594,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 20.029011600974147,
+          "deepest_sphere_indices": [
+            2,
+            1
+          ],
+          "overlapping_sphere_pairs": [
+            [
+              2,
+              1,
+              -16.243436154977594
+            ],
+            [
+              44,
+              1,
+              -10.62906830741038
+            ],
+            [
+              44,
+              2,
+              -11.153057669105266
+            ]
+          ]
+        },
+        {
+          "pair": [
+            "platform_base_link",
+            "r_link3"
+          ],
+          "sphere_gap_mm": -11.215010366606034,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 53.514762530573044,
+          "deepest_sphere_indices": [
+            3,
+            0
+          ],
+          "overlapping_sphere_pairs": [
+            [
+              3,
+              0,
+              -11.215010366606034
+            ],
+            [
+              4,
+              2,
+              -1.8724291328204925
+            ]
+          ]
+        },
+        {
+          "pair": [
+            "r_base_link1",
+            "r_link2"
+          ],
+          "sphere_gap_mm": -0.03683766810636674,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 17.348200489033434,
+          "deepest_sphere_indices": [
+            2,
+            1
+          ],
+          "overlapping_sphere_pairs": [
+            [
+              2,
+              1,
+              -0.03683766810636674
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "index": 12,
+      "checks": [
+        {
+          "pair": [
+            "body_base_link",
+            "l_base_link1"
+          ],
+          "sphere_gap_mm": -1.7349537108029138,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 26.07997516556439,
+          "deepest_sphere_indices": [
+            96,
+            0
+          ],
+          "overlapping_sphere_pairs": [
+            [
+              96,
+              0,
+              -1.7349537108029138
+            ]
+          ]
+        },
+        {
+          "pair": [
+            "body_base_link",
+            "r_base_link1"
+          ],
+          "sphere_gap_mm": -3.01835458493846,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 25.939535327939694,
+          "deepest_sphere_indices": [
+            86,
+            0
+          ],
+          "overlapping_sphere_pairs": [
+            [
+              86,
+              0,
+              -3.01835458493846
+            ]
+          ]
+        },
+        {
+          "pair": [
+            "body_base_link",
+            "r_link2"
+          ],
+          "sphere_gap_mm": 79.74161104412866,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 113.8155375662957,
+          "deepest_sphere_indices": [
+            88,
+            0
+          ],
+          "overlapping_sphere_pairs": []
+        },
+        {
+          "pair": [
+            "body_base_link",
+            "r_link3"
+          ],
+          "sphere_gap_mm": 99.70321561683058,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 149.19622311119107,
+          "deepest_sphere_indices": [
+            85,
+            0
+          ],
+          "overlapping_sphere_pairs": []
+        },
+        {
+          "pair": [
+            "platform_base_link",
+            "r_link2"
+          ],
+          "sphere_gap_mm": -14.974488858678074,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 22.33821888759424,
+          "deepest_sphere_indices": [
+            2,
+            1
+          ],
+          "overlapping_sphere_pairs": [
+            [
+              2,
+              1,
+              -14.974488858678074
+            ],
+            [
+              44,
+              1,
+              -9.62180226140806
+            ],
+            [
+              44,
+              2,
+              -8.955305715138875
+            ]
+          ]
+        },
+        {
+          "pair": [
+            "platform_base_link",
+            "r_link3"
+          ],
+          "sphere_gap_mm": -5.377115144448663,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 56.24736588464309,
+          "deepest_sphere_indices": [
+            3,
+            0
+          ],
+          "overlapping_sphere_pairs": [
+            [
+              3,
+              0,
+              -5.377115144448663
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "index": 13,
+      "checks": [
+        {
+          "pair": [
+            "body_base_link",
+            "l_base_link1"
+          ],
+          "sphere_gap_mm": -1.7351744057079315,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 26.07998043561281,
+          "deepest_sphere_indices": [
+            96,
+            0
+          ],
+          "overlapping_sphere_pairs": [
+            [
+              96,
+              0,
+              -1.7351744057079315
+            ]
+          ]
+        },
+        {
+          "pair": [
+            "body_base_link",
+            "r_base_link1"
+          ],
+          "sphere_gap_mm": -3.019087843485646,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 25.93952941308612,
+          "deepest_sphere_indices": [
+            86,
+            0
+          ],
+          "overlapping_sphere_pairs": [
+            [
+              86,
+              0,
+              -3.019087843485646
+            ]
+          ]
+        },
+        {
+          "pair": [
+            "body_base_link",
+            "r_link2"
+          ],
+          "sphere_gap_mm": 79.7415653110704,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 113.81533448419503,
+          "deepest_sphere_indices": [
+            88,
+            0
+          ],
+          "overlapping_sphere_pairs": []
+        },
+        {
+          "pair": [
+            "body_base_link",
+            "r_link3"
+          ],
+          "sphere_gap_mm": 98.89530776989797,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 149.25588783539823,
+          "deepest_sphere_indices": [
+            85,
+            0
+          ],
+          "overlapping_sphere_pairs": []
+        },
+        {
+          "pair": [
+            "platform_base_link",
+            "r_link2"
+          ],
+          "sphere_gap_mm": -14.952174794200044,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 22.378676267667757,
+          "deepest_sphere_indices": [
+            2,
+            1
+          ],
+          "overlapping_sphere_pairs": [
+            [
+              2,
+              1,
+              -14.952174794200044
+            ],
+            [
+              44,
+              1,
+              -9.603700657727158
+            ],
+            [
+              44,
+              2,
+              -8.916088895954688
+            ]
+          ]
+        },
+        {
+          "pair": [
+            "platform_base_link",
+            "r_link3"
+          ],
+          "sphere_gap_mm": -5.537086761379678,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 56.27849878220018,
+          "deepest_sphere_indices": [
+            3,
+            0
+          ],
+          "overlapping_sphere_pairs": [
+            [
+              3,
+              0,
+              -5.537086761379678
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "index": 14,
+      "checks": [
+        {
+          "pair": [
+            "body_base_link",
+            "l_base_link1"
+          ],
+          "sphere_gap_mm": -1.7326032944803975,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 26.07991987897897,
+          "deepest_sphere_indices": [
+            96,
+            0
+          ],
+          "overlapping_sphere_pairs": [
+            [
+              96,
+              0,
+              -1.7326032944803975
+            ]
+          ]
+        },
+        {
+          "pair": [
+            "body_base_link",
+            "r_base_link1"
+          ],
+          "sphere_gap_mm": -3.010621591991336,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 25.93959743731747,
+          "deepest_sphere_indices": [
+            86,
+            0
+          ],
+          "overlapping_sphere_pairs": [
+            [
+              86,
+              0,
+              -3.010621591991336
+            ]
+          ]
+        },
+        {
+          "pair": [
+            "body_base_link",
+            "r_link2"
+          ],
+          "sphere_gap_mm": 79.71856823874074,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 113.84276531401687,
+          "deepest_sphere_indices": [
+            88,
+            0
+          ],
+          "overlapping_sphere_pairs": []
+        },
+        {
+          "pair": [
+            "body_base_link",
+            "r_link3"
+          ],
+          "sphere_gap_mm": 94.4528885038311,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 143.1205946020728,
+          "deepest_sphere_indices": [
+            85,
+            0
+          ],
+          "overlapping_sphere_pairs": []
+        },
+        {
+          "pair": [
+            "platform_base_link",
+            "r_link2"
+          ],
+          "sphere_gap_mm": -16.485089268711373,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 19.578436276585357,
+          "deepest_sphere_indices": [
+            2,
+            1
+          ],
+          "overlapping_sphere_pairs": [
+            [
+              2,
+              1,
+              -16.485089268711373
+            ],
+            [
+              44,
+              1,
+              -10.830354486196834
+            ],
+            [
+              44,
+              2,
+              -11.598977477949454
+            ]
+          ]
+        },
+        {
+          "pair": [
+            "platform_base_link",
+            "r_link3"
+          ],
+          "sphere_gap_mm": -11.805739947739438,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 52.99295426206304,
+          "deepest_sphere_indices": [
+            3,
+            0
+          ],
+          "overlapping_sphere_pairs": [
+            [
+              3,
+              0,
+              -11.805739947739438
+            ],
+            [
+              4,
+              2,
+              -2.549621180574009
+            ]
+          ]
+        },
+        {
+          "pair": [
+            "r_base_link1",
+            "r_link2"
+          ],
+          "sphere_gap_mm": -0.2880689458209726,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 16.92116539409671,
+          "deepest_sphere_indices": [
+            2,
+            1
+          ],
+          "overlapping_sphere_pairs": [
+            [
+              2,
+              1,
+              -0.2880689458209726
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "index": 15,
+      "checks": [
+        {
+          "pair": [
+            "body_base_link",
+            "l_base_link1"
+          ],
+          "sphere_gap_mm": -1.7366466820209898,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 26.080015954943658,
+          "deepest_sphere_indices": [
+            96,
+            0
+          ],
+          "overlapping_sphere_pairs": [
+            [
+              96,
+              0,
+              -1.7366466820209898
+            ]
+          ]
+        },
+        {
+          "pair": [
+            "body_base_link",
+            "r_base_link1"
+          ],
+          "sphere_gap_mm": -3.0240123835491017,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 25.939489573029867,
+          "deepest_sphere_indices": [
+            86,
+            0
+          ],
+          "overlapping_sphere_pairs": [
+            [
+              86,
+              0,
+              -3.0240123835491017
+            ]
+          ]
+        },
+        {
+          "pair": [
+            "body_base_link",
+            "r_link2"
+          ],
+          "sphere_gap_mm": 79.74755659673983,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 113.81232664586365,
+          "deepest_sphere_indices": [
+            88,
+            0
+          ],
+          "overlapping_sphere_pairs": []
+        },
+        {
+          "pair": [
+            "body_base_link",
+            "r_link3"
+          ],
+          "sphere_gap_mm": 101.07974701005138,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 151.26363422063875,
+          "deepest_sphere_indices": [
+            85,
+            0
+          ],
+          "overlapping_sphere_pairs": []
+        },
+        {
+          "pair": [
+            "platform_base_link",
+            "r_link2"
+          ],
+          "sphere_gap_mm": -14.45897205662406,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 23.270594827701217,
+          "deepest_sphere_indices": [
+            2,
+            1
+          ],
+          "overlapping_sphere_pairs": [
+            [
+              2,
+              1,
+              -14.45897205662406
+            ],
+            [
+              44,
+              1,
+              -9.2017888059093
+            ],
+            [
+              44,
+              2,
+              -8.048111953119635
+            ]
+          ]
+        },
+        {
+          "pair": [
+            "platform_base_link",
+            "r_link3"
+          ],
+          "sphere_gap_mm": -3.295095330288669,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 57.32961558564816,
+          "deepest_sphere_indices": [
+            3,
+            0
+          ],
+          "overlapping_sphere_pairs": [
+            [
+              3,
+              0,
+              -3.295095330288669
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "index": 16,
+      "checks": [
+        {
+          "pair": [
+            "body_base_link",
+            "l_base_link1"
+          ],
+          "sphere_gap_mm": -1.7692076471370748,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 26.0832878234089,
+          "deepest_sphere_indices": [
+            96,
+            0
+          ],
+          "overlapping_sphere_pairs": [
+            [
+              95,
+              0,
+              -0.08540269566038872
+            ],
+            [
+              96,
+              0,
+              -1.7692076471370748
+            ]
+          ]
+        },
+        {
+          "pair": [
+            "body_base_link",
+            "r_base_link1"
+          ],
+          "sphere_gap_mm": -3.358531429972472,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 25.93599051140475,
+          "deepest_sphere_indices": [
+            86,
+            0
+          ],
+          "overlapping_sphere_pairs": [
+            [
+              86,
+              0,
+              -3.358531429972472
+            ]
+          ]
+        },
+        {
+          "pair": [
+            "body_base_link",
+            "r_link2"
+          ],
+          "sphere_gap_mm": 79.7862248799594,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 114.00658118356671,
+          "deepest_sphere_indices": [
+            88,
+            0
+          ],
+          "overlapping_sphere_pairs": []
+        },
+        {
+          "pair": [
+            "body_base_link",
+            "r_link3"
+          ],
+          "sphere_gap_mm": 90.75873544086544,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 140.71018855924586,
+          "deepest_sphere_indices": [
+            85,
+            0
+          ],
+          "overlapping_sphere_pairs": []
+        },
+        {
+          "pair": [
+            "platform_base_link",
+            "r_link2"
+          ],
+          "sphere_gap_mm": -17.790332419852707,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 17.503208235819557,
+          "deepest_sphere_indices": [
+            2,
+            1
+          ],
+          "overlapping_sphere_pairs": [
+            [
+              2,
+              1,
+              -17.790332419852707
+            ],
+            [
+              4,
+              2,
+              -0.5848942028883266
+            ],
+            [
+              44,
+              1,
+              -11.29219074167412
+            ],
+            [
+              44,
+              2,
+              -12.51060878457487
+            ]
+          ]
+        },
+        {
+          "pair": [
+            "platform_base_link",
+            "r_link3"
+          ],
+          "sphere_gap_mm": -16.026963813855684,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 50.442405305490674,
+          "deepest_sphere_indices": [
+            3,
+            0
+          ],
+          "overlapping_sphere_pairs": [
+            [
+              1,
+              2,
+              -1.0513998587583853
+            ],
+            [
+              3,
+              0,
+              -16.026963813855684
+            ],
+            [
+              4,
+              2,
+              -5.032691638031266
+            ]
+          ]
+        },
+        {
+          "pair": [
+            "r_base_link1",
+            "r_link2"
+          ],
+          "sphere_gap_mm": -1.4208342732078896,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 14.90918994302467,
+          "deepest_sphere_indices": [
+            2,
+            1
+          ],
+          "overlapping_sphere_pairs": [
+            [
+              2,
+              1,
+              -1.4208342732078896
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "index": 17,
+      "checks": [
+        {
+          "pair": [
+            "body_base_link",
+            "l_base_link1"
+          ],
+          "sphere_gap_mm": -1.7326780157087414,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 26.07992161358085,
+          "deepest_sphere_indices": [
+            96,
+            0
+          ],
+          "overlapping_sphere_pairs": [
+            [
+              96,
+              0,
+              -1.7326780157087414
+            ]
+          ]
+        },
+        {
+          "pair": [
+            "body_base_link",
+            "r_base_link1"
+          ],
+          "sphere_gap_mm": -3.0108653406568098,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 25.939595487031117,
+          "deepest_sphere_indices": [
+            86,
+            0
+          ],
+          "overlapping_sphere_pairs": [
+            [
+              86,
+              0,
+              -3.0108653406568098
+            ]
+          ]
+        },
+        {
+          "pair": [
+            "body_base_link",
+            "r_link2"
+          ],
+          "sphere_gap_mm": 79.71522712904464,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 113.84755949745407,
+          "deepest_sphere_indices": [
+            88,
+            0
+          ],
+          "overlapping_sphere_pairs": []
+        },
+        {
+          "pair": [
+            "body_base_link",
+            "r_link3"
+          ],
+          "sphere_gap_mm": 93.29619399698797,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 142.35479387500672,
+          "deepest_sphere_indices": [
+            85,
+            0
+          ],
+          "overlapping_sphere_pairs": []
+        },
+        {
+          "pair": [
+            "platform_base_link",
+            "r_link2"
+          ],
+          "sphere_gap_mm": -16.65741765722984,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 19.260982572909956,
+          "deepest_sphere_indices": [
+            2,
+            1
+          ],
+          "overlapping_sphere_pairs": [
+            [
+              2,
+              1,
+              -16.65741765722984
+            ],
+            [
+              44,
+              1,
+              -10.966075323389626
+            ],
+            [
+              44,
+              2,
+              -11.899108456596725
+            ]
+          ]
+        },
+        {
+          "pair": [
+            "platform_base_link",
+            "r_link3"
+          ],
+          "sphere_gap_mm": -12.727565041219968,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 52.59992858291784,
+          "deepest_sphere_indices": [
+            3,
+            0
+          ],
+          "overlapping_sphere_pairs": [
+            [
+              3,
+              0,
+              -12.727565041219968
+            ],
+            [
+              4,
+              2,
+              -3.0911256406782814
+            ]
+          ]
+        },
+        {
+          "pair": [
+            "r_base_link1",
+            "r_link2"
+          ],
+          "sphere_gap_mm": -0.46448108026130724,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 16.61956945780221,
+          "deepest_sphere_indices": [
+            2,
+            1
+          ],
+          "overlapping_sphere_pairs": [
+            [
+              2,
+              1,
+              -0.46448108026130724
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "index": 18,
+      "checks": [
+        {
+          "pair": [
+            "body_base_link",
+            "l_base_link1"
+          ],
+          "sphere_gap_mm": -1.7368421036247779,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 26.0800207179905,
+          "deepest_sphere_indices": [
+            96,
+            0
+          ],
+          "overlapping_sphere_pairs": [
+            [
+              96,
+              0,
+              -1.7368421036247779
+            ]
+          ]
+        },
+        {
+          "pair": [
+            "body_base_link",
+            "r_base_link1"
+          ],
+          "sphere_gap_mm": -3.024670435234217,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 25.939484233913156,
+          "deepest_sphere_indices": [
+            86,
+            0
+          ],
+          "overlapping_sphere_pairs": [
+            [
+              86,
+              0,
+              -3.024670435234217
+            ]
+          ]
+        },
+        {
+          "pair": [
+            "body_base_link",
+            "r_link2"
+          ],
+          "sphere_gap_mm": 79.74837809118269,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 113.81213640307764,
+          "deepest_sphere_indices": [
+            88,
+            0
+          ],
+          "overlapping_sphere_pairs": []
+        },
+        {
+          "pair": [
+            "body_base_link",
+            "r_link3"
+          ],
+          "sphere_gap_mm": 101.30630322250272,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 151.53775865133815,
+          "deepest_sphere_indices": [
+            85,
+            0
+          ],
+          "overlapping_sphere_pairs": []
+        },
+        {
+          "pair": [
+            "platform_base_link",
+            "r_link2"
+          ],
+          "sphere_gap_mm": -14.391849916466352,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 23.39163925495855,
+          "deepest_sphere_indices": [
+            2,
+            1
+          ],
+          "overlapping_sphere_pairs": [
+            [
+              2,
+              1,
+              -14.391849916466352
+            ],
+            [
+              44,
+              1,
+              -9.14682371032395
+            ],
+            [
+              44,
+              2,
+              -7.929813216219328
+            ]
+          ]
+        },
+        {
+          "pair": [
+            "platform_base_link",
+            "r_link3"
+          ],
+          "sphere_gap_mm": -3.008451116154137,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 57.47126023351189,
+          "deepest_sphere_indices": [
+            3,
+            0
+          ],
+          "overlapping_sphere_pairs": [
+            [
+              3,
+              0,
+              -3.008451116154137
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "index": 19,
+      "checks": [
+        {
+          "pair": [
+            "body_base_link",
+            "l_base_link1"
+          ],
+          "sphere_gap_mm": -1.7320043077894836,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 26.07990602677418,
+          "deepest_sphere_indices": [
+            96,
+            0
+          ],
+          "overlapping_sphere_pairs": [
+            [
+              96,
+              0,
+              -1.7320043077894836
+            ]
+          ]
+        },
+        {
+          "pair": [
+            "body_base_link",
+            "r_base_link1"
+          ],
+          "sphere_gap_mm": -3.008672433385373,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 25.93961301571433,
+          "deepest_sphere_indices": [
+            86,
+            0
+          ],
+          "overlapping_sphere_pairs": [
+            [
+              86,
+              0,
+              -3.008672433385373
+            ]
+          ]
+        },
+        {
+          "pair": [
+            "body_base_link",
+            "r_link2"
+          ],
+          "sphere_gap_mm": 79.71710726603298,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 113.84676112323446,
+          "deepest_sphere_indices": [
+            88,
+            0
+          ],
+          "overlapping_sphere_pairs": []
+        },
+        {
+          "pair": [
+            "body_base_link",
+            "r_link3"
+          ],
+          "sphere_gap_mm": 93.89814245034813,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 142.53422534091027,
+          "deepest_sphere_indices": [
+            85,
+            0
+          ],
+          "overlapping_sphere_pairs": []
+        },
+        {
+          "pair": [
+            "platform_base_link",
+            "r_link2"
+          ],
+          "sphere_gap_mm": -16.629561953635317,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 19.31233312667965,
+          "deepest_sphere_indices": [
+            2,
+            1
+          ],
+          "overlapping_sphere_pairs": [
+            [
+              2,
+              1,
+              -16.629561953635317
+            ],
+            [
+              44,
+              1,
+              -10.944167317188294
+            ],
+            [
+              44,
+              2,
+              -11.850615348314053
+            ]
+          ]
+        },
+        {
+          "pair": [
+            "platform_base_link",
+            "r_link3"
+          ],
+          "sphere_gap_mm": -12.43612543437006,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 52.67562272939482,
+          "deepest_sphere_indices": [
+            3,
+            0
+          ],
+          "overlapping_sphere_pairs": [
+            [
+              3,
+              0,
+              -12.43612543437006
+            ],
+            [
+              4,
+              2,
+              -2.984068200998967
+            ]
+          ]
+        },
+        {
+          "pair": [
+            "r_base_link1",
+            "r_link2"
+          ],
+          "sphere_gap_mm": -0.43597128409358227,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 16.668354875255897,
+          "deepest_sphere_indices": [
+            2,
+            1
+          ],
+          "overlapping_sphere_pairs": [
+            [
+              2,
+              1,
+              -0.43597128409358227
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "index": 20,
+      "checks": [
+        {
+          "pair": [
+            "body_base_link",
+            "l_base_link1"
+          ],
+          "sphere_gap_mm": -1.7646060931039846,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 26.083515235892524,
+          "deepest_sphere_indices": [
+            96,
+            0
+          ],
+          "overlapping_sphere_pairs": [
+            [
+              95,
+              0,
+              -0.24922153819846582
+            ],
+            [
+              96,
+              0,
+              -1.7646060931039846
+            ]
+          ]
+        },
+        {
+          "pair": [
+            "body_base_link",
+            "r_base_link1"
+          ],
+          "sphere_gap_mm": -3.373835762921024,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 25.935758681925297,
+          "deepest_sphere_indices": [
+            86,
+            0
+          ],
+          "overlapping_sphere_pairs": [
+            [
+              86,
+              0,
+              -3.373835762921024
+            ]
+          ]
+        },
+        {
+          "pair": [
+            "body_base_link",
+            "r_link2"
+          ],
+          "sphere_gap_mm": 79.62558052462731,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 114.00033709140725,
+          "deepest_sphere_indices": [
+            88,
+            0
+          ],
+          "overlapping_sphere_pairs": []
+        },
+        {
+          "pair": [
+            "body_base_link",
+            "r_link3"
+          ],
+          "sphere_gap_mm": 84.11538156392278,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 135.7221958883338,
+          "deepest_sphere_indices": [
+            85,
+            0
+          ],
+          "overlapping_sphere_pairs": []
+        },
+        {
+          "pair": [
+            "platform_base_link",
+            "r_link2"
+          ],
+          "sphere_gap_mm": -18.902253941789564,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 15.267435024666847,
+          "deepest_sphere_indices": [
+            2,
+            1
+          ],
+          "overlapping_sphere_pairs": [
+            [
+              2,
+              1,
+              -18.902253941789564
+            ],
+            [
+              4,
+              2,
+              -3.2986191705784083
+            ],
+            [
+              44,
+              1,
+              -12.392043931516744
+            ],
+            [
+              44,
+              2,
+              -15.031147411583886
+            ]
+          ]
+        },
+        {
+          "pair": [
+            "platform_base_link",
+            "r_link3"
+          ],
+          "sphere_gap_mm": -21.63451306349623,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 47.65014645709602,
+          "deepest_sphere_indices": [
+            3,
+            0
+          ],
+          "overlapping_sphere_pairs": [
+            [
+              1,
+              2,
+              -4.056348572207096
+            ],
+            [
+              3,
+              0,
+              -21.63451306349623
+            ],
+            [
+              4,
+              0,
+              -2.455467326444763
+            ],
+            [
+              4,
+              2,
+              -9.08810368492751
+            ]
+          ]
+        },
+        {
+          "pair": [
+            "r_base_link1",
+            "r_link2"
+          ],
+          "sphere_gap_mm": -2.644774408869531,
+          "mesh_intersection": false,
+          "mesh_distance_mm": 12.798116657209272,
+          "deepest_sphere_indices": [
+            2,
+            1
+          ],
+          "overlapping_sphere_pairs": [
+            [
+              2,
+              1,
+              -2.644774408869531
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "mesh_intersection_counts": {},
+  "overlap_frequency": [
+    {
+      "a": "body_base_link",
+      "i": 96,
+      "b": "l_base_link1",
+      "j": 0,
+      "count": 20,
+      "sphere_a": {
+        "center": [
+          0.032900248036487466,
+          -0.06204196828247809,
+          0.7568603776195122
+        ],
+        "radius": 0.09767515839392517
+      },
+      "sphere_b": {
+        "center": [
+          0.0,
+          0.0,
+          -0.025
+        ],
+        "radius": 0.07624
+      }
+    },
+    {
+      "a": "body_base_link",
+      "i": 86,
+      "b": "r_base_link1",
+      "j": 0,
+      "count": 20,
+      "sphere_a": {
+        "center": [
+          -0.037864334637840925,
+          -0.06395113483157522,
+          0.7479727324325414
+        ],
+        "radius": 0.0961970512191758
+      },
+      "sphere_b": {
+        "center": [
+          0.0,
+          -0.0,
+          -0.025
+        ],
+        "radius": 0.07624
+      }
+    },
+    {
+      "a": "platform_base_link",
+      "i": 2,
+      "b": "r_link2",
+      "j": 1,
+      "count": 20,
+      "sphere_a": {
+        "center": [
+          -0.14670088496858916,
+          -0.13191669298476785,
+          0.09324247937557287
+        ],
+        "radius": 0.06787656318842095
+      },
+      "sphere_b": {
+        "center": [
+          0.0002358243517775263,
+          0.004118430876613885,
+          0.05698597823249418
+        ],
+        "radius": 0.049364736
+      }
+    },
+    {
+      "a": "platform_base_link",
+      "i": 44,
+      "b": "r_link2",
+      "j": 1,
+      "count": 20,
+      "sphere_a": {
+        "center": [
+          -0.1936503772934278,
+          -0.07478770241141319,
+          0.05838798110683759
+        ],
+        "radius": 0.039
+      },
+      "sphere_b": {
+        "center": [
+          0.0002358243517775263,
+          0.004118430876613885,
+          0.05698597823249418
+        ],
+        "radius": 0.049364736
+      }
+    },
+    {
+      "a": "platform_base_link",
+      "i": 44,
+      "b": "r_link2",
+      "j": 2,
+      "count": 20,
+      "sphere_a": {
+        "center": [
+          -0.1936503772934278,
+          -0.07478770241141319,
+          0.05838798110683759
+        ],
+        "radius": 0.039
+      },
+      "sphere_b": {
+        "center": [
+          9.438661912607798e-06,
+          -5.744102615840675e-05,
+          0.1209455873060121
+        ],
+        "radius": 0.0466089
+      }
+    },
+    {
+      "a": "platform_base_link",
+      "i": 3,
+      "b": "r_link3",
+      "j": 0,
+      "count": 19,
+      "sphere_a": {
+        "center": [
+          -0.14212311310582057,
+          -0.07679649068381324,
+          -0.10205973339003077
+        ],
+        "radius": 0.06584476059960279
+      },
+      "sphere_b": {
+        "center": [
+          -0.0003072969488743315,
+          0.010933944366932563,
+          -0.04525227062780537
+        ],
+        "radius": 0.0460768
+      }
+    },
+    {
+      "a": "platform_base_link",
+      "i": 4,
+      "b": "r_link3",
+      "j": 2,
+      "count": 14,
+      "sphere_a": {
+        "center": [
+          -0.14848898351192474,
+          -0.07358071766793728,
+          -0.0007268860936164856
+        ],
+        "radius": 0.07528
+      },
+      "sphere_b": {
+        "center": [
+          9.925678809647877e-05,
+          0.0751445726318575,
+          -0.005262292674433759
+        ],
+        "radius": 0.0483032
+      }
+    },
+    {
+      "a": "r_base_link1",
+      "i": 2,
+      "b": "r_link2",
+      "j": 1,
+      "count": 13,
+      "sphere_a": {
+        "center": [
+          0.0,
+          -0.0,
+          0.055
+        ],
+        "radius": 0.061945
+      },
+      "sphere_b": {
+        "center": [
+          0.0002358243517775263,
+          0.004118430876613885,
+          0.05698597823249418
+        ],
+        "radius": 0.049364736
+      }
+    },
+    {
+      "a": "platform_base_link",
+      "i": 4,
+      "b": "r_link2",
+      "j": 2,
+      "count": 5,
+      "sphere_a": {
+        "center": [
+          -0.14848898351192474,
+          -0.07358071766793728,
+          -0.0007268860936164856
+        ],
+        "radius": 0.07528
+      },
+      "sphere_b": {
+        "center": [
+          9.438661912607798e-06,
+          -5.744102615840675e-05,
+          0.1209455873060121
+        ],
+        "radius": 0.0466089
+      }
+    },
+    {
+      "a": "platform_base_link",
+      "i": 1,
+      "b": "r_link3",
+      "j": 2,
+      "count": 5,
+      "sphere_a": {
+        "center": [
+          -0.1470394764005451,
+          -0.14777405007274882,
+          -0.0017696766788563212
+        ],
+        "radius": 0.068725705785637
+      },
+      "sphere_b": {
+        "center": [
+          9.925678809647877e-05,
+          0.0751445726318575,
+          -0.005262292674433759
+        ],
+        "radius": 0.0483032
+      }
+    },
+    {
+      "a": "body_base_link",
+      "i": 95,
+      "b": "l_base_link1",
+      "j": 0,
+      "count": 4,
+      "sphere_a": {
+        "center": [
+          0.053696707955625186,
+          -0.07203837797483217,
+          0.6795844058946073
+        ],
+        "radius": 0.09846919667154373
+      },
+      "sphere_b": {
+        "center": [
+          0.0,
+          0.0,
+          -0.025
+        ],
+        "radius": 0.07624
+      }
+    },
+    {
+      "a": "platform_base_link",
+      "i": 4,
+      "b": "r_link3",
+      "j": 0,
+      "count": 2,
+      "sphere_a": {
+        "center": [
+          -0.14848898351192474,
+          -0.07358071766793728,
+          -0.0007268860936164856
+        ],
+        "radius": 0.07528
+      },
+      "sphere_b": {
+        "center": [
+          -0.0003072969488743315,
+          0.010933944366932563,
+          -0.04525227062780537
+        ],
+        "radius": 0.0460768
+      }
+    }
+  ],
+  "mesh_watertight": {
+    "base_link_underpan": false,
+    "link_right_wheel": false,
+    "link_left_wheel": false,
+    "link_swivel_wheel_1_1": false,
+    "link_swivel_wheel_1_2": false,
+    "link_swivel_wheel_2_1": false,
+    "link_swivel_wheel_2_2": false,
+    "link_swivel_wheel_3_1": false,
+    "link_swivel_wheel_3_2": false,
+    "link_swivel_wheel_4_1": false,
+    "link_swivel_wheel_4_2": false,
+    "body_base_link": false,
+    "platform_base_link": false,
+    "head_link1": false,
+    "head_link2": false,
+    "camera_link": true,
+    "l_base_link_rmg24": false,
+    "l_Link_finger1": true,
+    "l_Link_finger2": true,
+    "r_base_link_rmg24": false,
+    "r_Link_finger1": true,
+    "r_Link_finger2": true,
+    "l_base_link1": false,
+    "l_link1": true,
+    "l_link2": true,
+    "l_link3": false,
+    "l_link4": true,
+    "l_link5": true,
+    "l_link6": true,
+    "l_link7": false,
+    "r_base_link1": false,
+    "r_link1": true,
+    "r_link2": true,
+    "r_link3": false,
+    "r_link4": true,
+    "r_link5": true,
+    "r_link6": true,
+    "r_link7": false
+  },
+  "scope": "20 terminal configurations only; FCL triangle surfaces, not certified solid containment; no path/world validation"
+}

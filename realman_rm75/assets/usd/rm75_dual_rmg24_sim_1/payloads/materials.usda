@@ -1,0 +1,90 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "URDF USD Converter v0.1.3"
+    }
+    doc = """Generated from Composed Stage of root layer /tmp/tmp0irb955r/overseas_75_b_v_description.usdc
+
+
+Generated from Composed Stage of root layer /tmp/urdf_import_rm75_dual_rmg24_sim_qrsmhf04/usdex_rm75_dual_rmg24_sim/overseas_75_b_v_description.usdc
+
+
+Generated from Composed Stage of root layer /tmp/urdf_import_rm75_dual_rmg24_sim_qrsmhf04/temp_rm75_dual_rmg24_sim/rm75_dual_rmg24_sim.usd
+
+
+Generated from Composed Stage of root layer /home/fang/isaacsim_rm75/assets/usd/rm75_dual_rmg24_sim_1/payloads/base.usd
+"""
+    kilogramsPerUnit = 1
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+
+def Scope "Materials"
+{
+    def Material "material_1"
+    {
+        color3f inputs:diffuseColor = (0.5906241, 0.63760066, 0.8549858)
+        float inputs:metallic = 0
+        float inputs:opacity = 1
+        float inputs:roughness = 0.5
+        token inputs:wrapMode = "repeat"
+        token outputs:displacement (
+            displayGroup = "Outputs"
+        )
+        prepend token outputs:displacement.connect = </Materials/material_1/PreviewSurface.outputs:displacement>
+        token outputs:surface (
+            displayGroup = "Outputs"
+        )
+        prepend token outputs:surface.connect = </Materials/material_1/PreviewSurface.outputs:surface>
+        token outputs:volume (
+            displayGroup = "Outputs"
+        )
+
+        def Shader "PreviewSurface" (
+            apiSchemas = ["NodeDefAPI"]
+        )
+        {
+            token info:id = "UsdPreviewSurface"
+            prepend color3f inputs:diffuseColor.connect = </Materials/material_1.inputs:diffuseColor>
+            prepend float inputs:metallic.connect = </Materials/material_1.inputs:metallic>
+            prepend float inputs:opacity.connect = </Materials/material_1.inputs:opacity>
+            prepend float inputs:roughness.connect = </Materials/material_1.inputs:roughness>
+            token outputs:displacement
+            token outputs:surface
+        }
+    }
+
+    def Material "material_20"
+    {
+        color3f inputs:diffuseColor = (0.5271134, 0.5271134, 0.5271134)
+        float inputs:metallic = 0
+        float inputs:opacity = 1
+        float inputs:roughness = 0.5
+        token inputs:wrapMode = "repeat"
+        token outputs:displacement (
+            displayGroup = "Outputs"
+        )
+        prepend token outputs:displacement.connect = </Materials/material_20/PreviewSurface.outputs:displacement>
+        token outputs:surface (
+            displayGroup = "Outputs"
+        )
+        prepend token outputs:surface.connect = </Materials/material_20/PreviewSurface.outputs:surface>
+        token outputs:volume (
+            displayGroup = "Outputs"
+        )
+
+        def Shader "PreviewSurface" (
+            apiSchemas = ["NodeDefAPI"]
+        )
+        {
+            token info:id = "UsdPreviewSurface"
+            prepend color3f inputs:diffuseColor.connect = </Materials/material_20.inputs:diffuseColor>
+            prepend float inputs:metallic.connect = </Materials/material_20.inputs:metallic>
+            prepend float inputs:opacity.connect = </Materials/material_20.inputs:opacity>
+            prepend float inputs:roughness.connect = </Materials/material_20.inputs:roughness>
+            token outputs:displacement
+            token outputs:surface
+        }
+    }
+}
+

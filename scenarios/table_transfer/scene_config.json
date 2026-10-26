@@ -1,0 +1,98 @@
+{
+  "room": {
+    "interior_size_m": [
+      7.0,
+      7.0
+    ],
+    "wall_height_m": 2.5,
+    "wall_thickness_m": 0.12
+  },
+  "tables": [
+    {
+      "name": "SourceTable",
+      "center_xy_m": [
+        -1.2,
+        1.5
+      ],
+      "size_m": [
+        1.4,
+        0.6,
+        0.75
+      ]
+    },
+    {
+      "name": "TargetTable",
+      "center_xy_m": [
+        1.2,
+        1.5
+      ],
+      "size_m": [
+        1.4,
+        0.6,
+        0.75
+      ]
+    }
+  ],
+  "tabletop_thickness_m": 0.04,
+  "leg_width_m": 0.06,
+  "cup": {
+    "radius_m": 0.03,
+    "height_m": 0.12,
+    "mass_kg": 0.15,
+    "initial_center_m": [
+      -1.2,
+      1.32,
+      0.812
+    ]
+  },
+  "placement_center_m": [
+    1.2,
+    1.32,
+    0.82
+  ],
+  "robot": {
+    "usd": "/home/fang/isaacsim_rm75/assets/usd/rm75_dual_rmg24_sim_1/rm75_dual_rmg24_sim.usda",
+    "spawn_xy_m": [
+      -1.3,
+      0.5
+    ],
+    "yaw_deg": 180.0,
+    "initial_posture": "/home/fang/robot_ws/postures/mobile_manipulation_initial.json",
+    "curobo_config": "/home/fang/robot_ws/postures/rm75_mobile_manipulation.yml",
+    "grasp_tcp_frames": {
+      "left": "l_grasp_tcp",
+      "right": "r_grasp_tcp"
+    },
+    "grasp_tcp_definition": "/home/fang/robot_ws/postures/grasp_tcp_definition.json",
+    "grasp_tcp_prim_paths": {
+      "l_grasp_tcp": "/World/Robot/Geometry/base_link_underpan/body_base_link/platform_base_link/l_base_link1/l_link1/l_link2/l_link3/l_link4/l_link5/l_link6/l_link7/l_tool0/l_grasp_tcp",
+      "r_grasp_tcp": "/World/Robot/Geometry/base_link_underpan/body_base_link/platform_base_link/r_base_link1/r_link1/r_link2/r_link3/r_link4/r_link5/r_link6/r_link7/r_tool0/r_grasp_tcp"
+    }
+  },
+  "task": {
+    "arm": "right",
+    "pick_object": "/World/Environment/Cup",
+    "target_marker": "/World/Environment/TargetTray",
+    "perception": "simulation_ground_truth",
+    "status": "numerical_pick_lift_transfer_place_withdraw_planning"
+  },
+  "tray": {
+    "name": "TargetTray",
+    "center_xy_m": [
+      1.2,
+      1.32
+    ],
+    "outer_size_m": [
+      0.25,
+      0.18
+    ],
+    "base_thickness_m": 0.01,
+    "rim_height_m": 0.025,
+    "rim_thickness_m": 0.008,
+    "table_name": "TargetTable"
+  },
+  "transfer": {
+    "lift_height_m": 0.05,
+    "withdraw_distance_m": 0.15
+  }
+}

@@ -1,0 +1,975 @@
+{
+  "status": "editable_draft_not_planning_validated",
+  "source_sha256": "9e3449da2dff02c3f2bd0bf15bfa2f97e5774f4a84596de49827c57805d14ee8",
+  "links": {
+    "base_link_underpan": {
+      "method": "occupied_regular_cells",
+      "baseline": {
+        "count": 40,
+        "sampled_surface_coverage_pct": 62.50833333333333,
+        "sampled_max_gap_mm": 122.944269980601,
+        "vertex_max_gap_mm": 112.35151283924003,
+        "aabb_excess_mm": 80.37573099136353,
+        "radius_min_mm": 8.647153154015541,
+        "radius_max_mm": 107.6149046421051
+      },
+      "candidate": {
+        "count": 64,
+        "sampled_surface_coverage_pct": 100.0,
+        "sampled_max_gap_mm": 0.0,
+        "vertex_max_gap_mm": 0.0,
+        "aabb_excess_mm": 54.166666070620224,
+        "radius_min_mm": 85.0,
+        "radius_max_mm": 90.0
+      },
+      "independent_check": {
+        "count": 64,
+        "sampled_surface_coverage_pct": 100.0,
+        "sampled_max_gap_mm": 0.0,
+        "vertex_max_gap_mm": 0.0,
+        "aabb_excess_mm": 54.166666070620224,
+        "radius_min_mm": 85.0,
+        "radius_max_mm": 90.0
+      }
+    },
+    "body_base_link": {
+      "method": "height_partitioned_regular_cells",
+      "baseline": {
+        "count": 44,
+        "sampled_surface_coverage_pct": 61.650000000000006,
+        "sampled_max_gap_mm": 133.62310403877393,
+        "vertex_max_gap_mm": 136.85346967089907,
+        "aabb_excess_mm": 78.8594176992774,
+        "radius_min_mm": 18.354088068008423,
+        "radius_max_mm": 150.18853545188904
+      },
+      "candidate": {
+        "count": 116,
+        "sampled_surface_coverage_pct": 100.0,
+        "sampled_max_gap_mm": 0.0,
+        "vertex_max_gap_mm": 0.0,
+        "aabb_excess_mm": 45.74999994598329,
+        "radius_min_mm": 65.0,
+        "radius_max_mm": 105.0
+      },
+      "independent_check": {
+        "count": 116,
+        "sampled_surface_coverage_pct": 100.0,
+        "sampled_max_gap_mm": 0.0,
+        "vertex_max_gap_mm": 0.0,
+        "aabb_excess_mm": 45.74999994598329,
+        "radius_min_mm": 65.0,
+        "radius_max_mm": 105.0
+      }
+    },
+    "camera_link": {
+      "method": "unchanged_baseline",
+      "baseline": {
+        "count": 3,
+        "sampled_surface_coverage_pct": 82.81666666666668,
+        "sampled_max_gap_mm": 4.427036514820338,
+        "vertex_max_gap_mm": 2.9295070073189247,
+        "aabb_excess_mm": 6.1725309933535755,
+        "radius_min_mm": 17.888104543089867,
+        "radius_max_mm": 18.308846279978752
+      },
+      "candidate": {
+        "count": 3,
+        "sampled_surface_coverage_pct": 82.81666666666668,
+        "sampled_max_gap_mm": 4.427036514820338,
+        "vertex_max_gap_mm": 2.9295070073189247,
+        "aabb_excess_mm": 6.1725309933535755,
+        "radius_min_mm": 17.888104543089867,
+        "radius_max_mm": 18.308846279978752
+      }
+    },
+    "head_link1": {
+      "method": "unchanged_baseline",
+      "baseline": {
+        "count": 4,
+        "sampled_surface_coverage_pct": 92.05,
+        "sampled_max_gap_mm": 7.638645356364562,
+        "vertex_max_gap_mm": 5.304143464586499,
+        "aabb_excess_mm": 15.78068919479847,
+        "radius_min_mm": 14.753521420061588,
+        "radius_max_mm": 34.689728170633316
+      },
+      "candidate": {
+        "count": 4,
+        "sampled_surface_coverage_pct": 92.05,
+        "sampled_max_gap_mm": 7.638645356364562,
+        "vertex_max_gap_mm": 5.304143464586499,
+        "aabb_excess_mm": 15.78068919479847,
+        "radius_min_mm": 14.753521420061588,
+        "radius_max_mm": 34.689728170633316
+      }
+    },
+    "head_link2": {
+      "method": "unchanged_baseline",
+      "baseline": {
+        "count": 7,
+        "sampled_surface_coverage_pct": 90.025,
+        "sampled_max_gap_mm": 12.752090340355432,
+        "vertex_max_gap_mm": 13.605244747320237,
+        "aabb_excess_mm": 20.209576934576035,
+        "radius_min_mm": 5.612406879663467,
+        "radius_max_mm": 46.55062034726143
+      },
+      "candidate": {
+        "count": 7,
+        "sampled_surface_coverage_pct": 90.025,
+        "sampled_max_gap_mm": 12.752090340355432,
+        "vertex_max_gap_mm": 13.605244747320237,
+        "aabb_excess_mm": 20.209576934576035,
+        "radius_min_mm": 5.612406879663467,
+        "radius_max_mm": 46.55062034726143
+      }
+    },
+    "l_Link_finger1": {
+      "method": "unchanged_baseline",
+      "baseline": {
+        "count": 3,
+        "sampled_surface_coverage_pct": 86.60833333333333,
+        "sampled_max_gap_mm": 5.445521455648816,
+        "vertex_max_gap_mm": 5.6564555922405635,
+        "aabb_excess_mm": 5.637213122099638,
+        "radius_min_mm": 14.456751756370068,
+        "radius_max_mm": 16.897941008210182
+      },
+      "candidate": {
+        "count": 3,
+        "sampled_surface_coverage_pct": 86.60833333333333,
+        "sampled_max_gap_mm": 5.445521455648816,
+        "vertex_max_gap_mm": 5.6564555922405635,
+        "aabb_excess_mm": 5.637213122099638,
+        "radius_min_mm": 14.456751756370068,
+        "radius_max_mm": 16.897941008210182
+      }
+    },
+    "l_Link_finger2": {
+      "method": "unchanged_baseline",
+      "baseline": {
+        "count": 3,
+        "sampled_surface_coverage_pct": 85.20833333333333,
+        "sampled_max_gap_mm": 5.780998700492628,
+        "vertex_max_gap_mm": 6.002304886961726,
+        "aabb_excess_mm": 4.690214642323554,
+        "radius_min_mm": 12.766983360052109,
+        "radius_max_mm": 17.466560006141663
+      },
+      "candidate": {
+        "count": 3,
+        "sampled_surface_coverage_pct": 85.20833333333333,
+        "sampled_max_gap_mm": 5.780998700492628,
+        "vertex_max_gap_mm": 6.002304886961726,
+        "aabb_excess_mm": 4.690214642323554,
+        "radius_min_mm": 12.766983360052109,
+        "radius_max_mm": 17.466560006141663
+      }
+    },
+    "l_base_link1": {
+      "method": "hand_authored_centers_with_sample_fitted_initial_radii",
+      "baseline": {
+        "count": 6,
+        "sampled_surface_coverage_pct": 90.44166666666666,
+        "sampled_max_gap_mm": 10.2398988922205,
+        "vertex_max_gap_mm": 10.47865129579793,
+        "aabb_excess_mm": 21.13788027781993,
+        "radius_min_mm": 6.6154515370726585,
+        "radius_max_mm": 70.10193914175034
+      },
+      "candidate": {
+        "count": 3,
+        "sampled_surface_coverage_pct": 100.0,
+        "sampled_max_gap_mm": 0.0,
+        "vertex_max_gap_mm": 0.0,
+        "aabb_excess_mm": 54.99999925494195,
+        "radius_min_mm": 62.5,
+        "radius_max_mm": 80.0
+      },
+      "independent_check": {
+        "count": 3,
+        "sampled_surface_coverage_pct": 100.0,
+        "sampled_max_gap_mm": 0.0,
+        "vertex_max_gap_mm": 0.0,
+        "aabb_excess_mm": 54.99999925494195,
+        "radius_min_mm": 62.5,
+        "radius_max_mm": 80.0
+      }
+    },
+    "l_base_link_rmg24": {
+      "method": "unchanged_baseline",
+      "baseline": {
+        "count": 6,
+        "sampled_surface_coverage_pct": 91.4,
+        "sampled_max_gap_mm": 7.3738150727169005,
+        "vertex_max_gap_mm": 6.715243839306925,
+        "aabb_excess_mm": 11.322878301143646,
+        "radius_min_mm": 16.15520380437374,
+        "radius_max_mm": 36.75033897161484
+      },
+      "candidate": {
+        "count": 6,
+        "sampled_surface_coverage_pct": 91.4,
+        "sampled_max_gap_mm": 7.3738150727169005,
+        "vertex_max_gap_mm": 6.715243839306925,
+        "aabb_excess_mm": 11.322878301143646,
+        "radius_min_mm": 16.15520380437374,
+        "radius_max_mm": 36.75033897161484
+      }
+    },
+    "l_link1": {
+      "method": "hand_authored_centers_with_sample_fitted_initial_radii",
+      "baseline": {
+        "count": 5,
+        "sampled_surface_coverage_pct": 83.90833333333333,
+        "sampled_max_gap_mm": 11.866870312087324,
+        "vertex_max_gap_mm": 10.684915715471234,
+        "aabb_excess_mm": 19.640760496258736,
+        "radius_min_mm": 16.29292406141758,
+        "radius_max_mm": 57.76046961545944
+      },
+      "candidate": {
+        "count": 4,
+        "sampled_surface_coverage_pct": 100.0,
+        "sampled_max_gap_mm": 0.0,
+        "vertex_max_gap_mm": 0.0,
+        "aabb_excess_mm": 31.950718164443977,
+        "radius_min_mm": 47.5,
+        "radius_max_mm": 55.0
+      },
+      "independent_check": {
+        "count": 4,
+        "sampled_surface_coverage_pct": 100.0,
+        "sampled_max_gap_mm": 0.0,
+        "vertex_max_gap_mm": 0.0,
+        "aabb_excess_mm": 31.950718164443977,
+        "radius_min_mm": 47.5,
+        "radius_max_mm": 55.0
+      }
+    },
+    "l_link2": {
+      "method": "hand_authored_centers_with_sample_fitted_initial_radii",
+      "baseline": {
+        "count": 13,
+        "sampled_surface_coverage_pct": 78.23333333333333,
+        "sampled_max_gap_mm": 7.36890016479563,
+        "vertex_max_gap_mm": 7.045927181441775,
+        "aabb_excess_mm": 16.95949910208583,
+        "radius_min_mm": 9.969676844775677,
+        "radius_max_mm": 52.70201340317726
+      },
+      "candidate": {
+        "count": 5,
+        "sampled_surface_coverage_pct": 100.0,
+        "sampled_max_gap_mm": 0.0,
+        "vertex_max_gap_mm": 0.0,
+        "aabb_excess_mm": 22.499996423721303,
+        "radius_min_mm": 42.5,
+        "radius_max_mm": 55.0
+      },
+      "independent_check": {
+        "count": 5,
+        "sampled_surface_coverage_pct": 100.0,
+        "sampled_max_gap_mm": 0.0,
+        "vertex_max_gap_mm": 0.0,
+        "aabb_excess_mm": 22.499996423721303,
+        "radius_min_mm": 42.5,
+        "radius_max_mm": 55.0
+      }
+    },
+    "l_link3": {
+      "method": "hand_authored_centers_with_sample_fitted_initial_radii",
+      "baseline": {
+        "count": 5,
+        "sampled_surface_coverage_pct": 84.29166666666667,
+        "sampled_max_gap_mm": 10.505366540441297,
+        "vertex_max_gap_mm": 10.092786231663188,
+        "aabb_excess_mm": 17.216595821082592,
+        "radius_min_mm": 6.950413808226585,
+        "radius_max_mm": 51.222700625658035
+      },
+      "candidate": {
+        "count": 4,
+        "sampled_surface_coverage_pct": 100.0,
+        "sampled_max_gap_mm": 0.0,
+        "vertex_max_gap_mm": 0.0,
+        "aabb_excess_mm": 33.02124738693238,
+        "radius_min_mm": 45.0,
+        "radius_max_mm": 55.0
+      },
+      "independent_check": {
+        "count": 4,
+        "sampled_surface_coverage_pct": 100.0,
+        "sampled_max_gap_mm": 0.0,
+        "vertex_max_gap_mm": 0.0,
+        "aabb_excess_mm": 33.02124738693238,
+        "radius_min_mm": 45.0,
+        "radius_max_mm": 55.0
+      }
+    },
+    "l_link4": {
+      "method": "hand_authored_centers_with_sample_fitted_initial_radii",
+      "baseline": {
+        "count": 12,
+        "sampled_surface_coverage_pct": 84.25833333333334,
+        "sampled_max_gap_mm": 5.738089537513896,
+        "vertex_max_gap_mm": 5.8345890464947505,
+        "aabb_excess_mm": 13.70126072288258,
+        "radius_min_mm": 2.0627835765480995,
+        "radius_max_mm": 42.912449687719345
+      },
+      "candidate": {
+        "count": 4,
+        "sampled_surface_coverage_pct": 100.0,
+        "sampled_max_gap_mm": 0.0,
+        "vertex_max_gap_mm": 0.0,
+        "aabb_excess_mm": 20.995945036411285,
+        "radius_min_mm": 40.0,
+        "radius_max_mm": 55.0
+      },
+      "independent_check": {
+        "count": 4,
+        "sampled_surface_coverage_pct": 100.0,
+        "sampled_max_gap_mm": 0.0,
+        "vertex_max_gap_mm": 0.0,
+        "aabb_excess_mm": 20.995945036411285,
+        "radius_min_mm": 40.0,
+        "radius_max_mm": 55.0
+      }
+    },
+    "l_link5": {
+      "method": "hand_authored_centers_with_sample_fitted_initial_radii",
+      "baseline": {
+        "count": 7,
+        "sampled_surface_coverage_pct": 81.975,
+        "sampled_max_gap_mm": 9.318515675359185,
+        "vertex_max_gap_mm": 9.092918431743115,
+        "aabb_excess_mm": 13.35667131934315,
+        "radius_min_mm": 2.594561316072941,
+        "radius_max_mm": 41.16949811577797
+      },
+      "candidate": {
+        "count": 4,
+        "sampled_surface_coverage_pct": 100.0,
+        "sampled_max_gap_mm": 0.0,
+        "vertex_max_gap_mm": 0.0,
+        "aabb_excess_mm": 23.500006198883053,
+        "radius_min_mm": 35.0,
+        "radius_max_mm": 47.5
+      },
+      "independent_check": {
+        "count": 4,
+        "sampled_surface_coverage_pct": 100.0,
+        "sampled_max_gap_mm": 0.0,
+        "vertex_max_gap_mm": 0.0,
+        "aabb_excess_mm": 23.500006198883053,
+        "radius_min_mm": 35.0,
+        "radius_max_mm": 47.5
+      }
+    },
+    "l_link6": {
+      "method": "hand_authored_centers_with_sample_fitted_initial_radii",
+      "baseline": {
+        "count": 7,
+        "sampled_surface_coverage_pct": 81.86666666666666,
+        "sampled_max_gap_mm": 7.8790885358259315,
+        "vertex_max_gap_mm": 6.688730180452258,
+        "aabb_excess_mm": 14.96746474003885,
+        "radius_min_mm": 12.548263184726238,
+        "radius_max_mm": 43.4565544128418
+      },
+      "candidate": {
+        "count": 4,
+        "sampled_surface_coverage_pct": 100.0,
+        "sampled_max_gap_mm": 0.0,
+        "vertex_max_gap_mm": 0.0,
+        "aabb_excess_mm": 20.000005364418037,
+        "radius_min_mm": 40.0,
+        "radius_max_mm": 45.0
+      },
+      "independent_check": {
+        "count": 4,
+        "sampled_surface_coverage_pct": 100.0,
+        "sampled_max_gap_mm": 0.0,
+        "vertex_max_gap_mm": 0.0,
+        "aabb_excess_mm": 20.000005364418037,
+        "radius_min_mm": 40.0,
+        "radius_max_mm": 45.0
+      }
+    },
+    "l_link7": {
+      "method": "hand_authored_centers_with_sample_fitted_initial_radii",
+      "baseline": {
+        "count": 6,
+        "sampled_surface_coverage_pct": 80.375,
+        "sampled_max_gap_mm": 6.191742492047257,
+        "vertex_max_gap_mm": 6.661887154248727,
+        "aabb_excess_mm": 13.937197706102133,
+        "radius_min_mm": 9.076802060008049,
+        "radius_max_mm": 36.15860268473625
+      },
+      "candidate": {
+        "count": 4,
+        "sampled_surface_coverage_pct": 100.0,
+        "sampled_max_gap_mm": 0.0,
+        "vertex_max_gap_mm": 0.0,
+        "aabb_excess_mm": 38.58665525913238,
+        "radius_min_mm": 40.0,
+        "radius_max_mm": 62.5
+      },
+      "independent_check": {
+        "count": 4,
+        "sampled_surface_coverage_pct": 100.0,
+        "sampled_max_gap_mm": 0.0,
+        "vertex_max_gap_mm": 0.0,
+        "aabb_excess_mm": 38.58665525913238,
+        "radius_min_mm": 40.0,
+        "radius_max_mm": 62.5
+      }
+    },
+    "link_left_wheel": {
+      "method": "unchanged_baseline",
+      "baseline": {
+        "count": 9,
+        "sampled_surface_coverage_pct": 87.51666666666667,
+        "sampled_max_gap_mm": 9.970835131069936,
+        "vertex_max_gap_mm": 10.726376157962978,
+        "aabb_excess_mm": 18.46100762486458,
+        "radius_min_mm": 6.304728332906961,
+        "radius_max_mm": 52.08170413970947
+      },
+      "candidate": {
+        "count": 9,
+        "sampled_surface_coverage_pct": 87.51666666666667,
+        "sampled_max_gap_mm": 9.970835131069936,
+        "vertex_max_gap_mm": 10.726376157962978,
+        "aabb_excess_mm": 18.46100762486458,
+        "radius_min_mm": 6.304728332906961,
+        "radius_max_mm": 52.08170413970947
+      }
+    },
+    "link_right_wheel": {
+      "method": "unchanged_baseline",
+      "baseline": {
+        "count": 10,
+        "sampled_surface_coverage_pct": 87.31666666666666,
+        "sampled_max_gap_mm": 11.34942165679987,
+        "vertex_max_gap_mm": 10.221643882865658,
+        "aabb_excess_mm": 17.718641087412834,
+        "radius_min_mm": 11.98181789368391,
+        "radius_max_mm": 49.41564053297043
+      },
+      "candidate": {
+        "count": 10,
+        "sampled_surface_coverage_pct": 87.31666666666666,
+        "sampled_max_gap_mm": 11.34942165679987,
+        "vertex_max_gap_mm": 10.221643882865658,
+        "aabb_excess_mm": 17.718641087412834,
+        "radius_min_mm": 11.98181789368391,
+        "radius_max_mm": 49.41564053297043
+      }
+    },
+    "link_swivel_wheel_1_1": {
+      "method": "unchanged_baseline",
+      "baseline": {
+        "count": 6,
+        "sampled_surface_coverage_pct": 93.48333333333333,
+        "sampled_max_gap_mm": 11.265006229309899,
+        "vertex_max_gap_mm": 11.537687908092558,
+        "aabb_excess_mm": 17.11097126826644,
+        "radius_min_mm": 3.454066114500165,
+        "radius_max_mm": 38.51770982146263
+      },
+      "candidate": {
+        "count": 6,
+        "sampled_surface_coverage_pct": 93.48333333333333,
+        "sampled_max_gap_mm": 11.265006229309899,
+        "vertex_max_gap_mm": 11.537687908092558,
+        "aabb_excess_mm": 17.11097126826644,
+        "radius_min_mm": 3.454066114500165,
+        "radius_max_mm": 38.51770982146263
+      }
+    },
+    "link_swivel_wheel_1_2": {
+      "method": "unchanged_baseline",
+      "baseline": {
+        "count": 2,
+        "sampled_surface_coverage_pct": 85.125,
+        "sampled_max_gap_mm": 3.7478785426989654,
+        "vertex_max_gap_mm": 4.117255602818045,
+        "aabb_excess_mm": 16.741626022849232,
+        "radius_min_mm": 4.291035700589418,
+        "radius_max_mm": 40.10733589529991
+      },
+      "candidate": {
+        "count": 2,
+        "sampled_surface_coverage_pct": 85.125,
+        "sampled_max_gap_mm": 3.7478785426989654,
+        "vertex_max_gap_mm": 4.117255602818045,
+        "aabb_excess_mm": 16.741626022849232,
+        "radius_min_mm": 4.291035700589418,
+        "radius_max_mm": 40.10733589529991
+      }
+    },
+    "link_swivel_wheel_2_1": {
+      "method": "unchanged_baseline",
+      "baseline": {
+        "count": 6,
+        "sampled_surface_coverage_pct": 92.77499999999999,
+        "sampled_max_gap_mm": 7.560510690481193,
+        "vertex_max_gap_mm": 6.920463636691042,
+        "aabb_excess_mm": 20.02774365246296,
+        "radius_min_mm": 2.63377046212554,
+        "radius_max_mm": 45.58157920837402
+      },
+      "candidate": {
+        "count": 6,
+        "sampled_surface_coverage_pct": 92.77499999999999,
+        "sampled_max_gap_mm": 7.560510690481193,
+        "vertex_max_gap_mm": 6.920463636691042,
+        "aabb_excess_mm": 20.02774365246296,
+        "radius_min_mm": 2.63377046212554,
+        "radius_max_mm": 45.58157920837402
+      }
+    },
+    "link_swivel_wheel_2_2": {
+      "method": "unchanged_baseline",
+      "baseline": {
+        "count": 8,
+        "sampled_surface_coverage_pct": 90.75833333333333,
+        "sampled_max_gap_mm": 7.0104063825389344,
+        "vertex_max_gap_mm": 7.2966661070170895,
+        "aabb_excess_mm": 18.62785778939724,
+        "radius_min_mm": 5.571645684540272,
+        "radius_max_mm": 37.4087318778038
+      },
+      "candidate": {
+        "count": 8,
+        "sampled_surface_coverage_pct": 90.75833333333333,
+        "sampled_max_gap_mm": 7.0104063825389344,
+        "vertex_max_gap_mm": 7.2966661070170895,
+        "aabb_excess_mm": 18.62785778939724,
+        "radius_min_mm": 5.571645684540272,
+        "radius_max_mm": 37.4087318778038
+      }
+    },
+    "link_swivel_wheel_3_1": {
+      "method": "unchanged_baseline",
+      "baseline": {
+        "count": 4,
+        "sampled_surface_coverage_pct": 91.61666666666667,
+        "sampled_max_gap_mm": 10.496983664434765,
+        "vertex_max_gap_mm": 10.616742657546405,
+        "aabb_excess_mm": 17.984512262046337,
+        "radius_min_mm": 3.018441144376993,
+        "radius_max_mm": 46.29039764404297
+      },
+      "candidate": {
+        "count": 4,
+        "sampled_surface_coverage_pct": 91.61666666666667,
+        "sampled_max_gap_mm": 10.496983664434765,
+        "vertex_max_gap_mm": 10.616742657546405,
+        "aabb_excess_mm": 17.984512262046337,
+        "radius_min_mm": 3.018441144376993,
+        "radius_max_mm": 46.29039764404297
+      }
+    },
+    "link_swivel_wheel_3_2": {
+      "method": "unchanged_baseline",
+      "baseline": {
+        "count": 11,
+        "sampled_surface_coverage_pct": 86.81666666666666,
+        "sampled_max_gap_mm": 5.356110291277177,
+        "vertex_max_gap_mm": 4.501768764441138,
+        "aabb_excess_mm": 15.654178336262703,
+        "radius_min_mm": 4.070619586855173,
+        "radius_max_mm": 34.616582095623016
+      },
+      "candidate": {
+        "count": 11,
+        "sampled_surface_coverage_pct": 86.81666666666666,
+        "sampled_max_gap_mm": 5.356110291277177,
+        "vertex_max_gap_mm": 4.501768764441138,
+        "aabb_excess_mm": 15.654178336262703,
+        "radius_min_mm": 4.070619586855173,
+        "radius_max_mm": 34.616582095623016
+      }
+    },
+    "link_swivel_wheel_4_1": {
+      "method": "unchanged_baseline",
+      "baseline": {
+        "count": 4,
+        "sampled_surface_coverage_pct": 97.15,
+        "sampled_max_gap_mm": 7.096720587553625,
+        "vertex_max_gap_mm": 7.063603235050085,
+        "aabb_excess_mm": 16.477450262755156,
+        "radius_min_mm": 5.47535577788949,
+        "radius_max_mm": 47.136347740888596
+      },
+      "candidate": {
+        "count": 4,
+        "sampled_surface_coverage_pct": 97.15,
+        "sampled_max_gap_mm": 7.096720587553625,
+        "vertex_max_gap_mm": 7.063603235050085,
+        "aabb_excess_mm": 16.477450262755156,
+        "radius_min_mm": 5.47535577788949,
+        "radius_max_mm": 47.136347740888596
+      }
+    },
+    "link_swivel_wheel_4_2": {
+      "method": "unchanged_baseline",
+      "baseline": {
+        "count": 10,
+        "sampled_surface_coverage_pct": 84.58333333333333,
+        "sampled_max_gap_mm": 6.391618046608903,
+        "vertex_max_gap_mm": 5.742815571715597,
+        "aabb_excess_mm": 12.265104800462723,
+        "radius_min_mm": 6.903906352818012,
+        "radius_max_mm": 31.076613813638687
+      },
+      "candidate": {
+        "count": 10,
+        "sampled_surface_coverage_pct": 84.58333333333333,
+        "sampled_max_gap_mm": 6.391618046608903,
+        "vertex_max_gap_mm": 5.742815571715597,
+        "aabb_excess_mm": 12.265104800462723,
+        "radius_min_mm": 6.903906352818012,
+        "radius_max_mm": 31.076613813638687
+      }
+    },
+    "platform_base_link": {
+      "method": "occupied_regular_cells",
+      "baseline": {
+        "count": 14,
+        "sampled_surface_coverage_pct": 0.05,
+        "sampled_max_gap_mm": 147.49900901458037,
+        "vertex_max_gap_mm": 147.19570143388265,
+        "aabb_excess_mm": 0.0,
+        "radius_min_mm": 2.0000000949949026,
+        "radius_max_mm": 2.0000000949949026
+      },
+      "candidate": {
+        "count": 42,
+        "sampled_surface_coverage_pct": 100.0,
+        "sampled_max_gap_mm": 0.0,
+        "vertex_max_gap_mm": 0.0,
+        "aabb_excess_mm": 43.14385719597341,
+        "radius_min_mm": 75.0,
+        "radius_max_mm": 80.0
+      },
+      "independent_check": {
+        "count": 42,
+        "sampled_surface_coverage_pct": 100.0,
+        "sampled_max_gap_mm": 0.0,
+        "vertex_max_gap_mm": 0.0,
+        "aabb_excess_mm": 43.14385719597341,
+        "radius_min_mm": 75.0,
+        "radius_max_mm": 80.0
+      }
+    },
+    "r_Link_finger1": {
+      "method": "unchanged_baseline",
+      "baseline": {
+        "count": 3,
+        "sampled_surface_coverage_pct": 87.85,
+        "sampled_max_gap_mm": 4.283081635971957,
+        "vertex_max_gap_mm": 4.08191407105378,
+        "aabb_excess_mm": 3.86678239738103,
+        "radius_min_mm": 14.386146329343319,
+        "radius_max_mm": 17.044102773070335
+      },
+      "candidate": {
+        "count": 3,
+        "sampled_surface_coverage_pct": 87.85,
+        "sampled_max_gap_mm": 4.283081635971957,
+        "vertex_max_gap_mm": 4.08191407105378,
+        "aabb_excess_mm": 3.86678239738103,
+        "radius_min_mm": 14.386146329343319,
+        "radius_max_mm": 17.044102773070335
+      }
+    },
+    "r_Link_finger2": {
+      "method": "unchanged_baseline",
+      "baseline": {
+        "count": 3,
+        "sampled_surface_coverage_pct": 89.58333333333334,
+        "sampled_max_gap_mm": 4.029223413822395,
+        "vertex_max_gap_mm": 3.0401982104213445,
+        "aabb_excess_mm": 5.4189590737223625,
+        "radius_min_mm": 14.996740035712719,
+        "radius_max_mm": 16.63406752049923
+      },
+      "candidate": {
+        "count": 3,
+        "sampled_surface_coverage_pct": 89.58333333333334,
+        "sampled_max_gap_mm": 4.029223413822395,
+        "vertex_max_gap_mm": 3.0401982104213445,
+        "aabb_excess_mm": 5.4189590737223625,
+        "radius_min_mm": 14.996740035712719,
+        "radius_max_mm": 16.63406752049923
+      }
+    },
+    "r_base_link1": {
+      "method": "hand_authored_centers_with_sample_fitted_initial_radii",
+      "baseline": {
+        "count": 4,
+        "sampled_surface_coverage_pct": 92.09166666666667,
+        "sampled_max_gap_mm": 11.357740728322824,
+        "vertex_max_gap_mm": 7.5862953944695155,
+        "aabb_excess_mm": 26.788064744323492,
+        "radius_min_mm": 9.3214251101017,
+        "radius_max_mm": 73.25217872858047
+      },
+      "candidate": {
+        "count": 3,
+        "sampled_surface_coverage_pct": 100.0,
+        "sampled_max_gap_mm": 0.0,
+        "vertex_max_gap_mm": 0.0,
+        "aabb_excess_mm": 54.99999925494195,
+        "radius_min_mm": 65.0,
+        "radius_max_mm": 80.0
+      },
+      "independent_check": {
+        "count": 3,
+        "sampled_surface_coverage_pct": 100.0,
+        "sampled_max_gap_mm": 0.0,
+        "vertex_max_gap_mm": 0.0,
+        "aabb_excess_mm": 54.99999925494195,
+        "radius_min_mm": 65.0,
+        "radius_max_mm": 80.0
+      }
+    },
+    "r_base_link_rmg24": {
+      "method": "unchanged_baseline",
+      "baseline": {
+        "count": 6,
+        "sampled_surface_coverage_pct": 90.51666666666667,
+        "sampled_max_gap_mm": 6.239120002496927,
+        "vertex_max_gap_mm": 7.665187387552726,
+        "aabb_excess_mm": 7.415547966957092,
+        "radius_min_mm": 20.61466872692108,
+        "radius_max_mm": 36.450158804655075
+      },
+      "candidate": {
+        "count": 6,
+        "sampled_surface_coverage_pct": 90.51666666666667,
+        "sampled_max_gap_mm": 6.239120002496927,
+        "vertex_max_gap_mm": 7.665187387552726,
+        "aabb_excess_mm": 7.415547966957092,
+        "radius_min_mm": 20.61466872692108,
+        "radius_max_mm": 36.450158804655075
+      }
+    },
+    "r_link1": {
+      "method": "hand_authored_centers_with_sample_fitted_initial_radii",
+      "baseline": {
+        "count": 9,
+        "sampled_surface_coverage_pct": 83.95833333333333,
+        "sampled_max_gap_mm": 9.04306632739076,
+        "vertex_max_gap_mm": 8.298833623788738,
+        "aabb_excess_mm": 16.18160685757175,
+        "radius_min_mm": 6.15075696259737,
+        "radius_max_mm": 55.72999641299248
+      },
+      "candidate": {
+        "count": 4,
+        "sampled_surface_coverage_pct": 100.0,
+        "sampled_max_gap_mm": 0.0,
+        "vertex_max_gap_mm": 0.0,
+        "aabb_excess_mm": 31.95071071386338,
+        "radius_min_mm": 47.5,
+        "radius_max_mm": 55.0
+      },
+      "independent_check": {
+        "count": 4,
+        "sampled_surface_coverage_pct": 100.0,
+        "sampled_max_gap_mm": 0.0,
+        "vertex_max_gap_mm": 0.0,
+        "aabb_excess_mm": 31.95071071386338,
+        "radius_min_mm": 47.5,
+        "radius_max_mm": 55.0
+      }
+    },
+    "r_link2": {
+      "method": "hand_authored_centers_with_sample_fitted_initial_radii",
+      "baseline": {
+        "count": 12,
+        "sampled_surface_coverage_pct": 77.525,
+        "sampled_max_gap_mm": 7.670915422960504,
+        "vertex_max_gap_mm": 8.322601064173138,
+        "aabb_excess_mm": 18.436144608131144,
+        "radius_min_mm": 5.606471095234156,
+        "radius_max_mm": 53.315892815589905
+      },
+      "candidate": {
+        "count": 5,
+        "sampled_surface_coverage_pct": 100.0,
+        "sampled_max_gap_mm": 0.0,
+        "vertex_max_gap_mm": 0.0,
+        "aabb_excess_mm": 22.499996423721303,
+        "radius_min_mm": 42.5,
+        "radius_max_mm": 55.0
+      },
+      "independent_check": {
+        "count": 5,
+        "sampled_surface_coverage_pct": 100.0,
+        "sampled_max_gap_mm": 0.0,
+        "vertex_max_gap_mm": 0.0,
+        "aabb_excess_mm": 22.499996423721303,
+        "radius_min_mm": 42.5,
+        "radius_max_mm": 55.0
+      }
+    },
+    "r_link3": {
+      "method": "hand_authored_centers_with_sample_fitted_initial_radii",
+      "baseline": {
+        "count": 2,
+        "sampled_surface_coverage_pct": 84.075,
+        "sampled_max_gap_mm": 7.918933595861086,
+        "vertex_max_gap_mm": 8.031250122728768,
+        "aabb_excess_mm": 17.212454695254564,
+        "radius_min_mm": 42.34326630830765,
+        "radius_max_mm": 49.19521510601044
+      },
+      "candidate": {
+        "count": 4,
+        "sampled_surface_coverage_pct": 100.0,
+        "sampled_max_gap_mm": 0.0,
+        "vertex_max_gap_mm": 0.0,
+        "aabb_excess_mm": 33.02117288112641,
+        "radius_min_mm": 45.0,
+        "radius_max_mm": 55.0
+      },
+      "independent_check": {
+        "count": 4,
+        "sampled_surface_coverage_pct": 100.0,
+        "sampled_max_gap_mm": 0.0,
+        "vertex_max_gap_mm": 0.0,
+        "aabb_excess_mm": 33.02117288112641,
+        "radius_min_mm": 45.0,
+        "radius_max_mm": 55.0
+      }
+    },
+    "r_link4": {
+      "method": "hand_authored_centers_with_sample_fitted_initial_radii",
+      "baseline": {
+        "count": 7,
+        "sampled_surface_coverage_pct": 83.275,
+        "sampled_max_gap_mm": 6.351129677004449,
+        "vertex_max_gap_mm": 6.403482203861142,
+        "aabb_excess_mm": 14.186071406584233,
+        "radius_min_mm": 12.139888480305672,
+        "radius_max_mm": 43.03818568587303
+      },
+      "candidate": {
+        "count": 4,
+        "sampled_surface_coverage_pct": 100.0,
+        "sampled_max_gap_mm": 0.0,
+        "vertex_max_gap_mm": 0.0,
+        "aabb_excess_mm": 20.995952486991882,
+        "radius_min_mm": 40.0,
+        "radius_max_mm": 55.0
+      },
+      "independent_check": {
+        "count": 4,
+        "sampled_surface_coverage_pct": 100.0,
+        "sampled_max_gap_mm": 0.0,
+        "vertex_max_gap_mm": 0.0,
+        "aabb_excess_mm": 20.995952486991882,
+        "radius_min_mm": 40.0,
+        "radius_max_mm": 55.0
+      }
+    },
+    "r_link5": {
+      "method": "hand_authored_centers_with_sample_fitted_initial_radii",
+      "baseline": {
+        "count": 3,
+        "sampled_surface_coverage_pct": 87.08333333333333,
+        "sampled_max_gap_mm": 6.670628371952987,
+        "vertex_max_gap_mm": 6.789949049968366,
+        "aabb_excess_mm": 14.488596469163895,
+        "radius_min_mm": 2.846707357093692,
+        "radius_max_mm": 42.35980659723282
+      },
+      "candidate": {
+        "count": 4,
+        "sampled_surface_coverage_pct": 100.0,
+        "sampled_max_gap_mm": 0.0,
+        "vertex_max_gap_mm": 0.0,
+        "aabb_excess_mm": 23.49999129772186,
+        "radius_min_mm": 35.0,
+        "radius_max_mm": 47.5
+      },
+      "independent_check": {
+        "count": 4,
+        "sampled_surface_coverage_pct": 100.0,
+        "sampled_max_gap_mm": 0.0,
+        "vertex_max_gap_mm": 0.0,
+        "aabb_excess_mm": 23.49999129772186,
+        "radius_min_mm": 35.0,
+        "radius_max_mm": 47.5
+      }
+    },
+    "r_link6": {
+      "method": "hand_authored_centers_with_sample_fitted_initial_radii",
+      "baseline": {
+        "count": 5,
+        "sampled_surface_coverage_pct": 83.84166666666667,
+        "sampled_max_gap_mm": 7.6075784202827155,
+        "vertex_max_gap_mm": 7.662526843664297,
+        "aabb_excess_mm": 17.040872015058994,
+        "radius_min_mm": 14.875204302370548,
+        "radius_max_mm": 42.3596128821373
+      },
+      "candidate": {
+        "count": 4,
+        "sampled_surface_coverage_pct": 100.0,
+        "sampled_max_gap_mm": 0.0,
+        "vertex_max_gap_mm": 0.0,
+        "aabb_excess_mm": 19.9969431757927,
+        "radius_min_mm": 40.0,
+        "radius_max_mm": 45.0
+      },
+      "independent_check": {
+        "count": 4,
+        "sampled_surface_coverage_pct": 100.0,
+        "sampled_max_gap_mm": 0.0,
+        "vertex_max_gap_mm": 0.0,
+        "aabb_excess_mm": 19.9969431757927,
+        "radius_min_mm": 40.0,
+        "radius_max_mm": 45.0
+      }
+    },
+    "r_link7": {
+      "method": "hand_authored_centers_with_sample_fitted_initial_radii",
+      "baseline": {
+        "count": 4,
+        "sampled_surface_coverage_pct": 79.14166666666667,
+        "sampled_max_gap_mm": 22.875023960556657,
+        "vertex_max_gap_mm": 23.992588381210844,
+        "aabb_excess_mm": 12.521863915026188,
+        "radius_min_mm": 20.878685638308525,
+        "radius_max_mm": 35.98600998520851
+      },
+      "candidate": {
+        "count": 4,
+        "sampled_surface_coverage_pct": 100.0,
+        "sampled_max_gap_mm": 0.0,
+        "vertex_max_gap_mm": 0.0,
+        "aabb_excess_mm": 36.03583827614784,
+        "radius_min_mm": 50.0,
+        "radius_max_mm": 62.5
+      },
+      "independent_check": {
+        "count": 4,
+        "sampled_surface_coverage_pct": 100.0,
+        "sampled_max_gap_mm": 0.0,
+        "vertex_max_gap_mm": 0.0,
+        "aabb_excess_mm": 36.03583827614784,
+        "radius_min_mm": 50.0,
+        "radius_max_mm": 62.5
+      }
+    }
+  }
+}

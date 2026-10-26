@@ -1,0 +1,46 @@
+"""Open the two-table task scene paused; --validate runs environment physics and exits."""
+from pathlib import Path
+import argparse,json
+parser=argparse.ArgumentParser();parser.add_argument('--headless',action='store_true');parser.add_argument('--validate',action='store_true');args=parser.parse_args()
+from isaacsim import SimulationApp
+app=SimulationApp({'headless':args.headless or args.validate,'width':1280,'height':720})
+from pxr import Usd,UsdGeom,UsdPhysics,Gf
+import omni.usd,omni.timeline
+ROOT=Path(__file__).resolve().parents[1];cfg=json.loads((ROOT/'scene_config.json').read_text())
+try:
+ if args.validate:
+  omni.usd.get_context().open_stage(str(ROOT/'assets/environment.usda'))
+  for _ in range(5):app.update()
+  from isaacsim.core.api import World
+  world=World(physics_dt=1/120,rendering_dt=1/60,stage_units_in_meters=1.)
+  world.reset()
+  for _ in range(360):world.step(render=False)
+  stage=omni.usd.get_context().get_stage();cup=stage.GetPrimAtPath('/World/Environment/Cup');pose=UsdGeom.Xformable(cup).ComputeLocalToWorldTransform(Usd.TimeCode.Default()).ExtractTranslation()
+  expected=cfg['tables'][0]['size_m'][2]+cfg['cup']['height_m']/2
+  print('CUP_POSE',list(pose),'EXPECTED_Z',expected,flush=True)
+  assert abs(pose[2]-expected)<.005, f'Cup not resting on tabletop: {pose}'
+  assert abs(pose[0]-cfg['cup']['initial_center_m'][0])<.01 and abs(pose[1]-cfg['cup']['initial_center_m'][1])<.01
+  assert cup.HasAPI(UsdPhysics.RigidBodyAPI)
+  assert not stage.GetPrimAtPath('/World/Environment/PlaceTarget').HasAPI(UsdPhysics.CollisionAPI)
+  world.stop();World.clear_instance()
+  (ROOT/'validation.json').write_text(json.dumps({'physics_steps':360,'physics_dt_s':1/120,'cup_final_center_m':list(pose),'expected_support_center_z_m':expected,'cup_resting_on_source_table':True,'scope':'Environment-only rigid-body physics; full-robot grasp/reach/navigation not tested'},indent=2))
+ omni.timeline.get_timeline_interface().stop()
+ omni.usd.get_context().open_stage(str(ROOT/'assets/rm75_table_transfer.usda'))
+ for _ in range(15):app.update()
+ stage=omni.usd.get_context().get_stage();assert stage.GetPrimAtPath('/World/Robot/Geometry').IsValid()
+ from omni.kit.viewport.utility import get_active_viewport
+ vp=get_active_viewport()
+ if vp:vp.set_active_camera('/World/OverviewCamera')
+ if args.validate:
+  import omni.replicator.core as rep
+  import numpy as np
+  from PIL import Image
+  product=rep.create.render_product('/World/OverviewCamera',(1280,720));rgb=rep.AnnotatorRegistry.get_annotator('rgb');rgb.attach([product])
+  for _ in range(8):rep.orchestrator.step(rt_subframes=4,pause_timeline=True)
+  data=rgb.get_data();assert data.size>0
+  Image.fromarray(np.asarray(data)).save(ROOT/'scene_preview.png')
+  print('VALIDATION_OK preview',ROOT/'scene_preview.png',flush=True)
+ else:
+  print('Scene ready, paused. Environment configured; grasp controller not connected.',flush=True)
+  while app.is_running():app.update()
+finally:app.close()

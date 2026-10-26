@@ -1,0 +1,180 @@
+#usda 1.0
+(
+    defaultPrim = "World"
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+
+def Xform "World"
+{
+    def Xform "Robot" (
+        prepend references = @../rm75_dual_rmg24_sim_1/rm75_dual_rmg24_sim.usda@
+    )
+    {
+        over "Geometry"
+        {
+            bool newton:selfCollisionEnabled = 1
+
+            over "base_link_underpan"
+            {
+                over "body_base_link"
+                {
+                    over "platform_base_link"
+                    {
+                        over "head_link1"
+                        {
+                            over "head_link1_1" (
+                                instanceable = false
+                            )
+                            {
+                                over "head_link1" (
+                                    instanceable = false
+                                )
+                                {
+                                }
+                            }
+
+                            over "head_link2"
+                            {
+                                over "camera_link"
+                                {
+                                    def Xform "head_d435"
+                                    {
+                                        float3 xformOp:rotateXYZ = (0, 0, 0)
+                                        double3 xformOp:translate = (0, 0, 0)
+                                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+                                        def Camera "head_camera"
+                                        {
+                                            float2 clippingRange = (0.05, 10)
+                                            float focalLength = 11.040981
+                                            float horizontalAperture = 20.955
+                                            token projection = "perspective"
+                                            custom string rm75:camera:depthAnnotator = "distance_to_image_plane"
+                                            custom string rm75:camera:forwardAxis = "-Y"
+                                            custom int rm75:camera:height = 480
+                                            custom string rm75:camera:model = "Intel RealSense D435-like"
+                                            custom string rm75:camera:upAxis = "+Z"
+                                            custom int rm75:camera:width = 640
+                                            float verticalAperture = 15.71625
+                                            quatf xformOp:orient = (0, 0, 0.70710677, 0.70710677)
+                                            uniform token[] xformOpOrder = ["xformOp:orient"]
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        over "l_base_link1"
+                        {
+                            over "l_link1"
+                            {
+                                over "l_link2"
+                                {
+                                    over "l_link3"
+                                    {
+                                        over "l_link4"
+                                        {
+                                            over "l_link5"
+                                            {
+                                                over "l_link6"
+                                                {
+                                                    over "l_link7"
+                                                    {
+                                                        over "l_tool0"
+                                                        {
+                                                            def Xform "left_wrist_d435"
+                                                            {
+                                                                float3 xformOp:rotateXYZ = (0, 0, 0)
+                                                                double3 xformOp:translate = (0, 0, 0.15)
+                                                                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+                                                                def Camera "left_camera"
+                                                                {
+                                                                    float2 clippingRange = (0.05, 10)
+                                                                    float focalLength = 11.040981
+                                                                    float horizontalAperture = 20.955
+                                                                    token projection = "perspective"
+                                                                    custom string rm75:camera:depthAnnotator = "distance_to_image_plane"
+                                                                    custom string rm75:camera:forwardAxis = "+Z"
+                                                                    custom int rm75:camera:height = 480
+                                                                    custom string rm75:camera:model = "Intel RealSense D435-like"
+                                                                    custom string rm75:camera:upAxis = "-X"
+                                                                    custom int rm75:camera:width = 640
+                                                                    float verticalAperture = 15.71625
+                                                                    quatf xformOp:orient = (0, 0.70710677, -0.70710677, 0)
+                                                                    uniform token[] xformOpOrder = ["xformOp:orient"]
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        over "r_base_link1"
+                        {
+                            over "r_link1"
+                            {
+                                over "r_link2"
+                                {
+                                    over "r_link3"
+                                    {
+                                        over "r_link4"
+                                        {
+                                            over "r_link5"
+                                            {
+                                                over "r_link6"
+                                                {
+                                                    over "r_link7"
+                                                    {
+                                                        over "r_tool0"
+                                                        {
+                                                            def Xform "right_wrist_d435"
+                                                            {
+                                                                float3 xformOp:rotateXYZ = (0, 0, 0)
+                                                                double3 xformOp:translate = (0, 0, 0.15)
+                                                                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+                                                                def Camera "right_camera"
+                                                                {
+                                                                    float2 clippingRange = (0.05, 10)
+                                                                    float focalLength = 11.040981
+                                                                    float horizontalAperture = 20.955
+                                                                    token projection = "perspective"
+                                                                    custom string rm75:camera:depthAnnotator = "distance_to_image_plane"
+                                                                    custom string rm75:camera:forwardAxis = "+Z"
+                                                                    custom int rm75:camera:height = 480
+                                                                    custom string rm75:camera:model = "Intel RealSense D435-like"
+                                                                    custom string rm75:camera:upAxis = "-X"
+                                                                    custom int rm75:camera:width = 640
+                                                                    float verticalAperture = 15.71625
+                                                                    quatf xformOp:orient = (0, 0.70710677, -0.70710677, 0)
+                                                                    uniform token[] xformOpOrder = ["xformOp:orient"]
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    def Xform "Obstacles" (
+        prepend references = @../obstacles/simple_obstacles.usda@
+    )
+    {
+    }
+}
