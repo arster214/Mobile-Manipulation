@@ -6,7 +6,7 @@ import numpy as np,yaml,yourdfpy
 from scipy.spatial.transform import Rotation
 ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT))
 from planning.carried_object import pose_matrix
-OUT=ROOT/('tests/artifacts/transport_priority' if '--priority' in sys.argv else 'tests/artifacts/transport');report=json.loads((OUT/'result.json').read_text());scene=json.loads((ROOT/'scene_config.json').read_text());cfg=yaml.safe_load(Path(scene['robot']['curobo_config']).read_text())['kinematics'];urdf=Path(cfg['urdf_path'])
+OUT=ROOT/('tests/artifacts/arm_placement' if '--placement' in sys.argv else ('tests/artifacts/transport_priority' if '--priority' in sys.argv else 'tests/artifacts/transport'));report=json.loads((OUT/'result.json').read_text());scene=json.loads((ROOT/'scene_config.json').read_text());cfg=yaml.safe_load(Path(scene['robot']['curobo_config']).read_text())['kinematics'];urdf=Path(cfg['urdf_path'])
 robot=yourdfpy.URDF.load(urdf,load_meshes=False,build_scene_graph=True,filename_handler=partial(yourdfpy.filename_handler_magic,dir=urdf.parent))
 settings=json.loads((ROOT/'planning/config.json').read_text())
 fixed=dict(zip(report['start_state']['joint_names'],report['start_state']['positions']));attachment=np.array(report['tcp_from_object']);metrics={};previous=None
@@ -21,6 +21,10 @@ for stage in ('lift','carry','place','withdraw'):
  if previous is not None:
   assert np.max(abs(previous['positions'][-1]-p['positions'][0]))<1e-6
   assert np.max(abs(previous['base_poses'][-1]-p['base_poses'][0]))<1e-6
+ if '--placement' in sys.argv and stage in ('place','withdraw'):
+  assert np.max(np.ptp(p['base_poses'],axis=0))<1e-10
+  locked=[j for j,n in enumerate(p['joint_names']) if n=='platform_joint' or n.startswith('l_joint')]
+  assert np.max(np.ptp(p['positions'][:,locked],axis=0))<1e-10
  metrics[stage]={'independent_fk_max_position_error_m':float(max(errors)),'independent_fk_max_rotation_error_rad':float(max(angles)),'duration_s':float(p['times'][-1])};previous=p
 placed=np.load(OUT/'place.npz')['object_poses'][-1];assert np.linalg.norm(placed[:3]-scene['placement_center_m'])<1e-5
 margin=np.array(scene['tray']['outer_size_m'])/2-scene['tray']['rim_thickness_m']-scene['cup']['radius_m']

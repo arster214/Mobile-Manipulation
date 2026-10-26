@@ -4,7 +4,7 @@ from functools import partial
 import sys,json,time,xml.etree.ElementTree as ET
 import numpy as np,yaml,trimesh,yourdfpy,viser
 from scipy.spatial.transform import Rotation
-ROOT=Path(__file__).resolve().parents[1];OUT=ROOT/('tests/artifacts/transport_priority' if '--priority' in sys.argv else 'tests/artifacts/transport');OLD=ROOT/('tests/artifacts/grasp_priority' if '--priority' in sys.argv else 'tests/artifacts/grasp_first')
+ROOT=Path(__file__).resolve().parents[1];OUT=ROOT/('tests/artifacts/arm_placement' if '--placement' in sys.argv else ('tests/artifacts/transport_priority' if '--priority' in sys.argv else 'tests/artifacts/transport'));OLD=ROOT/('tests/artifacts/grasp_priority' if '--priority' in sys.argv or '--placement' in sys.argv else 'tests/artifacts/grasp_first')
 report=json.loads((OUT/'result.json').read_text());assert report['complete']
 scene=json.loads((ROOT/'scene_config.json').read_text());cfg=yaml.safe_load(Path(scene['robot']['curobo_config']).read_text())['kinematics']
 pre=np.load(OLD/'r/pregrasp.npz');insert=np.load(OLD/'r/approach.npz');names=pre['joint_names'].tolist()
@@ -22,7 +22,9 @@ for label,p in parts:
 times=np.array(times);qs=np.array(qs);bases=np.array(bases);objects=np.array(objects)
 np.savez_compressed(OUT/'full_playback.npz',times=times,positions=qs,joint_names=names,base_poses=bases,object_poses=objects,stages=labels)
 urdf=Path(cfg['urdf_path']);robot=yourdfpy.URDF.load(urdf,load_meshes=False,build_scene_graph=True,filename_handler=partial(yourdfpy.filename_handler_magic,dir=urdf.parent))
-server=viser.ViserServer(host='127.0.0.1',port=8103 if '--priority' in sys.argv else 8101);server.scene.set_up_direction('+z')
+server=viser.ViserServer(host='127.0.0.1',port=8104 if '--placement' in sys.argv else (8103 if '--priority' in sys.argv else 8101));server.scene.set_up_direction('+z')
+if '--placement' in sys.argv:
+ server.gui.add_markdown('## 右臂下放与抽离\n下放/抽离固定底盘和升降；完整轨迹 **'+str(round(report['total_execution_duration_s'],2))+'秒**。\n'+ '\n'.join(f'{name}: {duration:.2f}s' for name,duration in report['execution_durations_s'].items()))
 server.gui.add_markdown('## 双桌搬运完整运动学回放\n预抓取 → 深入 → 抬升10cm → 搬运 → 放置 → 抽离。\n瓶子搬运时随TCP刚性附着，释放后留在托盘。**夹持/释放为任务事件假设，未验证夹爪接触物理。**')
 play=server.gui.add_checkbox('播放',initial_value=False);slider=server.gui.add_slider('时间 (s)',min=0,max=float(times[-1]),step=.025,initial_value=0)
 speed=server.gui.add_dropdown('速度',options=['0.5','1','2'],initial_value='1');jump=server.gui.add_dropdown('跳转阶段',options=list(boundaries),initial_value='到预抓取');info=server.gui.add_markdown('')
