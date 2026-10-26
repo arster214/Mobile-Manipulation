@@ -1,5 +1,6 @@
 """Same-start, same-world left/right constrained path comparison on CUDA."""
 import json
+import time
 import logging
 logging.basicConfig(level=logging.WARNING)
 logging.getLogger('planning.arm_comparison').setLevel(logging.INFO)
@@ -21,6 +22,7 @@ OUT = ROOT/'tests/artifacts/grasp_priority'
 
 
 def main():
+    started=time.perf_counter()
     OUT.mkdir(parents=True, exist_ok=True)
     scene = json.loads((ROOT/'scene_config.json').read_text())
     settings = json.loads((ROOT/'planning/config.json').read_text())
@@ -74,6 +76,7 @@ def main():
         print(side,json.dumps(row),flush=True)
     if selected is None:
         report['selection_reason']='Pregrasp preference is provisional: no complete locked-base approach passed'
+    report['wall_time_s']=time.perf_counter()-started
     (OUT/'result.json').write_text(json.dumps(report,indent=2)+'\n')
     print('PREFERRED',preferred,'SELECTED',selected,flush=True)
 

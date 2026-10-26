@@ -21,9 +21,10 @@ def plan_placement(lifted_state, nominal_state, goal_object_pose, attachment, ma
     target = TaskTarget(target_pose, np.array(goal_object_pose), 0., tool_frame='r_grasp_tcp',
                         task_constraints={'approach_direction':[0.,1.,0.]})
     carry_planner = make_planner(lifted_state, False)
+    nominal_planner = make_planner(nominal_state, False)
     for scope in GRASP_TIERS:
         begin = perf_counter()
-        solver = make_planner(nominal_state, False).grasp_solver(scope)
+        solver = nominal_planner.grasp_solver(scope)
         seed = state_vector(nominal_state, solver.names)
         timers['final_ik_s'] += perf_counter()-begin
         record = {'scope':scope, 'ik_solutions':0, 'retreat_pass':0, 'carry_pass':0}

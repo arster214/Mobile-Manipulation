@@ -1,0 +1,29 @@
+{
+  "scope": "Lift, carry/placement search and withdrawal; previously solved grasp trajectory reused. Independent process runs, timer excludes imports.",
+  "baseline_s": {
+    "lift_planning_s": 2.7811193840025226,
+    "placement_and_carry_search_s": 16.769092053997156,
+    "withdraw_planning_s": 1.9575971310005116,
+    "wall_time_s": 21.542363428998215
+  },
+  "optimized_runs_s": [
+    {
+      "lift_planning_s": 1.6375658610013488,
+      "placement_and_carry_search_s": 11.649363541997445,
+      "withdraw_planning_s": 1.77139736800018,
+      "wall_time_s": 15.089949850997073
+    },
+    {
+      "lift_planning_s": 1.6803424800018547,
+      "placement_and_carry_search_s": 11.771304293000867,
+      "withdraw_planning_s": 1.80881481400138,
+      "wall_time_s": 15.29373141799806
+    }
+  ],
+  "mean_wall_time_s": 15.191840634497566,
+  "execution_duration_s": 19.967703104211363,
+  "trajectory_comparison": "All saved grasp and transport NPZ arrays exactly equal to pre-optimization repository fixtures",
+  "grasp_search_separate_process_s": 23.0695264269998,
+  "grasp_search_baseline_measured": false,
+  "wall_time_reduction_fraction": 0.2947922968355551
+}

@@ -291,10 +291,10 @@
   ],
   "placement_search": {
     "timers": {
-      "final_ik_s": 7.809905267993599,
-      "upward_retreat_s": 5.6967056630019215,
-      "carry_s": 1.765655177001463,
-      "lowering_validation_s": 0.07858422999925097
+      "final_ik_s": 4.8893851559987525,
+      "upward_retreat_s": 5.2531429570044565,
+      "carry_s": 0.13995808600157034,
+      "lowering_validation_s": 0.0114830480015371
     },
     "trials": [
       {
@@ -314,10 +314,10 @@
     "scope": "arm_lift"
   },
   "timing": {
-    "lift_planning_s": 2.7800810580010875,
-    "placement_and_carry_search_s": 16.772168714000145,
-    "withdraw_planning_s": 1.9300963249988854,
-    "wall_time_s": 21.515758872999868
+    "lift_planning_s": 1.6803424800018547,
+    "placement_and_carry_search_s": 11.771304293000867,
+    "withdraw_planning_s": 1.80881481400138,
+    "wall_time_s": 15.29373141799806
   },
   "execution_durations_s": {
     "lift": 1.8171205928321392,

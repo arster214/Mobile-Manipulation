@@ -36,13 +36,8 @@ class CuroboPlanner:
         self.state = state
         self.robot = build_config(robot_source, state, runtime_directory, settings, arm_only, arm, self.reference_state)
         self.names = self.robot['kinematics']['cspace']['joint_names']
-        config = InverseKinematicsCfg.create(
-            robot=self.robot, scene_model=environment.obstacles, self_collision_check=True,
-            num_seeds=settings['num_ik_seeds'], seed_solver_num_seeds=settings['num_ik_seeds'], max_batch_size=1, position_tolerance=settings['position_tolerance_m'],
-            orientation_tolerance=settings['orientation_tolerance_rad'], use_cuda_graph=settings.get('use_cuda_graph', True),
-            optimizer_collision_activation_distance=settings['collision_activation_distance_m'],
-        )
-        self.ik = InverseKinematics(config)
+        self._ik = None
+        self._grasp_solvers = {}
         self.checker = RobotCollisionChecker(RobotCollisionCheckerCfg.load_from_config(
             robot_config=self.robot, scene_model=environment.obstacles,
             collision_activation_distance=0., self_collision_activation_distance=0.,
@@ -62,12 +57,29 @@ class CuroboPlanner:
             'jerk': np.array(cs['max_jerk']),
         }
 
+    @property
+    def ik(self):
+        """Collision-only/explicit-goal planning does not need an IK optimizer."""
+        if self._ik is None:
+            settings = self.settings
+            config = InverseKinematicsCfg.create(
+                robot=self.robot, scene_model=self.environment.obstacles, self_collision_check=True,
+                num_seeds=settings['num_ik_seeds'], seed_solver_num_seeds=settings['num_ik_seeds'],
+                max_batch_size=1, position_tolerance=settings['position_tolerance_m'],
+                orientation_tolerance=settings['orientation_tolerance_rad'],
+                use_cuda_graph=settings.get('use_cuda_graph', True),
+                optimizer_collision_activation_distance=settings['collision_activation_distance_m'])
+            self._ik = InverseKinematics(config)
+        return self._ik
+
     def grasp_solver(self, scope):
         """Use measured locks for the IK tier; connection validation stays full-body."""
-        settings = dict(self.settings, grasp_ik_scope=scope)
-        return CuroboPlanner(self.robot_source, self.state, self.environment, settings,
-                             self.runtime_directory / scope, arm=self.arm,
-                             reference_state=self.reference_state)
+        if scope not in self._grasp_solvers:
+            settings = dict(self.settings, grasp_ik_scope=scope)
+            self._grasp_solvers[scope] = CuroboPlanner(
+                self.robot_source, self.state, self.environment, settings,
+                self.runtime_directory / scope, arm=self.arm, reference_state=self.reference_state)
+        return self._grasp_solvers[scope]
 
     @staticmethod
     def tensor(values: np.ndarray) -> torch.Tensor:
@@ -114,7 +126,7 @@ class CuroboPlanner:
         q = self.tensor(positions[:, self.to_internal])[None]
         return bool(self.checker.validate(q).all().item())
 
-    def posture_metrics(self, positions: np.ndarray) -> dict:
+    def _posture_values(self, positions: np.ndarray):
         state = self.checker.get_kinematics(self.tensor(positions[:, self.to_internal])[None])
         internal = self.checker.kinematics.config.kinematics_config.joint_names
         indices = [internal.index(f'{self.arm}_joint{i}') for i in range(1,8)]
@@ -122,12 +134,23 @@ class CuroboPlanner:
         minimum, condition = singularity_metrics(jacobian)
         arm_indices = [i for i,n in enumerate(self.names) if n.startswith(('l_joint','r_joint'))]
         reference = state_vector(self.reference_state, [self.names[i] for i in arm_indices])
-        delta = np.abs(positions[:,arm_indices]-reference).max()
+        delta = np.abs(positions[:,arm_indices]-reference).max(axis=1)
+        return minimum, condition, delta
+
+    def posture_mask(self, positions: np.ndarray) -> np.ndarray:
+        """Check all seed results in one batched FK/Jacobian evaluation."""
+        minimum, condition, delta = self._posture_values(positions)
+        return ((minimum >= self.settings['jacobian_min_singular_value'])
+                & (condition <= self.settings['jacobian_max_condition_number'])
+                & (delta <= self.settings['arm_joint_max_change_rad']+1e-7))
+
+    def posture_metrics(self, positions: np.ndarray) -> dict:
+        minimum, condition, delta = self._posture_values(positions)
         return {'min_singular_value':float(minimum.min()), 'max_condition_number':float(condition.max()),
-                'max_arm_joint_change_rad':float(delta),
+                'max_arm_joint_change_rad':float(delta.max()),
                 'passed':bool(minimum.min() >= self.settings['jacobian_min_singular_value']
                               and condition.max() <= self.settings['jacobian_max_condition_number']
-                              and delta <= self.settings['arm_joint_max_change_rad']+1e-7)}
+                              and delta.max() <= self.settings['arm_joint_max_change_rad']+1e-7)}
 
     def tcp_pose(self, positions):
         pose = self.checker.get_kinematics(self.tensor(positions[:, self.to_internal])[None]).tool_poses
@@ -240,8 +263,9 @@ class CuroboPlanner:
         for fraction in np.linspace(0., 1., self.settings['approach_samples'])[1:]:
             pose = tcp_start_pose.copy()
             pose[:3] += fraction*(target.target_pose[:3]-tcp_start_pose[:3])
-            choices = [q for q in self.ik_candidates(replace(target, target_pose=pose), qs[-1])
-                       if self.posture_metrics(q[None])['passed']]
+            solutions = self.ik_candidates(replace(target, target_pose=pose), qs[-1])
+            choices = ([q for q,valid in zip(solutions,self.posture_mask(np.array(solutions))) if valid]
+                       if solutions else [])
             if not choices:
                 error = RuntimeError(f'{self.arm}-arm {target.target_type} IK failed at {fraction:.1%}; reject this grasp candidate')
                 error.partial_positions = np.array(qs)

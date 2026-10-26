@@ -59,18 +59,30 @@ def reverse_retreat(retreat, pregrasp_state):
                    validation_status=Status.NOT_RUN, execution_status=Status.NOT_RUN)
 
 
-def _plan_grasp_tier(state, environment, target, planner_factory, settings, scope):
+def _plan_grasp_tier(state, environment, target, planner_factory, settings, scope, planners=None):
     side=target.tool_frame[0]
     started=time.perf_counter()
     logging.getLogger(__name__).info('Search %s %s rank=%s', side, scope, target.task_constraints.get('candidate_rank'))
     contact_world=contact_environment(environment,target)
     grasp_target=replace(target,target_type='grasp',target_pose=np.array(target.task_constraints['grasp_pose']))
-    grasp_planner=planner_factory(state,contact_world,False,side,state).grasp_solver(scope)
-    mobile_planner=planner_factory(state,environment,False,side,state)
+    if planners is None:
+        planners = {}
+    key = (side, target.task_constraints.get('collision_object_name', 'Cup'))
+    if key not in planners:
+        planners[key] = (planner_factory(state,contact_world,False,side,state),
+                         planner_factory(state,environment,False,side,state))
+    template,mobile_planner = planners[key]
+    grasp_planner = template.grasp_solver(scope)
+    # Reuse initialization, while retaining the previous per-height seed sequence.
+    grasp_planner.rng = np.random.default_rng(0)
     q0=state_vector(state,grasp_planner.names)
     stats={'motion_scope':scope,'grasp_ik_success':0,'grasp_constraints_pass':0,'retreat_pass':0,'connection_pass':0}
     best=None;best_cost=np.inf;last_reason='No grasp IK satisfying all constraints'
-    for _ in range(settings['max_attempts']):
+    attempts = settings['max_attempts']
+    if scope != 'mobile' and not side_allowed(state_vector(state,['base_x','base_y','base_yaw']),target.object_pose,side,settings):
+        attempts = 0
+        last_reason = 'Fixed base heading violates grasp-arm side constraint'
+    for _ in range(attempts):
         for grasp_q in grasp_planner.ik_candidates(grasp_target,q0):
             stats['grasp_ik_success']+=1
             grasp_state=state_at(state,grasp_planner.names,grasp_q)
@@ -127,8 +139,9 @@ GRASP_TIERS = ('arm_only', 'arm_lift', 'mobile')
 def plan_arm_from_grasp(state, environment, target, planner_factory, settings):
     """Escalate only after the complete grasp/retreat/connection search fails."""
     history = []
+    planners = {}
     for scope in GRASP_TIERS:
-        item = _plan_grasp_tier(state, environment, target, planner_factory, settings, scope)
+        item = _plan_grasp_tier(state, environment, target, planner_factory, settings, scope, planners)
         history.append(dict(item.search_stats, reason=item.approach_reason))
         if item.complete:
             break
@@ -139,13 +152,14 @@ def plan_arm_from_grasp(state, environment, target, planner_factory, settings):
 def compare_arms(state, environment, targets, planner_factory, settings):
     """Search all arm/height choices in a tier before allowing more motion."""
     history = []
+    planners = {}
     for scope in GRASP_TIERS:
         candidates = {}
         for side in ('l', 'r'):
             choices = targets[side] if isinstance(targets[side], list) else [targets[side]]
             best = None; best_score = np.inf; attempts = []
             for target in choices:
-                item = _plan_grasp_tier(state, environment, target, planner_factory, settings, scope)
+                item = _plan_grasp_tier(state, environment, target, planner_factory, settings, scope, planners)
                 attempts.append({'candidate_rank':target.task_constraints.get('candidate_rank'),
                                  'stats':item.search_stats.copy(), 'reason':item.approach_reason})
                 if item.complete:

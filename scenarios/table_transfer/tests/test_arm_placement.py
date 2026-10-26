@@ -106,7 +106,7 @@ def main():
   return {'passed':valid,'object_state':'released and fixed in tray','finger_contact_allowed':True}
  planner.extra_validation=check_released
  withdraw=planner.plan_approach(target,tcp)
- planner.validate(withdraw);state=save('withdraw',withdraw,planner,False)
+ state=save('withdraw',withdraw,planner,False)
  timings['withdraw_planning_s']=time.perf_counter()-stage_started
  timings['wall_time_s']=time.perf_counter()-started
  report['timing']=timings

@@ -31,7 +31,7 @@ class PriorityTests(unittest.TestCase):
     def test_all_heights_before_escalating_and_stop_at_success(self):
         calls=[]
         targets={side:[SimpleNamespace(task_constraints={'candidate_rank':rank}) for rank in range(2)] for side in ('l','r')}
-        def attempt(state,world,target,factory,settings,scope):
+        def attempt(state,world,target,factory,settings,scope,planners=None):
             calls.append(scope)
             # Earlier tier can have a grasp IK but a failed connection: it is incomplete.
             return SimpleNamespace(complete=scope=='arm_lift',search_stats={},approach_reason='connection failed' if scope=='arm_only' else '',pregrasp=object(),approach=object())
