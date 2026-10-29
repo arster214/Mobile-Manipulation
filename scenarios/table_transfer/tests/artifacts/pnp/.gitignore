@@ -1,0 +1,3 @@
+# Selected acceptance evidence is tracked; retain other runtime output locally.
+*
+!.gitignore
