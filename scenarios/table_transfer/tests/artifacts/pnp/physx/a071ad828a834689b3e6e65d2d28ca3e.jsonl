@@ -1,0 +1,3 @@
+{"stage": "validate", "elapsed_s": 0.00021594400004687486, "goal": {"request_id": "physical-invalid_observation", "object_id": "blue_cube", "dimensions": [0.04, 0.04, 0.04], "source_id": "source", "destination_id": "tray", "placement_xy": [0.0, 0.0], "placement_yaw": 0.0, "arm": "l", "timeout_s": 1800, "max_retries": 0}, "mode": "isaac_physx_object__kinematic_robot__fixed_joint_grasp"}
+{"stage": "update_object", "elapsed_s": 0.0003909590000148455}
+{"stage": "update_object", "elapsed_s": 0.0006893009999657806, "failure": {"stage": "update_object", "code": "invalid_observation", "message": "Expected valid metric world pose and normalized wxyz"}}

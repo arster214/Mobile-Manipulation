@@ -1,0 +1,34 @@
+{
+  "date": "2026-10-29",
+  "conclusion": "Suspected host resource pressure from overlapping two Isaac applications plus CUDA planner; root cause not conclusively established.",
+  "confirmed": {
+    "concurrent_workloads": [
+      "PnP object-offset Isaac application",
+      "cuRobo planning subprocess",
+      "second PnP Isaac acceptance application"
+    ],
+    "second_simulator_log": "verified_suite.log:44-45",
+    "reported_system_total_memory_MB": 15090,
+    "reported_system_free_memory_MB": 1769,
+    "reported_swap_MB": 0,
+    "second_application_incomplete": true,
+    "variation_has_no_planning_result": true
+  },
+  "kernel_oom_xid_lockup_search": "-- No entries --\n",
+  "driver_and_watchdog_evidence": "2026-10-29T10:34:55+0800 fang kernel: NVRM: GPU0 refcntRequestReference_IMPL: Failed to enter state 1 (current state: 0, status: 0x00000056)\n2026-10-29T10:41:19+0800 fang kernel: NVRM: GPU0 refcntRequestReference_IMPL: Failed to enter state 1 (current state: 0, status: 0x00000056)\n2026-10-29T10:42:33+0800 fang kernel: NVRM: GPU0 refcntRequestReference_IMPL: Failed to enter state 1 (current state: 0, status: 0x00000056)\n2026-10-29T10:48:17+0800 fang kernel: NVRM: GPU0 refcntRequestReference_IMPL: Failed to enter state 1 (current state: 0, status: 0x00000056)\n2026-10-29T11:06:25+0800 fang systemd[1]: systemd-resolved.service: Watchdog timeout (limit 3min)!\n2026-10-29T11:06:32+0800 fang systemd[1]: systemd-resolved.service: Killing process 627 (systemd-resolve) with signal SIGABRT.\n",
+  "limitations": [
+    "Free memory is not MemAvailable; memory exhaustion was not directly recorded.",
+    "No pre-crash host RAM/VRAM time series.",
+    "No kernel pstore access under current user.",
+    "Wall clock moved across boot; use ordered per-boot events."
+  ],
+  "mitigation": {
+    "entry": "tests/test_pnp_physx.py",
+    "process_lock": "tests/artifacts/pnp/isaac.lock",
+    "tested_without_simulation": [
+      "Second instance rejected before Isaac import",
+      "Normal exit releases lock"
+    ],
+    "gpu_tests_restarted": false
+  }
+}

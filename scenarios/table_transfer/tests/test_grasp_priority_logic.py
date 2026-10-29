@@ -7,7 +7,7 @@ import numpy as np
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
 from planning.model import build_config
 from planning.interfaces import RobotState
-from planning.arm_comparison import compare_arms
+from planning.arm_comparison import compare_arms, _candidate_rank
 ROOT=Path(__file__).resolve().parents[1]
 
 class PriorityTests(unittest.TestCase):
@@ -21,6 +21,8 @@ class PriorityTests(unittest.TestCase):
             with tempfile.TemporaryDirectory() as directory:
                 k=build_config(source,state,directory,dict(settings,grasp_ik_scope=scope))['kinematics']
             self.assertEqual(k['cspace']['joint_names'],expected)
+            if scope=='mobile':
+                self.assertEqual(k['cspace']['cspace_distance_weight'][:3],[settings['grasp_base_ik_weight']]*3)
             for name,value in zip(state.joint_names,state.joint_positions):
                 if name.startswith('l_joint') or name=='platform_joint' and scope=='arm_only':
                     self.assertEqual(k['lock_joints'][name],value)
@@ -36,9 +38,21 @@ class PriorityTests(unittest.TestCase):
             # Earlier tier can have a grasp IK but a failed connection: it is incomplete.
             return SimpleNamespace(complete=scope=='arm_lift',search_stats={},approach_reason='connection failed' if scope=='arm_only' else '',pregrasp=object(),approach=object())
         with patch('planning.arm_comparison._plan_grasp_tier',side_effect=attempt),patch('planning.arm_comparison.path_cost',return_value=(1.,{})):
-            result,_,selected=compare_arms(None,None,targets,None,{})
+            result,_,selected=compare_arms(None,None,targets,None,{'path_cost_weights':{}})
         self.assertEqual(calls,['arm_only']*4+['arm_lift']*4)
         self.assertIsNotNone(selected)
         self.assertEqual(len(result[selected].search_stats['priority_trials']),2)
+
+    def test_mobile_prefers_less_base_motion_over_total_cost(self):
+        small=SimpleNamespace(pregrasp='small',approach='approach')
+        large=SimpleNamespace(pregrasp='large',approach='approach')
+        weights={'path_cost_weights':{'base_distance_m':1.,'base_rotation_rad':1.}}
+        def cost(plan,*args):
+            return {'small':(10.,{'base_distance_m':.01,'base_rotation_rad':0.}),
+                    'large':(1.,{'base_distance_m':.5,'base_rotation_rad':.3}),
+                    'approach':(0.,{})}[plan]
+        with patch('planning.arm_comparison.path_cost',side_effect=cost):
+            self.assertLess(_candidate_rank(small,'r',weights,'mobile'),_candidate_rank(large,'r',weights,'mobile'))
+            self.assertGreater(_candidate_rank(small,'r',weights,'arm_only'),_candidate_rank(large,'r',weights,'arm_only'))
 
 if __name__=='__main__':unittest.main()

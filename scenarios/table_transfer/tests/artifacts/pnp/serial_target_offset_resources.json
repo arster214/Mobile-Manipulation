@@ -1,0 +1,15 @@
+{
+  "returncode": 0,
+  "reason": null,
+  "minimum_available_mb": 4058.875,
+  "elapsed_s": 606.1599275890001,
+  "command": [
+    "/home/fang/isaacsim/python.sh",
+    "/home/fang/Mobile-Manipulation/scenarios/table_transfer/tests/test_pnp_physx.py",
+    "--label",
+    "serial_target_offset",
+    "--placement-xy",
+    "0.02",
+    "0"
+  ]
+}

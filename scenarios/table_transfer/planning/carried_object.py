@@ -53,8 +53,12 @@ class CarriedObject:
 
     @classmethod
     def attach(cls, tcp_pose, object_pose, radius, height, arm):
+        return cls.attach_box(tcp_pose, object_pose, [2*radius,2*radius,height], arm)
+
+    @classmethod
+    def attach_box(cls, tcp_pose, object_pose, dimensions, arm):
         return cls(np.linalg.inv(pose_matrix(tcp_pose))@pose_matrix(object_pose),
-                   np.array([2*radius,2*radius,height]),
+                   np.asarray(dimensions, dtype=float),
                    (f'{arm}_Link_finger1',f'{arm}_Link_finger2',f'{arm}_base_link_rmg24'))
 
     def poses(self, tcp_poses):
@@ -83,4 +87,4 @@ class CarriedObject:
         if len(bad):
             frame,index = bad[0]
             return {'passed':False,'robot_link':names[index],'sample':int(frame)}
-        return {'passed':True,'samples':len(transforms),'representation':'conservative cylinder bounding box'}
+        return {'passed':True,'samples':len(transforms),'representation':'oriented box'}

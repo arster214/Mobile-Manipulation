@@ -1,0 +1,37 @@
+{
+  "object": "plate",
+  "dimensions_m": [
+    0.25,
+    0.18,
+    0.02
+  ],
+  "vertices": 288,
+  "triangles": 572,
+  "origin": "outer bbox centre",
+  "z_axis": "toward tray opening / cube arbitrary axis",
+  "provisional": true,
+  "parameters": {
+    "class_id": 0,
+    "outer_top_lw_m": [
+      0.25,
+      0.18
+    ],
+    "outer_bottom_lw_m": [
+      0.23,
+      0.16
+    ],
+    "outer_height_m": 0.02,
+    "assumed_bottom_thickness_m": 0.002,
+    "assumed_wall_inset_xy_m": 0.002,
+    "assumed_rim_width_m": 0.006,
+    "assumed_rim_thickness_m": 0.002,
+    "assumed_top_corner_radius_m": 0.02,
+    "assumed_bottom_corner_radius_m": 0.018,
+    "mesh": "models/plate/model.obj",
+    "symmetry": "z_180",
+    "provisional": true,
+    "user_approved": true,
+    "approved_date": "2026-10-28",
+    "provisional_reason": "外尺寸和底尺寸已确认；底厚、壁厚和圆角未测量，模型仅为近似盆状梯形"
+  }
+}

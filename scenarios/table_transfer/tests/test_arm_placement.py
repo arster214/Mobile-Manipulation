@@ -14,17 +14,19 @@ from planning.selection import path_cost
 ROOT=Path(__file__).resolve().parents[1];OUT=ROOT/'tests/artifacts/arm_placement';OLD=ROOT/'tests/artifacts/grasp_priority'
 
 
-def main():
+def main(scene=None, obstacles=None):
  started=time.perf_counter();timings={}
  OUT.mkdir(parents=True,exist_ok=True)
- old=json.loads((OLD/'result.json').read_text());scene=json.loads((ROOT/'scene_config.json').read_text());settings=json.loads((ROOT/'planning/config.json').read_text())
+ for stage in ('lift','carry','place','withdraw'):
+  (OUT/f'{stage}.npz').unlink(missing_ok=True)
+ old=json.loads((OLD/'result.json').read_text());scene=scene or json.loads((ROOT/'scene_config.json').read_text());settings=json.loads((ROOT/'planning/config.json').read_text())
  source=Path(scene['robot']['curobo_config']);initial=old['start_state'];side=old['selected_arm']
  ref=RobotState(initial['joint_names'],np.array(initial['positions']),np.zeros(len(initial['positions'])),0.,np.array(initial['base_pose']))
  pre=np.load(OLD/side/'pregrasp.npz');insertion=np.load(OLD/side/'approach.npz')
  state=state_at(ref,['base_x','base_y','base_yaw']+pre['joint_names'].tolist(),np.r_[pre['base_poses'][-1],pre['positions'][-1]])
  state=state_at(state,insertion['joint_names'].tolist(),insertion['positions'][-1])
  start=state
- obstacles=yaml.safe_load((ROOT/'static_world.yml').read_text());obstacles['cuboid'].pop('Floor',None)
+ obstacles=obstacles or yaml.safe_load((ROOT/'static_world.yml').read_text());obstacles['cuboid'].pop('Floor',None)
  world=EnvironmentState(obstacles,0.,version=2)
  report={'start_state':{'joint_names':state.joint_names,'positions':state.joint_positions.tolist(),'base_pose':state.base_pose.tolist()},
          'reference_state':initial,'object_start_pose':old['object_pose'],'object_goal_pose':[*scene['placement_center_m'],1,0,0,0],
@@ -35,7 +37,8 @@ def main():
   return planner
  stage_started=time.perf_counter()
  first=make(state,'lift');grasp_tcp=first.tcp_pose(state_vector(state,first.names)[None])[0]
- attachment=CarriedObject.attach(grasp_tcp,np.array(old['object_pose']),scene['cup']['radius_m'],scene['cup']['height_m'],side)
+ dimensions=scene['object']['dimensions_m'] if 'object' in scene else [2*scene['cup']['radius_m']]*2+[scene['cup']['height_m']]
+ attachment=CarriedObject.attach_box(grasp_tcp,np.array(old['object_pose']),dimensions,side)
  first.extra_validation=lambda q:attachment.audit(first,q,world)
  report['tcp_from_object']=attachment.tcp_from_object.tolist()
  def save(name,plan,planner,attached):
@@ -77,7 +80,14 @@ def main():
  def placement_factory(snapshot,arm_only):
   return make(snapshot,'placement_arm' if arm_only else 'placement_search',attachment,arm_only=arm_only)
  stage_started=time.perf_counter()
- carry,place,placed_state,carry_planner,place_planner,search=plan_placement(state,nominal,report['object_goal_pose'],attachment,placement_factory,settings,scene['transfer']['lift_height_m'])
+ try:
+  carry,place,placed_state,carry_planner,place_planner,search=plan_placement(state,nominal,report['object_goal_pose'],attachment,placement_factory,settings,scene['transfer']['lift_height_m'])
+ except RuntimeError as error:
+  report['failure']=str(error)
+  report['stages']['carry']={'validation':'failed','reason':str(error),'duration_s':0.}
+  (OUT/'result.json').write_text(json.dumps(report,indent=2)+'\n')
+  print('COMPLETE False',str(error),flush=True)
+  return
  timings['placement_and_carry_search_s']=time.perf_counter()-stage_started
  report['placement_search']=search
  state=save('carry',carry,carry_planner,True)
@@ -91,7 +101,9 @@ def main():
  # Release is a task boundary; solve a fresh arm-only withdrawal away from the tray.
  planner=make(state,'withdraw',arm_only=True)
  tcp=planner.tcp_pose(state_vector(state,planner.names)[None])[0]
- target_pose=tcp.copy();target_pose[1]-=scene['transfer']['withdraw_distance_m']
+ target_pose=tcp.copy()
+ direction=np.array(scene['transfer'].get('withdraw_direction_world',[0.,-1.,0.]))
+ target_pose[:3]+=direction*scene['transfer']['withdraw_distance_m']
  target=TaskTarget(target_pose,np.array(report['object_goal_pose']),0.,tool_frame=f'{side}_grasp_tcp',target_type='withdraw')
  # Released-object collision against non-contact robot links (fingers are allowed to separate from contact).
  placed=pose_matrix(report['object_goal_pose'])
@@ -105,8 +117,13 @@ def main():
   valid=bool(np.all((gaps>=-1e-6)|(~active[None])|(balls[:,:,3]<=0)))
   return {'passed':valid,'object_state':'released and fixed in tray','finger_contact_allowed':True}
  planner.extra_validation=check_released
- withdraw=planner.plan_approach(target,tcp)
- state=save('withdraw',withdraw,planner,False)
+ try:
+  withdraw=planner.plan_approach(target,tcp)
+ except RuntimeError as error:
+  report['stages']['withdraw']={'validation':'failed','reason':str(error),'duration_s':0.}
+  state=None
+ else:
+  state=save('withdraw',withdraw,planner,False)
  timings['withdraw_planning_s']=time.perf_counter()-stage_started
  timings['wall_time_s']=time.perf_counter()-started
  report['timing']=timings

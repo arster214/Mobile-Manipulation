@@ -21,12 +21,12 @@ ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT/'tests/artifacts/grasp_priority'
 
 
-def main(initial_base=None):
+def main(initial_base=None, scene=None, observation=None, perception=None, policy=None):
     started=time.perf_counter()
     OUT.mkdir(parents=True, exist_ok=True)
-    scene = json.loads((ROOT/'scene_config.json').read_text())
+    scene = scene or json.loads((ROOT/'scene_config.json').read_text())
     settings = json.loads((ROOT/'planning/config.json').read_text())
-    policy = json.loads((ROOT/'grasp_policy.json').read_text())
+    policy = policy or json.loads((ROOT/'grasp_policy.json').read_text())
     source = Path(scene['robot']['curobo_config'])
     model = yaml.safe_load(source.read_text())['kinematics']
     initial = json.loads(Path(scene['robot']['initial_posture']).read_text())
@@ -38,8 +38,8 @@ def main(initial_base=None):
     if initial_base is not None:
         state.base_pose[:2] = initial_base[:2]
         state.base_pose[3:] = Rotation.from_euler('z', initial_base[2]).as_quat(scalar_first=True)
-    observation = ObjectObservation(np.array([-1.05,1.32,.81,1,0,0,0]),0.,1)
-    perception = SimulationPerception(yaml.safe_load((ROOT/'static_world.yml').read_text()),
+    observation = observation or ObjectObservation(np.array([-1.05,1.32,.81,1,0,0,0]),0.,1)
+    perception = perception or SimulationPerception(yaml.safe_load((ROOT/'static_world.yml').read_text()),
                                      scene['cup']['radius_m'],scene['cup']['height_m'])
     environment = perception.environment(observation)
     report = {'constraints':settings, 'jacobian':'selected arm geometric TCP Jacobian, 6x7, linear m/rad and angular rad/rad; world-aligned',

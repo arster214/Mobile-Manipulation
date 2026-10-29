@@ -1,0 +1,14 @@
+{
+  "returncode": 0,
+  "reason": null,
+  "minimum_available_mb": 5675.4921875,
+  "elapsed_s": 18.03348985599996,
+  "command": [
+    "/home/fang/isaacsim/python.sh",
+    "/home/fang/Mobile-Manipulation/scenarios/table_transfer/tests/test_pnp_physx.py",
+    "--label",
+    "resume_physics",
+    "--fault",
+    "cancel_held"
+  ]
+}

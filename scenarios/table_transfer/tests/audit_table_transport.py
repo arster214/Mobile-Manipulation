@@ -6,7 +6,7 @@ import numpy as np,yaml,yourdfpy
 from scipy.spatial.transform import Rotation
 ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT))
 from planning.carried_object import pose_matrix
-OUT=Path(sys.argv[sys.argv.index('--directory')+1]) if '--directory' in sys.argv else ROOT/('tests/artifacts/arm_placement' if '--placement' in sys.argv else ('tests/artifacts/transport_priority' if '--priority' in sys.argv else 'tests/artifacts/transport'));report=json.loads((OUT/'result.json').read_text());scene=json.loads((ROOT/'scene_config.json').read_text());cfg=yaml.safe_load(Path(scene['robot']['curobo_config']).read_text())['kinematics'];urdf=Path(cfg['urdf_path'])
+OUT=Path(sys.argv[sys.argv.index('--directory')+1]) if '--directory' in sys.argv else ROOT/('tests/artifacts/arm_placement' if '--placement' in sys.argv else ('tests/artifacts/transport_priority' if '--priority' in sys.argv else 'tests/artifacts/transport'));report=json.loads((OUT/'result.json').read_text());scene=json.loads((Path(sys.argv[sys.argv.index('--scene')+1]) if '--scene' in sys.argv else ROOT/'scene_config.json').read_text());cfg=yaml.safe_load(Path(scene['robot']['curobo_config']).read_text())['kinematics'];urdf=Path(cfg['urdf_path'])
 robot=yourdfpy.URDF.load(urdf,load_meshes=False,build_scene_graph=True,filename_handler=partial(yourdfpy.filename_handler_magic,dir=urdf.parent))
 settings=json.loads((ROOT/'planning/config.json').read_text())
 arm=sys.argv[sys.argv.index('--arm')+1] if '--arm' in sys.argv else 'r'
@@ -33,7 +33,8 @@ metrics['placement_position_error_m']=float(np.linalg.norm(placed[:3]-scene['pla
 metrics['placement_orientation_error_rad']=float(Rotation.from_quat(placed[3:],scalar_first=True).magnitude())
 assert metrics['placement_position_error_m']<settings['position_tolerance_m']
 assert metrics['placement_orientation_error_rad']<settings['orientation_tolerance_rad']
-margin=np.array(scene['tray']['outer_size_m'])/2-scene['tray']['rim_thickness_m']-scene['cup']['radius_m']
+inner=np.array(scene['tray'].get('inner_free_size_m',np.array(scene['tray']['outer_size_m'])-2*scene['tray']['rim_thickness_m']))
+margin=inner/2-scene['cup']['radius_m']
 assert np.all(abs(placed[:2]-scene['tray']['center_xy_m'])<=margin)
 metrics['tray_inner_clearance_xy_m']=margin.tolist();metrics['passed']=True
 (OUT/'independent_audit.json').write_text(json.dumps(metrics,indent=2));print(json.dumps(metrics),flush=True)

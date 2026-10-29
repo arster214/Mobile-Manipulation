@@ -62,5 +62,6 @@
     "definition": "/home/fang/robot_ws/postures/grasp_tcp_definition.json",
     "candidate_to_tcp_rotation_local_z_rad": -1.5707963267948966,
     "status": "simulation_transform_defined; existing candidates retain abstract axes; apply rotation before IK"
-  }
+  },
+  "orientation_samples": 9
 }

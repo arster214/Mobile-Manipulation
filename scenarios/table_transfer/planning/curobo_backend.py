@@ -63,24 +63,39 @@ class CuroboPlanner:
         """Collision-only/explicit-goal planning does not need an IK optimizer."""
         if self._ik is None:
             settings = self.settings
+            optimizer_options = {}
+            if settings.get('grasp_ik_scope') == 'mobile' and settings.get('prefer_grasp_base', True):
+                import curobo, yaml
+                directory = Path(curobo.__file__).resolve().parent/'content/configs/task/ik'
+                optimizers = [yaml.safe_load((directory/name).read_text()) for name in ('particle_ik.yml','lbfgs_ik.yml')]
+                for optimizer in optimizers:
+                    optimizer['rollout']['cost_cfg']['start_cspace_dist_cfg'] = {
+                        'weight': 1.}
+                from .grasp_cost import GraspCostManagerCfg
+                optimizer_options['optimizer_configs'] = optimizers
+                optimizer_options['cost_manager_config_instance_type'] = GraspCostManagerCfg
             config = InverseKinematicsCfg.create(
                 robot=self.robot, scene_model=self.environment.obstacles, self_collision_check=True,
+                **optimizer_options,
                 num_seeds=settings['num_ik_seeds'], seed_solver_num_seeds=settings['num_ik_seeds'],
                 max_batch_size=1, position_tolerance=settings['position_tolerance_m'],
                 orientation_tolerance=settings['orientation_tolerance_rad'],
                 use_cuda_graph=settings.get('use_cuda_graph', True),
                 optimizer_collision_activation_distance=settings['collision_activation_distance_m'])
+            if settings.get('grasp_ik_scope') == 'mobile' and settings.get('prefer_grasp_base', True):
+                config.exit_early = False
             self._ik = InverseKinematics(config)
         return self._ik
 
-    def grasp_solver(self, scope):
+    def grasp_solver(self, scope, prefer_base_motion=True):
         """Use measured locks for the IK tier; connection validation stays full-body."""
-        if scope not in self._grasp_solvers:
-            settings = dict(self.settings, grasp_ik_scope=scope)
-            self._grasp_solvers[scope] = CuroboPlanner(
+        key = (scope, prefer_base_motion)
+        if key not in self._grasp_solvers:
+            settings = dict(self.settings, grasp_ik_scope=scope, prefer_grasp_base=prefer_base_motion)
+            self._grasp_solvers[key] = CuroboPlanner(
                 self.robot_source, self.state, self.environment, settings,
                 self.runtime_directory / scope, arm=self.arm, reference_state=self.reference_state)
-        return self._grasp_solvers[scope]
+        return self._grasp_solvers[key]
 
     @staticmethod
     def tensor(values: np.ndarray) -> torch.Tensor:
@@ -92,11 +107,14 @@ class CuroboPlanner:
             quaternion=self.tensor(target.target_pose[3:][None]),
         )}, num_goalset=1)
         state = JointState.from_position(self.tensor(seed[None]), joint_names=self.names)
-        bank = self.rng.uniform(self.bounds[0], self.bounds[1],
-                                (self.settings['num_ik_seeds'], len(self.names)))
-        # Local seeds preserve posture; hard URDF bounds enforce the 0.8-rad envelope.
-        bank = np.clip(seed + self.rng.normal(0., .2, bank.shape), self.bounds[0], self.bounds[1])
+        shape = (self.settings['num_ik_seeds'], len(self.names))
+        # Mix local seeds with the full allowed envelope. Previously the uniform
+        # bank was overwritten, so fixed-base searches only explored near q0.
+        bank = np.clip(seed + self.rng.normal(0., .2, shape), self.bounds[0], self.bounds[1])
+        if self.settings.get('grasp_ik_scope') in ('arm_only', 'arm_lift'):
+            bank[1::2] = self.rng.uniform(self.bounds[0], self.bounds[1], bank[1::2].shape)
         if 'base_x' in self.names:
+            local_bank = bank.copy()
             # Seed robot placements on the requested side of the object, near the task direction.
             bank[::2, 3:] = self.rng.uniform(self.bounds[0,3:], self.bounds[1,3:], bank[::2,3:].shape)
             other = 'l' if self.arm == 'r' else 'r'
@@ -114,6 +132,9 @@ class CuroboPlanner:
             bank[:,1] = target.object_pose[1]-distance*np.sin(bearing)
             bank[:,2] = wrapped(yaw)
             bank = np.clip(bank,self.bounds[0],self.bounds[1])
+            # Keep half the candidates near the measured base, so enabling the
+            # base does not force every seed onto a distant object-centred arc.
+            bank[1::2] = local_bank[1::2]
         bank[0] = seed
         seeds = self.tensor(bank[:, self.to_internal][None])
         result = self.ik.solve_pose(goal, current_state=state, seed_config=seeds,
@@ -265,9 +286,13 @@ class CuroboPlanner:
         for fraction in np.linspace(0., 1., self.settings['approach_samples'])[1:]:
             pose = tcp_start_pose.copy()
             pose[:3] += fraction*(target.target_pose[:3]-tcp_start_pose[:3])
-            solutions = self.ik_candidates(replace(target, target_pose=pose), qs[-1])
-            choices = ([q for q,valid in zip(solutions,self.posture_mask(np.array(solutions))) if valid]
-                       if solutions else [])
+            choices = []
+            for _ in range(self.settings['max_attempts']):
+                solutions = self.ik_candidates(replace(target, target_pose=pose), qs[-1])
+                choices = ([q for q, valid in zip(solutions, self.posture_mask(np.array(solutions))) if valid]
+                           if solutions else [])
+                if choices:
+                    break
             if not choices:
                 error = RuntimeError(f'{self.arm}-arm {target.target_type} IK failed at {fraction:.1%}; reject this grasp candidate')
                 error.partial_positions = np.array(qs)

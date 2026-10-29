@@ -41,5 +41,6 @@
     "carry_reverse_excess_time_squared_s2": 0.5
   },
   "jacobian_constraint_scope": "new_ik_endpoints_and_approach_samples",
-  "carry_reverse_soft_time_s": 1.1
+  "carry_reverse_soft_time_s": 1.1,
+  "grasp_base_ik_weight": 10.0
 }

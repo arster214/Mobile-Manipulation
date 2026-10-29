@@ -1,0 +1,9 @@
+{
+  "perception_root": "/home/fang/Documents/Codex/2026-10-26/new-chat/outputs/foundationpose-rgbd",
+  "objects_config": "/home/fang/Documents/Codex/2026-10-26/new-chat/outputs/foundationpose-rgbd/config/objects.yaml",
+  "yolo_python": "/home/fang/Documents/Codex/2026-10-26/new-chat/outputs/yolo11-foundationpose/.venv/bin/python",
+  "pose_python": "/home/fang/Documents/Codex/2026-10-26/new-chat/outputs/foundationpose-rgbd/.runtime/bin/python",
+  "active_object": "blue_cube",
+  "camera_frame": "optical x-right y-down z-forward",
+  "units": "metres"
+}

@@ -9,7 +9,7 @@ from .carried_object import pose_matrix, matrix_pose
 
 
 def plan_placement(lifted_state, nominal_state, goal_object_pose, attachment, make_planner,
-                   settings, clearance):
+                   settings, clearance, accept_placement=None):
     """Nominal base is a destination seed, never a teleported execution state.
 
     All returned motion begins at lifted_state. Final lowering uses measured locks
@@ -21,11 +21,11 @@ def plan_placement(lifted_state, nominal_state, goal_object_pose, attachment, ma
     carry_planner = make_planner(lifted_state, False)
     carry_planner.motion_phase = 'carry'
     target = TaskTarget(target_pose, np.array(goal_object_pose), 0., tool_frame=f'{carry_planner.arm}_grasp_tcp',
-                        task_constraints={'approach_direction':[0.,1.,0.]})
+                        task_constraints={'approach_direction':pose_matrix(target_pose)[:3, 2].tolist()})
     nominal_planner = make_planner(nominal_state, False)
     for scope in GRASP_TIERS:
         begin = perf_counter()
-        solver = nominal_planner.grasp_solver(scope)
+        solver = nominal_planner.grasp_solver(scope, prefer_base_motion=False)
         seed = state_vector(nominal_state, solver.names)
         timers['final_ik_s'] += perf_counter()-begin
         record = {'scope':scope, 'ik_solutions':0, 'retreat_pass':0, 'carry_pass':0}
@@ -66,6 +66,12 @@ def plan_placement(lifted_state, nominal_state, goal_object_pose, attachment, ma
                 lowering = reverse_retreat(retreat,preplace_state)
                 valid = arm_planner.validate(lowering)
                 timers['lowering_validation_s'] += perf_counter()-begin
+                if valid and accept_placement is not None:
+                    try:
+                        accept_placement(placed_state, arm_planner, lowering)
+                    except RuntimeError as error:
+                        record['last_failure'] = str(error)
+                        continue
                 if valid:
                     record['carry_pass'] += 1
                     return carry,lowering,placed_state,carry_planner,arm_planner,{'timers':timers,'trials':trials,'scope':scope}

@@ -18,6 +18,7 @@ class ArmCandidate:
     search_stats: dict
     approach: object = None
     approach_reason: str = ''
+    task_suffix: object = None
 
     @property
     def complete(self):
@@ -59,7 +60,7 @@ def reverse_retreat(retreat, pregrasp_state):
                    validation_status=Status.NOT_RUN, execution_status=Status.NOT_RUN)
 
 
-def _plan_grasp_tier(state, environment, target, planner_factory, settings, scope, planners=None):
+def _plan_grasp_tier(state, environment, target, planner_factory, settings, scope, planners=None, seed_hint=None, continuation=None):
     side=target.tool_frame[0]
     started=time.perf_counter()
     logging.getLogger(__name__).info('Search %s %s rank=%s', side, scope, target.task_constraints.get('candidate_rank'))
@@ -75,15 +76,27 @@ def _plan_grasp_tier(state, environment, target, planner_factory, settings, scop
     grasp_planner = template.grasp_solver(scope)
     # Reuse initialization, while retaining the previous per-height seed sequence.
     grasp_planner.rng = np.random.default_rng(0)
-    q0=state_vector(state,grasp_planner.names)
+    q0=state_vector(state if seed_hint is None else seed_hint,grasp_planner.names)
     stats={'motion_scope':scope,'grasp_ik_success':0,'grasp_constraints_pass':0,'retreat_pass':0,'connection_pass':0}
     best=None;best_cost=np.inf;last_reason='No grasp IK satisfying all constraints'
-    attempts = settings['max_attempts']
+    # The optional warm refinement tests the known mobile branch once; the
+    # preceding fixed-tier search already exhausted the full retry budget.
+    attempts = settings['max_attempts'] if seed_hint is None else 1
     if scope != 'mobile' and not side_allowed(state_vector(state,['base_x','base_y','base_yaw']),target.object_pose,side,settings):
         attempts = 0
         last_reason = 'Fixed base heading violates grasp-arm side constraint'
     for _ in range(attempts):
-        for grasp_q in grasp_planner.ik_candidates(grasp_target,q0):
+        stats['ik_batches'] = stats.get('ik_batches', 0) + 1
+        solutions = grasp_planner.ik_candidates(grasp_target,q0)
+        if scope == 'mobile':
+            from .trajectory import wrapped
+            origin = state_vector(state, ['base_x','base_y','base_yaw'])
+            weights = settings['path_cost_weights']
+            def base_effort(q):
+                return (weights['base_distance_m']*np.linalg.norm(q[:2]-origin[:2])
+                        + weights['base_rotation_rad']*abs(wrapped(q[2]-origin[2])))
+            solutions.sort(key=base_effort)
+        for grasp_q in solutions:
             stats['grasp_ik_success']+=1
             grasp_state=state_at(state,grasp_planner.names,grasp_q)
             grasp_base=state_vector(grasp_state,['base_x','base_y','base_yaw'])
@@ -120,6 +133,16 @@ def _plan_grasp_tier(state, environment, target, planner_factory, settings, scop
             if cost<best_cost:
                 best_cost=cost
                 best=ArmCandidate(side,target,mobile,stats.copy(),approach)
+                if continuation is not None:
+                    try:
+                        best.task_suffix = continuation(best)
+                    except RuntimeError as error:
+                        last_reason = str(error)
+                        logging.getLogger(__name__).info('Reject %s %s task suffix: %s', side, scope, last_reason)
+                        stats['task_rejections'] = stats.get('task_rejections', 0) + 1
+                        best = None
+                        best_cost = np.inf
+                        continue
                 best.pregrasp.planning_time=time.perf_counter()-started
                 return best
     if best is None:
@@ -149,32 +172,63 @@ def plan_arm_from_grasp(state, environment, target, planner_factory, settings):
     return item
 
 
-def compare_arms(state, environment, targets, planner_factory, settings):
+def _candidate_rank(item, side, settings, scope):
+    pregrasp_cost, terms = path_cost(item.pregrasp, side, settings)
+    total = pregrasp_cost + path_cost(item.approach, side, settings)[0]
+    if getattr(item, 'task_suffix', None) is not None:
+        total += sum(path_cost(plan, side, settings)[0]
+                     for plan, _ in item.task_suffix['stages'].values())
+    weights = settings['path_cost_weights']
+    base = (weights['base_distance_m']*terms['base_distance_m']
+            + weights['base_rotation_rad']*terms['base_rotation_rad']) if scope == 'mobile' else 0.
+    return base, total
+
+
+def compare_arms(state, environment, targets, planner_factory, settings, continuation=None, allowed_arm='auto'):
     """Search all arm/height choices in a tier before allowing more motion."""
     history = []
     planners = {}
     for scope in GRASP_TIERS:
         candidates = {}
-        for side in ('l', 'r'):
+        for side in (('l', 'r') if allowed_arm == 'auto' else (allowed_arm,)):
             choices = targets[side] if isinstance(targets[side], list) else [targets[side]]
-            best = None; best_score = np.inf; attempts = []
+            best = None; best_score = None; attempts = []
             for target in choices:
-                item = _plan_grasp_tier(state, environment, target, planner_factory, settings, scope, planners)
+                options = {} if continuation is None else {'continuation': continuation}
+                item = _plan_grasp_tier(state, environment, target, planner_factory, settings, scope, planners, **options)
                 attempts.append({'candidate_rank':target.task_constraints.get('candidate_rank'),
                                  'stats':item.search_stats.copy(), 'reason':item.approach_reason})
                 if item.complete:
-                    score = path_cost(item.pregrasp,side,settings)[0] + path_cost(item.approach,side,settings)[0]
-                    if score < best_score:
+                    score = _candidate_rank(item, side, settings, scope)
+                    if best_score is None or score < best_score:
                         best, best_score = item, score
+                    # Full-task feasibility is the expensive acceptance gate.
+                    # Keep one complete candidate per arm in the first feasible
+                    # tier; do not re-plan the entire suffix for every angle.
+                    if continuation is not None:
+                        break
                 elif best is None:
                     best = item
             best.search_stats['height_candidates'] = attempts
             candidates[side] = best
         history.append({'scope':scope, 'arms':{side:deepcopy(item.search_stats) for side,item in candidates.items()}})
-        complete = [(path_cost(item.pregrasp,side,settings)[0]+path_cost(item.approach,side,settings)[0],side)
+        complete = [(_candidate_rank(item, side, settings, scope), side)
                     for side,item in candidates.items() if item.complete]
         if complete:
             selected = min(complete)[1]
+            if scope == 'mobile':
+                mobile = candidates[selected]
+                hint = state_at(mobile.approach.start_state, mobile.approach.joint_names,
+                                mobile.approach.positions[-1])
+                for fixed_scope in ('arm_only', 'arm_lift'):
+                    refined = _plan_grasp_tier(state, environment, mobile.target, planner_factory,
+                                              settings, fixed_scope, planners, seed_hint=hint, continuation=continuation)
+                    history.append({'scope':fixed_scope, 'seed_source':'feasible_mobile_grasp',
+                                    'arms':{selected:deepcopy(refined.search_stats)},
+                                    'reason':refined.approach_reason})
+                    if refined.complete:
+                        candidates[selected] = refined
+                        break
             break
     else:
         selected = None

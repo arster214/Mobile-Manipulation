@@ -1,0 +1,24 @@
+{
+  "object": "blue_cube",
+  "dimensions_m": [
+    0.04,
+    0.04,
+    0.04
+  ],
+  "vertices": 8,
+  "triangles": 12,
+  "origin": "outer bbox centre",
+  "z_axis": "toward tray opening / cube arbitrary axis",
+  "provisional": false,
+  "parameters": {
+    "class_id": 1,
+    "dimensions_m": [
+      0.04,
+      0.04,
+      0.04
+    ],
+    "mesh": "models/blue_cube/model.obj",
+    "symmetry": "cube_24",
+    "provisional": false
+  }
+}

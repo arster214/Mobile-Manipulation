@@ -92,6 +92,8 @@ def build_config(source, state: RobotState, target_directory, settings: dict,
         by_name = dict(zip(old_names, value))
         by_name.update(zip(ACTIVE_JOINTS[:4], extras[key]))
         cspace[key] = [by_name[name] for name in active]
+    if scope == 'mobile' and settings.get('prefer_grasp_base', True):
+        cspace['cspace_distance_weight'] = [settings['grasp_base_ik_weight'] if n in BASE_JOINTS else 0. for n in active]
     cspace['joint_names'] = active
     cspace['default_joint_position'] = [float(measured[name]) for name in active]
     for name in list(k['lock_joints']):

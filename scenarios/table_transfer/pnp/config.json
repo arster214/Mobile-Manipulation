@@ -1,0 +1,33 @@
+{
+  "robot_calibration": {
+    "tcp_definition": "postures/grasp_tcp_definition.json",
+    "status": "mesh_based_simulation_only",
+    "finger_master": "{arm}_Joint_finger1",
+    "finger_mimic": "{arm}_Joint_finger2",
+    "finger_travel_m": [0.0, 0.0325],
+    "aperture_offset_m": 0.0,
+    "aperture_per_joint_m": 2.0,
+    "aperture_mapping_status": "nominal_unverified_pad_offset",
+    "max_opening_m": 0.065
+  },
+  "objects_environment": {
+    "cube_dimensions_m": [0.04, 0.04, 0.04],
+    "tray_inner_size_m": [0.226, 0.156],
+    "table_height_range_m": [0.7, 0.8],
+    "mode": "upright_cube_on_horizontal_support"
+  },
+  "execution": {
+    "edge_margin_m": 0.005,
+    "opening_clearance_m": 0.01,
+    "approach_object_lengths": 3.75,
+    "lift_object_heights": 2.5,
+    "observation_max_age_s": 0.25,
+    "position_tolerance_m": 0.005,
+    "rotation_tolerance_rad": 0.05,
+    "stable_linear_speed_m_s": 0.01,
+    "stable_angular_speed_rad_s": 0.05,
+    "verification_window_s": 0.3,
+    "stage_timeout_s": 120.0,
+    "tick_s": 0.008333333333333333
+  }
+}

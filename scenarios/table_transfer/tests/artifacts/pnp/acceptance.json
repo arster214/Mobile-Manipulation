@@ -1,0 +1,722 @@
+{
+  "scope": "Assisted object physics, not physical RM75 controller/frictional grip acceptance",
+  "source_digest_at_report": "7c8087d814a1d5504b5795377a8510202f85baf8ab3ddeeec13e5511a9fc97f6",
+  "distinct_normal_physical_configurations": 3,
+  "normal_scope": "baseline; source cube x=-1.03; placement slot x offset +0.02; all other scene/config values unchanged",
+  "physical_note": "Replay/recovery/second-call rows are additional checks, not additional randomized normal configurations",
+  "physics": [
+    {
+      "suite": "final_suite",
+      "case": null,
+      "mode": "isaac_physx_object__kinematic_robot__fixed_joint_grasp",
+      "status": "succeeded",
+      "reason": "",
+      "holding": "empty",
+      "first_attempt_success": true,
+      "recovered_success": false,
+      "first_failure": null,
+      "elapsed_s": 5.462403217999963,
+      "retries": 0,
+      "physical_readback": {
+        "source": "independent PhysX readback after execute; not skill result fields",
+        "object_xyz_m": [
+          1.200034499168396,
+          1.3214106559753418,
+          0.7719999551773071
+        ],
+        "position_error_m": 0.0014110777708533405,
+        "inside_tray": true,
+        "supported": true,
+        "fixed_joint_exists": false,
+        "linear_speed_m_s": 0.00017829785065259784,
+        "angular_speed_rad_s": 0.0061700004152953625,
+        "placed_and_released": true
+      },
+      "config_sha256": "b76c4942c71f9310f192019c8a7334ce1d77734e512a5bb49c9f2e222f567ebd",
+      "log": "/home/fang/Mobile-Manipulation/scenarios/table_transfer/tests/artifacts/pnp/physx/49e8af1461b7444bba75e86bbe877a36.jsonl",
+      "run_id": "49e8af1461b7444bba75e86bbe877a36"
+    },
+    {
+      "suite": "final_suite",
+      "case": "consecutive_already_placed",
+      "mode": "isaac_physx_object__kinematic_robot__fixed_joint_grasp",
+      "status": "succeeded",
+      "reason": "",
+      "holding": "empty",
+      "first_attempt_success": true,
+      "recovered_success": false,
+      "first_failure": null,
+      "elapsed_s": 0.07271469400029673,
+      "retries": 0,
+      "physical_readback": {
+        "source": "independent PhysX readback after execute; not skill result fields",
+        "object_xyz_m": [
+          1.2000346183776855,
+          1.3214105367660522,
+          0.7719999551773071
+        ],
+        "position_error_m": 0.001410961517004489,
+        "inside_tray": true,
+        "supported": true,
+        "fixed_joint_exists": false,
+        "linear_speed_m_s": 0.0001351718237856403,
+        "angular_speed_rad_s": 0.005153903737664223,
+        "placed_and_released": true
+      },
+      "config_sha256": "b76c4942c71f9310f192019c8a7334ce1d77734e512a5bb49c9f2e222f567ebd",
+      "log": "/home/fang/Mobile-Manipulation/scenarios/table_transfer/tests/artifacts/pnp/physx/a3c528fd2466469498b0021f1a85244f.jsonl",
+      "run_id": "a3c528fd2466469498b0021f1a85244f"
+    },
+    {
+      "suite": "final_suite",
+      "case": "grasp_not_established",
+      "mode": "isaac_physx_object__kinematic_robot__fixed_joint_grasp",
+      "status": "failed",
+      "reason": "grasp_not_established",
+      "holding": "empty",
+      "first_attempt_success": false,
+      "recovered_success": false,
+      "first_failure": {
+        "stage": "confirm_grasp",
+        "code": "grasp_not_established",
+        "message": "Object not lifted and retained relative to measured TCP"
+      },
+      "elapsed_s": 2.316575128000295,
+      "retries": 0,
+      "physical_readback": {
+        "source": "independent PhysX readback after execute; not skill result fields",
+        "object_xyz_m": [
+          -1.050185203552246,
+          1.3201228380203247,
+          0.7699999809265137
+        ],
+        "position_error_m": 2.250186095737625,
+        "inside_tray": false,
+        "supported": true,
+        "fixed_joint_exists": false,
+        "linear_speed_m_s": 0.0001221403363160789,
+        "angular_speed_rad_s": 0.004156101960688829,
+        "placed_and_released": false
+      },
+      "config_sha256": "b76c4942c71f9310f192019c8a7334ce1d77734e512a5bb49c9f2e222f567ebd",
+      "log": "/home/fang/Mobile-Manipulation/scenarios/table_transfer/tests/artifacts/pnp/physx/82901a115e7a4495a8cc706db9151bc8.jsonl",
+      "run_id": "82901a115e7a4495a8cc706db9151bc8"
+    },
+    {
+      "suite": "final_suite",
+      "case": "object_lost",
+      "mode": "isaac_physx_object__kinematic_robot__fixed_joint_grasp",
+      "status": "failed",
+      "reason": "object_lost",
+      "holding": "empty",
+      "first_attempt_success": false,
+      "recovered_success": false,
+      "first_failure": {
+        "stage": "carry",
+        "code": "object_lost",
+        "message": "Measured object no longer follows held transform"
+      },
+      "elapsed_s": 2.3839697049997994,
+      "retries": 0,
+      "physical_readback": {
+        "source": "independent PhysX readback after execute; not skill result fields",
+        "object_xyz_m": [
+          -1.050185203552246,
+          1.3201228380203247,
+          0.8693187236785889
+        ],
+        "position_error_m": 2.2522887024875544,
+        "inside_tray": false,
+        "supported": false,
+        "fixed_joint_exists": false,
+        "linear_speed_m_s": 0.08175000548362732,
+        "angular_speed_rad_s": 0.0,
+        "placed_and_released": false
+      },
+      "config_sha256": "b76c4942c71f9310f192019c8a7334ce1d77734e512a5bb49c9f2e222f567ebd",
+      "log": "/home/fang/Mobile-Manipulation/scenarios/table_transfer/tests/artifacts/pnp/physx/50087e9013c34670b20455e8a91dd543.jsonl",
+      "run_id": "50087e9013c34670b20455e8a91dd543"
+    },
+    {
+      "suite": "final_suite",
+      "case": "release_failed",
+      "mode": "isaac_physx_object__kinematic_robot__fixed_joint_grasp",
+      "status": "failed",
+      "reason": "result_uncertain",
+      "holding": "holding_target",
+      "first_attempt_success": false,
+      "recovered_success": false,
+      "first_failure": {
+        "stage": "confirm_placement",
+        "code": "result_uncertain",
+        "message": "Release not independently confirmed"
+      },
+      "elapsed_s": 5.285276564000014,
+      "retries": 0,
+      "physical_readback": {
+        "source": "independent PhysX readback after execute; not skill result fields",
+        "object_xyz_m": [
+          1.1978131532669067,
+          1.1823278665542603,
+          0.8298421502113342
+        ],
+        "position_error_m": 0.14934561582854108,
+        "inside_tray": false,
+        "supported": false,
+        "fixed_joint_exists": true,
+        "linear_speed_m_s": 6.89403090170515e-10,
+        "angular_speed_rad_s": 9.585199658729976e-14,
+        "placed_and_released": false
+      },
+      "config_sha256": "b76c4942c71f9310f192019c8a7334ce1d77734e512a5bb49c9f2e222f567ebd",
+      "log": "/home/fang/Mobile-Manipulation/scenarios/table_transfer/tests/artifacts/pnp/physx/b95b3d3fb1364438940d422b98c6b0a2.jsonl",
+      "run_id": "b95b3d3fb1364438940d422b98c6b0a2"
+    },
+    {
+      "suite": "final_suite",
+      "case": "cancel_held",
+      "mode": "isaac_physx_object__kinematic_robot__fixed_joint_grasp",
+      "status": "cancelled",
+      "reason": "cancelled",
+      "holding": "holding_target",
+      "first_attempt_success": false,
+      "recovered_success": false,
+      "first_failure": {
+        "stage": "carry",
+        "code": "cancelled",
+        "message": "Cancellation requested"
+      },
+      "elapsed_s": 2.3720293610003864,
+      "retries": 0,
+      "physical_readback": {
+        "source": "independent PhysX readback after execute; not skill result fields",
+        "object_xyz_m": [
+          -1.050185203552246,
+          1.3201228380203247,
+          0.8699999451637268
+        ],
+        "position_error_m": 2.252318240086586,
+        "inside_tray": false,
+        "supported": false,
+        "fixed_joint_exists": true,
+        "linear_speed_m_s": 1.8626433728741176e-09,
+        "angular_speed_rad_s": 0.0,
+        "placed_and_released": false
+      },
+      "config_sha256": "b76c4942c71f9310f192019c8a7334ce1d77734e512a5bb49c9f2e222f567ebd",
+      "log": "/home/fang/Mobile-Manipulation/scenarios/table_transfer/tests/artifacts/pnp/physx/2eefc50799864ad19507066fe2b722e9.jsonl",
+      "run_id": "2eefc50799864ad19507066fe2b722e9"
+    },
+    {
+      "suite": "final_suite",
+      "case": "invalid_observation",
+      "mode": "isaac_physx_object__kinematic_robot__fixed_joint_grasp",
+      "status": "failed",
+      "reason": "invalid_observation",
+      "holding": "unknown",
+      "first_attempt_success": false,
+      "recovered_success": false,
+      "first_failure": {
+        "stage": "update_object",
+        "code": "invalid_observation",
+        "message": "Expected valid metric world pose and normalized wxyz"
+      },
+      "elapsed_s": 0.0008943940001699957,
+      "retries": 0,
+      "physical_readback": {
+        "source": "independent PhysX readback after execute; not skill result fields",
+        "object_xyz_m": [
+          -1.0501853227615356,
+          1.3201228380203247,
+          0.7699999809265137
+        ],
+        "position_error_m": 2.2501862149468677,
+        "inside_tray": false,
+        "supported": true,
+        "fixed_joint_exists": false,
+        "linear_speed_m_s": 0.00012175925803603604,
+        "angular_speed_rad_s": 0.004144770558923483,
+        "placed_and_released": false
+      },
+      "config_sha256": "b76c4942c71f9310f192019c8a7334ce1d77734e512a5bb49c9f2e222f567ebd",
+      "log": "/home/fang/Mobile-Manipulation/scenarios/table_transfer/tests/artifacts/pnp/physx/a071ad828a834689b3e6e65d2d28ca3e.jsonl",
+      "run_id": "a071ad828a834689b3e6e65d2d28ca3e"
+    },
+    {
+      "suite": "serial_object_offset",
+      "case": null,
+      "mode": "isaac_physx_object__kinematic_robot__fixed_joint_grasp",
+      "status": "succeeded",
+      "reason": "",
+      "holding": "empty",
+      "first_attempt_success": true,
+      "recovered_success": false,
+      "first_failure": null,
+      "elapsed_s": 697.002266814,
+      "retries": 0,
+      "physical_readback": null,
+      "config_sha256": "b76c4942c71f9310f192019c8a7334ce1d77734e512a5bb49c9f2e222f567ebd",
+      "log": "/home/fang/Mobile-Manipulation/scenarios/table_transfer/tests/artifacts/pnp/physx/26c86366604349699f82a1775a9c5412.jsonl",
+      "run_id": "26c86366604349699f82a1775a9c5412"
+    },
+    {
+      "suite": "serial_object_offset",
+      "case": "consecutive_already_placed",
+      "mode": "isaac_physx_object__kinematic_robot__fixed_joint_grasp",
+      "status": "succeeded",
+      "reason": "",
+      "holding": "empty",
+      "first_attempt_success": true,
+      "recovered_success": false,
+      "first_failure": null,
+      "elapsed_s": 0.0671275299998797,
+      "retries": 0,
+      "physical_readback": null,
+      "config_sha256": "b76c4942c71f9310f192019c8a7334ce1d77734e512a5bb49c9f2e222f567ebd",
+      "log": "/home/fang/Mobile-Manipulation/scenarios/table_transfer/tests/artifacts/pnp/physx/d846e66199124168b93dc5a9322e0ef9.jsonl",
+      "run_id": "d846e66199124168b93dc5a9322e0ef9"
+    },
+    {
+      "suite": "serial_target_offset",
+      "case": null,
+      "mode": "isaac_physx_object__kinematic_robot__fixed_joint_grasp",
+      "status": "succeeded",
+      "reason": "",
+      "holding": "empty",
+      "first_attempt_success": true,
+      "recovered_success": false,
+      "first_failure": null,
+      "elapsed_s": 594.0124054189998,
+      "retries": 0,
+      "physical_readback": {
+        "source": "independent PhysX readback after execute; not skill result fields",
+        "object_xyz_m": [
+          1.2200201749801636,
+          1.3232582807540894,
+          0.7720000743865967
+        ],
+        "position_error_m": 0.0032583432151672823,
+        "inside_tray": true,
+        "supported": true,
+        "fixed_joint_exists": false,
+        "linear_speed_m_s": 0.00013429325190372765,
+        "angular_speed_rad_s": 0.004415700677782297,
+        "placed_and_released": true
+      },
+      "config_sha256": "b76c4942c71f9310f192019c8a7334ce1d77734e512a5bb49c9f2e222f567ebd",
+      "log": "/home/fang/Mobile-Manipulation/scenarios/table_transfer/tests/artifacts/pnp/physx/d482d6e248344a78b3c72e6cec83a99b.jsonl",
+      "run_id": "d482d6e248344a78b3c72e6cec83a99b"
+    },
+    {
+      "suite": "serial_target_offset",
+      "case": "consecutive_already_placed",
+      "mode": "isaac_physx_object__kinematic_robot__fixed_joint_grasp",
+      "status": "succeeded",
+      "reason": "",
+      "holding": "empty",
+      "first_attempt_success": true,
+      "recovered_success": false,
+      "first_failure": null,
+      "elapsed_s": 0.06674564200011446,
+      "retries": 0,
+      "physical_readback": {
+        "source": "independent PhysX readback after execute; not skill result fields",
+        "object_xyz_m": [
+          1.2200201749801636,
+          1.323258399963379,
+          0.7720000743865967
+        ],
+        "position_error_m": 0.0032584624221717244,
+        "inside_tray": true,
+        "supported": true,
+        "fixed_joint_exists": false,
+        "linear_speed_m_s": 0.0001322069438174367,
+        "angular_speed_rad_s": 0.004623196553438902,
+        "placed_and_released": true
+      },
+      "config_sha256": "b76c4942c71f9310f192019c8a7334ce1d77734e512a5bb49c9f2e222f567ebd",
+      "log": "/home/fang/Mobile-Manipulation/scenarios/table_transfer/tests/artifacts/pnp/physx/b33c6b48cdd943ad880c2cb8ee7c807a.jsonl",
+      "run_id": "b33c6b48cdd943ad880c2cb8ee7c807a"
+    },
+    {
+      "suite": "resume_physics",
+      "case": "cancel_held",
+      "mode": "isaac_physx_object__kinematic_robot__fixed_joint_grasp",
+      "status": "cancelled",
+      "reason": "cancelled",
+      "holding": "holding_target",
+      "first_attempt_success": false,
+      "recovered_success": false,
+      "first_failure": {
+        "stage": "carry",
+        "code": "cancelled",
+        "message": "Cancellation requested"
+      },
+      "elapsed_s": 2.350497866999831,
+      "retries": 0,
+      "physical_readback": {
+        "source": "independent PhysX readback after execute; not skill result fields",
+        "object_xyz_m": [
+          -1.050185203552246,
+          1.3201228380203247,
+          0.8699999451637268
+        ],
+        "position_error_m": 2.252318240086586,
+        "inside_tray": false,
+        "supported": false,
+        "fixed_joint_exists": true,
+        "linear_speed_m_s": 1.8626433728741176e-09,
+        "angular_speed_rad_s": 0.0,
+        "placed_and_released": false
+      },
+      "config_sha256": "b76c4942c71f9310f192019c8a7334ce1d77734e512a5bb49c9f2e222f567ebd",
+      "log": "/home/fang/Mobile-Manipulation/scenarios/table_transfer/tests/artifacts/pnp/physx/80772872363a43dd80138f10cf10cbb1.jsonl",
+      "run_id": "80772872363a43dd80138f10cf10cbb1"
+    },
+    {
+      "suite": "resume_physics",
+      "case": "resume_held_without_regrasp",
+      "mode": "isaac_physx_object__kinematic_robot__fixed_joint_grasp",
+      "status": "succeeded",
+      "reason": "",
+      "holding": "empty",
+      "first_attempt_success": true,
+      "recovered_success": false,
+      "first_failure": null,
+      "elapsed_s": 3.079440383000019,
+      "retries": 0,
+      "physical_readback": {
+        "source": "independent PhysX readback after execute; not skill result fields",
+        "object_xyz_m": [
+          1.200034499168396,
+          1.3214106559753418,
+          0.7719999551773071
+        ],
+        "position_error_m": 0.0014110777708533405,
+        "inside_tray": true,
+        "supported": true,
+        "fixed_joint_exists": false,
+        "linear_speed_m_s": 0.00017829785065259784,
+        "angular_speed_rad_s": 0.0061700004152953625,
+        "placed_and_released": true
+      },
+      "config_sha256": "b76c4942c71f9310f192019c8a7334ce1d77734e512a5bb49c9f2e222f567ebd",
+      "log": "/home/fang/Mobile-Manipulation/scenarios/table_transfer/tests/artifacts/pnp/physx/9431180e29224381aeb75b7a9f807c8a.jsonl",
+      "run_id": "9431180e29224381aeb75b7a9f807c8a"
+    },
+    {
+      "suite": "final_object_replay",
+      "case": null,
+      "mode": "isaac_physx_object__kinematic_robot__fixed_joint_grasp",
+      "status": "succeeded",
+      "reason": "",
+      "holding": "empty",
+      "first_attempt_success": true,
+      "recovered_success": false,
+      "first_failure": null,
+      "elapsed_s": 5.609861947999889,
+      "retries": 0,
+      "physical_readback": {
+        "source": "independent PhysX readback after execute; not skill result fields",
+        "object_xyz_m": [
+          1.2000352144241333,
+          1.32136869430542,
+          0.7720000147819519
+        ],
+        "position_error_m": 0.0013691472373613808,
+        "inside_tray": true,
+        "supported": true,
+        "fixed_joint_exists": false,
+        "linear_speed_m_s": 0.000180863295099698,
+        "angular_speed_rad_s": 0.006121389102190733,
+        "placed_and_released": true
+      },
+      "config_sha256": "b76c4942c71f9310f192019c8a7334ce1d77734e512a5bb49c9f2e222f567ebd",
+      "log": "/home/fang/Mobile-Manipulation/scenarios/table_transfer/tests/artifacts/pnp/physx/0b31b4d0a0624afcbdde051762f7acd8.jsonl",
+      "run_id": "0b31b4d0a0624afcbdde051762f7acd8"
+    },
+    {
+      "suite": "final_object_replay",
+      "case": "consecutive_already_placed",
+      "mode": "isaac_physx_object__kinematic_robot__fixed_joint_grasp",
+      "status": "succeeded",
+      "reason": "",
+      "holding": "empty",
+      "first_attempt_success": true,
+      "recovered_success": false,
+      "first_failure": null,
+      "elapsed_s": 0.0758985429997665,
+      "retries": 0,
+      "physical_readback": {
+        "source": "independent PhysX readback after execute; not skill result fields",
+        "object_xyz_m": [
+          1.2000353336334229,
+          1.321368932723999,
+          0.7719999551773071
+        ],
+        "position_error_m": 0.001369388648446873,
+        "inside_tray": true,
+        "supported": true,
+        "fixed_joint_exists": false,
+        "linear_speed_m_s": 0.00013366311031859368,
+        "angular_speed_rad_s": 0.005127006210386753,
+        "placed_and_released": true
+      },
+      "config_sha256": "b76c4942c71f9310f192019c8a7334ce1d77734e512a5bb49c9f2e222f567ebd",
+      "log": "/home/fang/Mobile-Manipulation/scenarios/table_transfer/tests/artifacts/pnp/physx/949f09f4ff5d4aea8b58d00e762fe606.jsonl",
+      "run_id": "949f09f4ff5d4aea8b58d00e762fe606"
+    },
+    {
+      "suite": "final_target_replay",
+      "case": null,
+      "mode": "isaac_physx_object__kinematic_robot__fixed_joint_grasp",
+      "status": "succeeded",
+      "reason": "",
+      "holding": "empty",
+      "first_attempt_success": true,
+      "recovered_success": false,
+      "first_failure": null,
+      "elapsed_s": 5.479898999999932,
+      "retries": 0,
+      "physical_readback": {
+        "source": "independent PhysX readback after execute; not skill result fields",
+        "object_xyz_m": [
+          1.220020055770874,
+          1.323258399963379,
+          0.7720000147819519
+        ],
+        "position_error_m": 0.003258461685444699,
+        "inside_tray": true,
+        "supported": true,
+        "fixed_joint_exists": false,
+        "linear_speed_m_s": 0.0002182591997552663,
+        "angular_speed_rad_s": 0.0070704687386751175,
+        "placed_and_released": true
+      },
+      "config_sha256": "b76c4942c71f9310f192019c8a7334ce1d77734e512a5bb49c9f2e222f567ebd",
+      "log": "/home/fang/Mobile-Manipulation/scenarios/table_transfer/tests/artifacts/pnp/physx/845ca776b385430f828655099304ce44.jsonl",
+      "run_id": "845ca776b385430f828655099304ce44"
+    },
+    {
+      "suite": "final_target_replay",
+      "case": "consecutive_already_placed",
+      "mode": "isaac_physx_object__kinematic_robot__fixed_joint_grasp",
+      "status": "succeeded",
+      "reason": "",
+      "holding": "empty",
+      "first_attempt_success": true,
+      "recovered_success": false,
+      "first_failure": null,
+      "elapsed_s": 0.07437326299987035,
+      "retries": 0,
+      "physical_readback": {
+        "source": "independent PhysX readback after execute; not skill result fields",
+        "object_xyz_m": [
+          1.2200201749801636,
+          1.323258638381958,
+          0.7720000147819519
+        ],
+        "position_error_m": 0.0032587008353656224,
+        "inside_tray": true,
+        "supported": true,
+        "fixed_joint_exists": false,
+        "linear_speed_m_s": 0.0001595864596311003,
+        "angular_speed_rad_s": 0.00646069273352623,
+        "placed_and_released": true
+      },
+      "config_sha256": "b76c4942c71f9310f192019c8a7334ce1d77734e512a5bb49c9f2e222f567ebd",
+      "log": "/home/fang/Mobile-Manipulation/scenarios/table_transfer/tests/artifacts/pnp/physx/4eb9edebd74644a2b48a191367f4d1ad.jsonl",
+      "run_id": "4eb9edebd74644a2b48a191367f4d1ad"
+    }
+  ],
+  "synthetic_feedback": {
+    "seed": 29,
+    "normal_cases": 12,
+    "successful": 12,
+    "evidence": "contract/normal_cases.json",
+    "claim": "interface and geometry only; not IK/robot success"
+  },
+  "numerical_baseline": [
+    {
+      "stage": "pregrasp",
+      "passed": true,
+      "reason": "",
+      "constraints": {
+        "base": {
+          "nonholonomic_valid": true,
+          "linear_speed_valid": true,
+          "max_pose_error": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_and_acceleration_limits_checked": false
+        },
+        "path": {
+          "min_singular_value": 0.0002510205376893282,
+          "max_condition_number": 6935.90966796875,
+          "max_arm_joint_change_rad": 0.7972853850753174,
+          "passed": false
+        },
+        "endpoint": {
+          "min_singular_value": 0.1092015951871872,
+          "max_condition_number": 16.949146270751953,
+          "max_arm_joint_change_rad": 0.7972853850753174,
+          "passed": true
+        },
+        "singularity_scope": "IK endpoint; moving path reported separately"
+      }
+    },
+    {
+      "stage": "approach",
+      "passed": true,
+      "reason": "",
+      "constraints": {
+        "base": {
+          "nonholonomic_valid": true,
+          "linear_speed_valid": true,
+          "max_pose_error": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_and_acceleration_limits_checked": false
+        },
+        "path": {
+          "min_singular_value": 0.027955420315265656,
+          "max_condition_number": 65.79159545898438,
+          "max_arm_joint_change_rad": 0.7985773745115083,
+          "passed": true
+        },
+        "endpoint": {
+          "min_singular_value": 0.027955420315265656,
+          "max_condition_number": 65.79159545898438,
+          "max_arm_joint_change_rad": 0.5196429845403583,
+          "passed": true
+        },
+        "singularity_scope": "all approach samples"
+      }
+    },
+    {
+      "stage": "lift",
+      "passed": true,
+      "reason": "",
+      "constraints": {
+        "base": {
+          "nonholonomic_valid": true,
+          "linear_speed_valid": true,
+          "max_pose_error": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_and_acceleration_limits_checked": false
+        },
+        "path": {
+          "min_singular_value": 0.02795546129345894,
+          "max_condition_number": 65.79157257080078,
+          "max_arm_joint_change_rad": 0.5196429845403583,
+          "passed": true
+        },
+        "endpoint": {
+          "min_singular_value": 0.02795546129345894,
+          "max_condition_number": 65.79157257080078,
+          "max_arm_joint_change_rad": 0.5196429845403583,
+          "passed": true
+        },
+        "singularity_scope": "IK endpoint; moving path reported separately"
+      }
+    },
+    {
+      "stage": "carry",
+      "passed": true,
+      "reason": "",
+      "constraints": {
+        "base": {
+          "nonholonomic_valid": true,
+          "linear_speed_valid": true,
+          "max_pose_error": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_and_acceleration_limits_checked": false
+        },
+        "path": {
+          "min_singular_value": 0.001316599315032363,
+          "max_condition_number": 1358.5948486328125,
+          "max_arm_joint_change_rad": 0.7841948199837341,
+          "passed": false
+        },
+        "endpoint": {
+          "min_singular_value": 0.08068263530731201,
+          "max_condition_number": 22.687501907348633,
+          "max_arm_joint_change_rad": 0.7841948199837341,
+          "passed": true
+        },
+        "singularity_scope": "IK endpoint; moving path reported separately"
+      }
+    },
+    {
+      "stage": "place",
+      "passed": true,
+      "reason": "",
+      "constraints": {
+        "base": {
+          "nonholonomic_valid": true,
+          "linear_speed_valid": true,
+          "max_pose_error": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_and_acceleration_limits_checked": false
+        },
+        "path": {
+          "min_singular_value": 0.02848103456199169,
+          "max_condition_number": 63.08845138549805,
+          "max_arm_joint_change_rad": 0.798638932761444,
+          "passed": true
+        },
+        "endpoint": {
+          "min_singular_value": 0.02848103456199169,
+          "max_condition_number": 63.08845138549805,
+          "max_arm_joint_change_rad": 0.5049310264055449,
+          "passed": true
+        },
+        "singularity_scope": "all approach samples"
+      }
+    },
+    {
+      "stage": "withdraw",
+      "passed": true,
+      "reason": "",
+      "constraints": {
+        "base": {
+          "nonholonomic_valid": true,
+          "linear_speed_valid": true,
+          "max_pose_error": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_and_acceleration_limits_checked": false
+        },
+        "path": {
+          "min_singular_value": 0.02848103456199169,
+          "max_condition_number": 63.08845138549805,
+          "max_arm_joint_change_rad": 0.7991188693611755,
+          "passed": true
+        },
+        "endpoint": {
+          "min_singular_value": 0.10607778280973434,
+          "max_condition_number": 16.638221740722656,
+          "max_arm_joint_change_rad": 0.7985316444008483,
+          "passed": true
+        },
+        "singularity_scope": "all approach samples"
+      }
+    }
+  ],
+  "unfinished_cases": []
+}

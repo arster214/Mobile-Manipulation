@@ -305,3 +305,62 @@ tests/scan_carry_maneuvers.py在9组已存在搬运起终点上扫描4050条路�
 组10：倒车2.302→0.000m；搬运运动9.550→9.875s；本次热规划0.162480s；用相同新权重重算的路径代价14.624→7.099。
 9组可用搬运端点（含3组原本前进对照）均通过独立FK、附着物和相邻阶段衔接审计；组3原抽离失败仍保留，不将单段成功当作完整任务成功。结果tests/artifacts/carry_reverse_penalty/results.json。
 对照回放8106：tests/view_random_room.py --penalty，可勾选“播放旧搬运轨迹”、选择组号及“跳到搬运开始”。整段显示的完整规划耗时仍为旧基准；本次只替换搬运段。
+
+2026-10-29 PnP 测试主机卡死排查
+第二个 Isaac 验收进程启动时，方块变位仿真及其 cuRobo 子进程尚未结束。verified_suite.log 记录系统总内存15090MB、空闲1769MB、swap为0；该日志停在启动过程，变位测试仍停在plan_pick且没有规划结果。可读上次启动日志未发现OOM kill或NVIDIA Xid；有NVRM状态切换错误及11:06系统DNS服务watchdog超时。高度怀疑并发负载造成主机资源压力，但没有采样数据证明内存耗尽，也不能排除驱动因素。记录tests/artifacts/pnp/host_incident_20261029.json。
+tests/test_pnp_physx.py现于导入Isaac之前获取进程锁，第二个测试直接拒绝启动；已用不加载Isaac/CUDA的检查验证互斥及退出释放。此次没有重启重负载测试，也未更改swap、驱动或系统设置。后续运行须串行并记录系统MemAvailable及进程RSS，不能只看显存。未完成的变位/新一轮验收不得记为通过。
+
+2026-10-29 PnP 运行时能力（Python execute API；不是 Codex SKILL.md）
+实现：pnp/contracts.py、geometry.py、skill.py；Isaac 适配器pnp/isaac_assisted.py；可取消CUDA规划进程pnp/planner_process.py及planner_worker.py。保留原规划/碰撞模块；本轮没有接入实机，也没有更改ROS部署。
+
+审查结论与证据
+1. 旧8108回放由TCP相对变换更新物体显示，旧test_tray_release_physics只有环境释放；不存在能证明真实抓取的夹爪反馈闭环。旧完整六段轨迹保留tests/artifacts/pnp/baseline，并由audit_pnp_baseline.py重新检查六段碰撞/姿态/携物检查均通过。规划通过和物理任务通过现分别记录。
+2. 旧抓取候选的接受不包含后续放置/抽离，容易形成需要人工换角度的死路。task_search现以完整后续任务可行为接受条件；深入各点重试，规则角度采样。为避免对每个成功角度重复规划整条任务，完整任务模式在首个可行层级中每臂保留一个完整候选再比较代价；不是全局最优搜索。
+3. 旧参数散落在场景与脚本，放置/抽离有固定世界方向假设。现支撑面顶面、物体中心和TCP分开；放置TCP由观测的T_tcp_object计算；实际夹持偏移改变后拒绝旧末端目标并重新规划。
+4. 两个Isaac实例及规划子进程重叠，第二实例启动时日志空闲内存1769MB且无swap。未证实OOM，但已消除测试实例重叠；run_pnp_checked.py每秒记录MemAvailable及进程组RSS，低于2GB只终止自己的测试进程组。该门槛是主机保护，不参与机器人规划。
+5. 已修复复测暴露的USD建约束异常：不能在Sdf.ChangeBlock中调用UsdStage.DefinePrim；改为离线完整构造再复制。固定关节创建仍有PhysX disjointed-body警告，属于当前辅助抓持模型待进一步核查项，不以此宣称接触抓取稳定。
+
+输入与支持范围
+Goal(request_id, object_id, dimensions, source_id, destination_id, placement_xy, placement_yaw, arm, timeout_s, max_retries)。Pose采用world<-frame、米、wxyz四元数；timestamp与Context.time同一时钟，source和valid不可省略其语义。总超时使用单调墙钟，暂停仿真也会超时。目标的placement_xy/yaw是相对目标支撑面顶面坐标，中心Z由方块半高自动计算；不是托盘网格中心。
+首版几何契约：4cm直立方块、水平矩形支撑面、几何桌高0.70～0.80m、目标物体完整角点加5mm边缘余量必须落入有效区域。这个范围是输入几何范围，不是已完成全范围机器人可达性/物理验收的承诺。当前PhysX基线桌高0.750m，托盘内底支撑高0.752m；验收结果须按物理、数值、合成反馈三类分别阅读。
+机器人当前状态、物体/目标新观测、环境以及控制权由Context提供，不由调用者重复传入。Isaac适配器只服务其场景中的source/tray角色；上层四区域需在自己的Context中解析区域ID，并提供更新后的障碍物和真实机器人状态。局部skill核心没有桌号或路线。
+
+参数分类（pnp/config.json）
+robot_calibration：TCP定义索引、双指主从名称/行程、名义开口映射及控制范围。TCP距tool0沿Z 0.1168m来自网格定义，仍需实机标定；URDF两指均0～0.0325m、finger2 mimic finger1已确认，指垫零位偏置和实际开口映射尚未实测。不能将名义opening=2*q用于未经标定的实机。
+objects_environment：4cm方块、托盘内自由区域0.226×0.156m、几何支持高度范围。具体支撑面位姿来自Context观测。
+execution：边缘余量、开口净空、接近/抬升尺度倍数、容差、观测时效、保持确认窗口、阶段超时。当前由几何求开口=物体宽度+10mm=50mm、接近/撤离=3.75倍物体尺度=150mm、提起=2.5倍高度=100mm；这些倍数是统一策略，不是已经证明最优的自动几何设计。升降/速度/碰撞/IK预算沿用planning/config.json。目标中心Z、整物体角点与目标区域关系、抓后物体—TCP关系不再按case手调。
+
+最小调用
+在已有、独占执行器的Context中：
+ from pnp import Goal, PickPlaceSkill
+ skill = PickPlaceSkill(context, "tests/artifacts/pnp/runs")
+ goal = Goal("transfer-0001", "blue_cube", (.04,.04,.04), "source", "tray", placement_xy=(0.,0.), arm="auto", timeout_s=1800, max_retries=1)
+ result = skill.execute(goal, feedback=print)
+另一线程可调用skill.cancel()。完整函数示例pnp/example.py。pick/transport/place为同一执行事务内的可复用阶段，不得绕过execute的控制权、超时与反馈检查单独发命令。
+重复request_id且输入相同返回原结果；不同输入返回request_id_conflict；并发返回busy。同一个Context也有独占租约。失败/取消先hold，只有确认hold才释放控制权；停止未确认时保留租约并返回control_stop_failed，绝不自动松开夹爪。
+返回status/reason/final_stage/holding/retries/elapsed_s/run_id/log/last_state/config_sha256，以及首次失败、首次成功/恢复成功。holding是empty/holding_target/unknown。闭合或attach不决定holding_target：必须观察到物体离开支撑并在保持窗口中随TCP保持相对位姿。无观测或近抓取阶段取消返回unknown。持物失败不从抓取重来；同一实例以新request_id恢复会重新检查持物并从运输阶段规划。已在目标且释放的重复任务只做稳定性复核。
+
+执行方式与明确限制
+当前具体适配器mode=isaac_physx_object__kinematic_robot__fixed_joint_grasp：机器人/TCP沿已验证轨迹运动学推进，方块由PhysX模拟，闭合用显式固定关节辅助抓持，释放删除约束并由重力/接触落稳。观测取动态刚体状态，不从规划attach合成。它不是RM75关节驱动跟踪、差速轮动力学或真实指垫摩擦抓取的验收。无硬件控制命令。现有RM75 socket/ROS桥主要为14轴臂，升降/夹爪被锁定，不能直接冒充完整移动操作控制器。
+新对象/目标需要时由子进程调用现有cuRobo规划器，不能复用起点/目标不匹配的轨迹。取消/主机保护会终止子进程。当前规划仍可能耗时数分钟，有限路线搜索不保证任意房间布局可达；本轮未接Navigation、实时YOLO/FoundationPose或四区域路径选择。
+物理成功需要释放确认、完整角点在区域内、底部接触支撑、目标位置/姿态满足容差，并在撤离后保持位置/速度稳定。固定关节辅助的成功仅证明该模式下的搬运/释放和状态机，不证明真实夹持能力。
+
+复现与产物
+在仓库根目录：
+ /home/fang/isaacsim/python.sh scenarios/table_transfer/tests/test_pnp_contract.py
+ /home/fang/isaacsim/python.sh scenarios/table_transfer/tests/audit_pnp_baseline.py
+ python3 scenarios/table_transfer/tests/run_pnp_checked.py --label serial_suite_fixed --suite
+ python3 scenarios/table_transfer/tests/run_pnp_checked.py --label serial_object_offset --object-xy -1.03 1.32
+不要并发运行上两条仿真命令。所有测试程序和产物在tests下；resources.jsonl记录主机内存而不是规划性能。日志JSONL包含阶段、实际TCP/物体/夹爪状态；最终JSON包含首次失败和配置哈希。详细结果由tests/artifacts/pnp/acceptance.json汇总；不存在的结果、被内存保护终止的结果和旧中断运行均不得计作成功。
+
+2026-10-29 串行验收收尾（同一配置，非真实手指接触验收）
+正常物理配置共3种：原始基线；物体XY=(-1.03,1.32)m；原物体、托盘内放置点XY偏移(+0.02,0)m。托盘本体未移动。三者均首次成功、0重试。
+新物体位置从头规划及执行耗时697.002s；新放置点594.012s。包含规划子进程初始化，不是预热后纯规划或机器人运动时长。缓存轨迹复测约5.61/5.48s，只验证执行与结果，不能替代上述新任务延迟。
+独立PhysX读回的两项变位最终位置误差约1.37mm、3.26mm；完整方块位于托盘内、得到支撑、约束已移除，撤离后稳定。
+final_suite覆盖抓持未建立、运输丢失、释放失败、持物取消、观测无效，均按预期返回失败/取消及持物状态。释放失败返回result_uncertain且holding_target；无效观测返回unknown。
+resume_physics验证持物取消后新请求继续运输/放置，未再次执行开爪、接近、闭合或提起。连续已完成请求只复核稳定性，不计第二次完整搬运。
+12组固定seed=29的位置/偏航/桌高变化是合成反馈契约测试，不是12组机器人IK/物理成功；11项契约测试、4项完整任务搜索测试、3项优先级测试、1项左右臂放置测试、5项视觉几何测试通过。须使用/home/fang/isaacsim/python.sh；系统Python的旧SciPy及缺少yourdfpy不满足依赖。
+六段原始轨迹数值审计通过。acceptance.json的17条记录含负例、重复调用、恢复及缓存复测，不能作为17种正常工况成功率。
+两次新目标长测试最低MemAvailable分别3520MB/4059MB，所有收尾进程returncode=0，未再卡死。执行器测试互斥及2GB主机保护保留；原卡死仍属内存压力高度可疑、未获得OOM确证。
+四区域接入：上层提供区域身份与物体/支撑面的world位姿，Context解析区域、提供实时状态和障碍物，切换时结束导航控制并取得独占控制权，再调用execute。完成或停止确认后才能交还导航。实机Context仍需补齐底盘/升降/双臂/夹爪控制与可靠反馈；现有Isaac适配器不自动完成这一接入。
+剩余限制：真实接触抓持和全机器人动力学未验收；TCP/指垫开口等仍需一次性标定；尚无广泛物理偏航/桌高/区域变化测试；新目标搜索仍需约10分钟；固定关节创建警告仍待核查。当前交付是可诊断的辅助抓持仿真能力，不宣称稳定实机PnP已完成。

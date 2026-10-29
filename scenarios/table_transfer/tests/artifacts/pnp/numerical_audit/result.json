@@ -1,0 +1,182 @@
+[
+  {
+    "stage": "pregrasp",
+    "passed": true,
+    "reason": "",
+    "constraints": {
+      "base": {
+        "nonholonomic_valid": true,
+        "linear_speed_valid": true,
+        "max_pose_error": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "angular_and_acceleration_limits_checked": false
+      },
+      "path": {
+        "min_singular_value": 0.0002510205376893282,
+        "max_condition_number": 6935.90966796875,
+        "max_arm_joint_change_rad": 0.7972853850753174,
+        "passed": false
+      },
+      "endpoint": {
+        "min_singular_value": 0.1092015951871872,
+        "max_condition_number": 16.949146270751953,
+        "max_arm_joint_change_rad": 0.7972853850753174,
+        "passed": true
+      },
+      "singularity_scope": "IK endpoint; moving path reported separately"
+    }
+  },
+  {
+    "stage": "approach",
+    "passed": true,
+    "reason": "",
+    "constraints": {
+      "base": {
+        "nonholonomic_valid": true,
+        "linear_speed_valid": true,
+        "max_pose_error": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "angular_and_acceleration_limits_checked": false
+      },
+      "path": {
+        "min_singular_value": 0.027955420315265656,
+        "max_condition_number": 65.79159545898438,
+        "max_arm_joint_change_rad": 0.7985773745115083,
+        "passed": true
+      },
+      "endpoint": {
+        "min_singular_value": 0.027955420315265656,
+        "max_condition_number": 65.79159545898438,
+        "max_arm_joint_change_rad": 0.5196429845403583,
+        "passed": true
+      },
+      "singularity_scope": "all approach samples"
+    }
+  },
+  {
+    "stage": "lift",
+    "passed": true,
+    "reason": "",
+    "constraints": {
+      "base": {
+        "nonholonomic_valid": true,
+        "linear_speed_valid": true,
+        "max_pose_error": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "angular_and_acceleration_limits_checked": false
+      },
+      "path": {
+        "min_singular_value": 0.02795546129345894,
+        "max_condition_number": 65.79157257080078,
+        "max_arm_joint_change_rad": 0.5196429845403583,
+        "passed": true
+      },
+      "endpoint": {
+        "min_singular_value": 0.02795546129345894,
+        "max_condition_number": 65.79157257080078,
+        "max_arm_joint_change_rad": 0.5196429845403583,
+        "passed": true
+      },
+      "singularity_scope": "IK endpoint; moving path reported separately"
+    }
+  },
+  {
+    "stage": "carry",
+    "passed": true,
+    "reason": "",
+    "constraints": {
+      "base": {
+        "nonholonomic_valid": true,
+        "linear_speed_valid": true,
+        "max_pose_error": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "angular_and_acceleration_limits_checked": false
+      },
+      "path": {
+        "min_singular_value": 0.001316599315032363,
+        "max_condition_number": 1358.5948486328125,
+        "max_arm_joint_change_rad": 0.7841948199837341,
+        "passed": false
+      },
+      "endpoint": {
+        "min_singular_value": 0.08068263530731201,
+        "max_condition_number": 22.687501907348633,
+        "max_arm_joint_change_rad": 0.7841948199837341,
+        "passed": true
+      },
+      "singularity_scope": "IK endpoint; moving path reported separately"
+    }
+  },
+  {
+    "stage": "place",
+    "passed": true,
+    "reason": "",
+    "constraints": {
+      "base": {
+        "nonholonomic_valid": true,
+        "linear_speed_valid": true,
+        "max_pose_error": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "angular_and_acceleration_limits_checked": false
+      },
+      "path": {
+        "min_singular_value": 0.02848103456199169,
+        "max_condition_number": 63.08845138549805,
+        "max_arm_joint_change_rad": 0.798638932761444,
+        "passed": true
+      },
+      "endpoint": {
+        "min_singular_value": 0.02848103456199169,
+        "max_condition_number": 63.08845138549805,
+        "max_arm_joint_change_rad": 0.5049310264055449,
+        "passed": true
+      },
+      "singularity_scope": "all approach samples"
+    }
+  },
+  {
+    "stage": "withdraw",
+    "passed": true,
+    "reason": "",
+    "constraints": {
+      "base": {
+        "nonholonomic_valid": true,
+        "linear_speed_valid": true,
+        "max_pose_error": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "angular_and_acceleration_limits_checked": false
+      },
+      "path": {
+        "min_singular_value": 0.02848103456199169,
+        "max_condition_number": 63.08845138549805,
+        "max_arm_joint_change_rad": 0.7991188693611755,
+        "passed": true
+      },
+      "endpoint": {
+        "min_singular_value": 0.10607778280973434,
+        "max_condition_number": 16.638221740722656,
+        "max_arm_joint_change_rad": 0.7985316444008483,
+        "passed": true
+      },
+      "singularity_scope": "all approach samples"
+    }
+  }
+]

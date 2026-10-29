@@ -1,0 +1,438 @@
+[
+  {
+    "case": "cancel_held",
+    "result": {
+      "status": "cancelled",
+      "reason": "cancelled",
+      "final_stage": "carry",
+      "holding": "holding_target",
+      "control_hold_confirmed": true,
+      "retries": 0,
+      "elapsed_s": 2.350497866999831,
+      "run_id": "80772872363a43dd80138f10cf10cbb1",
+      "log": "/home/fang/Mobile-Manipulation/scenarios/table_transfer/tests/artifacts/pnp/physx/80772872363a43dd80138f10cf10cbb1.jsonl",
+      "mode": "isaac_physx_object__kinematic_robot__fixed_joint_grasp",
+      "goal": {
+        "request_id": "physical-cancel_held",
+        "object_id": "blue_cube",
+        "dimensions": [
+          0.04,
+          0.04,
+          0.04
+        ],
+        "source_id": "source",
+        "destination_id": "tray",
+        "placement_xy": [
+          0.0,
+          0.0
+        ],
+        "placement_yaw": 0.0,
+        "arm": "l",
+        "timeout_s": 1800,
+        "max_retries": 0
+      },
+      "first_failure": {
+        "stage": "carry",
+        "code": "cancelled",
+        "message": "Cancellation requested"
+      },
+      "failures": [
+        {
+          "stage": "carry",
+          "code": "cancelled",
+          "message": "Cancellation requested"
+        }
+      ],
+      "first_attempt_success": false,
+      "recovered_success": false,
+      "last_state": {
+        "object_id": "blue_cube",
+        "object_pose": {
+          "xyz": [
+            -1.050185203552246,
+            1.3201228380203247,
+            0.8699999451637268
+          ],
+          "wxyz": [
+            0.9999826550483704,
+            -2.622604597490863e-06,
+            3.7997963318048278e-06,
+            -0.005889893043786287
+          ],
+          "frame": "world",
+          "timestamp": 11.399999999999993,
+          "valid": true,
+          "source": "physx_truth_feedback"
+        },
+        "tcp_pose": {
+          "xyz": [
+            -1.0513818264007568,
+            1.3200979232788086,
+            0.8719684481620789
+          ],
+          "wxyz": [
+            0.400478720664978,
+            -0.5811529159545898,
+            0.5917143821716309,
+            0.3895537555217743
+          ],
+          "frame": "world",
+          "timestamp": 11.399999999999993,
+          "valid": true,
+          "source": "physx_truth_feedback"
+        },
+        "surfaces": {
+          "source": {
+            "identity": "source",
+            "size_xy": [
+              1.4,
+              0.6
+            ],
+            "pose": {
+              "xyz": [
+                -1.2,
+                1.5,
+                0.75
+              ],
+              "wxyz": [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "frame": "world",
+              "timestamp": 11.399999999999993,
+              "valid": true,
+              "source": "physx_truth_feedback"
+            }
+          },
+          "tray": {
+            "identity": "tray",
+            "size_xy": [
+              0.226,
+              0.156
+            ],
+            "pose": {
+              "xyz": [
+                1.2,
+                1.32,
+                0.752
+              ],
+              "wxyz": [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "frame": "world",
+              "timestamp": 11.399999999999993,
+              "valid": true,
+              "source": "physx_truth_feedback"
+            }
+          }
+        },
+        "linear_velocity": [
+          1.4219785830597853e-14,
+          2.001038427296674e-14,
+          1.8626433728741176e-09
+        ],
+        "angular_velocity": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "gripper": {
+          "opening_m": 0.04,
+          "action_complete": true,
+          "released": false,
+          "mechanism": "explicit fixed-joint assistance"
+        },
+        "robot_state": {
+          "controller_mode": "kinematic_reference",
+          "stage": "lift",
+          "joint_names": [
+            "l_joint1",
+            "l_joint2",
+            "l_joint3",
+            "l_joint4",
+            "l_joint5",
+            "l_joint6",
+            "l_joint7",
+            "r_joint1",
+            "r_joint2",
+            "r_joint3",
+            "r_joint4",
+            "r_joint5",
+            "r_joint6",
+            "r_joint7",
+            "platform_joint",
+            "head_joint1",
+            "head_joint2",
+            "l_Joint_finger1",
+            "r_Joint_finger1"
+          ],
+          "joint_positions": [
+            2.610203504562378,
+            2.0638303756713867,
+            -1.3753042221069336,
+            0.7741889953613281,
+            1.2346714735031128,
+            -0.2854573726654053,
+            -1.815422534942627,
+            -2.8622861935756982,
+            -1.6960935688224021,
+            -1.533766857816064,
+            1.2938326754442206,
+            -1.6121790989181415,
+            0.0011637691047781463,
+            -0.8746416800394974,
+            0.394865894317627,
+            0.0,
+            0.0,
+            0.0325,
+            0.0325
+          ],
+          "base_pose": [
+            -0.8622541427612305,
+            0.5213454365730286,
+            0.24734551877975464,
+            0.039288495336244476,
+            0.0,
+            0.0,
+            0.9992279090048546
+          ],
+          "timestamp": 11.399999999999993
+        }
+      },
+      "config_sha256": "b76c4942c71f9310f192019c8a7334ce1d77734e512a5bb49c9f2e222f567ebd"
+    },
+    "physical_readback": {
+      "source": "independent PhysX readback after execute; not skill result fields",
+      "object_xyz_m": [
+        -1.050185203552246,
+        1.3201228380203247,
+        0.8699999451637268
+      ],
+      "position_error_m": 2.252318240086586,
+      "inside_tray": false,
+      "supported": false,
+      "fixed_joint_exists": true,
+      "linear_speed_m_s": 1.8626433728741176e-09,
+      "angular_speed_rad_s": 0.0,
+      "placed_and_released": false
+    }
+  },
+  {
+    "case": "resume_held_without_regrasp",
+    "result": {
+      "status": "succeeded",
+      "reason": "",
+      "final_stage": "confirm_placement",
+      "holding": "empty",
+      "control_hold_confirmed": true,
+      "retries": 0,
+      "elapsed_s": 3.079440383000019,
+      "run_id": "9431180e29224381aeb75b7a9f807c8a",
+      "log": "/home/fang/Mobile-Manipulation/scenarios/table_transfer/tests/artifacts/pnp/physx/9431180e29224381aeb75b7a9f807c8a.jsonl",
+      "mode": "isaac_physx_object__kinematic_robot__fixed_joint_grasp",
+      "goal": {
+        "request_id": "physical-resume",
+        "object_id": "blue_cube",
+        "dimensions": [
+          0.04,
+          0.04,
+          0.04
+        ],
+        "source_id": "source",
+        "destination_id": "tray",
+        "placement_xy": [
+          0.0,
+          0.0
+        ],
+        "placement_yaw": 0.0,
+        "arm": "l",
+        "timeout_s": 1800,
+        "max_retries": 0
+      },
+      "first_failure": null,
+      "failures": [],
+      "first_attempt_success": true,
+      "recovered_success": false,
+      "last_state": {
+        "object_id": "blue_cube",
+        "object_pose": {
+          "xyz": [
+            1.200034499168396,
+            1.3214106559753418,
+            0.7719999551773071
+          ],
+          "wxyz": [
+            1.0,
+            -4.6035224841034506e-06,
+            3.0848373171465937e-06,
+            -6.833287625340745e-05
+          ],
+          "frame": "world",
+          "timestamp": 24.32499999999926,
+          "valid": true,
+          "source": "physx_truth_feedback"
+        },
+        "tcp_pose": {
+          "xyz": [
+            1.196616768836975,
+            1.1822929382324219,
+            0.8318106532096863
+          ],
+          "wxyz": [
+            0.3977769911289215,
+            -0.5848698019981384,
+            0.5887715220451355,
+            0.39121490716934204
+          ],
+          "frame": "world",
+          "timestamp": 24.32499999999926,
+          "valid": true,
+          "source": "physx_truth_feedback"
+        },
+        "surfaces": {
+          "source": {
+            "identity": "source",
+            "size_xy": [
+              1.4,
+              0.6
+            ],
+            "pose": {
+              "xyz": [
+                -1.2,
+                1.5,
+                0.75
+              ],
+              "wxyz": [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "frame": "world",
+              "timestamp": 24.32499999999926,
+              "valid": true,
+              "source": "physx_truth_feedback"
+            }
+          },
+          "tray": {
+            "identity": "tray",
+            "size_xy": [
+              0.226,
+              0.156
+            ],
+            "pose": {
+              "xyz": [
+                1.2,
+                1.32,
+                0.752
+              ],
+              "wxyz": [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "frame": "world",
+              "timestamp": 24.32499999999926,
+              "valid": true,
+              "source": "physx_truth_feedback"
+            }
+          }
+        },
+        "linear_velocity": [
+          0.0001296085974900052,
+          -5.330431304173544e-05,
+          -0.00011022877879440784
+        ],
+        "angular_velocity": [
+          0.0006622729706577957,
+          0.00613397965207696,
+          -6.777539965696633e-05
+        ],
+        "gripper": {
+          "opening_m": 0.05,
+          "action_complete": true,
+          "released": true,
+          "mechanism": "explicit fixed-joint assistance"
+        },
+        "robot_state": {
+          "controller_mode": "kinematic_reference",
+          "stage": "withdraw",
+          "joint_names": [
+            "l_joint1",
+            "l_joint2",
+            "l_joint3",
+            "l_joint4",
+            "l_joint5",
+            "l_joint6",
+            "l_joint7",
+            "r_joint1",
+            "r_joint2",
+            "r_joint3",
+            "r_joint4",
+            "r_joint5",
+            "r_joint6",
+            "r_joint7",
+            "platform_joint",
+            "head_joint1",
+            "head_joint2",
+            "l_Joint_finger1",
+            "r_Joint_finger1"
+          ],
+          "joint_positions": [
+            3.055410385131836,
+            1.9037786722183228,
+            -1.6886004209518433,
+            1.7962522506713867,
+            2.367708683013916,
+            0.7342286705970764,
+            -2.8292582035064697,
+            -2.8622861935756982,
+            -1.6960935688224021,
+            -1.533766857816064,
+            1.2938326754442206,
+            -1.6121790989181415,
+            0.0011637691047781463,
+            -0.8746416800394974,
+            0.5817369818687439,
+            0.0,
+            0.0,
+            0.0325,
+            0.0325
+          ],
+          "base_pose": [
+            1.6314069032669067,
+            0.5819827914237976,
+            0.24734551877975464,
+            0.13204730313722607,
+            0.0,
+            0.0,
+            -0.9912434159852894
+          ],
+          "timestamp": 24.32499999999926
+        }
+      },
+      "config_sha256": "b76c4942c71f9310f192019c8a7334ce1d77734e512a5bb49c9f2e222f567ebd"
+    },
+    "physical_readback": {
+      "source": "independent PhysX readback after execute; not skill result fields",
+      "object_xyz_m": [
+        1.200034499168396,
+        1.3214106559753418,
+        0.7719999551773071
+      ],
+      "position_error_m": 0.0014110777708533405,
+      "inside_tray": true,
+      "supported": true,
+      "fixed_joint_exists": false,
+      "linear_speed_m_s": 0.00017829785065259784,
+      "angular_speed_rad_s": 0.0061700004152953625,
+      "placed_and_released": true
+    }
+  }
+]

@@ -1,0 +1,2006 @@
+[
+  {
+    "case": 0,
+    "seed": 29,
+    "goal": {
+      "request_id": "normal-0",
+      "object_id": "blue_cube",
+      "dimensions": [
+        0.04,
+        0.04,
+        0.04
+      ],
+      "source_id": "source",
+      "destination_id": "tray",
+      "placement_xy": [
+        -0.022246701308889956,
+        -0.019170758696925364
+      ],
+      "placement_yaw": -0.6670985959577673,
+      "arm": "auto",
+      "timeout_s": 1800.0,
+      "max_retries": 1
+    },
+    "initial_source": [
+      -1.2,
+      1.5,
+      0.7
+    ],
+    "result": {
+      "status": "succeeded",
+      "reason": "",
+      "final_stage": "confirm_placement",
+      "holding": "empty",
+      "control_hold_confirmed": true,
+      "retries": 0,
+      "elapsed_s": 0.021133657000063977,
+      "run_id": "678cff6e2ea143f8a346614b23209a9c",
+      "log": "/home/fang/Mobile-Manipulation/scenarios/table_transfer/tests/artifacts/pnp/contract/678cff6e2ea143f8a346614b23209a9c.jsonl",
+      "mode": "synthetic_feedback_contract_test_not_robot_simulation",
+      "goal": {
+        "request_id": "normal-0",
+        "object_id": "blue_cube",
+        "dimensions": [
+          0.04,
+          0.04,
+          0.04
+        ],
+        "source_id": "source",
+        "destination_id": "tray",
+        "placement_xy": [
+          -0.022246701308889956,
+          -0.019170758696925364
+        ],
+        "placement_yaw": -0.6670985959577673,
+        "arm": "auto",
+        "timeout_s": 1800.0,
+        "max_retries": 1
+      },
+      "context_metadata": {},
+      "first_failure": null,
+      "failures": [],
+      "first_attempt_success": true,
+      "recovered_success": false,
+      "last_state": {
+        "object_id": "blue_cube",
+        "object_pose": {
+          "xyz": [
+            1.1307939414785522,
+            1.3008292413030746,
+            0.722
+          ],
+          "wxyz": [
+            0.9448862617918276,
+            0.0,
+            0.0,
+            -0.3273987664562376
+          ],
+          "frame": "world",
+          "timestamp": 0.7400000000000004,
+          "valid": true,
+          "source": "synthetic"
+        },
+        "tcp_pose": {
+          "xyz": [
+            1.1307939414785522,
+            1.1508292413030747,
+            0.722
+          ],
+          "wxyz": [
+            0.9233905906777587,
+            0.0,
+            0.0,
+            -0.38386171604860503
+          ],
+          "frame": "world",
+          "timestamp": 0.7400000000000004,
+          "valid": true,
+          "source": "synthetic"
+        },
+        "surfaces": {
+          "source": {
+            "identity": "source",
+            "size_xy": [
+              1.4,
+              0.6
+            ],
+            "pose": {
+              "xyz": [
+                -1.2,
+                1.5,
+                0.7
+              ],
+              "wxyz": [
+                1,
+                0,
+                0,
+                0
+              ],
+              "frame": "world",
+              "timestamp": 0.7400000000000004,
+              "valid": true,
+              "source": "synthetic"
+            }
+          },
+          "tray": {
+            "identity": "tray",
+            "size_xy": [
+              0.226,
+              0.156
+            ],
+            "pose": {
+              "xyz": [
+                1.1530406427874422,
+                1.32,
+                0.702
+              ],
+              "wxyz": [
+                1,
+                0,
+                0,
+                0
+              ],
+              "frame": "world",
+              "timestamp": 0.7400000000000004,
+              "valid": true,
+              "source": "synthetic"
+            }
+          }
+        },
+        "linear_velocity": [
+          0,
+          0,
+          0
+        ],
+        "angular_velocity": [
+          0,
+          0,
+          0
+        ],
+        "gripper": {
+          "released": true,
+          "opening_m": 0.05
+        },
+        "robot_state": {}
+      },
+      "config_sha256": "b76c4942c71f9310f192019c8a7334ce1d77734e512a5bb49c9f2e222f567ebd"
+    }
+  },
+  {
+    "case": 1,
+    "seed": 29,
+    "goal": {
+      "request_id": "normal-1",
+      "object_id": "blue_cube",
+      "dimensions": [
+        0.04,
+        0.04,
+        0.04
+      ],
+      "source_id": "source",
+      "destination_id": "tray",
+      "placement_xy": [
+        0.007055722909780071,
+        0.01931173305788501
+      ],
+      "placement_yaw": 2.2689328532905195,
+      "arm": "auto",
+      "timeout_s": 1800.0,
+      "max_retries": 1
+    },
+    "initial_source": [
+      -1.2,
+      1.5,
+      0.75
+    ],
+    "result": {
+      "status": "succeeded",
+      "reason": "",
+      "final_stage": "confirm_placement",
+      "holding": "empty",
+      "control_hold_confirmed": true,
+      "retries": 0,
+      "elapsed_s": 0.021013145999859262,
+      "run_id": "a79d52f53c06489fbe677189ef44bda7",
+      "log": "/home/fang/Mobile-Manipulation/scenarios/table_transfer/tests/artifacts/pnp/contract/a79d52f53c06489fbe677189ef44bda7.jsonl",
+      "mode": "synthetic_feedback_contract_test_not_robot_simulation",
+      "goal": {
+        "request_id": "normal-1",
+        "object_id": "blue_cube",
+        "dimensions": [
+          0.04,
+          0.04,
+          0.04
+        ],
+        "source_id": "source",
+        "destination_id": "tray",
+        "placement_xy": [
+          0.007055722909780071,
+          0.01931173305788501
+        ],
+        "placement_yaw": 2.2689328532905195,
+        "arm": "auto",
+        "timeout_s": 1800.0,
+        "max_retries": 1
+      },
+      "context_metadata": {},
+      "first_failure": null,
+      "failures": [],
+      "first_attempt_success": true,
+      "recovered_success": false,
+      "last_state": {
+        "object_id": "blue_cube",
+        "object_pose": {
+          "xyz": [
+            1.2646770016694757,
+            1.339311733057885,
+            0.772
+          ],
+          "wxyz": [
+            0.42261607495568093,
+            0.0,
+            0.0,
+            0.906308806748039
+          ],
+          "frame": "world",
+          "timestamp": 0.7400000000000004,
+          "valid": true,
+          "source": "synthetic"
+        },
+        "tcp_pose": {
+          "xyz": [
+            1.2646770016694757,
+            1.189311733057885,
+            0.772
+          ],
+          "wxyz": [
+            -0.37658040575001767,
+            0.0,
+            0.0,
+            0.9263839366079014
+          ],
+          "frame": "world",
+          "timestamp": 0.7400000000000004,
+          "valid": true,
+          "source": "synthetic"
+        },
+        "surfaces": {
+          "source": {
+            "identity": "source",
+            "size_xy": [
+              1.4,
+              0.6
+            ],
+            "pose": {
+              "xyz": [
+                -1.2,
+                1.5,
+                0.75
+              ],
+              "wxyz": [
+                1,
+                0,
+                0,
+                0
+              ],
+              "frame": "world",
+              "timestamp": 0.7400000000000004,
+              "valid": true,
+              "source": "synthetic"
+            }
+          },
+          "tray": {
+            "identity": "tray",
+            "size_xy": [
+              0.226,
+              0.156
+            ],
+            "pose": {
+              "xyz": [
+                1.2576212787596956,
+                1.32,
+                0.752
+              ],
+              "wxyz": [
+                1,
+                0,
+                0,
+                0
+              ],
+              "frame": "world",
+              "timestamp": 0.7400000000000004,
+              "valid": true,
+              "source": "synthetic"
+            }
+          }
+        },
+        "linear_velocity": [
+          0,
+          0,
+          0
+        ],
+        "angular_velocity": [
+          0,
+          0,
+          0
+        ],
+        "gripper": {
+          "released": true,
+          "opening_m": 0.05
+        },
+        "robot_state": {}
+      },
+      "config_sha256": "b76c4942c71f9310f192019c8a7334ce1d77734e512a5bb49c9f2e222f567ebd"
+    }
+  },
+  {
+    "case": 2,
+    "seed": 29,
+    "goal": {
+      "request_id": "normal-2",
+      "object_id": "blue_cube",
+      "dimensions": [
+        0.04,
+        0.04,
+        0.04
+      ],
+      "source_id": "source",
+      "destination_id": "tray",
+      "placement_xy": [
+        -0.02829560910596277,
+        0.0180896163492142
+      ],
+      "placement_yaw": 2.78868920873552,
+      "arm": "auto",
+      "timeout_s": 1800.0,
+      "max_retries": 1
+    },
+    "initial_source": [
+      -1.2,
+      1.5,
+      0.79
+    ],
+    "result": {
+      "status": "succeeded",
+      "reason": "",
+      "final_stage": "confirm_placement",
+      "holding": "empty",
+      "control_hold_confirmed": true,
+      "retries": 0,
+      "elapsed_s": 0.021161871000003885,
+      "run_id": "7ed91241ab934d78b10372acfa36b94c",
+      "log": "/home/fang/Mobile-Manipulation/scenarios/table_transfer/tests/artifacts/pnp/contract/7ed91241ab934d78b10372acfa36b94c.jsonl",
+      "mode": "synthetic_feedback_contract_test_not_robot_simulation",
+      "goal": {
+        "request_id": "normal-2",
+        "object_id": "blue_cube",
+        "dimensions": [
+          0.04,
+          0.04,
+          0.04
+        ],
+        "source_id": "source",
+        "destination_id": "tray",
+        "placement_xy": [
+          -0.02829560910596277,
+          0.0180896163492142
+        ],
+        "placement_yaw": 2.78868920873552,
+        "arm": "auto",
+        "timeout_s": 1800.0,
+        "max_retries": 1
+      },
+      "context_metadata": {},
+      "first_failure": null,
+      "failures": [],
+      "first_attempt_success": true,
+      "recovered_success": false,
+      "last_state": {
+        "object_id": "blue_cube",
+        "object_pose": {
+          "xyz": [
+            1.1559550241620038,
+            1.3380896163492142,
+            0.812
+          ],
+          "wxyz": [
+            0.17553750322634787,
+            0.0,
+            0.0,
+            0.9844727446511965
+          ],
+          "frame": "world",
+          "timestamp": 0.7400000000000004,
+          "valid": true,
+          "source": "synthetic"
+        },
+        "tcp_pose": {
+          "xyz": [
+            1.1559550241620038,
+            1.1880896163492143,
+            0.812
+          ],
+          "wxyz": [
+            0.9491560842158572,
+            0.0,
+            0.0,
+            0.3148058573089465
+          ],
+          "frame": "world",
+          "timestamp": 0.7400000000000004,
+          "valid": true,
+          "source": "synthetic"
+        },
+        "surfaces": {
+          "source": {
+            "identity": "source",
+            "size_xy": [
+              1.4,
+              0.6
+            ],
+            "pose": {
+              "xyz": [
+                -1.2,
+                1.5,
+                0.79
+              ],
+              "wxyz": [
+                1,
+                0,
+                0,
+                0
+              ],
+              "frame": "world",
+              "timestamp": 0.7400000000000004,
+              "valid": true,
+              "source": "synthetic"
+            }
+          },
+          "tray": {
+            "identity": "tray",
+            "size_xy": [
+              0.226,
+              0.156
+            ],
+            "pose": {
+              "xyz": [
+                1.1842506332679665,
+                1.32,
+                0.792
+              ],
+              "wxyz": [
+                1,
+                0,
+                0,
+                0
+              ],
+              "frame": "world",
+              "timestamp": 0.7400000000000004,
+              "valid": true,
+              "source": "synthetic"
+            }
+          }
+        },
+        "linear_velocity": [
+          0,
+          0,
+          0
+        ],
+        "angular_velocity": [
+          0,
+          0,
+          0
+        ],
+        "gripper": {
+          "released": true,
+          "opening_m": 0.05
+        },
+        "robot_state": {}
+      },
+      "config_sha256": "b76c4942c71f9310f192019c8a7334ce1d77734e512a5bb49c9f2e222f567ebd"
+    }
+  },
+  {
+    "case": 3,
+    "seed": 29,
+    "goal": {
+      "request_id": "normal-3",
+      "object_id": "blue_cube",
+      "dimensions": [
+        0.04,
+        0.04,
+        0.04
+      ],
+      "source_id": "source",
+      "destination_id": "tray",
+      "placement_xy": [
+        0.028297811803302993,
+        0.004348136598899651
+      ],
+      "placement_yaw": 0.7143618590009786,
+      "arm": "auto",
+      "timeout_s": 1800.0,
+      "max_retries": 1
+    },
+    "initial_source": [
+      -1.2,
+      1.5,
+      0.7
+    ],
+    "result": {
+      "status": "succeeded",
+      "reason": "",
+      "final_stage": "confirm_placement",
+      "holding": "empty",
+      "control_hold_confirmed": true,
+      "retries": 0,
+      "elapsed_s": 0.021136130999821034,
+      "run_id": "5be5eb83e60d47ef835f332f29af755c",
+      "log": "/home/fang/Mobile-Manipulation/scenarios/table_transfer/tests/artifacts/pnp/contract/5be5eb83e60d47ef835f332f29af755c.jsonl",
+      "mode": "synthetic_feedback_contract_test_not_robot_simulation",
+      "goal": {
+        "request_id": "normal-3",
+        "object_id": "blue_cube",
+        "dimensions": [
+          0.04,
+          0.04,
+          0.04
+        ],
+        "source_id": "source",
+        "destination_id": "tray",
+        "placement_xy": [
+          0.028297811803302993,
+          0.004348136598899651
+        ],
+        "placement_yaw": 0.7143618590009786,
+        "arm": "auto",
+        "timeout_s": 1800.0,
+        "max_retries": 1
+      },
+      "context_metadata": {},
+      "first_failure": null,
+      "failures": [],
+      "first_attempt_success": true,
+      "recovered_success": false,
+      "last_state": {
+        "object_id": "blue_cube",
+        "object_pose": {
+          "xyz": [
+            1.280451803461457,
+            1.3243481365988996,
+            0.722
+          ],
+          "wxyz": [
+            0.9368861894036035,
+            0.0,
+            0.0,
+            0.3496344778547954
+          ],
+          "frame": "world",
+          "timestamp": 0.7400000000000004,
+          "valid": true,
+          "source": "synthetic"
+        },
+        "tcp_pose": {
+          "xyz": [
+            1.280451803461457,
+            1.1743481365988997,
+            0.722
+          ],
+          "wxyz": [
+            0.47921721690304947,
+            0.0,
+            0.0,
+            0.8776963364533863
+          ],
+          "frame": "world",
+          "timestamp": 0.7400000000000004,
+          "valid": true,
+          "source": "synthetic"
+        },
+        "surfaces": {
+          "source": {
+            "identity": "source",
+            "size_xy": [
+              1.4,
+              0.6
+            ],
+            "pose": {
+              "xyz": [
+                -1.2,
+                1.5,
+                0.7
+              ],
+              "wxyz": [
+                1,
+                0,
+                0,
+                0
+              ],
+              "frame": "world",
+              "timestamp": 0.7400000000000004,
+              "valid": true,
+              "source": "synthetic"
+            }
+          },
+          "tray": {
+            "identity": "tray",
+            "size_xy": [
+              0.226,
+              0.156
+            ],
+            "pose": {
+              "xyz": [
+                1.2521539916581539,
+                1.32,
+                0.702
+              ],
+              "wxyz": [
+                1,
+                0,
+                0,
+                0
+              ],
+              "frame": "world",
+              "timestamp": 0.7400000000000004,
+              "valid": true,
+              "source": "synthetic"
+            }
+          }
+        },
+        "linear_velocity": [
+          0,
+          0,
+          0
+        ],
+        "angular_velocity": [
+          0,
+          0,
+          0
+        ],
+        "gripper": {
+          "released": true,
+          "opening_m": 0.05
+        },
+        "robot_state": {}
+      },
+      "config_sha256": "b76c4942c71f9310f192019c8a7334ce1d77734e512a5bb49c9f2e222f567ebd"
+    }
+  },
+  {
+    "case": 4,
+    "seed": 29,
+    "goal": {
+      "request_id": "normal-4",
+      "object_id": "blue_cube",
+      "dimensions": [
+        0.04,
+        0.04,
+        0.04
+      ],
+      "source_id": "source",
+      "destination_id": "tray",
+      "placement_xy": [
+        0.0139510012554716,
+        -0.018115444876592907
+      ],
+      "placement_yaw": 0.38618605701934205,
+      "arm": "auto",
+      "timeout_s": 1800.0,
+      "max_retries": 1
+    },
+    "initial_source": [
+      -1.2,
+      1.5,
+      0.75
+    ],
+    "result": {
+      "status": "succeeded",
+      "reason": "",
+      "final_stage": "confirm_placement",
+      "holding": "empty",
+      "control_hold_confirmed": true,
+      "retries": 0,
+      "elapsed_s": 0.021211576000041532,
+      "run_id": "458451e74b22424fa57703a5ca5bbc29",
+      "log": "/home/fang/Mobile-Manipulation/scenarios/table_transfer/tests/artifacts/pnp/contract/458451e74b22424fa57703a5ca5bbc29.jsonl",
+      "mode": "synthetic_feedback_contract_test_not_robot_simulation",
+      "goal": {
+        "request_id": "normal-4",
+        "object_id": "blue_cube",
+        "dimensions": [
+          0.04,
+          0.04,
+          0.04
+        ],
+        "source_id": "source",
+        "destination_id": "tray",
+        "placement_xy": [
+          0.0139510012554716,
+          -0.018115444876592907
+        ],
+        "placement_yaw": 0.38618605701934205,
+        "arm": "auto",
+        "timeout_s": 1800.0,
+        "max_retries": 1
+      },
+      "context_metadata": {},
+      "first_failure": null,
+      "failures": [],
+      "first_attempt_success": true,
+      "recovered_success": false,
+      "last_state": {
+        "object_id": "blue_cube",
+        "object_pose": {
+          "xyz": [
+            1.2277227066515197,
+            1.301884555123407,
+            0.772
+          ],
+          "wxyz": [
+            0.9814153927744402,
+            0.0,
+            0.0,
+            0.19189535384003195
+          ],
+          "frame": "world",
+          "timestamp": 0.7400000000000004,
+          "valid": true,
+          "source": "synthetic"
+        },
+        "tcp_pose": {
+          "xyz": [
+            1.2277227066515197,
+            1.1518845551234072,
+            0.772
+          ],
+          "wxyz": [
+            0.8442116445837247,
+            0.0,
+            0.0,
+            0.5360099804567475
+          ],
+          "frame": "world",
+          "timestamp": 0.7400000000000004,
+          "valid": true,
+          "source": "synthetic"
+        },
+        "surfaces": {
+          "source": {
+            "identity": "source",
+            "size_xy": [
+              1.4,
+              0.6
+            ],
+            "pose": {
+              "xyz": [
+                -1.2,
+                1.5,
+                0.75
+              ],
+              "wxyz": [
+                1,
+                0,
+                0,
+                0
+              ],
+              "frame": "world",
+              "timestamp": 0.7400000000000004,
+              "valid": true,
+              "source": "synthetic"
+            }
+          },
+          "tray": {
+            "identity": "tray",
+            "size_xy": [
+              0.226,
+              0.156
+            ],
+            "pose": {
+              "xyz": [
+                1.2137717053960482,
+                1.32,
+                0.752
+              ],
+              "wxyz": [
+                1,
+                0,
+                0,
+                0
+              ],
+              "frame": "world",
+              "timestamp": 0.7400000000000004,
+              "valid": true,
+              "source": "synthetic"
+            }
+          }
+        },
+        "linear_velocity": [
+          0,
+          0,
+          0
+        ],
+        "angular_velocity": [
+          0,
+          0,
+          0
+        ],
+        "gripper": {
+          "released": true,
+          "opening_m": 0.05
+        },
+        "robot_state": {}
+      },
+      "config_sha256": "b76c4942c71f9310f192019c8a7334ce1d77734e512a5bb49c9f2e222f567ebd"
+    }
+  },
+  {
+    "case": 5,
+    "seed": 29,
+    "goal": {
+      "request_id": "normal-5",
+      "object_id": "blue_cube",
+      "dimensions": [
+        0.04,
+        0.04,
+        0.04
+      ],
+      "source_id": "source",
+      "destination_id": "tray",
+      "placement_xy": [
+        0.017573904092644047,
+        -0.013564958453425546
+      ],
+      "placement_yaw": 0.9954470645644768,
+      "arm": "auto",
+      "timeout_s": 1800.0,
+      "max_retries": 1
+    },
+    "initial_source": [
+      -1.2,
+      1.5,
+      0.79
+    ],
+    "result": {
+      "status": "succeeded",
+      "reason": "",
+      "final_stage": "confirm_placement",
+      "holding": "empty",
+      "control_hold_confirmed": true,
+      "retries": 0,
+      "elapsed_s": 0.0210267509996811,
+      "run_id": "415cfdecd1e148e4b0c466ec281f8e79",
+      "log": "/home/fang/Mobile-Manipulation/scenarios/table_transfer/tests/artifacts/pnp/contract/415cfdecd1e148e4b0c466ec281f8e79.jsonl",
+      "mode": "synthetic_feedback_contract_test_not_robot_simulation",
+      "goal": {
+        "request_id": "normal-5",
+        "object_id": "blue_cube",
+        "dimensions": [
+          0.04,
+          0.04,
+          0.04
+        ],
+        "source_id": "source",
+        "destination_id": "tray",
+        "placement_xy": [
+          0.017573904092644047,
+          -0.013564958453425546
+        ],
+        "placement_yaw": 0.9954470645644768,
+        "arm": "auto",
+        "timeout_s": 1800.0,
+        "max_retries": 1
+      },
+      "context_metadata": {},
+      "first_failure": null,
+      "failures": [],
+      "first_attempt_success": true,
+      "recovered_success": false,
+      "last_state": {
+        "object_id": "blue_cube",
+        "object_pose": {
+          "xyz": [
+            1.1262214317805472,
+            1.3064350415465744,
+            0.812
+          ],
+          "wxyz": [
+            0.8786716837600318,
+            0.0,
+            0.0,
+            0.47742650969370237
+          ],
+          "frame": "world",
+          "timestamp": 0.7400000000000004,
+          "valid": true,
+          "source": "synthetic"
+        },
+        "tcp_pose": {
+          "xyz": [
+            1.1262214317805472,
+            1.1564350415465745,
+            0.812
+          ],
+          "wxyz": [
+            0.7271161189036858,
+            0.0,
+            0.0,
+            0.6865144933870232
+          ],
+          "frame": "world",
+          "timestamp": 0.7400000000000004,
+          "valid": true,
+          "source": "synthetic"
+        },
+        "surfaces": {
+          "source": {
+            "identity": "source",
+            "size_xy": [
+              1.4,
+              0.6
+            ],
+            "pose": {
+              "xyz": [
+                -1.2,
+                1.5,
+                0.79
+              ],
+              "wxyz": [
+                1,
+                0,
+                0,
+                0
+              ],
+              "frame": "world",
+              "timestamp": 0.7400000000000004,
+              "valid": true,
+              "source": "synthetic"
+            }
+          },
+          "tray": {
+            "identity": "tray",
+            "size_xy": [
+              0.226,
+              0.156
+            ],
+            "pose": {
+              "xyz": [
+                1.108647527687903,
+                1.32,
+                0.792
+              ],
+              "wxyz": [
+                1,
+                0,
+                0,
+                0
+              ],
+              "frame": "world",
+              "timestamp": 0.7400000000000004,
+              "valid": true,
+              "source": "synthetic"
+            }
+          }
+        },
+        "linear_velocity": [
+          0,
+          0,
+          0
+        ],
+        "angular_velocity": [
+          0,
+          0,
+          0
+        ],
+        "gripper": {
+          "released": true,
+          "opening_m": 0.05
+        },
+        "robot_state": {}
+      },
+      "config_sha256": "b76c4942c71f9310f192019c8a7334ce1d77734e512a5bb49c9f2e222f567ebd"
+    }
+  },
+  {
+    "case": 6,
+    "seed": 29,
+    "goal": {
+      "request_id": "normal-6",
+      "object_id": "blue_cube",
+      "dimensions": [
+        0.04,
+        0.04,
+        0.04
+      ],
+      "source_id": "source",
+      "destination_id": "tray",
+      "placement_xy": [
+        0.008576229029129218,
+        0.013382310094285466
+      ],
+      "placement_yaw": -2.001694811705691,
+      "arm": "auto",
+      "timeout_s": 1800.0,
+      "max_retries": 1
+    },
+    "initial_source": [
+      -1.2,
+      1.5,
+      0.7
+    ],
+    "result": {
+      "status": "succeeded",
+      "reason": "",
+      "final_stage": "confirm_placement",
+      "holding": "empty",
+      "control_hold_confirmed": true,
+      "retries": 0,
+      "elapsed_s": 0.021427108999887423,
+      "run_id": "ae2b3ce78b6d4e559c4a301f028462ad",
+      "log": "/home/fang/Mobile-Manipulation/scenarios/table_transfer/tests/artifacts/pnp/contract/ae2b3ce78b6d4e559c4a301f028462ad.jsonl",
+      "mode": "synthetic_feedback_contract_test_not_robot_simulation",
+      "goal": {
+        "request_id": "normal-6",
+        "object_id": "blue_cube",
+        "dimensions": [
+          0.04,
+          0.04,
+          0.04
+        ],
+        "source_id": "source",
+        "destination_id": "tray",
+        "placement_xy": [
+          0.008576229029129218,
+          0.013382310094285466
+        ],
+        "placement_yaw": -2.001694811705691,
+        "arm": "auto",
+        "timeout_s": 1800.0,
+        "max_retries": 1
+      },
+      "context_metadata": {},
+      "first_failure": null,
+      "failures": [],
+      "first_attempt_success": true,
+      "recovered_success": false,
+      "last_state": {
+        "object_id": "blue_cube",
+        "object_pose": {
+          "xyz": [
+            1.217488333011218,
+            1.3333823100942854,
+            0.722
+          ],
+          "wxyz": [
+            -0.5395890445213214,
+            0.0,
+            0.0,
+            0.8419285379606558
+          ],
+          "frame": "world",
+          "timestamp": 0.7400000000000004,
+          "valid": true,
+          "source": "synthetic"
+        },
+        "tcp_pose": {
+          "xyz": [
+            1.217488333011218,
+            1.1833823100942855,
+            0.722
+          ],
+          "wxyz": [
+            0.5673150698345474,
+            0.0,
+            0.0,
+            0.8235008266775588
+          ],
+          "frame": "world",
+          "timestamp": 0.7400000000000004,
+          "valid": true,
+          "source": "synthetic"
+        },
+        "surfaces": {
+          "source": {
+            "identity": "source",
+            "size_xy": [
+              1.4,
+              0.6
+            ],
+            "pose": {
+              "xyz": [
+                -1.2,
+                1.5,
+                0.7
+              ],
+              "wxyz": [
+                1,
+                0,
+                0,
+                0
+              ],
+              "frame": "world",
+              "timestamp": 0.7400000000000004,
+              "valid": true,
+              "source": "synthetic"
+            }
+          },
+          "tray": {
+            "identity": "tray",
+            "size_xy": [
+              0.226,
+              0.156
+            ],
+            "pose": {
+              "xyz": [
+                1.208912103982089,
+                1.32,
+                0.702
+              ],
+              "wxyz": [
+                1,
+                0,
+                0,
+                0
+              ],
+              "frame": "world",
+              "timestamp": 0.7400000000000004,
+              "valid": true,
+              "source": "synthetic"
+            }
+          }
+        },
+        "linear_velocity": [
+          0,
+          0,
+          0
+        ],
+        "angular_velocity": [
+          0,
+          0,
+          0
+        ],
+        "gripper": {
+          "released": true,
+          "opening_m": 0.05
+        },
+        "robot_state": {}
+      },
+      "config_sha256": "b76c4942c71f9310f192019c8a7334ce1d77734e512a5bb49c9f2e222f567ebd"
+    }
+  },
+  {
+    "case": 7,
+    "seed": 29,
+    "goal": {
+      "request_id": "normal-7",
+      "object_id": "blue_cube",
+      "dimensions": [
+        0.04,
+        0.04,
+        0.04
+      ],
+      "source_id": "source",
+      "destination_id": "tray",
+      "placement_xy": [
+        -0.017974820327578342,
+        0.016270896960754445
+      ],
+      "placement_yaw": 2.9081376184831953,
+      "arm": "auto",
+      "timeout_s": 1800.0,
+      "max_retries": 1
+    },
+    "initial_source": [
+      -1.2,
+      1.5,
+      0.75
+    ],
+    "result": {
+      "status": "succeeded",
+      "reason": "",
+      "final_stage": "confirm_placement",
+      "holding": "empty",
+      "control_hold_confirmed": true,
+      "retries": 0,
+      "elapsed_s": 0.02102304499976526,
+      "run_id": "8746c74b3870476d82b15cefe5a3a9ca",
+      "log": "/home/fang/Mobile-Manipulation/scenarios/table_transfer/tests/artifacts/pnp/contract/8746c74b3870476d82b15cefe5a3a9ca.jsonl",
+      "mode": "synthetic_feedback_contract_test_not_robot_simulation",
+      "goal": {
+        "request_id": "normal-7",
+        "object_id": "blue_cube",
+        "dimensions": [
+          0.04,
+          0.04,
+          0.04
+        ],
+        "source_id": "source",
+        "destination_id": "tray",
+        "placement_xy": [
+          -0.017974820327578342,
+          0.016270896960754445
+        ],
+        "placement_yaw": 2.9081376184831953,
+        "arm": "auto",
+        "timeout_s": 1800.0,
+        "max_retries": 1
+      },
+      "context_metadata": {},
+      "first_failure": null,
+      "failures": [],
+      "first_attempt_success": true,
+      "recovered_success": false,
+      "last_state": {
+        "object_id": "blue_cube",
+        "object_pose": {
+          "xyz": [
+            1.1743957597202144,
+            1.3362708969607544,
+            0.772
+          ],
+          "wxyz": [
+            0.11646262324715663,
+            0.0,
+            0.0,
+            0.9931950751923767
+          ],
+          "frame": "world",
+          "timestamp": 0.7400000000000004,
+          "valid": true,
+          "source": "synthetic"
+        },
+        "tcp_pose": {
+          "xyz": [
+            1.1743957597202144,
+            1.1862708969607545,
+            0.772
+          ],
+          "wxyz": [
+            0.13903283010919312,
+            0.0,
+            0.0,
+            0.9902877723933726
+          ],
+          "frame": "world",
+          "timestamp": 0.7400000000000004,
+          "valid": true,
+          "source": "synthetic"
+        },
+        "surfaces": {
+          "source": {
+            "identity": "source",
+            "size_xy": [
+              1.4,
+              0.6
+            ],
+            "pose": {
+              "xyz": [
+                -1.2,
+                1.5,
+                0.75
+              ],
+              "wxyz": [
+                1,
+                0,
+                0,
+                0
+              ],
+              "frame": "world",
+              "timestamp": 0.7400000000000004,
+              "valid": true,
+              "source": "synthetic"
+            }
+          },
+          "tray": {
+            "identity": "tray",
+            "size_xy": [
+              0.226,
+              0.156
+            ],
+            "pose": {
+              "xyz": [
+                1.1923705800477926,
+                1.32,
+                0.752
+              ],
+              "wxyz": [
+                1,
+                0,
+                0,
+                0
+              ],
+              "frame": "world",
+              "timestamp": 0.7400000000000004,
+              "valid": true,
+              "source": "synthetic"
+            }
+          }
+        },
+        "linear_velocity": [
+          0,
+          0,
+          0
+        ],
+        "angular_velocity": [
+          0,
+          0,
+          0
+        ],
+        "gripper": {
+          "released": true,
+          "opening_m": 0.05
+        },
+        "robot_state": {}
+      },
+      "config_sha256": "b76c4942c71f9310f192019c8a7334ce1d77734e512a5bb49c9f2e222f567ebd"
+    }
+  },
+  {
+    "case": 8,
+    "seed": 29,
+    "goal": {
+      "request_id": "normal-8",
+      "object_id": "blue_cube",
+      "dimensions": [
+        0.04,
+        0.04,
+        0.04
+      ],
+      "source_id": "source",
+      "destination_id": "tray",
+      "placement_xy": [
+        -0.0005643288303335929,
+        -0.015383784171045835
+      ],
+      "placement_yaw": -2.6743713061673446,
+      "arm": "auto",
+      "timeout_s": 1800.0,
+      "max_retries": 1
+    },
+    "initial_source": [
+      -1.2,
+      1.5,
+      0.79
+    ],
+    "result": {
+      "status": "succeeded",
+      "reason": "",
+      "final_stage": "confirm_placement",
+      "holding": "empty",
+      "control_hold_confirmed": true,
+      "retries": 0,
+      "elapsed_s": 0.02118627700019715,
+      "run_id": "19110f6688cd4eb9b6f6759dd594eb5b",
+      "log": "/home/fang/Mobile-Manipulation/scenarios/table_transfer/tests/artifacts/pnp/contract/19110f6688cd4eb9b6f6759dd594eb5b.jsonl",
+      "mode": "synthetic_feedback_contract_test_not_robot_simulation",
+      "goal": {
+        "request_id": "normal-8",
+        "object_id": "blue_cube",
+        "dimensions": [
+          0.04,
+          0.04,
+          0.04
+        ],
+        "source_id": "source",
+        "destination_id": "tray",
+        "placement_xy": [
+          -0.0005643288303335929,
+          -0.015383784171045835
+        ],
+        "placement_yaw": -2.6743713061673446,
+        "arm": "auto",
+        "timeout_s": 1800.0,
+        "max_retries": 1
+      },
+      "context_metadata": {},
+      "first_failure": null,
+      "failures": [],
+      "first_attempt_success": true,
+      "recovered_success": false,
+      "last_state": {
+        "object_id": "blue_cube",
+        "object_pose": {
+          "xyz": [
+            1.1600801387434192,
+            1.3046162158289543,
+            0.812
+          ],
+          "wxyz": [
+            -0.23149162148652475,
+            0.0,
+            0.0,
+            0.9728368975226729
+          ],
+          "frame": "world",
+          "timestamp": 0.7400000000000004,
+          "valid": true,
+          "source": "synthetic"
+        },
+        "tcp_pose": {
+          "xyz": [
+            1.1600801387434192,
+            1.1546162158289544,
+            0.812
+          ],
+          "wxyz": [
+            -0.3699458114741676,
+            0.0,
+            0.0,
+            0.9290533335458842
+          ],
+          "frame": "world",
+          "timestamp": 0.7400000000000004,
+          "valid": true,
+          "source": "synthetic"
+        },
+        "surfaces": {
+          "source": {
+            "identity": "source",
+            "size_xy": [
+              1.4,
+              0.6
+            ],
+            "pose": {
+              "xyz": [
+                -1.2,
+                1.5,
+                0.79
+              ],
+              "wxyz": [
+                1,
+                0,
+                0,
+                0
+              ],
+              "frame": "world",
+              "timestamp": 0.7400000000000004,
+              "valid": true,
+              "source": "synthetic"
+            }
+          },
+          "tray": {
+            "identity": "tray",
+            "size_xy": [
+              0.226,
+              0.156
+            ],
+            "pose": {
+              "xyz": [
+                1.1606444675737528,
+                1.32,
+                0.792
+              ],
+              "wxyz": [
+                1,
+                0,
+                0,
+                0
+              ],
+              "frame": "world",
+              "timestamp": 0.7400000000000004,
+              "valid": true,
+              "source": "synthetic"
+            }
+          }
+        },
+        "linear_velocity": [
+          0,
+          0,
+          0
+        ],
+        "angular_velocity": [
+          0,
+          0,
+          0
+        ],
+        "gripper": {
+          "released": true,
+          "opening_m": 0.05
+        },
+        "robot_state": {}
+      },
+      "config_sha256": "b76c4942c71f9310f192019c8a7334ce1d77734e512a5bb49c9f2e222f567ebd"
+    }
+  },
+  {
+    "case": 9,
+    "seed": 29,
+    "goal": {
+      "request_id": "normal-9",
+      "object_id": "blue_cube",
+      "dimensions": [
+        0.04,
+        0.04,
+        0.04
+      ],
+      "source_id": "source",
+      "destination_id": "tray",
+      "placement_xy": [
+        -0.025810048351035057,
+        -0.008581417221022495
+      ],
+      "placement_yaw": 1.6379025436527952,
+      "arm": "auto",
+      "timeout_s": 1800.0,
+      "max_retries": 1
+    },
+    "initial_source": [
+      -1.2,
+      1.5,
+      0.7
+    ],
+    "result": {
+      "status": "succeeded",
+      "reason": "",
+      "final_stage": "confirm_placement",
+      "holding": "empty",
+      "control_hold_confirmed": true,
+      "retries": 0,
+      "elapsed_s": 0.02123243599999114,
+      "run_id": "34ad16ead5a041e6a1a4e926fcb352a7",
+      "log": "/home/fang/Mobile-Manipulation/scenarios/table_transfer/tests/artifacts/pnp/contract/34ad16ead5a041e6a1a4e926fcb352a7.jsonl",
+      "mode": "synthetic_feedback_contract_test_not_robot_simulation",
+      "goal": {
+        "request_id": "normal-9",
+        "object_id": "blue_cube",
+        "dimensions": [
+          0.04,
+          0.04,
+          0.04
+        ],
+        "source_id": "source",
+        "destination_id": "tray",
+        "placement_xy": [
+          -0.025810048351035057,
+          -0.008581417221022495
+        ],
+        "placement_yaw": 1.6379025436527952,
+        "arm": "auto",
+        "timeout_s": 1800.0,
+        "max_retries": 1
+      },
+      "context_metadata": {},
+      "first_failure": null,
+      "failures": [],
+      "first_attempt_success": true,
+      "recovered_success": false,
+      "last_state": {
+        "object_id": "blue_cube",
+        "object_pose": {
+          "xyz": [
+            1.2694904618900558,
+            1.3114185827789775,
+            0.722
+          ],
+          "wxyz": [
+            0.682987605213799,
+            0.0,
+            0.0,
+            0.7304299631890245
+          ],
+          "frame": "world",
+          "timestamp": 0.7400000000000004,
+          "valid": true,
+          "source": "synthetic"
+        },
+        "tcp_pose": {
+          "xyz": [
+            1.2694904618900558,
+            1.1614185827789776,
+            0.722
+          ],
+          "wxyz": [
+            -0.3633007724946678,
+            0.0,
+            0.0,
+            0.9316719104409973
+          ],
+          "frame": "world",
+          "timestamp": 0.7400000000000004,
+          "valid": true,
+          "source": "synthetic"
+        },
+        "surfaces": {
+          "source": {
+            "identity": "source",
+            "size_xy": [
+              1.4,
+              0.6
+            ],
+            "pose": {
+              "xyz": [
+                -1.2,
+                1.5,
+                0.7
+              ],
+              "wxyz": [
+                1,
+                0,
+                0,
+                0
+              ],
+              "frame": "world",
+              "timestamp": 0.7400000000000004,
+              "valid": true,
+              "source": "synthetic"
+            }
+          },
+          "tray": {
+            "identity": "tray",
+            "size_xy": [
+              0.226,
+              0.156
+            ],
+            "pose": {
+              "xyz": [
+                1.2953005102410908,
+                1.32,
+                0.702
+              ],
+              "wxyz": [
+                1,
+                0,
+                0,
+                0
+              ],
+              "frame": "world",
+              "timestamp": 0.7400000000000004,
+              "valid": true,
+              "source": "synthetic"
+            }
+          }
+        },
+        "linear_velocity": [
+          0,
+          0,
+          0
+        ],
+        "angular_velocity": [
+          0,
+          0,
+          0
+        ],
+        "gripper": {
+          "released": true,
+          "opening_m": 0.05
+        },
+        "robot_state": {}
+      },
+      "config_sha256": "b76c4942c71f9310f192019c8a7334ce1d77734e512a5bb49c9f2e222f567ebd"
+    }
+  },
+  {
+    "case": 10,
+    "seed": 29,
+    "goal": {
+      "request_id": "normal-10",
+      "object_id": "blue_cube",
+      "dimensions": [
+        0.04,
+        0.04,
+        0.04
+      ],
+      "source_id": "source",
+      "destination_id": "tray",
+      "placement_xy": [
+        0.003649455648361319,
+        -0.00038244910933265056
+      ],
+      "placement_yaw": 1.0467458732702042,
+      "arm": "auto",
+      "timeout_s": 1800.0,
+      "max_retries": 1
+    },
+    "initial_source": [
+      -1.2,
+      1.5,
+      0.75
+    ],
+    "result": {
+      "status": "succeeded",
+      "reason": "",
+      "final_stage": "confirm_placement",
+      "holding": "empty",
+      "control_hold_confirmed": true,
+      "retries": 0,
+      "elapsed_s": 0.021104139999806648,
+      "run_id": "752aa43d9b2d4b768ab759d220e787e6",
+      "log": "/home/fang/Mobile-Manipulation/scenarios/table_transfer/tests/artifacts/pnp/contract/752aa43d9b2d4b768ab759d220e787e6.jsonl",
+      "mode": "synthetic_feedback_contract_test_not_robot_simulation",
+      "goal": {
+        "request_id": "normal-10",
+        "object_id": "blue_cube",
+        "dimensions": [
+          0.04,
+          0.04,
+          0.04
+        ],
+        "source_id": "source",
+        "destination_id": "tray",
+        "placement_xy": [
+          0.003649455648361319,
+          -0.00038244910933265056
+        ],
+        "placement_yaw": 1.0467458732702042,
+        "arm": "auto",
+        "timeout_s": 1800.0,
+        "max_retries": 1
+      },
+      "context_metadata": {},
+      "first_failure": null,
+      "failures": [],
+      "first_attempt_success": true,
+      "recovered_success": false,
+      "last_state": {
+        "object_id": "blue_cube",
+        "object_pose": {
+          "xyz": [
+            1.1241212714419535,
+            1.3196175508906673,
+            0.772
+          ],
+          "wxyz": [
+            0.8661383011800277,
+            0.0,
+            0.0,
+            0.49980440497156053
+          ],
+          "frame": "world",
+          "timestamp": 0.7400000000000004,
+          "valid": true,
+          "source": "synthetic"
+        },
+        "tcp_pose": {
+          "xyz": [
+            1.1241212714419535,
+            1.1696175508906674,
+            0.772
+          ],
+          "wxyz": [
+            0.2450061264198946,
+            0.0,
+            0.0,
+            0.969521530455471
+          ],
+          "frame": "world",
+          "timestamp": 0.7400000000000004,
+          "valid": true,
+          "source": "synthetic"
+        },
+        "surfaces": {
+          "source": {
+            "identity": "source",
+            "size_xy": [
+              1.4,
+              0.6
+            ],
+            "pose": {
+              "xyz": [
+                -1.2,
+                1.5,
+                0.75
+              ],
+              "wxyz": [
+                1,
+                0,
+                0,
+                0
+              ],
+              "frame": "world",
+              "timestamp": 0.7400000000000004,
+              "valid": true,
+              "source": "synthetic"
+            }
+          },
+          "tray": {
+            "identity": "tray",
+            "size_xy": [
+              0.226,
+              0.156
+            ],
+            "pose": {
+              "xyz": [
+                1.1204718157935922,
+                1.32,
+                0.752
+              ],
+              "wxyz": [
+                1,
+                0,
+                0,
+                0
+              ],
+              "frame": "world",
+              "timestamp": 0.7400000000000004,
+              "valid": true,
+              "source": "synthetic"
+            }
+          }
+        },
+        "linear_velocity": [
+          0,
+          0,
+          0
+        ],
+        "angular_velocity": [
+          0,
+          0,
+          0
+        ],
+        "gripper": {
+          "released": true,
+          "opening_m": 0.05
+        },
+        "robot_state": {}
+      },
+      "config_sha256": "b76c4942c71f9310f192019c8a7334ce1d77734e512a5bb49c9f2e222f567ebd"
+    }
+  },
+  {
+    "case": 11,
+    "seed": 29,
+    "goal": {
+      "request_id": "normal-11",
+      "object_id": "blue_cube",
+      "dimensions": [
+        0.04,
+        0.04,
+        0.04
+      ],
+      "source_id": "source",
+      "destination_id": "tray",
+      "placement_xy": [
+        -0.011645850704977711,
+        -0.006184717947920623
+      ],
+      "placement_yaw": 1.3832404773140903,
+      "arm": "auto",
+      "timeout_s": 1800.0,
+      "max_retries": 1
+    },
+    "initial_source": [
+      -1.2,
+      1.5,
+      0.79
+    ],
+    "result": {
+      "status": "succeeded",
+      "reason": "",
+      "final_stage": "confirm_placement",
+      "holding": "empty",
+      "control_hold_confirmed": true,
+      "retries": 0,
+      "elapsed_s": 0.02118678800025009,
+      "run_id": "e9b331f8303d4ad19bac7386e42405b0",
+      "log": "/home/fang/Mobile-Manipulation/scenarios/table_transfer/tests/artifacts/pnp/contract/e9b331f8303d4ad19bac7386e42405b0.jsonl",
+      "mode": "synthetic_feedback_contract_test_not_robot_simulation",
+      "goal": {
+        "request_id": "normal-11",
+        "object_id": "blue_cube",
+        "dimensions": [
+          0.04,
+          0.04,
+          0.04
+        ],
+        "source_id": "source",
+        "destination_id": "tray",
+        "placement_xy": [
+          -0.011645850704977711,
+          -0.006184717947920623
+        ],
+        "placement_yaw": 1.3832404773140903,
+        "arm": "auto",
+        "timeout_s": 1800.0,
+        "max_retries": 1
+      },
+      "context_metadata": {},
+      "first_failure": null,
+      "failures": [],
+      "first_attempt_success": true,
+      "recovered_success": false,
+      "last_state": {
+        "object_id": "blue_cube",
+        "object_pose": {
+          "xyz": [
+            1.2353007961982898,
+            1.3138152820520794,
+            0.812
+          ],
+          "wxyz": [
+            0.770213660972062,
+            0.0,
+            0.0,
+            0.6377859487727945
+          ],
+          "frame": "world",
+          "timestamp": 0.7400000000000004,
+          "valid": true,
+          "source": "synthetic"
+        },
+        "tcp_pose": {
+          "xyz": [
+            1.2353007961982898,
+            1.1638152820520795,
+            0.812
+          ],
+          "wxyz": [
+            0.9012813616285451,
+            0.0,
+            0.0,
+            0.4332342405454537
+          ],
+          "frame": "world",
+          "timestamp": 0.7400000000000004,
+          "valid": true,
+          "source": "synthetic"
+        },
+        "surfaces": {
+          "source": {
+            "identity": "source",
+            "size_xy": [
+              1.4,
+              0.6
+            ],
+            "pose": {
+              "xyz": [
+                -1.2,
+                1.5,
+                0.79
+              ],
+              "wxyz": [
+                1,
+                0,
+                0,
+                0
+              ],
+              "frame": "world",
+              "timestamp": 0.7400000000000004,
+              "valid": true,
+              "source": "synthetic"
+            }
+          },
+          "tray": {
+            "identity": "tray",
+            "size_xy": [
+              0.226,
+              0.156
+            ],
+            "pose": {
+              "xyz": [
+                1.2469466469032675,
+                1.32,
+                0.792
+              ],
+              "wxyz": [
+                1,
+                0,
+                0,
+                0
+              ],
+              "frame": "world",
+              "timestamp": 0.7400000000000004,
+              "valid": true,
+              "source": "synthetic"
+            }
+          }
+        },
+        "linear_velocity": [
+          0,
+          0,
+          0
+        ],
+        "angular_velocity": [
+          0,
+          0,
+          0
+        ],
+        "gripper": {
+          "released": true,
+          "opening_m": 0.05
+        },
+        "robot_state": {}
+      },
+      "config_sha256": "b76c4942c71f9310f192019c8a7334ce1d77734e512a5bb49c9f2e222f567ebd"
+    }
+  }
+]
